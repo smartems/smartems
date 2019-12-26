@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 DAEMON=smartems-server
 EXECUTABLE=/usr/local/bin/smartems-server
-CONFIG=/usr/local/etc/grafana/grafana.ini
-HOMEPATH=/usr/local/share/grafana
-LOGPATH=/usr/local/var/log/grafana
-DATAPATH=/usr/local/var/lib/grafana
-PLUGINPATH=/usr/local/var/lib/grafana/plugins
-DATASOURCECFGPATH=/usr/local/etc/grafana/datasources
-DASHBOARDSCFGPATH=/usr/local/etc/grafana/dashboards
+CONFIG=/usr/local/etc/smartems/smartems.ini
+HOMEPATH=/usr/local/share/smartems
+LOGPATH=/usr/local/var/log/smartems
+DATAPATH=/usr/local/var/lib/smartems
+PLUGINPATH=/usr/local/var/lib/smartems/plugins
+DATASOURCECFGPATH=/usr/local/etc/smartems/datasources
+DASHBOARDSCFGPATH=/usr/local/etc/smartems/dashboards
 
 case "$1" in
 start)

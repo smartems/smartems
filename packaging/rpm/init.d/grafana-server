@@ -3,8 +3,8 @@
 # chkconfig: 2345 80 05
 # description: Grafana web server & backend
 # processname: grafana
-# config: /etc/grafana/grafana.ini
-# pidfile: /var/run/grafana.pid
+# config: /etc/smartems/smartems.ini
+# pidfile: /var/run/smartems.pid
 
 ### BEGIN INIT INFO
 # Provides:          grafana
@@ -25,13 +25,13 @@ DESC="Grafana Server"
 
 SMARTEMS_USER=grafana
 SMARTEMS_GROUP=grafana
-SMARTEMS_HOME=/usr/share/grafana
-CONF_DIR=/etc/grafana
+SMARTEMS_HOME=/usr/share/smartems
+CONF_DIR=/etc/smartems
 WORK_DIR=$SMARTEMS_HOME
-DATA_DIR=/var/lib/grafana
-PLUGINS_DIR=/var/lib/grafana/plugins
-LOG_DIR=/var/log/grafana
-CONF_FILE=$CONF_DIR/grafana.ini
+DATA_DIR=/var/lib/smartems
+PLUGINS_DIR=/var/lib/smartems/plugins
+LOG_DIR=/var/log/smartems
+CONF_FILE=$CONF_DIR/smartems.ini
 PROVISIONING_CFG_DIR=$CONF_DIR/provisioning
 MAX_OPEN_FILES=10000
 PID_FILE=/var/run/$NAME.pid

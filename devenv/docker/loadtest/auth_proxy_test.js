@@ -5,7 +5,7 @@ export let options = {
   noCookiesReset: true
 };
 
-let endpoint = __ENV.URL || 'http://localhost:10080/grafana';
+let endpoint = __ENV.URL || 'http://localhost:10080/smartems';
 const client = createBasicAuthClient(endpoint, 'user1', 'grafana');
 client.withOrgId(1);
 

@@ -17,8 +17,8 @@ module.exports = (env = {}) =>
 
     entry: {
       app: './public/app/index.ts',
-      dark: './public/sass/grafana.dark.scss',
-      light: './public/sass/grafana.light.scss',
+      dark: './public/sass/smartems.dark.scss',
+      light: './public/sass/smartems.light.scss',
     },
 
     // If we enabled watch option via CLI

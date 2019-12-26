@@ -29,7 +29,7 @@ describe('GithubClient', () => {
       const client = github.client;
 
       expect(spy).toHaveBeenCalledWith({
-        baseURL: 'https://api.github.com/repos/grafana/grafana',
+        baseURL: 'https://api.github.com/repos/smartems/smartems',
         timeout: 10000,
       });
       expect(client).toEqual(fakeClient);
@@ -43,7 +43,7 @@ describe('GithubClient', () => {
       const client = github.client;
 
       expect(spy).toHaveBeenCalledWith({
-        baseURL: 'https://api.github.com/repos/grafana/grafana-enterprise',
+        baseURL: 'https://api.github.com/repos/smartems/smartems-enterprise',
         timeout: 10000,
       });
       expect(client).toEqual(fakeClient);
@@ -64,7 +64,7 @@ describe('GithubClient', () => {
         const client = github.client;
 
         expect(spy).toHaveBeenCalledWith({
-          baseURL: 'https://api.github.com/repos/grafana/grafana',
+          baseURL: 'https://api.github.com/repos/smartems/smartems',
           timeout: 10000,
           auth: { username, password: token },
         });
@@ -86,7 +86,7 @@ describe('GithubClient', () => {
         const client = github.client;
 
         expect(spy).toHaveBeenCalledWith({
-          baseURL: 'https://api.github.com/repos/grafana/grafana-enterprise',
+          baseURL: 'https://api.github.com/repos/smartems/smartems-enterprise',
           timeout: 10000,
           auth: { username, password: token },
         });

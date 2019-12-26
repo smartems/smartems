@@ -1,7 +1,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-const grafanaURL = 'https://api.github.com/repos/grafana/grafana';
-const enterpriseURL = 'https://api.github.com/repos/grafana/grafana-enterprise';
+const grafanaURL = 'https://api.github.com/repos/smartems/smartems';
+const enterpriseURL = 'https://api.github.com/repos/smartems/smartems-enterprise';
 
 // Encapsulates the creation of a client for the Github API
 //

@@ -12,7 +12,7 @@ const startTaskRunner: TaskRunner<StartTaskOptions> = async ({ watchThemes, noTs
   const noTsCheckArg = noTsCheck ? 1 : 0;
   const jobs = [
     watchThemes && {
-      command: 'nodemon -e ts -w ./packages/grafana-ui/src/themes -x yarn run themes:generate',
+      command: 'nodemon -e ts -w ./packages/smartems-ui/src/themes -x yarn run themes:generate',
       name: 'SASS variables generator',
     },
     hot

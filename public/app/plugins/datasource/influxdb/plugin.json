@@ -18,7 +18,7 @@
     "description": "Open source time series database",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/influxdb_logo.svg",

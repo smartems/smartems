@@ -24,9 +24,9 @@ interface PluginDetails {
 type PluginType = 'angular-panel' | 'react-panel' | 'datasource-plugin';
 
 const RepositoriesPaths = {
-  'angular-panel': 'https://github.com/grafana/simple-angular-panel.git',
-  'react-panel': 'https://github.com/grafana/simple-react-panel.git',
-  'datasource-plugin': 'https://github.com/grafana/simple-datasource.git',
+  'angular-panel': 'https://github.com/smartems/simple-angular-panel.git',
+  'react-panel': 'https://github.com/smartems/simple-react-panel.git',
+  'datasource-plugin': 'https://github.com/smartems/simple-datasource.git',
 };
 
 export const getGitUsername = async () => {

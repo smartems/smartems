@@ -15,38 +15,38 @@ case "$1" in
 	    addgroup --system "$SMARTEMS_GROUP" --quiet
 	fi
 	if ! id $SMARTEMS_USER > /dev/null 2>&1 ; then
-	    adduser --system --home /usr/share/grafana --no-create-home \
+	    adduser --system --home /usr/share/smartems --no-create-home \
 		--ingroup "$SMARTEMS_GROUP" --disabled-password --shell /bin/false \
 		"$SMARTEMS_USER"
 	fi
 
-	# Set user permissions on /var/log/grafana, /var/lib/grafana
-	mkdir -p /var/log/grafana /var/lib/grafana
-	chown -R $SMARTEMS_USER:$SMARTEMS_GROUP /var/log/grafana /var/lib/grafana
-	chmod 755 /var/log/grafana /var/lib/grafana
+	# Set user permissions on /var/log/smartems, /var/lib/smartems
+	mkdir -p /var/log/smartems /var/lib/smartems
+	chown -R $SMARTEMS_USER:$SMARTEMS_GROUP /var/log/smartems /var/lib/smartems
+	chmod 755 /var/log/smartems /var/lib/smartems
 
   # copy user config files
   if [ ! -f $CONF_FILE ]; then
-    cp /usr/share/grafana/conf/sample.ini $CONF_FILE
-    cp /usr/share/grafana/conf/ldap.toml /etc/grafana/ldap.toml
+    cp /usr/share/smartems/conf/sample.ini $CONF_FILE
+    cp /usr/share/smartems/conf/ldap.toml /etc/smartems/ldap.toml
   fi
 
   if [ ! -d $PROVISIONING_CFG_DIR ]; then
     mkdir -p $PROVISIONING_CFG_DIR/dashboards $PROVISIONING_CFG_DIR/datasources
-    cp /usr/share/grafana/conf/provisioning/dashboards/sample.yaml $PROVISIONING_CFG_DIR/dashboards/sample.yaml
-    cp /usr/share/grafana/conf/provisioning/datasources/sample.yaml $PROVISIONING_CFG_DIR/datasources/sample.yaml
+    cp /usr/share/smartems/conf/provisioning/dashboards/sample.yaml $PROVISIONING_CFG_DIR/dashboards/sample.yaml
+    cp /usr/share/smartems/conf/provisioning/datasources/sample.yaml $PROVISIONING_CFG_DIR/datasources/sample.yaml
   fi
 
   if [ ! -d $PROVISIONING_CFG_DIR/notifiers ]; then
     mkdir -p $PROVISIONING_CFG_DIR/notifiers
-    cp /usr/share/grafana/conf/provisioning/notifiers/sample.yaml $PROVISIONING_CFG_DIR/notifiers/sample.yaml
+    cp /usr/share/smartems/conf/provisioning/notifiers/sample.yaml $PROVISIONING_CFG_DIR/notifiers/sample.yaml
   fi
 
 	# configuration files should not be modifiable by grafana user, as this can be a security issue
-	chown -Rh root:$SMARTEMS_GROUP /etc/grafana/*
-	chmod 755 /etc/grafana
-	find /etc/grafana -type f -exec chmod 640 {} ';'
-	find /etc/grafana -type d -exec chmod 755 {} ';'
+	chown -Rh root:$SMARTEMS_GROUP /etc/smartems/*
+	chmod 755 /etc/smartems
+	find /etc/smartems -type f -exec chmod 640 {} ';'
+	find /etc/smartems -type d -exec chmod 755 {} ';'
 
   # If $1=configure and $2 is set, this is an upgrade
   if [ "$2" != "" ]; then

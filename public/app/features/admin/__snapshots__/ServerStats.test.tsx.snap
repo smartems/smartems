@@ -171,7 +171,7 @@ exports[`ServerStats Should render table with stats 1`] = `
               </li>
               <li>
                 <a
-                  href="https://grafana.com/products/enterprise/?utm_source=grafana_footer"
+                  href="https://smartems.com/products/enterprise/?utm_source=grafana_footer"
                   rel="noopener"
                   target="_blank"
                 >
@@ -195,7 +195,7 @@ exports[`ServerStats Should render table with stats 1`] = `
               </li>
               <li>
                 <a
-                  href="https://grafana.com"
+                  href="https://smartems.com"
                   rel="noopener"
                   target="_blank"
                 >

@@ -122,12 +122,12 @@ build-docker-dev: ## Build Docker image for development (fast).
 	@echo "build development container"
 	@echo "\033[92mInfo:\033[0m the frontend code is expected to be built already."
 	$(GO) run build.go -goos linux -pkg-arch amd64 ${OPT} build pkg-archive latest
-	cp dist/grafana-latest.linux-x64.tar.gz packaging/docker
-	cd packaging/docker && docker build --tag grafana/grafana:dev .
+	cp dist/smartems-latest.linux-x64.tar.gz packaging/docker
+	cd packaging/docker && docker build --tag grafana/smartems:dev .
 
 build-docker-full: ## Build Docker image for development.
 	@echo "build docker container"
-	docker build --tag grafana/grafana:dev .
+	docker build --tag grafana/smartems:dev .
 
 ##@ Services
 

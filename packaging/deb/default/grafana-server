@@ -2,23 +2,23 @@ SMARTEMS_USER=grafana
 
 SMARTEMS_GROUP=grafana
 
-SMARTEMS_HOME=/usr/share/grafana
+SMARTEMS_HOME=/usr/share/smartems
 
-LOG_DIR=/var/log/grafana
+LOG_DIR=/var/log/smartems
 
-DATA_DIR=/var/lib/grafana
+DATA_DIR=/var/lib/smartems
 
 MAX_OPEN_FILES=10000
 
-CONF_DIR=/etc/grafana
+CONF_DIR=/etc/smartems
 
-CONF_FILE=/etc/grafana/grafana.ini
+CONF_FILE=/etc/smartems/smartems.ini
 
 RESTART_ON_UPGRADE=true
 
-PLUGINS_DIR=/var/lib/grafana/plugins
+PLUGINS_DIR=/var/lib/smartems/plugins
 
-PROVISIONING_CFG_DIR=/etc/grafana/provisioning
+PROVISIONING_CFG_DIR=/etc/smartems/provisioning
 
 # Only used on systemd systems
-PID_FILE_DIR=/var/run/grafana
+PID_FILE_DIR=/var/run/smartems

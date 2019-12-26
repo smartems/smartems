@@ -18,7 +18,7 @@
     "description": "Like Prometheus but for logs. OSS logging solution from Grafana Labs",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/loki_icon.svg",
@@ -27,11 +27,11 @@
     "links": [
       {
         "name": "Learn more",
-        "url": "https://grafana.com/loki"
+        "url": "https://smartems.com/loki"
       },
       {
         "name": "GitHub Project",
-        "url": "https://github.com/grafana/loki"
+        "url": "https://github.com/smartems/loki"
       }
     ]
   }

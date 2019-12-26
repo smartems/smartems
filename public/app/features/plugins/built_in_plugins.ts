@@ -9,7 +9,7 @@ const elasticsearchPlugin = async () =>
 const opentsdbPlugin = async () =>
   await import(/* webpackChunkName: "opentsdbPlugin" */ 'app/plugins/datasource/opentsdb/module');
 const grafanaPlugin = async () =>
-  await import(/* webpackChunkName: "grafanaPlugin" */ 'app/plugins/datasource/grafana/module');
+  await import(/* webpackChunkName: "grafanaPlugin" */ 'app/plugins/datasource/smartems/module');
 const influxdbPlugin = async () =>
   await import(/* webpackChunkName: "influxdbPlugin" */ 'app/plugins/datasource/influxdb/module');
 const lokiPlugin = async () => await import(/* webpackChunkName: "lokiPlugin" */ 'app/plugins/datasource/loki/module');
@@ -30,7 +30,7 @@ const inputDatasourcePlugin = async () =>
 const stackdriverPlugin = async () =>
   await import(/* webpackChunkName: "stackdriverPlugin" */ 'app/plugins/datasource/stackdriver/module');
 const azureMonitorPlugin = async () =>
-  await import(/* webpackChunkName: "azureMonitorPlugin" */ 'app/plugins/datasource/grafana-azure-monitor-datasource/module');
+  await import(/* webpackChunkName: "azureMonitorPlugin" */ 'app/plugins/datasource/smartems-azure-monitor-datasource/module');
 
 import * as textPanel from 'app/plugins/panel/text/module';
 import * as text2Panel from 'app/plugins/panel/text2/module';
@@ -59,7 +59,7 @@ const builtInPlugins: any = {
   'app/plugins/datasource/dashboard/module': dashboardDSPlugin,
   'app/plugins/datasource/elasticsearch/module': elasticsearchPlugin,
   'app/plugins/datasource/opentsdb/module': opentsdbPlugin,
-  'app/plugins/datasource/grafana/module': grafanaPlugin,
+  'app/plugins/datasource/smartems/module': grafanaPlugin,
   'app/plugins/datasource/influxdb/module': influxdbPlugin,
   'app/plugins/datasource/loki/module': lokiPlugin,
   'app/plugins/datasource/mixed/module': mixedPlugin,
@@ -70,7 +70,7 @@ const builtInPlugins: any = {
   'app/plugins/datasource/testdata/module': testDataDSPlugin,
   'app/plugins/datasource/input/module': inputDatasourcePlugin,
   'app/plugins/datasource/stackdriver/module': stackdriverPlugin,
-  'app/plugins/datasource/grafana-azure-monitor-datasource/module': azureMonitorPlugin,
+  'app/plugins/datasource/smartems-azure-monitor-datasource/module': azureMonitorPlugin,
 
   'app/plugins/panel/text/module': textPanel,
   'app/plugins/panel/text2/module': text2Panel,

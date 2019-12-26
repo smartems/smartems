@@ -8,14 +8,14 @@
     "description": "Open source logging & analytics database",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "keywords": ["elasticsearch"],
     "logos": {
       "small": "img/elasticsearch.svg",
       "large": "img/elasticsearch.svg"
     },
-    "links": [{ "name": "Learn more", "url": "https://grafana.com/docs/features/datasources/elasticsearch/" }]
+    "links": [{ "name": "Learn more", "url": "https://smartems.com/docs/features/datasources/elasticsearch/" }]
   },
 
   "alerting": true,

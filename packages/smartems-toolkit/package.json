@@ -15,7 +15,7 @@
     "url": "http://github.com/smartems/smartems.git"
   },
   "bin": {
-    "grafana-toolkit": "./bin/grafana-toolkit.js"
+    "grafana-toolkit": "./bin/smartems-toolkit.js"
   },
   "scripts": {
     "tslint": "tslint -c tslint.json --project tsconfig.json",

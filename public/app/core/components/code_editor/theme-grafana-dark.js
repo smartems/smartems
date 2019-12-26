@@ -1,6 +1,6 @@
 /* jshint ignore:start */
 
-ace.define("ace/theme/grafana-dark",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
+ace.define("ace/theme/smartems-dark",["require","exports","module","ace/lib/dom"], function(acequire, exports, module) {
   "use strict";
 
   exports.isDark = true;

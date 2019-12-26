@@ -31,7 +31,7 @@
 import coreModule from 'app/core/core_module';
 import config from 'app/core/config';
 
-const DEFAULT_THEME_DARK = 'ace/theme/grafana-dark';
+const DEFAULT_THEME_DARK = 'ace/theme/smartems-dark';
 const DEFAULT_THEME_LIGHT = 'ace/theme/textmate';
 const DEFAULT_MODE = 'text';
 const DEFAULT_MAX_LINES = 10;

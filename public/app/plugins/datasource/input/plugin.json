@@ -13,7 +13,7 @@
     "description": "Data source that supports manual table & CSV input",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/input.svg",

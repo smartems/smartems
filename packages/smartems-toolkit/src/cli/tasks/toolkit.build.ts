@@ -40,7 +40,7 @@ export const savePackage = useSpinner<{
 
 const preparePackage = async (pkg: any) => {
   pkg.bin = {
-    'grafana-toolkit': './bin/grafana-toolkit.dist.js',
+    'grafana-toolkit': './bin/smartems-toolkit.dist.js',
   };
 
   await savePackage({
@@ -53,7 +53,7 @@ const copyFiles = () => {
   const files = [
     'README.md',
     'CHANGELOG.md',
-    'bin/grafana-toolkit.dist.js',
+    'bin/smartems-toolkit.dist.js',
     'src/config/prettier.plugin.config.json',
     'src/config/prettier.plugin.rc.js',
     'src/config/tsconfig.plugin.json',

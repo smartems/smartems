@@ -54,7 +54,7 @@ conf/custom.ini
 /conf/ldap_dev.toml
 /conf/ldap_freeipa.toml
 profile.cov
-/grafana
+/smartems
 /local
 .notouch
 /Makefile.local

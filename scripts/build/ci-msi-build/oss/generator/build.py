@@ -7,8 +7,8 @@
 # download the zip, drop in to dist/enterprise-dist and do the same thing
 #
 # Expected paths and names
-# /tmp/dist/grafana-6.0.0-ca0bc2c5pre3.windows-amd64.zip
-# /tmp/enterprise-dist/grafana-enterprise-6.0.0-29b28127pre3.windows-amd64.zip
+# /tmp/dist/smartems-6.0.0-ca0bc2c5pre3.windows-amd64.zip
+# /tmp/enterprise-dist/smartems-enterprise-6.0.0-29b28127pre3.windows-amd64.zip
 #
 # Optionally (mainly for testing), pass arguments to pull a specific build
 #   -b,--build 5.4.3
@@ -18,7 +18,7 @@
 # When using the build option, the zip file is created in either dist or
 # dist-enterprise according to the -e flag toggle.
 #
-# https://s3-us-west-2.amazonaws.com/grafana-releases/release/
+# https://s3-us-west-2.amazonaws.com/smartems-releases/release/
 #   grafana-{}.windows-amd64.zip
 #
 # https://dl.grafana.com/enterprise/release/
@@ -79,21 +79,21 @@ grafana_oss = {
 def remove_long_paths():
     print('Removing long pathed files - these are not needed to run grafana')
     long_files = [
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/app_insights/app_insights_querystring_builder.test.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/app_insights/app_insights_querystring_builder.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_log_analytics/azure_log_analytics_datasource.test.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_log_analytics/azure_log_analytics_datasource.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/azure_monitor_datasource.test.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/azure_monitor_datasource.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/azure_monitor_filter_builder.test.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/azure_monitor_filter_builder.ts',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/AnalyticsConfig.test.tsx',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/AzureCredentialsForm.test.tsx',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/InsightsConfig.test.tsx',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/__snapshots__/AnalyticsConfig.test.tsx.snap',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/__snapshots__/AzureCredentialsForm.test.tsx.snap',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/__snapshots__/InsightsConfig.test.tsx.snap',
-        '/tmp/a/grafana/public/app/plugins/datasource/grafana-azure-monitor-datasource/components/__snapshots__/ConfigEditor.test.tsx.snap'
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/app_insights/app_insights_querystring_builder.test.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/app_insights/app_insights_querystring_builder.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_log_analytics/azure_log_analytics_datasource.test.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_log_analytics/azure_log_analytics_datasource.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_monitor/azure_monitor_datasource.test.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_monitor/azure_monitor_datasource.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_monitor/azure_monitor_filter_builder.test.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_monitor/azure_monitor_filter_builder.ts',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/AnalyticsConfig.test.tsx',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/AzureCredentialsForm.test.tsx',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/InsightsConfig.test.tsx',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/__snapshots__/AnalyticsConfig.test.tsx.snap',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/__snapshots__/AzureCredentialsForm.test.tsx.snap',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/__snapshots__/InsightsConfig.test.tsx.snap',
+        '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/components/__snapshots__/ConfigEditor.test.tsx.snap'
     ]
     for file in long_files:
         if os.path.isfile(file):
@@ -117,7 +117,7 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     # than light.exe can parse (windows issue)
     # Once extracted, rename it to grafana without the version included
     zip_file_path = '{}/{}'.format(target_dir_name, extracted_name)
-    rename_to = '{}/grafana'.format(target_dir_name)
+    rename_to = '{}/smartems'.format(target_dir_name)
     print('Renaming extracted path {} to {}'.format(zip_file_path, rename_to))
     os.system('ls -al /tmp/a')
     print('Before:')
@@ -167,8 +167,8 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     extract_zip(nssm_file, target_dir_name + '/nssm')
     print('HARVEST COMPLETE')
     os.chdir(src_dir)
-    generate_firewall_wxs(env, PRODUCT_VERSION, '/tmp/scratch/grafana-firewall.wxs', target_dir_name)
-    generate_service_wxs(env, PRODUCT_VERSION, '/tmp/scratch/grafana-service.wxs', target_dir_name, NSSM_VERSION)
+    generate_firewall_wxs(env, PRODUCT_VERSION, '/tmp/scratch/smartems-firewall.wxs', target_dir_name)
+    generate_service_wxs(env, PRODUCT_VERSION, '/tmp/scratch/smartems-service.wxs', target_dir_name, NSSM_VERSION)
     generate_product_wxs(env, config, features, '/tmp/scratch/product.wxs', target_dir_name)
     print('GENERATE COMPLETE')
     copy_static_files(target_dir_name)
@@ -321,15 +321,15 @@ if __name__ == '__main__':
         print('Detected Hash: {}'.format(grafana_hash))
     print('Enterprise: {}'.format(is_enterprise))
     if is_enterprise:
-        zip_file = '{}/grafana-enterprise-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
+        zip_file = '{}/smartems-enterprise-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
         extracted_name = 'grafana-enterprise-{}'.format(grafana_version)
     else:
         # the file can have a build hash
         if grafana_hash:
-            zip_file = '{}/grafana-{}-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version, grafana_hash)
+            zip_file = '{}/smartems-{}-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version, grafana_hash)
             extracted_name = 'grafana-{}-{}'.format(grafana_version, grafana_hash)
         else:
-            zip_file = '{}/grafana-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
+            zip_file = '{}/smartems-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
             extracted_name = 'grafana-{}'.format(grafana_version)
     print('ZipFile: {}'.format(zip_file))
     # check if file downloaded

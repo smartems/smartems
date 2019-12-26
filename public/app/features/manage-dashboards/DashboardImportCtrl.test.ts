@@ -59,7 +59,7 @@ describe('DashboardImportCtrl', () => {
 
   describe('when specifying grafana.com url', () => {
     beforeEach(() => {
-      ctx.ctrl.gnetUrl = 'http://grafana.com/dashboards/123';
+      ctx.ctrl.gnetUrl = 'http://smartems.com/dashboards/123';
       // setup api mock
       backendSrv.get = jest.fn(() => {
         return Promise.resolve({

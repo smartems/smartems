@@ -9,7 +9,7 @@
     "description": "Shows list of alerts and their current status",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/icn-singlestat-panel.svg",

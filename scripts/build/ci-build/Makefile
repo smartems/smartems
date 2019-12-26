@@ -37,11 +37,11 @@ run-with-local-source-copy:
 		--name grafana-build \
 		${TAG}:${VERSION} \
 		bash -c "/tmp/bootstrap.sh; tail -f /dev/null"
-	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/grafana/
+	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/smartems/
 	docker exec -ti grafana-build bash
 
 update-source:
-	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/grafana/	
+	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/smartems/	
 
 attach:
 	docker exec -ti grafana-build bash

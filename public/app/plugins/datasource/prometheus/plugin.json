@@ -18,7 +18,7 @@
     {
       "type": "dashboard",
       "name": "Grafana Stats",
-      "path": "dashboards/grafana_stats.json"
+      "path": "dashboards/smartems_stats.json"
     }
   ],
   "metrics": true,
@@ -31,7 +31,7 @@
     "description": "Open source time series database & alerting",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/prometheus_logo.svg",

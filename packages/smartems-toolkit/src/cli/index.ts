@@ -43,7 +43,7 @@ export const run = (includeInternalScripts = false) => {
     program
       .command('package:build')
       .option('-s, --scope <packages>', 'packages=[data|runtime|ui|toolkit]')
-      .description('Builds @grafana/* package to packages/grafana-*/dist')
+      .description('Builds @grafana/* package to packages/smartems-*/dist')
       .action(async cmd => {
         await execTask(buildPackageTask)({
           scope: cmd.scope,

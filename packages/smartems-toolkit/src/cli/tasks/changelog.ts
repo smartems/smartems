@@ -68,7 +68,7 @@ const changelogTaskRunner: TaskRunner<ChangelogOptions> = useSpinner<ChangelogOp
 
     const issues = res.data;
     const toolkitIssues = issues.filter((item: any) =>
-      item.labels.find((label: any) => label.name === 'area/grafana/toolkit')
+      item.labels.find((label: any) => label.name === 'area/smartems/toolkit')
     );
 
     let markdown = '';

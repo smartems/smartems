@@ -13,10 +13,10 @@
 
   <link rel="preload" href="public/fonts/roboto/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2" as="font" crossorigin />
   <link rel="icon" type="image/png" href="public/img/fav32.png">
-  <link rel="mask-icon" href="public/img/grafana_mask_icon.svg" color="#F05A28">
+  <link rel="mask-icon" href="public/img/smartems_mask_icon.svg" color="#F05A28">
   <link rel="apple-touch-icon" sizes="180x180" href="public/img/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="public/build/grafana.[[ .Theme ]].<%= webpack.hash %>.css">
+  <link rel="stylesheet" href="public/build/smartems.[[ .Theme ]].<%= webpack.hash %>.css">
 
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
@@ -205,7 +205,7 @@
                 </a>
               </li>
               <li>
-                <a href="https://grafana.com/services/support" target="_blank">
+                <a href="https://smartems.com/services/support" target="_blank">
                   <i class="fa fa-support"></i>
                   Support Plans
                 </a>
@@ -217,12 +217,12 @@
                 </a>
               </li>
               <li>
-                <a href="https://grafana.com" target="_blank">[[.AppName]]</a>
+                <a href="https://smartems.com" target="_blank">[[.AppName]]</a>
                 <span>v[[.BuildVersion]] (commit: [[.BuildCommit]])</span>
               </li>
               [[if .NewGrafanaVersionExists]]
               <li>
-                <a href="https://grafana.com/get" target="_blank" bs-tooltip="'[[.NewGrafanaVersion]]'">
+                <a href="https://smartems.com/get" target="_blank" bs-tooltip="'[[.NewGrafanaVersion]]'">
                   New version available!
                 </a>
               </li>
@@ -232,7 +232,7 @@
         </footer>
       </div>
     </div>
-  </grafana-app>
+  </smartems-app>
 
   <script>
     window.grafanaBootData = {

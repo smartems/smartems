@@ -113,7 +113,7 @@ export const ciBuildPluginDocsTask = new Task<PluginCIOptions>('Build Plugin Doc
  *  Take everything from `~/ci/job/{any}/dist` and
  *  1. merge it into: `~/ci/dist`
  *  2. zip it into packages in `~/ci/packages`
- *  3. prepare grafana environment in: `~/ci/grafana-test-env`
+ *  3. prepare grafana environment in: `~/ci/smartems-test-env`
  */
 const packagePluginRunner: TaskRunner<PluginCIOptions> = async () => {
   const start = Date.now();
@@ -343,7 +343,7 @@ const pluginReportRunner: TaskRunner<PluginCIOptions> = async ({ upload }) => {
     console.log('Enter a SMARTEMS_API_KEY to upload the plugin report');
     return;
   }
-  const url = `https://grafana.com/api/plugins/${report.plugin.id}/ci`;
+  const url = `https://smartems.com/api/plugins/${report.plugin.id}/ci`;
 
   console.log('Sending report to:', url);
   const axios = require('axios');

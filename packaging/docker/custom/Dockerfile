@@ -1,6 +1,6 @@
 ARG SMARTEMS_VERSION="latest"
 
-FROM grafana/grafana:${SMARTEMS_VERSION}
+FROM grafana/smartems:${SMARTEMS_VERSION}
 
 USER root
 
@@ -13,7 +13,7 @@ RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     apk --no-cache  upgrade && \
     apk add --no-cache udev ttf-opensans chromium && \
     rm -rf /tmp/* && \
-    rm -rf /usr/share/grafana/tools/phantomjs; \
+    rm -rf /usr/share/smartems/tools/phantomjs; \
 fi
 
 USER grafana

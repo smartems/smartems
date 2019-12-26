@@ -19,7 +19,7 @@
     "description": "Open source time series database",
     "author": {
       "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "url": "https://smartems.com"
     },
     "logos": {
       "small": "img/graphite_logo.png",
@@ -29,7 +29,7 @@
       { "name": "Graphite", "url": "https://graphiteapp.org/" },
       {
         "name": "Graphite 1.1 Release",
-        "url": "https://grafana.com/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/"
+        "url": "https://smartems.com/blog/2018/01/11/graphite-1.1-teaching-an-old-dog-new-tricks/"
       }
     ]
   }

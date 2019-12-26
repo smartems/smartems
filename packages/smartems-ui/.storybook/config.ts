@@ -12,9 +12,9 @@ import '../../../public/vendor/flot/jquery.flot.gauge';
 import { withTheme } from '../src/utils/storybook/withTheme';
 import { withPaddedStory } from '../src/utils/storybook/withPaddedStory';
 // @ts-ignore
-import lightTheme from '../../../public/sass/grafana.light.scss';
+import lightTheme from '../../../public/sass/smartems.light.scss';
 // @ts-ignore
-import darkTheme from '../../../public/sass/grafana.dark.scss';
+import darkTheme from '../../../public/sass/smartems.dark.scss';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 

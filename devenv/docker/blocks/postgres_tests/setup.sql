@@ -1,3 +1,3 @@
-CREATE DATABASE grafanadstest;
-REVOKE CONNECT ON DATABASE grafanadstest FROM PUBLIC;
-GRANT CONNECT ON DATABASE grafanadstest TO grafanatest;
+CREATE DATABASE smartemsdstest;
+REVOKE CONNECT ON DATABASE smartemsdstest FROM PUBLIC;
+GRANT CONNECT ON DATABASE smartemsdstest TO smartemstest;

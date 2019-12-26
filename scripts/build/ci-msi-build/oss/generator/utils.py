@@ -30,8 +30,8 @@ def get_zip(version, target_filename):
     exists = os.path.isfile(target_filename)
     if exists:
         return target_filename
-    url = 'https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-{}.windows-amd64.zip'.format(version)
-    #url = 'https://dl.grafana.com/enterprise/release/grafana-enterprise-{}.windows-amd64.zip'.format(version)
+    url = 'https://s3-us-west-2.amazonaws.com/smartems-releases/release/smartems-{}.windows-amd64.zip'.format(version)
+    #url = 'https://dl.grafana.com/enterprise/release/smartems-enterprise-{}.windows-amd64.zip'.format(version)
     filename = wget.download(url, out=target_filename, bar=wget.bar_thermometer)
     return filename
 
@@ -46,7 +46,7 @@ def detect_version(dist_path):
     print("Detecting Version...")
     # grafana-6.0.0-ca0bc2c5pre3.windows-amd64.zip
     # get files in directory matching pattern
-    fileList = glob.glob(dist_path + '/grafana*.windows-amd64.zip')
+    fileList = glob.glob(dist_path + '/smartems*.windows-amd64.zip')
     print(fileList)
     if len(fileList) == 0:
         print('Skipping detection, no matches')
@@ -64,7 +64,7 @@ def detect_version(dist_path):
     #if os.path.isdir(dist_path + 'enterprise-dist'):
     #    # grafana-enterprise-6.0.0-29b28127pre3.windows-amd64.zip
     #    # get files in directory matching pattern
-    #    fileList = glob.glob(dist_path + '/enterprise-dist/grafana*.windows-amd64.zip')
+    #    fileList = glob.glob(dist_path + '/enterprise-dist/smartems*.windows-amd64.zip')
     #    firstFile = fileList[0]
     #    p1 = re.search(r'grafana-enterprise-(\d\.\d\.\d)\.windows-amd64.zip$', firstFile)
     #    p2 = re.search(r'grafana-enterprise-(\d\.\d\.\d)-(.*)\.windows-amd64.zip$', firstFile)
@@ -87,7 +87,7 @@ def generate_product_wxs(env, config, features, scratch_file, target_dir):
     shutil.copy2(scratch_file, target_dir)
 
 def generate_service_wxs(env, grafana_version, scratch_file, target_dir, nssm_version='2.24'):
-    template = env.get_template('common/grafana-service.wxs.j2')
+    template = env.get_template('common/smartems-service.wxs.j2')
     output = template.render(grafana_version=grafana_version, nssm_version=nssm_version)
     fh = open(scratch_file, 'w')
     fh.write(output)
@@ -96,7 +96,7 @@ def generate_service_wxs(env, grafana_version, scratch_file, target_dir, nssm_ve
 
 def generate_firewall_wxs(env, grafana_version, scratch_file, target_dir):
     os.system("ls -al templates")
-    template = env.get_template('common/grafana-firewall.wxs.j2')
+    template = env.get_template('common/smartems-firewall.wxs.j2')
     output = template.render(grafana_version=grafana_version)
     fh = open(scratch_file, 'w')
     fh.write(output)

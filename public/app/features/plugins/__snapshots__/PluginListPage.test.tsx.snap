@@ -20,7 +20,7 @@ exports[`Render should render component 1`] = `
       layoutMode="grid"
       linkButton={
         Object {
-          "href": "https://grafana.com/plugins?utm_source=grafana_plugin_list",
+          "href": "https://smartems.com/plugins?utm_source=grafana_plugin_list",
           "title": "Find more plugins on Grafana.com",
         }
       }
@@ -52,7 +52,7 @@ exports[`Render should render list 1`] = `
       layoutMode="grid"
       linkButton={
         Object {
-          "href": "https://grafana.com/plugins?utm_source=grafana_plugin_list",
+          "href": "https://smartems.com/plugins?utm_source=grafana_plugin_list",
           "title": "Find more plugins on Grafana.com",
         }
       }

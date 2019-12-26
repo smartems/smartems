@@ -51,13 +51,13 @@ LABEL maintainer="Grafana team <hello@grafana.com>"
 ARG GF_UID="472"
 ARG GF_GID="472"
 
-ENV PATH="/usr/share/grafana/bin:$PATH" \
-    GF_PATHS_CONFIG="/etc/grafana/grafana.ini" \
-    GF_PATHS_DATA="/var/lib/grafana" \
-    GF_PATHS_HOME="/usr/share/grafana" \
-    GF_PATHS_LOGS="/var/log/grafana" \
-    GF_PATHS_PLUGINS="/var/lib/grafana/plugins" \
-    GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
+ENV PATH="/usr/share/smartems/bin:$PATH" \
+    GF_PATHS_CONFIG="/etc/smartems/smartems.ini" \
+    GF_PATHS_DATA="/var/lib/smartems" \
+    GF_PATHS_HOME="/usr/share/smartems" \
+    GF_PATHS_LOGS="/var/log/smartems" \
+    GF_PATHS_PLUGINS="/var/lib/smartems/plugins" \
+    GF_PATHS_PROVISIONING="/etc/smartems/provisioning"
 
 WORKDIR $GF_PATHS_HOME
 
@@ -76,7 +76,7 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
              "$GF_PATHS_PLUGINS" \
              "$GF_PATHS_DATA" && \
     cp "$GF_PATHS_HOME/conf/sample.ini" "$GF_PATHS_CONFIG" && \
-    cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/grafana/ldap.toml && \
+    cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/smartems/ldap.toml && \
     chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
     chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
 

@@ -9,8 +9,8 @@ jest.mock('app/core/config', () => {
 describe('locationUtil', () => {
   describe('With /subUrl as appSubUrl', () => {
     it('/subUrl should be stripped', () => {
-      const urlWithoutMaster = locationUtil.stripBaseFromUrl('/subUrl/grafana/');
-      expect(urlWithoutMaster).toBe('/grafana/');
+      const urlWithoutMaster = locationUtil.stripBaseFromUrl('/subUrl/smartems/');
+      expect(urlWithoutMaster).toBe('/smartems/');
     });
   });
 });

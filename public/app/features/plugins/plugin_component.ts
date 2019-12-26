@@ -99,7 +99,7 @@ function pluginDirectiveLoader(
 
       PanelCtrl.templatePromise = getTemplate(PanelCtrl).then((template: any) => {
         PanelCtrl.templateUrl = null;
-        PanelCtrl.template = `<grafana-panel ctrl="ctrl" class="panel-height-helper">${template}</grafana-panel>`;
+        PanelCtrl.template = `<grafana-panel ctrl="ctrl" class="panel-height-helper">${template}</smartems-panel>`;
         return componentInfo;
       });
 

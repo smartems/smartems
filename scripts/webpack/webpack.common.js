@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../../public/build'),
     filename: '[name].[hash].js',
-    // Keep publicPath relative for host.com/grafana/ deployments
+    // Keep publicPath relative for host.com/smartems/ deployments
     publicPath: 'public/build/',
   },
   resolve: {
