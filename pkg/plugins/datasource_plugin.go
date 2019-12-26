@@ -13,8 +13,8 @@ import (
 	"github.com/smartems/smartems/pkg/setting"
 	"github.com/smartems/smartems/pkg/util/errutil"
 
-	datasourceV1 "github.com/grafana/grafana-plugin-model/go/datasource"
-	sdk "github.com/grafana/grafana-plugin-sdk-go/datasource"
+	datasourceV1 "github.com/smartems/smartems-plugin-model/go/datasource"
+	sdk "github.com/smartems/smartems-plugin-sdk-go/datasource"
 	"github.com/smartems/smartems/pkg/infra/log"
 	"github.com/smartems/smartems/pkg/models"
 	"github.com/smartems/smartems/pkg/plugins/datasource/wrapper"

@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	pluginModel "github.com/grafana/grafana-plugin-model/go/renderer"
+	pluginModel "github.com/smartems/smartems-plugin-model/go/renderer"
 	"github.com/smartems/smartems/pkg/infra/log"
 	"github.com/smartems/smartems/pkg/middleware"
 	"github.com/smartems/smartems/pkg/models"

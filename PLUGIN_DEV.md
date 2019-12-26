@@ -17,7 +17,7 @@ for built-in plugins and everything internal. External plugins still use systemj
 set of smartEMS components they can import. Plugins can depend on libs like lodash & moment and internal components 
 like before using the same import paths. However since everything in smartEMS is no longer accessible, a few plugins could encounter issues when importing a smartEMS dependency. 
 
-[List of exposed components plugins can import/require](https://github.com/grafana/grafana/blob/master/public/app/features/plugins/plugin_loader.ts#L48)
+[List of exposed components plugins can import/require](https://github.com/smartems/smartems/blob/master/public/app/features/plugins/plugin_loader.ts#L48)
 
 If you think we missed exposing a crucial lib or smartEMS component let us know by opening an issue.  
 
@@ -30,4 +30,4 @@ upgrade to new `<color-picker color="ctrl.color" onChange="ctrl.onSparklineColor
 
 ### DashboardSrv.ts
 
-If you utilize [DashboardSrv](https://github.com/grafana/grafana/commit/8574dca081002f36e482b572517d8f05fd44453f#diff-1ab99561f9f6a10e1fafcddc39bc1d65) in your plugin code, `dash` was renamed to `dashboard`.
+If you utilize [DashboardSrv](https://github.com/smartems/smartems/commit/8574dca081002f36e482b572517d8f05fd44453f#diff-1ab99561f9f6a10e1fafcddc39bc1d65) in your plugin code, `dash` was renamed to `dashboard`.

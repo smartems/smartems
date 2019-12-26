@@ -12,7 +12,7 @@ weight = -16
 
 # What's New in smartEMS v6.5
 
-For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+For all details please read the full [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGELOG.md)
 
 ## Highlights
 
@@ -134,4 +134,4 @@ See [upgrade notes](/installation/upgrading/#upgrading-to-v6-5).
 
 ## Changelog
 
-Checkout the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file for a complete list of new features, changes, and bug fixes.
+Checkout the [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGELOG.md) file for a complete list of new features, changes, and bug fixes.

@@ -3,7 +3,7 @@ package wrapper
 import (
 	"testing"
 
-	"github.com/grafana/grafana-plugin-model/go/datasource"
+	"github.com/smartems/smartems-plugin-model/go/datasource"
 	"github.com/smartems/smartems/pkg/infra/log"
 	"github.com/smartems/smartems/pkg/tsdb"
 )

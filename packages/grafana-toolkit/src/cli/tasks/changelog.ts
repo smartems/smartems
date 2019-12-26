@@ -81,7 +81,7 @@ const changelogTaskRunner: TaskRunner<ChangelogOptions> = useSpinner<ChangelogOp
 );
 
 function getMarkdownLineForIssue(item: any) {
-  const githubGrafanaUrl = 'https://github.com/grafana/grafana';
+  const githubGrafanaUrl = 'https://github.com/smartems/smartems';
   let markdown = '';
   const title = item.title.replace(/^([^:]*)/, (_match: any, g1: any) => {
     return `**${g1}**`;

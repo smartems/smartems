@@ -79,5 +79,5 @@ smartEMS v5.4 adds support for customizing home dashboard, timezone and theme fo
 
 ## Changelog
 
-Checkout the [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md) file for a complete list
+Checkout the [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGELOG.md) file for a complete list
 of new features, changes, and bug fixes.

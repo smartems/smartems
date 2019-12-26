@@ -1,7 +1,7 @@
 package datasource
 
 import (
-	"github.com/grafana/grafana-plugin-sdk-go/common"
+	"github.com/smartems/smartems-plugin-sdk-go/common"
 	plugin "github.com/hashicorp/go-plugin"
 )
 

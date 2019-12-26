@@ -463,7 +463,7 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 * [Gogs](http://try.gogits.org) - [github.com/gogits/gogs](http://github.com/gogits/gogs)
 
-* [grafana](https://grafana.com/) - [github.com/grafana/grafana](http://github.com/grafana/grafana)
+* [grafana](https://grafana.com/) - [github.com/smartems/smartems](http://github.com/smartems/smartems)
 
 * [github.com/m3ng9i/qreader](https://github.com/m3ng9i/qreader)
 

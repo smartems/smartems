@@ -95,7 +95,7 @@ This command creates a production-ready build of your plugin.
 ## FAQ
 
 ### Which version of grafana-toolkit should I use?
-See [smartEMS packages versioning guide](https://github.com/grafana/grafana/blob/master/packages/README.md#versioning).
+See [smartEMS packages versioning guide](https://github.com/smartems/smartems/blob/master/packages/README.md#versioning).
 
 ### What tools does grafana-toolkit use?
 grafana-toolkit comes with Typescript, TSLint, Prettier, Jest, CSS and SASS support.
@@ -180,7 +180,7 @@ const MyComponent = () => {
   return <div className={css`background: red;`} />
 }
 ```
-To learn more about using smartEMS theme please refer to [Theme usage guide](https://github.com/grafana/grafana/blob/master/style_guides/themes.md#react)
+To learn more about using smartEMS theme please refer to [Theme usage guide](https://github.com/smartems/smartems/blob/master/style_guides/themes.md#react)
 
 > We do not support Emotion's `css` prop. Use className instead!
 
@@ -199,7 +199,7 @@ Yes! However, it's important that your `tsconfig.json` file contains the followi
 ```
 
 ### Can I adjust TSLint configuration to suit my needs?
-grafana-toolkit comes with [default config for TSLint](https://github.com/grafana/grafana/blob/master/packages/grafana-toolkit/src/config/tslint.plugin.json). For now, there is now way to customise TSLint config.
+grafana-toolkit comes with [default config for TSLint](https://github.com/smartems/smartems/blob/master/packages/grafana-toolkit/src/config/tslint.plugin.json). For now, there is now way to customise TSLint config.
 
 ### How is Prettier integrated into grafana-toolkit workflow?
 When building plugin with [`grafana-toolkit plugin:build`](#building-plugin) task, grafana-toolkit performs Prettier check. If the check detects any Prettier issues, the build will not pass. To avoid such situation we suggest developing plugin with [`grafana-toolkit plugin:dev --watch`](#developing-plugin) task running. This task tries to fix Prettier issues automatically.
@@ -222,7 +222,7 @@ You can contribute to grafana-toolkit in the by helping develop it or by debuggi
 ### Develop grafana-toolkit
 Typically plugins should be developed using the `@grafana/toolkit` installed from npm. However, when working on the toolkit, you might want to use the local version. Follow the steps below to develop with a local version:
 
-1. Clone [smartEMS repository](https://github.com/grafana/grafana).
+1. Clone [smartEMS repository](https://github.com/smartems/smartems).
 2. Navigate to the directory you have cloned smartEMS repo to and then run `yarn install --pure-lockfile`.
 3. Navigate to `<SMARTEMS_DIR>/packages/grafana-toolkit` and then run `yarn link`.
 2. Navigate to the directory where your plugin code is and then run `npx grafana-toolkit plugin:dev --yarnlink`. This adds all dependencies required by grafana-toolkit to your project, as well as link your local grafana-toolkit version to be used by the plugin.

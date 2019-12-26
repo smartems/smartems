@@ -21,7 +21,7 @@ CCWIN64=x86_64-w64-mingw32-gcc
 CCX64=/tmp/x86_64-centos6-linux-gnu/bin/x86_64-centos6-linux-gnu-gcc
 CCX64_MUSL=/tmp/x86_64-linux-musl-cross/bin/x86_64-linux-musl-gcc
 
-cd /go/src/github.com/grafana/grafana
+cd /go/src/github.com/smartems/smartems
 echo "current dir: $(pwd)"
 
 if [ "$CIRCLE_TAG" != "" ]; then

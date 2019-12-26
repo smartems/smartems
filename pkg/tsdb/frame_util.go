@@ -3,7 +3,7 @@ package tsdb
 import (
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/dataframe"
+	"github.com/smartems/smartems-plugin-sdk-go/dataframe"
 )
 
 // SeriesToFrame converts a TimeSeries to a sdk Frame

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/grafana/grafana-plugin-model/go/datasource"
+	"github.com/smartems/smartems-plugin-model/go/datasource"
 	"github.com/smartems/smartems/pkg/components/null"
 	"github.com/smartems/smartems/pkg/components/simplejson"
 	"github.com/smartems/smartems/pkg/infra/log"

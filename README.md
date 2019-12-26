@@ -4,7 +4,7 @@ The open-source platform for monitoring and observability.
 
 [![License](https://img.shields.io/github/license/grafana/grafana)](LICENSE)
 [![Circle CI](https://img.shields.io/circleci/build/gh/grafana/grafana)](https://circleci.com/gh/grafana/grafana)
-[![Go Report Card](https://goreportcard.com/badge/github.com/grafana/grafana)](https://goreportcard.com/report/github.com/grafana/grafana)
+[![Go Report Card](https://goreportcard.com/badge/github.com/smartems/smartems)](https://goreportcard.com/report/github.com/smartems/smartems)
 
 smartEMS allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture:
 
@@ -32,7 +32,7 @@ If you're interested in contributing to the smartEMS project:
 
 - Start by reading the [Contributing guide](/CONTRIBUTING.md).
 - Learn how to set up your local environment, in our [Developer guide](/contribute/developer-guide.md).
-- Explore our [beginner-friendly issues](https://github.com/grafana/grafana/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22).
+- Explore our [beginner-friendly issues](https://github.com/smartems/smartems/issues?q=is%3Aopen+is%3Aissue+label%3A%22beginner+friendly%22).
 
 ## Get involved
 
@@ -43,4 +43,4 @@ If you're interested in contributing to the smartEMS project:
 
 ## License
 
-smartEMS is distributed under the [Apache 2.0 License](https://github.com/grafana/grafana/blob/master/LICENSE).
+smartEMS is distributed under the [Apache 2.0 License](https://github.com/smartems/smartems/blob/master/LICENSE).

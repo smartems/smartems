@@ -12,7 +12,7 @@ weight = -14
 
 # What's New in smartEMS v6.3
 
-For all details please read the full [CHANGELOG.md](https://github.com/grafana/grafana/blob/master/CHANGELOG.md)
+For all details please read the full [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGELOG.md)
 
 ## Highlights
 

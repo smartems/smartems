@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/grafana/grafana.git"
+    "url": "http://github.com/smartems/smartems.git"
   },
   "main": "src/index.ts",
   "scripts": {

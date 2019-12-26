@@ -20,7 +20,7 @@ We use the standard following linters:
 
 In addition to the standard linters, we also use:
 
-- [revive](https://revive.run/) with a [custom config](https://github.com/grafana/grafana/blob/master/conf/revive.toml)
+- [revive](https://revive.run/) with a [custom config](https://github.com/smartems/smartems/blob/master/conf/revive.toml)
 - [GolangCI-Lint](https://github.com/golangci/golangci-lint)
 - [gosec](https://github.com/securego/gosec)
 
@@ -42,4 +42,4 @@ In the `sqlstore` package we do database operations in tests and while some migh
 
 ## General guidelines
 
-- Avoid using import aliases, e.g. `import m "github.com/grafana/grafana/pkg/models"`.
+- Avoid using import aliases, e.g. `import m "github.com/smartems/smartems/pkg/models"`.

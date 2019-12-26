@@ -31,7 +31,7 @@ If you have not cloned the smartEMS repository already then:
 
 ```
 cd ..
-git clone https://github.com/grafana/grafana
+git clone https://github.com/smartems/smartems
 ```
 
 Switch your working directory to the directory this file
@@ -61,7 +61,7 @@ Open [localhost:3004](http://localhost:3004) to view the docs.
 
 ### Images and Content
 
-All markdown files are part of [this repository](https://github.com/grafana/grafana). However, all images are added to the [website repository](https://github.com/grafana/website). Therefore, the process of adding images is not as straightforward. These are the steps:
+All markdown files are part of [this repository](https://github.com/smartems/smartems). However, all images are added to the [website repository](https://github.com/grafana/website). Therefore, the process of adding images is not as straightforward. These are the steps:
 
 1. Ensure you create a feature branch within the [website repository](https://github.com/grafana/website) to make the change. This branch needs to be based on the `old-docs` branch.
 1. Ensure the image(s) are compressed and optimised e.g. Using [tinypng](https://tinypng.com/).

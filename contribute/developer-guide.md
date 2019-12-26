@@ -31,8 +31,8 @@ npm install -g yarn
 We recommend using Go to download the source code for the smartEMS project:
 
 1. Add `export GOPATH=$HOME/go/` to the bottom of your `$HOME/.bash_profile`.
-1. Open a terminal and run `go get github.com/grafana/grafana` in your terminal. This command downloads, and installs smartEMS to your `$GOPATH`.
-1. Open `$GOPATH/src/github.com/grafana/grafana` in your favorite code editor.
+1. Open a terminal and run `go get github.com/smartems/smartems` in your terminal. This command downloads, and installs smartEMS to your `$GOPATH`.
+1. Open `$GOPATH/src/github.com/smartems/smartems` in your favorite code editor.
 
 ## Build smartEMS
 

@@ -6,7 +6,7 @@ import (
 	"path"
 	"time"
 
-	pluginModel "github.com/grafana/grafana-plugin-model/go/renderer"
+	pluginModel "github.com/smartems/smartems-plugin-model/go/renderer"
 	"github.com/smartems/smartems/pkg/plugins"
 	"github.com/smartems/smartems/pkg/plugins/backendplugin"
 )

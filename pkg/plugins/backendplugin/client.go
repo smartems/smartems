@@ -5,11 +5,11 @@ import (
 
 	"github.com/smartems/smartems/pkg/infra/log"
 
-	datasourceV1 "github.com/grafana/grafana-plugin-model/go/datasource"
-	rendererV1 "github.com/grafana/grafana-plugin-model/go/renderer"
-	sdk "github.com/grafana/grafana-plugin-sdk-go/common"
-	datasourceV2 "github.com/grafana/grafana-plugin-sdk-go/datasource"
-	transformV2 "github.com/grafana/grafana-plugin-sdk-go/transform"
+	datasourceV1 "github.com/smartems/smartems-plugin-model/go/datasource"
+	rendererV1 "github.com/smartems/smartems-plugin-model/go/renderer"
+	sdk "github.com/smartems/smartems-plugin-sdk-go/common"
+	datasourceV2 "github.com/smartems/smartems-plugin-sdk-go/datasource"
+	transformV2 "github.com/smartems/smartems-plugin-sdk-go/transform"
 	"github.com/hashicorp/go-plugin"
 )
 

@@ -15,7 +15,7 @@ To start building a service:
 - Create a new Go package `mysvc` in the [pkg/services](/pkg/services) directory.
 - Create a `service.go` file inside your new directory.
 
-All services need to implement the [Service](https://godoc.org/github.com/grafana/grafana/pkg/registry#Service) interface:
+All services need to implement the [Service](https://godoc.org/github.com/smartems/smartems/pkg/registry#Service) interface:
 
 ```go
 type MyService struct {
@@ -43,7 +43,7 @@ func init() {
 `init` functions are only run whenever a package is imported, so we also need to import the package in the application. In the `server.go` file under `pkg/cmd/grafana-server`, import the package we just created:
 
 ```go
-import _ "github.com/grafana/grafana/pkg/services/mysvc"
+import _ "github.com/smartems/smartems/pkg/services/mysvc"
 ```
 
 ## Dependencies

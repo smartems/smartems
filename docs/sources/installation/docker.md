@@ -105,7 +105,7 @@ docker run -d \
 
 ## Building a custom smartEMS image
 
-In the [smartEMS GitHub repository](https://github.com/grafana/grafana/tree/master/packaging/docker) there is a folder called `custom/` which two includes Dockerfiles, `Dockerfile` and `ubuntu.Dockerfile`, that can be used to build a custom smartEMS image.
+In the [smartEMS GitHub repository](https://github.com/smartems/smartems/tree/master/packaging/docker) there is a folder called `custom/` which two includes Dockerfiles, `Dockerfile` and `ubuntu.Dockerfile`, that can be used to build a custom smartEMS image.
 It accepts `SMARTEMS_VERSION`, `GF_INSTALL_PLUGINS` and `GF_INSTALL_IMAGE_RENDERER_PLUGIN` as build arguments.
 
 ### With pre-installed plugins

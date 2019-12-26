@@ -6,7 +6,7 @@
   "version": "6.5.2",
   "repository": {
     "type": "git",
-    "url": "http://github.com/grafana/grafana.git"
+    "url": "http://github.com/smartems/smartems.git"
   },
   "devDependencies": {
     "@babel/core": "7.6.4",

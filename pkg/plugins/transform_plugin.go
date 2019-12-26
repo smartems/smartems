@@ -8,9 +8,9 @@ import (
 	"path"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/dataframe"
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
-	"github.com/grafana/grafana-plugin-sdk-go/transform"
+	"github.com/smartems/smartems-plugin-sdk-go/dataframe"
+	"github.com/smartems/smartems-plugin-sdk-go/genproto/pluginv2"
+	"github.com/smartems/smartems-plugin-sdk-go/transform"
 	"github.com/smartems/smartems/pkg/bus"
 	"github.com/smartems/smartems/pkg/components/simplejson"
 	"github.com/smartems/smartems/pkg/infra/log"

@@ -61,8 +61,8 @@ export class AnnoListPanel extends PureComponent<Props, State> {
 
   async doSearch() {
     // http://docs.grafana.org/http_api/annotations/
-    // https://github.com/grafana/grafana/blob/master/public/app/core/services/backend_srv.ts
-    // https://github.com/grafana/grafana/blob/master/public/app/features/annotations/annotations_srv.ts
+    // https://github.com/smartems/smartems/blob/master/public/app/core/services/backend_srv.ts
+    // https://github.com/smartems/smartems/blob/master/public/app/features/annotations/annotations_srv.ts
 
     const { options } = this.props;
     const { queryUser, queryTags } = this.state;

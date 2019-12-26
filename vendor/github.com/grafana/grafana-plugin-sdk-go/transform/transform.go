@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana-plugin-sdk-go/dataframe"
-	"github.com/grafana/grafana-plugin-sdk-go/datasource"
-	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
+	"github.com/smartems/smartems-plugin-sdk-go/dataframe"
+	"github.com/smartems/smartems-plugin-sdk-go/datasource"
+	"github.com/smartems/smartems-plugin-sdk-go/genproto/pluginv2"
 	"github.com/hashicorp/go-plugin"
 )
 

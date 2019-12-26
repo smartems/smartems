@@ -697,7 +697,7 @@ Default setting for max attempts to sending alert notifications. Default value i
 
 ## [rendering]
 
-Options to configure a remote HTTP image rendering service, e.g. using https://github.com/grafana/grafana-image-renderer.
+Options to configure a remote HTTP image rendering service, e.g. using https://github.com/smartems/smartems-image-renderer.
 
 ### server_url
 

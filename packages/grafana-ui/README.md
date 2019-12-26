@@ -2,11 +2,11 @@
 
 > **@grafana/toolkit is currently in ALPHA**. Core API is unstable and can be a subject of breaking changes!
 
-@grafana/ui is a collection of components used by [smartEMS](https://github.com/grafana/grafana)
+@grafana/ui is a collection of components used by [smartEMS](https://github.com/smartems/smartems)
 
 Our goal is to deliver smartEMS's common UI elements for plugins developers and contributors.
 
-See [package source](https://github.com/grafana/grafana/tree/master/packages/grafana-ui) for more details.
+See [package source](https://github.com/smartems/smartems/tree/master/packages/grafana-ui) for more details.
 
 ## Installation
 

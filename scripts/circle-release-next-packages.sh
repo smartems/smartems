@@ -15,7 +15,7 @@ function unpublish_previous_canary () {
   echo $'\nUnpublishing previous canary packages'
   for PACKAGE in ui toolkit data runtime
   do
-    # dist-tag next to be changed to canary when https://github.com/grafana/grafana/pull/18195 is merged
+    # dist-tag next to be changed to canary when https://github.com/smartems/smartems/pull/18195 is merged
     CURRENT_CANARY=$(npm view @grafana/${PACKAGE} dist-tags.canary)
     if [ -z "${CURRENT_CANARY}" ]; then
         echo "@grafana/${PACKAGE} - Nothing to unpublish"
