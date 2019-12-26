@@ -22,7 +22,7 @@
     "storybook:build": "build-storybook -o ./dist/storybook -c .storybook",
     "clean": "rimraf ./dist ./compiled",
     "bundle": "rollup -c rollup.config.ts",
-    "build": "grafana-toolkit package:build --scope=ui"
+    "build": "smartems-toolkit package:build --scope=ui"
   },
   "dependencies": {
     "@smartems/data": "6.5.2",

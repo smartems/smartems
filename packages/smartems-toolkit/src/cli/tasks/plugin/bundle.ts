@@ -30,7 +30,7 @@ export const bundlePlugin = async ({ watch, production }: PluginBundleOptions) =
 
       compiler.hooks.done.tap('done', (stats: webpack.Stats) => {
         clearConsole();
-        const json: any = stats.toJson(); // different @types/webpack between react-dev-utils and grafana-toolkit
+        const json: any = stats.toJson(); // different @types/webpack between react-dev-utils and smartems-toolkit
         const output = formatWebpackMessages(json);
 
         if (!output.errors.length && !output.warnings.length) {

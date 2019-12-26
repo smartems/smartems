@@ -15,14 +15,14 @@
     "url": "http://github.com/smartems/smartems.git"
   },
   "bin": {
-    "grafana-toolkit": "./bin/smartems-toolkit.js"
+    "smartems-toolkit": "./bin/smartems-toolkit.js"
   },
   "scripts": {
     "tslint": "tslint -c tslint.json --project tsconfig.json",
     "typecheck": "tsc --noEmit",
     "precommit": "npm run tslint & npm run typecheck",
     "clean": "rimraf ./dist ./compiled",
-    "build": "grafana-toolkit toolkit:build"
+    "build": "smartems-toolkit toolkit:build"
   },
   "main": "src/index.ts",
   "dependencies": {

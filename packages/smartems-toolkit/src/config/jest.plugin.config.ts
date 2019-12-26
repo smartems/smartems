@@ -32,7 +32,7 @@ export const jestConfig = (baseDir: string = process.cwd()) => {
     : [];
 
   if (deniedOverrides.length > 0) {
-    console.error("\ngrafana-toolkit doesn't support following Jest options: ", deniedOverrides);
+    console.error("\nsmartems-toolkit doesn't support following Jest options: ", deniedOverrides);
     console.log('Supported Jest options are: ', JSON.stringify(allowedJestConfigOverrides));
     throw new Error('Provided Jest config is not supported');
   }

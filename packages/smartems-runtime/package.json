@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit",
     "clean": "rimraf ./dist ./compiled",
     "bundle": "rollup -c rollup.config.ts",
-    "build": "grafana-toolkit package:build --scope=runtime"
+    "build": "smartems-toolkit package:build --scope=runtime"
   },
   "dependencies": {
     "@smartems/data": "6.5.2",

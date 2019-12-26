@@ -74,7 +74,7 @@ const changelogTaskRunner: TaskRunner<ChangelogOptions> = useSpinner<ChangelogOp
     let markdown = '';
 
     markdown += getPackageChangelog('Grafana', issues);
-    markdown += getPackageChangelog('grafana-toolkit', toolkitIssues);
+    markdown += getPackageChangelog('smartems-toolkit', toolkitIssues);
 
     console.log(markdown);
   }

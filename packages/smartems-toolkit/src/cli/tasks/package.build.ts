@@ -99,7 +99,7 @@ const buildTaskRunner: TaskRunner<PackageBuildOptions> = async ({ scope }) => {
     return async () => {
       cwd = path.resolve(__dirname, `../../../../smartems-${s}`);
       // Lerna executes this in package's dir context, but for testing purposes I want to be able to run from root:
-      // grafana-toolkit package:build --scope=<package>
+      // smartems-toolkit package:build --scope=<package>
       process.chdir(cwd);
       distDir = `${cwd}/dist`;
       const pkg = require(`${cwd}/package.json`);

@@ -40,7 +40,7 @@ export const savePackage = useSpinner<{
 
 const preparePackage = async (pkg: any) => {
   pkg.bin = {
-    'grafana-toolkit': './bin/smartems-toolkit.dist.js',
+    'smartems-toolkit': './bin/smartems-toolkit.dist.js',
   };
 
   await savePackage({
