@@ -1,7 +1,7 @@
 import React from 'react';
 import Prism from 'prismjs';
 import { Decoration } from 'slate';
-import { Editor } from '@smartems/slate-react';
+import { Editor } from '@grafana/slate-react';
 
 const TOKEN_MARK = 'prism-token';
 
