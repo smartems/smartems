@@ -3,7 +3,7 @@ import { GrafanaDatasource } from '../datasource';
 import q from 'q';
 import { dateTime } from '@smartems/data';
 
-describe('grafana data source', () => {
+describe('smartems data source', () => {
   describe('when executing an annotations query', () => {
     let calledBackendSrvParams: any;
     const backendSrvStub = {

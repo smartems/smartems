@@ -66,9 +66,9 @@ grafana_oss = {
         'GrafanaX64Dir'
     ],
     'components': [
-        'grafana.wxs',
-        'grafana-service.wxs',
-        'grafana-firewall.wxs'
+        'smartems.wxs',
+        'smartems-service.wxs',
+        'smartems-firewall.wxs'
     ]
 }
 
@@ -137,7 +137,7 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     if not os.path.isdir('/tmp/scratch'):
         os.mkdir('/tmp/scratch')
     os.chdir('/tmp/scratch')
-    outfile = 'grafana-oss.wxs'
+    outfile = 'smartems-oss.wxs'
     # important flags
     # -srd - prevents the parent directory name from being included in the
     #        harvest
@@ -177,27 +177,27 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     # CANDLE needs to run in the scratch dir
     os.chdir('/tmp/scratch')
     try:
-        filename = 'grafana-service.wxs'
+        filename = 'smartems-service.wxs'
         cmd = '{} -ext WixFirewallExtension -ext WixUtilExtension -v -arch x64 {}'.format(CANDLE, filename)
         print(cmd)
         os.system(cmd)
-        shutil.copy2('grafana-service.wixobj', target_dir_name)
+        shutil.copy2('smartems-service.wixobj', target_dir_name)
         #
-        filename = 'grafana-firewall.wxs'
+        filename = 'smartems-firewall.wxs'
         cmd = '{} -ext WixFirewallExtension -ext WixUtilExtension -v -arch x64 {}'.format(
             CANDLE,
             filename)
         print(cmd)
         os.system(cmd)
-        shutil.copy2('grafana-firewall.wixobj', target_dir_name)
+        shutil.copy2('smartems-firewall.wixobj', target_dir_name)
         #
-        filename = 'grafana-oss.wxs'
+        filename = 'smartems-oss.wxs'
         cmd = '{} -ext WixFirewallExtension -ext WixUtilExtension -v -arch x64 {}'.format(
             CANDLE,
             filename)
         print(cmd)
         os.system(cmd)
-        shutil.copy2('grafana-oss.wixobj', target_dir_name)
+        shutil.copy2('smartems-oss.wixobj', target_dir_name)
         #
         filename = 'product.wxs'
         cmd = '{} -ext WixFirewallExtension -ext WixUtilExtension -v -arch x64 {}'.format(
@@ -231,7 +231,7 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
         print(ex)
     # copy to scratch with version included
     msi_filename = '/tmp/scratch/{}.windows-amd64.msi'.format(extracted_name)
-    shutil.copy2('grafana.msi', msi_filename)
+    shutil.copy2('smartems.msi', msi_filename)
     os.system('ls -al /tmp/scratch')
     print('LIGHT COMPLETE')
     # finally cleanup
@@ -248,7 +248,7 @@ def main(file_loader, env, grafana_version, zip_file, extracted_name):
     PRODUCT_VERSION = SMARTEMS_VERSION.split('-')[0]
 
     config = {
-        'grafana_version': PRODUCT_VERSION,
+        'smartems_version': PRODUCT_VERSION,
         'upgrade_code': UPGRADE_VERSION,
         'product_name': PRODUCT_NAME,
         'manufacturer': 'Grafana Labs'
@@ -322,15 +322,15 @@ if __name__ == '__main__':
     print('Enterprise: {}'.format(is_enterprise))
     if is_enterprise:
         zip_file = '{}/smartems-enterprise-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
-        extracted_name = 'grafana-enterprise-{}'.format(grafana_version)
+        extracted_name = 'smartems-enterprise-{}'.format(grafana_version)
     else:
         # the file can have a build hash
         if grafana_hash:
             zip_file = '{}/smartems-{}-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version, grafana_hash)
-            extracted_name = 'grafana-{}-{}'.format(grafana_version, grafana_hash)
+            extracted_name = 'smartems-{}-{}'.format(grafana_version, grafana_hash)
         else:
             zip_file = '{}/smartems-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
-            extracted_name = 'grafana-{}'.format(grafana_version)
+            extracted_name = 'smartems-{}'.format(grafana_version)
     print('ZipFile: {}'.format(zip_file))
     # check if file downloaded
 

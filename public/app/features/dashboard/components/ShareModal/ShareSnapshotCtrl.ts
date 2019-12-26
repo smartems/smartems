@@ -159,4 +159,4 @@ export class ShareSnapshotCtrl {
   }
 }
 
-angular.module('grafana.controllers').controller('ShareSnapshotCtrl', ShareSnapshotCtrl);
+angular.module('smartems.controllers').controller('ShareSnapshotCtrl', ShareSnapshotCtrl);

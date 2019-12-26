@@ -311,4 +311,4 @@ export function grafanaAppDirective(
   };
 }
 
-coreModule.directive('grafanaApp', grafanaAppDirective);
+coreModule.directive('smartemsApp', grafanaAppDirective);

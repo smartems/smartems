@@ -21,4 +21,4 @@ export function unsavedChangesSrv(
   };
 }
 
-angular.module('grafana.services').service('unsavedChangesSrv', unsavedChangesSrv);
+angular.module('smartems.services').service('unsavedChangesSrv', unsavedChangesSrv);

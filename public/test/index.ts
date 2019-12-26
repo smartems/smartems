@@ -14,12 +14,12 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 angular.module('smartems', ['ngRoute']);
-angular.module('grafana.services', ['ngRoute', '$strap.directives']);
-angular.module('grafana.panels', []);
-angular.module('grafana.controllers', []);
-angular.module('grafana.directives', []);
-angular.module('grafana.filters', []);
-angular.module('grafana.routes', ['ngRoute']);
+angular.module('smartems.services', ['ngRoute', '$strap.directives']);
+angular.module('smartems.panels', []);
+angular.module('smartems.controllers', []);
+angular.module('smartems.directives', []);
+angular.module('smartems.filters', []);
+angular.module('smartems.routes', ['ngRoute']);
 
 const context = (require as any).context('../', true, /specs\.(tsx?|js)/);
 for (const key of context.keys()) {

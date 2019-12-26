@@ -19,18 +19,18 @@ export class LayoutSelectorCtrl {
 
   /** @ngInject */
   constructor(private $rootScope: GrafanaRootScope) {
-    this.mode = store.get('grafana.list.layout.mode') || 'grid';
+    this.mode = store.get('smartems.list.layout.mode') || 'grid';
   }
 
   listView() {
     this.mode = 'list';
-    store.set('grafana.list.layout.mode', 'list');
+    store.set('smartems.list.layout.mode', 'list');
     this.$rootScope.appEvent(CoreEvents.layoutModeChanged, 'list');
   }
 
   gridView() {
     this.mode = 'grid';
-    store.set('grafana.list.layout.mode', 'grid');
+    store.set('smartems.list.layout.mode', 'grid');
     this.$rootScope.appEvent(CoreEvents.layoutModeChanged, 'grid');
   }
 }
@@ -53,7 +53,7 @@ export function layoutMode($rootScope: GrafanaRootScope) {
     restrict: 'A',
     scope: {},
     link: (scope: any, elem: any) => {
-      const layout = store.get('grafana.list.layout.mode') || 'grid';
+      const layout = store.get('smartems.list.layout.mode') || 'grid';
       let className = 'card-list-layout-' + layout;
       elem.addClass(className);
 

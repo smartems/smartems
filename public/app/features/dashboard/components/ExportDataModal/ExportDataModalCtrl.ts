@@ -53,4 +53,4 @@ export function exportDataModal() {
   };
 }
 
-angular.module('grafana.directives').directive('exportDataModal', exportDataModal);
+angular.module('smartems.directives').directive('exportDataModal', exportDataModal);

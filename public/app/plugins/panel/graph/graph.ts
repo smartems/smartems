@@ -904,5 +904,5 @@ function graphDirective(timeSrv: TimeSrv, popoverSrv: any, contextSrv: ContextSr
   };
 }
 
-coreModule.directive('grafanaGraph', graphDirective);
+coreModule.directive('smartemsGraph', graphDirective);
 export { GraphElement, graphDirective };

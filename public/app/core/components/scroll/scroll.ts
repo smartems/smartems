@@ -47,4 +47,4 @@ export function geminiScrollbar() {
   };
 }
 
-coreModule.directive('grafanaScrollbar', geminiScrollbar);
+coreModule.directive('smartemsScrollbar', geminiScrollbar);

@@ -213,4 +213,4 @@ export function dashboardHistoryDirective() {
   };
 }
 
-angular.module('grafana.directives').directive('gfDashboardHistory', dashboardHistoryDirective);
+angular.module('smartems.directives').directive('gfDashboardHistory', dashboardHistoryDirective);

@@ -35,4 +35,4 @@ export class SelectOrgCtrl {
   }
 }
 
-angular.module('grafana.controllers').controller('SelectOrgCtrl', SelectOrgCtrl);
+angular.module('smartems.controllers').controller('SelectOrgCtrl', SelectOrgCtrl);

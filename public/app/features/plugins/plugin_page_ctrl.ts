@@ -62,4 +62,4 @@ export class AppPageCtrl {
   }
 }
 
-angular.module('grafana.controllers').controller('AppPageCtrl', AppPageCtrl);
+angular.module('smartems.controllers').controller('AppPageCtrl', AppPageCtrl);

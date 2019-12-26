@@ -191,6 +191,6 @@ export class DashLinksContainerCtrl {
   }
 }
 
-angular.module('grafana.directives').directive('dashLinksContainer', dashLinksContainer);
-angular.module('grafana.directives').directive('dashLink', dashLink);
-angular.module('grafana.directives').controller('DashLinksContainerCtrl', DashLinksContainerCtrl);
+angular.module('smartems.directives').directive('dashLinksContainer', dashLinksContainer);
+angular.module('smartems.directives').directive('dashLink', dashLink);
+angular.module('smartems.directives').controller('DashLinksContainerCtrl', DashLinksContainerCtrl);

@@ -121,7 +121,7 @@ const packagePluginRunner: TaskRunner<PluginCIOptions> = async () => {
   const packagesDir = path.resolve(ciDir, 'packages');
   const distDir = path.resolve(ciDir, 'dist');
   const docsDir = path.resolve(ciDir, 'docs');
-  const grafanaEnvDir = path.resolve(ciDir, 'grafana-test-env');
+  const grafanaEnvDir = path.resolve(ciDir, 'smartems-test-env');
   await execa('rimraf', [packagesDir, distDir, grafanaEnvDir]);
   fs.mkdirSync(packagesDir);
   fs.mkdirSync(distDir);

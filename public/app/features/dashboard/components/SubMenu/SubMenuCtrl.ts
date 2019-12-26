@@ -40,4 +40,4 @@ export function submenuDirective() {
   };
 }
 
-angular.module('grafana.directives').directive('dashboardSubmenu', submenuDirective);
+angular.module('smartems.directives').directive('dashboardSubmenu', submenuDirective);

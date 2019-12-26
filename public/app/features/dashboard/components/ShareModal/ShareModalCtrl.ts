@@ -131,4 +131,4 @@ export function ShareModalCtrl(
   };
 }
 
-angular.module('grafana.controllers').controller('ShareModalCtrl', ShareModalCtrl);
+angular.module('smartems.controllers').controller('ShareModalCtrl', ShareModalCtrl);

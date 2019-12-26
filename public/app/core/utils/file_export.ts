@@ -10,7 +10,7 @@ const POINT_VALUE_INDEX = 0;
 const END_COLUMN = ';';
 const END_ROW = '\r\n';
 const QUOTE = '"';
-const EXPORT_FILENAME = 'grafana_data_export.csv';
+const EXPORT_FILENAME = 'smartems_data_export.csv';
 
 interface SeriesListToCsvColumnsOptions {
   dateTimeFormat: string;

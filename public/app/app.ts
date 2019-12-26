@@ -118,7 +118,7 @@ export class GrafanaApp {
     );
 
     this.ngModuleDependencies = [
-      'grafana.core',
+      'smartems.core',
       'ngRoute',
       'ngSanitize',
       '$strap.directives',

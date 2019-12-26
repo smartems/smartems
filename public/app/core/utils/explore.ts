@@ -46,7 +46,7 @@ export const DEFAULT_UI_STATE = {
 
 const MAX_HISTORY_ITEMS = 100;
 
-export const LAST_USED_DATASOURCE_KEY = 'grafana.explore.datasource';
+export const LAST_USED_DATASOURCE_KEY = 'smartems.explore.datasource';
 export const lastUsedDatasourceKeyForOrgId = (orgId: number) => `${LAST_USED_DATASOURCE_KEY}.${orgId}`;
 
 /**

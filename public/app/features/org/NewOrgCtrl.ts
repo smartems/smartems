@@ -19,4 +19,4 @@ export class NewOrgCtrl {
   }
 }
 
-angular.module('grafana.controllers').controller('NewOrgCtrl', NewOrgCtrl);
+angular.module('smartems.controllers').controller('NewOrgCtrl', NewOrgCtrl);

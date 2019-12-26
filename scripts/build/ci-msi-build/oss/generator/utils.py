@@ -52,8 +52,8 @@ def detect_version(dist_path):
         print('Skipping detection, no matches')
         return
     firstFile = fileList[0]
-    p1 = re.search(r'grafana-(\d\.\d\.\d)\.windows-amd64.zip$', firstFile)
-    p2 = re.search(r'grafana-(\d\.\d\.\d)-(.*)\.windows-amd64.zip$', firstFile)
+    p1 = re.search(r'smartems-(\d\.\d\.\d)\.windows-amd64.zip$', firstFile)
+    p2 = re.search(r'smartems-(\d\.\d\.\d)-(.*)\.windows-amd64.zip$', firstFile)
     if p1:
         detectedVersion = p1.group(1)
     if p2:
@@ -66,8 +66,8 @@ def detect_version(dist_path):
     #    # get files in directory matching pattern
     #    fileList = glob.glob(dist_path + '/enterprise-dist/smartems*.windows-amd64.zip')
     #    firstFile = fileList[0]
-    #    p1 = re.search(r'grafana-enterprise-(\d\.\d\.\d)\.windows-amd64.zip$', firstFile)
-    #    p2 = re.search(r'grafana-enterprise-(\d\.\d\.\d)-(.*)\.windows-amd64.zip$', firstFile)
+    #    p1 = re.search(r'smartems-enterprise-(\d\.\d\.\d)\.windows-amd64.zip$', firstFile)
+    #    p2 = re.search(r'smartems-enterprise-(\d\.\d\.\d)-(.*)\.windows-amd64.zip$', firstFile)
     #    if p1:
     #        detectedVersion = p1.group(1)
     #        isEnterprise = True

@@ -142,4 +142,4 @@ export class DashboardLoaderSrv {
   }
 }
 
-angular.module('grafana.services').service('dashboardLoaderSrv', DashboardLoaderSrv);
+angular.module('smartems.services').service('dashboardLoaderSrv', DashboardLoaderSrv);

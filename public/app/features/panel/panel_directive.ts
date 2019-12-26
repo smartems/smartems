@@ -7,7 +7,7 @@ import baron from 'baron';
 import { PanelEvents } from '@smartems/data';
 import { getLocationSrv } from '@smartems/runtime';
 
-const module = angular.module('grafana.directives');
+const module = angular.module('smartems.directives');
 
 const panelTemplate = `
   <div class="panel-container" ng-class="{'panel-container--no-title': !ctrl.panel.title.length}">
@@ -31,7 +31,7 @@ const panelTemplate = `
   </div>
 `;
 
-module.directive('grafanaPanel', ($rootScope, $document, $timeout) => {
+module.directive('smartemsPanel', ($rootScope, $document, $timeout) => {
   return {
     restrict: 'E',
     template: panelTemplate,

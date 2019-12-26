@@ -69,7 +69,7 @@ module.exports = (env = {}) =>
         checkSyntacticErrors: true,
       }),
       new MiniCssExtractPlugin({
-        filename: 'grafana.[name].[hash].css'
+        filename: 'smartems.[name].[hash].css'
       }),
       new HtmlWebpackPlugin({
         filename: path.resolve(__dirname, '../../public/views/error.html'),

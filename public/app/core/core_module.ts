@@ -1,16 +1,16 @@
 import angular from 'angular';
 
-const coreModule = angular.module('grafana.core', ['ngRoute']);
+const coreModule = angular.module('smartems.core', ['ngRoute']);
 
 // legacy modules
 const angularModules = [
   coreModule,
-  angular.module('grafana.controllers', []),
-  angular.module('grafana.directives', []),
-  angular.module('grafana.factories', []),
-  angular.module('grafana.services', []),
-  angular.module('grafana.filters', []),
-  angular.module('grafana.routes', []),
+  angular.module('smartems.controllers', []),
+  angular.module('smartems.directives', []),
+  angular.module('smartems.factories', []),
+  angular.module('smartems.services', []),
+  angular.module('smartems.filters', []),
+  angular.module('smartems.routes', []),
 ];
 
 export { angularModules, coreModule };

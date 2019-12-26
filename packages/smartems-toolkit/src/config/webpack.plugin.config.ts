@@ -164,7 +164,7 @@ export const getWebpackConfig: WebpackConfigurationGetter = options => {
       '@smartems/data',
       // @ts-ignore
       (context, request, callback) => {
-        const prefix = 'grafana/';
+        const prefix = 'smartems/';
         if (request.indexOf(prefix) === 0) {
           return callback(null, request.substr(prefix.length));
         }

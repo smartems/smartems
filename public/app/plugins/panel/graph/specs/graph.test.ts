@@ -40,7 +40,7 @@ const scope = {
 };
 let link;
 
-describe('grafanaGraph', () => {
+describe('smartemsGraph', () => {
   const setupCtx = (beforeRender?: any) => {
     config.bootData = {
       user: {

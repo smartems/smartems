@@ -1,6 +1,6 @@
 import { getColorForValue } from '../module';
 
-describe('grafanaSingleStat', () => {
+describe('smartemsSingleStat', () => {
   describe('legacy thresholds', () => {
     describe('positive thresholds', () => {
       const data: any = {

@@ -93,4 +93,4 @@ function dashLinksEditor() {
   };
 }
 
-angular.module('grafana.directives').directive('dashLinksEditor', dashLinksEditor);
+angular.module('smartems.directives').directive('dashLinksEditor', dashLinksEditor);
