@@ -13,7 +13,7 @@ export interface PluginBuildReport {
   tests: TestResultsInfo[];
   pullRequest?: number;
   artifactsBaseURL?: string;
-  grafanaVersion?: KeyValue<string>;
+  smartemsVersion?: KeyValue<string>;
 }
 
 export interface JobInfo {

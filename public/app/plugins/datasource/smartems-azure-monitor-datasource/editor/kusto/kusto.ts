@@ -643,7 +643,7 @@ export const KEYWORDS = [
   'bool',
 ];
 
-export const grafanaMacros = [
+export const smartemsMacros = [
   {
     text: '$__timeFilter',
     display: '$__timeFilter()',

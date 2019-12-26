@@ -46,7 +46,7 @@ interface PluginDependencyInfo {
 }
 
 export interface PluginDependencies {
-  grafanaVersion: string;
+  smartemsVersion: string;
   plugins: PluginDependencyInfo[];
 }
 
