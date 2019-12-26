@@ -1,0 +1,9 @@
+{
+  "type": "datasource",
+  "name": "-- smartEMS --",
+  "id": "grafana",
+
+  "builtIn": true,
+  "annotations": true,
+  "metrics": true
+}
