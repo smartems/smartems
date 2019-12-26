@@ -1,6 +1,6 @@
 ARG SMARTEMS_VERSION="latest-ubuntu"
 
-FROM grafana/smartems:${SMARTEMS_VERSION}-ubuntu
+FROM smartems/smartems:${SMARTEMS_VERSION}-ubuntu
 
 USER root
 
@@ -18,7 +18,7 @@ RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     rm -rf /usr/share/smartems/tools/phantomjs; \
 fi
 
-USER grafana
+USER smartems
 
 ENV GF_RENDERER_PLUGIN_CHROME_BIN="/usr/bin/chromium-browser"
 
@@ -26,7 +26,7 @@ RUN if [ $GF_INSTALL_IMAGE_RENDERER_PLUGIN = "true" ]; then \
     smartems-cli \
         --pluginsDir "$GF_PATHS_PLUGINS" \
         --pluginUrl https://github.com/smartems/smartems-image-renderer/releases/latest/download/plugin-linux-x64-glibc-no-chromium.zip \
-        plugins install grafana-image-renderer; \
+        plugins install smartems-image-renderer; \
 fi
 
 ARG GF_INSTALL_PLUGINS=""

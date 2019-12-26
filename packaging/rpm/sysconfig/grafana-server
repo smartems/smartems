@@ -1,6 +1,6 @@
-SMARTEMS_USER=grafana
+SMARTEMS_USER=smartems
 
-SMARTEMS_GROUP=grafana
+SMARTEMS_GROUP=smartems
 
 SMARTEMS_HOME=/usr/share/smartems
 

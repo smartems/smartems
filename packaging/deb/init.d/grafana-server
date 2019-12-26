@@ -2,17 +2,17 @@
 
 # chkconfig: 2345 80 05
 # description: Grafana web server & backend
-# processname: grafana
+# processname: smartems
 # config: /etc/smartems/smartems.ini
 # pidfile: /var/run/smartems.pid
 
 ### BEGIN INIT INFO
-# Provides:          grafana
+# Provides:          smartems
 # Required-Start:    $all
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: Start grafana at boot time
+# Short-Description: Start smartems at boot time
 ### END INIT INFO
 
 #  tested on
@@ -24,8 +24,8 @@ NAME=smartems-server
 DESC="Grafana Server"
 DEFAULT=/etc/default/$NAME
 
-SMARTEMS_USER=grafana
-SMARTEMS_GROUP=grafana
+SMARTEMS_USER=smartems
+SMARTEMS_GROUP=smartems
 SMARTEMS_HOME=/usr/share/smartems
 CONF_DIR=/etc/smartems
 WORK_DIR=$SMARTEMS_HOME
@@ -70,7 +70,7 @@ case "$1" in
   checkUser
 	log_daemon_msg "Starting $DESC"
 
-	pid=`pidofproc -p $PID_FILE grafana`
+	pid=`pidofproc -p $PID_FILE smartems`
 	if [ -n "$pid" ] ; then
 		log_begin_msg "Already running."
 		log_end_msg 0
@@ -135,7 +135,7 @@ case "$1" in
 	log_end_msg 0
 	;;
   status)
-	status_of_proc -p $PID_FILE grafana grafana && exit 0 || exit $?
+	status_of_proc -p $PID_FILE smartems smartems && exit 0 || exit $?
     ;;
   restart|force-reload)
 	if [ -f "$PID_FILE" ]; then

@@ -1,4 +1,4 @@
-FROM grafana/docs-base:latest
+FROM smartems/docs-base:latest
 
 # to get the git info for this repo
 # COPY config.toml /site

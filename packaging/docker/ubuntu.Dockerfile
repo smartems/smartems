@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=ubuntu:18.10
-FROM ${BASE_IMAGE} AS grafana-builder
+FROM ${BASE_IMAGE} AS smartems-builder
 
-ARG SMARTEMS_TGZ="grafana-latest.linux-x64.tar.gz"
+ARG SMARTEMS_TGZ="smartems-latest.linux-x64.tar.gz"
 
 COPY ${SMARTEMS_TGZ} /tmp/smartems.tar.gz
 
@@ -36,11 +36,11 @@ RUN if [ `arch` = "x86_64" ]; then \
         apt-get autoremove -y && rm -rf /var/lib/apt/lists/*; \
     fi
 
-COPY --from=grafana-builder /tmp/smartems "$GF_PATHS_HOME"
+COPY --from=smartems-builder /tmp/smartems "$GF_PATHS_HOME"
 
 RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
-    addgroup --system --gid $GF_GID grafana && \
-    adduser --system --uid $GF_UID --ingroup grafana grafana && \
+    addgroup --system --gid $GF_GID smartems && \
+    adduser --system --uid $GF_UID --ingroup smartems smartems && \
     mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
              "$GF_PATHS_PROVISIONING/dashboards" \
              "$GF_PATHS_PROVISIONING/notifiers" \
@@ -49,10 +49,10 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
              "$GF_PATHS_DATA" && \
     cp "$GF_PATHS_HOME/conf/sample.ini" "$GF_PATHS_CONFIG" && \
     cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/smartems/ldap.toml && \
-    chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
+    chown -R smartems:smartems "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
     chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
 
 COPY ./run.sh /run.sh
 
-USER grafana
+USER smartems
 ENTRYPOINT [ "/run.sh" ]

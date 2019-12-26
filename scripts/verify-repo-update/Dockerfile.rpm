@@ -1,7 +1,7 @@
 FROM centos
 
-ARG REPO_CONFIG=grafana.repo.oss
-ARG PACKAGE=grafana
+ARG REPO_CONFIG=smartems.repo.oss
+ARG PACKAGE=smartems
 
 COPY "./$REPO_CONFIG" /etc/yum.repos.d/smartems.repo
 

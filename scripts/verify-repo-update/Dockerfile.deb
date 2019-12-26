@@ -1,7 +1,7 @@
 FROM ubuntu
 
-ARG REPO_CONFIG=grafana.list.oss
-ARG PACKAGE=grafana
+ARG REPO_CONFIG=smartems.list.oss
+ARG PACKAGE=smartems
 
 COPY sources.list /etc/apt/sources.list
 RUN apt update && \
@@ -9,7 +9,7 @@ RUN apt update && \
                    apt-transport-https \
                    ca-certificates     \
                    gnupg               && \
-    curl https://packages.grafana.com/gpg.key | apt-key add -
+    curl https://packages.smartems.com/gpg.key | apt-key add -
 
 COPY "./$REPO_CONFIG" /etc/apt/sources.list.d/smartems.list
 RUN apt update && \

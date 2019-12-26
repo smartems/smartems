@@ -68,7 +68,7 @@ RUN apt-get update   && \
     rm -rf /tmp/x86_64-centos6-linux-gnu/ && \
     rm -rf /tmp/crosstool-ng-${CTNG}
 
-# base image to crossbuild grafana
+# base image to crossbuild smartems
 FROM ubuntu:14.04
 
 ENV GOVERSION=1.13.1 \

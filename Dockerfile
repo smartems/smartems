@@ -46,7 +46,7 @@ RUN ./node_modules/.bin/grunt build
 # Final container
 FROM alpine:3.10
 
-LABEL maintainer="Grafana team <hello@grafana.com>"
+LABEL maintainer="Grafana team <hello@smartems.com>"
 
 ARG GF_UID="472"
 ARG GF_GID="472"
@@ -67,8 +67,8 @@ RUN apk add --no-cache ca-certificates bash tzdata && \
 COPY conf ./conf
 
 RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
-    addgroup -S -g $GF_GID grafana && \
-    adduser -S -u $GF_UID -G grafana grafana && \
+    addgroup -S -g $GF_GID smartems && \
+    adduser -S -u $GF_UID -G smartems smartems && \
     mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
              "$GF_PATHS_PROVISIONING/dashboards" \
              "$GF_PATHS_PROVISIONING/notifiers" \
@@ -77,7 +77,7 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
              "$GF_PATHS_DATA" && \
     cp "$GF_PATHS_HOME/conf/sample.ini" "$GF_PATHS_CONFIG" && \
     cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/smartems/ldap.toml && \
-    chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
+    chown -R smartems:smartems "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
     chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
 
 # PhantomJS
@@ -97,5 +97,5 @@ EXPOSE 3000
 
 COPY ./packaging/docker/run.sh /run.sh
 
-USER grafana
+USER smartems
 ENTRYPOINT [ "/run.sh" ]

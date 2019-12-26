@@ -2,7 +2,7 @@
 
 FROM debian:jessie
 
-LABEL maintainer="Grafana team <hello@grafana.com>"
+LABEL maintainer="Grafana team <hello@smartems.com>"
 
 ENV OPENLDAP_VERSION 2.4.40
 
