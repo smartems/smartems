@@ -74,7 +74,7 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
 # PhantomJS
 COPY --from=js-builder /usr/local/bin/phantomjs /usr/local/bin/
 
-COPY --from=go-builder /src/grafana/bin/linux-amd64/grafana-server /src/grafana/bin/linux-amd64/grafana-cli bin/
+COPY --from=go-builder /src/grafana/bin/linux-amd64/smartems-server /src/grafana/bin/linux-amd64/grafana-cli bin/
 COPY --from=js-builder /usr/src/app/public public
 COPY --from=js-builder /usr/src/app/tools tools
 

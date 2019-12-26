@@ -44,7 +44,7 @@ var (
 	workingDir            string
 	includeBuildId        bool     = true
 	buildId               string   = "0"
-	serverBinary          string   = "grafana-server"
+	serverBinary          string   = "smartems-server"
 	cliBinary             string   = "grafana-cli"
 	binaries              []string = []string{serverBinary, cliBinary}
 	isDev                 bool     = false
@@ -110,7 +110,7 @@ func main() {
 
 		case "build-srv", "build-server":
 			clean()
-			build("grafana-server", "./pkg/cmd/grafana-server", []string{})
+			build("smartems-server", "./pkg/cmd/smartems-server", []string{})
 
 		case "build-cli":
 			clean()
@@ -269,14 +269,14 @@ func createDebPackages() {
 		binPath:                "/usr/sbin",
 		configDir:              "/etc/grafana",
 		etcDefaultPath:         "/etc/default",
-		etcDefaultFilePath:     "/etc/default/grafana-server",
-		initdScriptFilePath:    "/etc/init.d/grafana-server",
-		systemdServiceFilePath: "/usr/lib/systemd/system/grafana-server.service",
+		etcDefaultFilePath:     "/etc/default/smartems-server",
+		initdScriptFilePath:    "/etc/init.d/smartems-server",
+		systemdServiceFilePath: "/usr/lib/systemd/system/smartems-server.service",
 
 		postinstSrc:         "packaging/deb/control/postinst",
-		initdScriptSrc:      "packaging/deb/init.d/grafana-server",
-		defaultFileSrc:      "packaging/deb/default/grafana-server",
-		systemdFileSrc:      "packaging/deb/systemd/grafana-server.service",
+		initdScriptSrc:      "packaging/deb/init.d/smartems-server",
+		defaultFileSrc:      "packaging/deb/default/smartems-server",
+		systemdFileSrc:      "packaging/deb/systemd/smartems-server.service",
 		cliBinaryWrapperSrc: "packaging/wrappers/grafana-cli",
 
 		depends: []string{"adduser", "libfontconfig1"},
@@ -299,14 +299,14 @@ func createRpmPackages() {
 		binPath:                "/usr/sbin",
 		configDir:              "/etc/grafana",
 		etcDefaultPath:         "/etc/sysconfig",
-		etcDefaultFilePath:     "/etc/sysconfig/grafana-server",
-		initdScriptFilePath:    "/etc/init.d/grafana-server",
-		systemdServiceFilePath: "/usr/lib/systemd/system/grafana-server.service",
+		etcDefaultFilePath:     "/etc/sysconfig/smartems-server",
+		initdScriptFilePath:    "/etc/init.d/smartems-server",
+		systemdServiceFilePath: "/usr/lib/systemd/system/smartems-server.service",
 
 		postinstSrc:         "packaging/rpm/control/postinst",
-		initdScriptSrc:      "packaging/rpm/init.d/grafana-server",
-		defaultFileSrc:      "packaging/rpm/sysconfig/grafana-server",
-		systemdFileSrc:      "packaging/rpm/systemd/grafana-server.service",
+		initdScriptSrc:      "packaging/rpm/init.d/smartems-server",
+		defaultFileSrc:      "packaging/rpm/sysconfig/smartems-server",
+		systemdFileSrc:      "packaging/rpm/systemd/smartems-server.service",
 		cliBinaryWrapperSrc: "packaging/wrappers/grafana-cli",
 
 		depends: []string{"/sbin/service", "fontconfig", "freetype", "urw-fonts"},
@@ -337,7 +337,7 @@ func createPackage(options linuxPackageOptions) {
 	// copy grafana-cli wrapper
 	runPrint("cp", "-p", options.cliBinaryWrapperSrc, filepath.Join(packageRoot, "/usr/sbin/"+cliBinary))
 
-	// copy grafana-server binary
+	// copy smartems-server binary
 	runPrint("cp", "-p", filepath.Join(workingDir, "tmp/bin/"+serverBinary), filepath.Join(packageRoot, "/usr/sbin/"+serverBinary))
 
 	// copy init.d script
@@ -472,7 +472,7 @@ func gruntBuildArg(task string) []string {
 }
 
 func setup() {
-	runPrint("go", "install", "-v", "./pkg/cmd/grafana-server")
+	runPrint("go", "install", "-v", "./pkg/cmd/smartems-server")
 }
 
 func printGeneratedVersion() {

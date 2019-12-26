@@ -37,7 +37,7 @@ You may see an error such as: `package github.com/smartems/smartems: no buildabl
 ```bash
 cd $GOPATH/src/github.com/smartems/smartems
 go run build.go setup
-go run build.go build              # (or 'go build ./pkg/cmd/grafana-server')
+go run build.go build              # (or 'go build ./pkg/cmd/smartems-server')
 ```
 
 #### Building on Windows
@@ -64,9 +64,9 @@ yarn start
 You can run a local instance of smartEMS by running:
 
 ```bash
-./bin/grafana-server
+./bin/smartems-server
 ```
-Or, if you built the binary with `go run build.go build`, run `./bin/<os>-<architecture>/grafana-server`
+Or, if you built the binary with `go run build.go build`, run `./bin/<os>-<architecture>/smartems-server`
 
 If you built it with `go build .`, run `./grafana`
 

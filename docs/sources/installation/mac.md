@@ -90,7 +90,7 @@ To configure smartEMS add a configuration file named `custom.ini` to the
 `conf` folder and override any of the settings defined in
 `conf/defaults.ini`.
 
-Start smartEMS by executing `./bin/grafana-server web`. The `grafana-server`
+Start smartEMS by executing `./bin/smartems-server web`. The `smartems-server`
 binary needs the working directory to be the root install directory (where the
 binary and the `public` folder is located).
 

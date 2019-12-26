@@ -34,7 +34,7 @@ That port should not require extra Windows privileges.
 Default login and password `admin`/ `admin`
 
 
-Start smartEMS by executing `grafana-server.exe`, located in the `bin` directory, preferably from the
+Start smartEMS by executing `smartems-server.exe`, located in the `bin` directory, preferably from the
 command line. If you want to run smartEMS as Windows service, download
 [NSSM](https://nssm.cc/). It is very easy to add smartEMS as a Windows
 service using that tool.

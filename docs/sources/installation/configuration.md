@@ -70,7 +70,7 @@ export GF_AUTH_GOOGLE_CLIENT_SECRET=newS3cretKey
 
 ## instance_name
 
-Set the name of the grafana-server instance. Used in logging and internal metrics and in
+Set the name of the smartems-server instance. Used in logging and internal metrics and in
 clustering info. Defaults to: `${HOSTNAME}`, which will be replaced with
 environment variable `HOSTNAME`, if that is empty or does not exist smartEMS will try to use
 system calls to get the machine name.
@@ -115,7 +115,7 @@ The port to bind to, defaults to `3000`. To use port 80 you need to
 either give the smartEMS binary permission for example:
 
 ```bash
-$ sudo setcap 'cap_net_bind_service=+ep' /usr/sbin/grafana-server
+$ sudo setcap 'cap_net_bind_service=+ep' /usr/sbin/smartems-server
 ```
 
 Or redirect port 80 to the smartEMS port using:

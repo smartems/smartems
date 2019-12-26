@@ -34,16 +34,16 @@ You can enable more logging by changing log level in your grafana configuration 
 
 ## Diagnostics
 
-The `grafana-server` process can be instructued to enable certain diagnostics when it starts. This can be helpful
+The `smartems-server` process can be instructued to enable certain diagnostics when it starts. This can be helpful
 when experiencing/investigating certain performance problems. It's `not` recommended to have these enabled per default.
 
 ### Profiling
 
-The `grafana-server` can be started with the arguments `-profile` to enable profiling and  `-profile-port` to override
+The `smartems-server` can be started with the arguments `-profile` to enable profiling and  `-profile-port` to override
 the default HTTP port (`6060`) where the pprof debugging endpoints will be available, e.g.
 
 ```bash
-./grafana-server -profile -profile-port=8080
+./smartems-server -profile -profile-port=8080
 ```
 
 Note that pprof debugging endpoints are served on a different port than the smartEMS HTTP server.
@@ -59,11 +59,11 @@ See [Go command pprof](https://golang.org/cmd/pprof/) for more information about
 
 ### Tracing
 
-The `grafana-server` can be started with the arguments `-tracing` to enable tracing and `-tracing-file` to
+The `smartems-server` can be started with the arguments `-tracing` to enable tracing and `-tracing-file` to
 override the default trace file (`trace.out`) where trace result will be written to, e.g.
 
 ```bash
-./grafana-server -tracing -tracing-file=/tmp/trace.out
+./smartems-server -tracing -tracing-file=/tmp/trace.out
 ```
 
 You can configure/override profiling settings using environment variables:

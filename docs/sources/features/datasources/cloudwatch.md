@@ -117,7 +117,7 @@ See the AWS documentation on [Configuring the AWS SDK for Go](https://docs.aws.a
 
 ### AWS credentials file
 
-Create a file at `~/.aws/credentials`. That is the `HOME` path for user running grafana-server.
+Create a file at `~/.aws/credentials`. That is the `HOME` path for user running smartems-server.
 
 > NOTE: If you think you have the credentials file in the right place but it is still not working then you might try moving your .aws file to '/usr/share/grafana/' and make sure your credentials file has at most 0644 permissions.
 

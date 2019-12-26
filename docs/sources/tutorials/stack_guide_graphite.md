@@ -215,7 +215,7 @@ also open `http://your_server_ip:8888/metrics/find?query?*` in your browser. You
     cd /tmp/
     wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.1_amd64.deb
     sudo dpkg -i grafana_2.1.1_amd64.deb
-    sudo service grafana-server start
+    sudo service smartems-server start
 
 smartEMS should now be running with default config on port 3000.
 

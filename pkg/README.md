@@ -12,7 +12,7 @@ For more information on developing for the backend:
 | folder | description |
 | ------- | ----------- |
 | /pkg/api | HTTP handlers and routing. Almost all handler funcs are global which is something we would like to improve in the future. Handlers should be associated with a struct that refers to all dependencies. |
-| /pkg/cmd | The binaries that we build: grafana-server and grafana-cli. |
+| /pkg/cmd | The binaries that we build: smartems-server and grafana-cli. |
 | /pkg/components | A mix of third-party packages and packages we have implemented ourselves. Includes our packages that have out-grown the util package and don't naturally belong somewhere else. |
 | /pkg/infra | Packages in infra should be packages that are used in multiple places in smartEMS without knowing anything about the smartEMS domain. |
 | /pkg/services | Packages in services are responsible for peristing domain objects and manage the relationship between domain objects. Services should communicate with each other using DI when possible. Most of smartEMS's codebase still relies on global state for this. Any new features going forward should use DI. |
@@ -42,7 +42,7 @@ These issues are not something we want to address all at once but something we w
 
 Global state makes testing and debugging software harder and it's something we want to avoid when possible. Unfortunately, there is quite a lot of global state in smartEMS. 
 
-We want to migrate away from this by using the `inject` package to wire up all dependencies either in `pkg/cmd/grafana-server/main.go` or self-registering using `registry.RegisterService` ex https://github.com/smartems/smartems/blob/master/pkg/services/cleanup/cleanup.go#L25.
+We want to migrate away from this by using the `inject` package to wire up all dependencies either in `pkg/cmd/smartems-server/main.go` or self-registering using `registry.RegisterService` ex https://github.com/smartems/smartems/blob/master/pkg/services/cleanup/cleanup.go#L25.
 
 ### Limit the use of the init() function
 

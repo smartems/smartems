@@ -92,11 +92,11 @@ key](https://packages.grafana.com/gpg.key).
 
 ## Package details
 
-- Installs binary to `/usr/sbin/grafana-server`
-- Copies init.d script to `/etc/init.d/grafana-server`
-- Installs default file (environment vars) to `/etc/sysconfig/grafana-server`
+- Installs binary to `/usr/sbin/smartems-server`
+- Copies init.d script to `/etc/init.d/smartems-server`
+- Installs default file (environment vars) to `/etc/sysconfig/smartems-server`
 - Copies configuration file to `/etc/grafana/grafana.ini`
-- Installs systemd service (if systemd is available) name `grafana-server.service`
+- Installs systemd service (if systemd is available) name `smartems-server.service`
 - The default configuration uses a log file at `/var/log/grafana/grafana.log`
 - The default configuration specifies an sqlite3 database at `/var/lib/grafana/grafana.db`
 
@@ -105,10 +105,10 @@ key](https://packages.grafana.com/gpg.key).
 You can start smartEMS by running:
 
 ```bash
-$ sudo service grafana-server start
+$ sudo service smartems-server start
 ```
 
-This will start the `grafana-server` process as the `grafana` user,
+This will start the `smartems-server` process as the `grafana` user,
 which is created during package installation. The default HTTP port is
 `3000`, and default user and group is `admin`.
 
@@ -117,27 +117,27 @@ Default login and password `admin`/ `admin`
 To configure the smartEMS server to start at boot time:
 
 ```bash
-$ sudo /sbin/chkconfig --add grafana-server
+$ sudo /sbin/chkconfig --add smartems-server
 ```
 
 ## Start the server (via systemd)
 
 ```bash
 $ systemctl daemon-reload
-$ systemctl start grafana-server
-$ systemctl status grafana-server
+$ systemctl start smartems-server
+$ systemctl status smartems-server
 ```
 
 ### Enable the systemd service to start at boot
 
 ```bash
-sudo systemctl enable grafana-server.service
+sudo systemctl enable smartems-server.service
 ```
 
 ## Environment file
 
 The systemd service file and init.d script both use the file located at
-`/etc/sysconfig/grafana-server` for environment variables used when
+`/etc/sysconfig/smartems-server` for environment variables used when
 starting the back-end. Here you can override log directory, data
 directory and other variables.
 
@@ -188,7 +188,7 @@ To configure smartEMS add a configuration file named `custom.ini` to the
 `conf` folder and override any of the settings defined in
 `conf/defaults.ini`.
 
-Start smartEMS by executing `./bin/grafana-server web`. The `grafana-server`
+Start smartEMS by executing `./bin/smartems-server web`. The `smartems-server`
 binary needs the working directory to be the root install directory (where the
 binary and the `public` folder is located).
 

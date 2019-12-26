@@ -7,7 +7,7 @@ priority: "extra"
 replaces:
 - grafana
 provides:
-- grafana-server
+- smartems-server
 - grafana-cli
 depends:
 - adduser
@@ -20,12 +20,12 @@ homepage: "https://grafana.com"
 license: "Apache 2"
 bindir: "/usr/sbin"
 files:
-  "./bin/grafana-server": "/usr/sbin/grafana-server"
+  "./bin/smartems-server": "/usr/sbin/smartems-server"
   "./bin/grafana-cli": "/usr/sbin/grafana-cli"
 config_files:
-  ./packaging/deb/init.d/grafana-server: "/etc/init.d/grafana-server"
-  ./packaging/deb/default/grafana-server: "/etc/default/grafana-server"
-  ./packaging/deb/systemd/grafana-server.service: "/usr/lib/systemd/system/grafana-server.service"
+  ./packaging/deb/init.d/smartems-server: "/etc/init.d/smartems-server"
+  ./packaging/deb/default/smartems-server: "/etc/default/smartems-server"
+  ./packaging/deb/systemd/smartems-server.service: "/usr/lib/systemd/system/smartems-server.service"
 overrides:
   rpm:
     scripts:

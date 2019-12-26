@@ -152,7 +152,7 @@ submenu in the alert tab to view and clear state history.
 First level of troubleshooting you can do is hit the **Test Rule** button. You will get result back that you can expand
 to the point where you can see the raw data that was returned from your query.
 
-Further troubleshooting can also be done by inspecting the grafana-server log. If it's not an error or for some reason
+Further troubleshooting can also be done by inspecting the smartems-server log. If it's not an error or for some reason
 the log does not say anything you can enable debug logging for some relevant components. This is done
 in smartEMS's ini config file.
 

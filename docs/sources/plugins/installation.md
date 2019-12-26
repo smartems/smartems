@@ -21,7 +21,7 @@ To discover plugins checkout the official [Plugin Repository](https://grafana.co
 
 # Installing Plugins
 
-The easiest way to install plugins is by using the CLI tool grafana-cli which is bundled with grafana. Before any modification take place after modifying plugins, grafana-server needs to be restarted.
+The easiest way to install plugins is by using the CLI tool grafana-cli which is bundled with grafana. Before any modification take place after modifying plugins, smartems-server needs to be restarted.
 
 ### smartEMS Plugin Directory
 

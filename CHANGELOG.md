@@ -266,7 +266,7 @@ Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin]
 * **Editor**: Fixes issue where only entire lines were being copied. [#18806](https://github.com/smartems/smartems/pull/18806), [@kaydelaney](https://github.com/kaydelaney)
 * **Explore**: Fixes query field layout in splitted view for Safari browsers. [#18654](https://github.com/smartems/smartems/pull/18654), [@hugohaggmark](https://github.com/hugohaggmark)
 * **LDAP**: multildap + ldap integration. [#18588](https://github.com/smartems/smartems/pull/18588), [@markelog](https://github.com/markelog)
-* **Profile/UserAdmin**: Fix for user agent parser crashes grafana-server on 32-bit builds. [#18788](https://github.com/smartems/smartems/pull/18788), [@marcusolsson](https://github.com/marcusolsson)
+* **Profile/UserAdmin**: Fix for user agent parser crashes smartems-server on 32-bit builds. [#18788](https://github.com/smartems/smartems/pull/18788), [@marcusolsson](https://github.com/marcusolsson)
 * **Prometheus**: Prevents panel editor crash when switching to Prometheus data source. [#18616](https://github.com/smartems/smartems/pull/18616), [@hugohaggmark](https://github.com/hugohaggmark)
 * **Prometheus**: Changes brace-insertion behavior to be less annoying. [#18698](https://github.com/smartems/smartems/pull/18698), [@kaydelaney](https://github.com/kaydelaney)
 
@@ -2291,7 +2291,7 @@ data source api change.
 **Tech (Note for devs)**
 Started using Typescript (transpiled to ES5), uncompiled typescript files and less files are in public folder (in source tree)
 This folder is never modified by build steps. Compiled css and javascript files are put in public_gen, all other files
-that do not undergo transformation are just copied from public to public_gen, it is public_gen that is used by grafana-server
+that do not undergo transformation are just copied from public to public_gen, it is public_gen that is used by smartems-server
 if it is found.
 
 Grunt & Watch tasks:
@@ -2395,13 +2395,13 @@ Grunt & Watch tasks:
 # 2.0.0-Beta3 (2015-04-12)
 
 **RPM / DEB Package changes (to follow HFS)**
-- binary name changed to grafana-server
+- binary name changed to smartems-server
 - does not install to `/opt/grafana` any more, installs to `/usr/share/grafana`
-- binary to `/usr/sbin/grafana-server`
-- init.d script improvements, renamed to `/etc/init.d/grafana-server`
+- binary to `/usr/sbin/smartems-server`
+- init.d script improvements, renamed to `/etc/init.d/smartems-server`
 - added default file with environment variables,
-  - `/etc/default/grafana-server` (deb/ubuntu)
-  - `/etc/sysconfig/grafana-server` (centos/redhat)
+  - `/etc/default/smartems-server` (deb/ubuntu)
+  - `/etc/sysconfig/smartems-server` (centos/redhat)
 
 - added systemd service file, tested on debian jessie and centos7
 - config file in same location `/etc/grafana/grafana.ini` (now complete config file but with every setting commented out)

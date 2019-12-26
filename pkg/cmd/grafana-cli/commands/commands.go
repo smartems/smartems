@@ -73,7 +73,7 @@ func runPluginCommand(command func(commandLine utils.CommandLine) error) func(co
 			os.Exit(1)
 		}
 
-		logger.Info("\nRestart grafana after installing plugins . <service grafana-server restart>\n\n")
+		logger.Info("\nRestart grafana after installing plugins . <service smartems-server restart>\n\n")
 	}
 }
 

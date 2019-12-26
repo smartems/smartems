@@ -202,7 +202,7 @@ allowed_organizations =
 
 5.  Put the URL to the front page of your smartEMS instance into the "Resource Application URL" field.
 
-6.  Add an authorized Redirect URI like https://your-grafana-server/login/generic_oauth
+6.  Add an authorized Redirect URI like https://your-smartems-server/login/generic_oauth
 
 7.  Set up permissions, policies, etc. just like any other Centrify app
 

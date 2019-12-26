@@ -2,7 +2,7 @@
 
 set -e
 
-[ -f /etc/default/grafana-server ] && . /etc/default/grafana-server
+[ -f /etc/default/smartems-server ] && . /etc/default/smartems-server
 
 IS_UPGRADE=false
 
@@ -57,27 +57,27 @@ case "$1" in
     if command -v systemctl >/dev/null; then
       echo "### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd"
       echo " sudo /bin/systemctl daemon-reload"
-      echo " sudo /bin/systemctl enable grafana-server"
-      echo "### You can start grafana-server by executing"
-      echo " sudo /bin/systemctl start grafana-server"
+      echo " sudo /bin/systemctl enable smartems-server"
+      echo "### You can start smartems-server by executing"
+      echo " sudo /bin/systemctl start smartems-server"
     elif command -v update-rc.d >/dev/null; then
-      echo "### NOT starting grafana-server by default on bootup, please execute"
-      echo " sudo update-rc.d grafana-server defaults 95 10"
-      echo "### In order to start grafana-server, execute"
-      echo " sudo service grafana-server start"
+      echo "### NOT starting smartems-server by default on bootup, please execute"
+      echo " sudo update-rc.d smartems-server defaults 95 10"
+      echo "### In order to start smartems-server, execute"
+      echo " sudo service smartems-server start"
     fi
   elif [ "$RESTART_ON_UPGRADE" = "true" ]; then
 
-    echo -n "Restarting grafana-server service..."
+    echo -n "Restarting smartems-server service..."
 
     if command -v systemctl >/dev/null; then
       systemctl daemon-reload
-      systemctl restart grafana-server || true
-    elif [ -x /etc/init.d/grafana-server ]; then
+      systemctl restart smartems-server || true
+    elif [ -x /etc/init.d/smartems-server ]; then
       if command -v invoke-rc.d >/dev/null; then
-        invoke-rc.d grafana-server restart || true
+        invoke-rc.d smartems-server restart || true
       else
-        /etc/init.d/grafana-server restart || true
+        /etc/init.d/smartems-server restart || true
       fi
     fi
     echo " OK"

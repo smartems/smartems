@@ -22,7 +22,7 @@ is a core new feature: Alerting! Read on below for a detailed description of wha
 Alerting is a really revolutionary feature for smartEMS. It transforms smartEMS from a
 visualization tool into a truly mission critical monitoring tool. The alert rules are very easy to
 configure using your existing graph panels and threshold levels can be set simply by dragging handles to
-the right side of the graph. The rules will continually be evaluated by grafana-server and
+the right side of the graph. The rules will continually be evaluated by smartems-server and
 notifications will be sent out when the rule conditions are met.
 
 This feature has been worked on for over a year with many iterations and rewrites
