@@ -3,8 +3,8 @@
 cp Dockerfile ../../dist
 cd ../../dist
 
-docker build --tag "grafana/debtest" .
+docker build --tag "smartems/debtest" .
 
 rm Dockerfile
 
-docker run -i -t grafana/debtest /bin/bash
+docker run -i -t smartems/debtest /bin/bash

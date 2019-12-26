@@ -8,7 +8,7 @@
       - "11300:9300"
 
   fake-elastic6-data:
-    image: grafana/fake-data-gen
+    image: smartems/fake-data-gen
     network_mode: bridge
     environment:
       FD_DATASOURCE: elasticsearch6
@@ -20,4 +20,4 @@
     volumes:
       - ./docker/blocks/elastic6/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /var/log:/var/log:ro
-      - ../data/log:/var/log/grafana:ro
+      - ../data/log:/var/log/smartems:ro

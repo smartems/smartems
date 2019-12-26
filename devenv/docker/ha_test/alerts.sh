@@ -9,7 +9,7 @@ requiresJsonnet() {
 }
 
 setup() {
-	STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://admin:admin@grafana.loc/api/alert-notifications/1)
+	STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://admin:admin@smartems.loc/api/alert-notifications/1)
   if [ $STATUS -eq 200 ]; then
     echo "Email already exists, skipping..."
   else
@@ -24,10 +24,10 @@ setup() {
 				"addresses": "user@test.com"
 			}
 		}' \
-		http://admin:admin@grafana.loc/api/alert-notifications
+		http://admin:admin@smartems.loc/api/alert-notifications
   fi
 
-	STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://admin:admin@grafana.loc/api/alert-notifications/2)
+	STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://admin:admin@smartems.loc/api/alert-notifications/2)
   if [ $STATUS -eq 200 ]; then
     echo "Slack already exists, skipping..."
   else
@@ -39,7 +39,7 @@ setup() {
 			"sendReminder": false,
 			"uploadImage": true
 		}' \
-		http://admin:admin@grafana.loc/api/alert-notifications
+		http://admin:admin@smartems.loc/api/alert-notifications
   fi
 }
 
@@ -81,7 +81,7 @@ slack() {
 				"url": "'$url'"
 			}
 		}' \
-		http://admin:admin@grafana.loc/api/alert-notifications/2
+		http://admin:admin@smartems.loc/api/alert-notifications/2
 }
 
 provision() {
@@ -101,20 +101,20 @@ provision() {
 
 	requiresJsonnet
 
-	find grafana/provisioning/dashboards/alerts -maxdepth 1 -name 'alert*.json' -delete
-	jsonnet -m grafana/provisioning/dashboards/alerts grafana/provisioning/alerts.jsonnet --ext-code alerts=$alerts --ext-code condition=$condition
+	find smartems/provisioning/dashboards/alerts -maxdepth 1 -name 'alert*.json' -delete
+	jsonnet -m smartems/provisioning/dashboards/alerts smartems/provisioning/alerts.jsonnet --ext-code alerts=$alerts --ext-code condition=$condition
 }
 
 pause() {
 	curl -H "Content-Type: application/json" \
   -d '{"paused":true}' \
-  http://admin:admin@grafana.loc/api/admin/pause-all-alerts
+  http://admin:admin@smartems.loc/api/admin/pause-all-alerts
 }
 
 unpause() {
 	curl -H "Content-Type: application/json" \
   -d '{"paused":false}' \
-  http://admin:admin@grafana.loc/api/admin/pause-all-alerts
+  http://admin:admin@smartems.loc/api/admin/pause-all-alerts
 }
 
 usage() {

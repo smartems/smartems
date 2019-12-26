@@ -5,7 +5,7 @@ SMARTEMS_TAG=${1:-}
 RELEASE_CHANNEL="latest"
 
 if echo "$SMARTEMS_TAG" | grep -q "^v"; then
-	_grafana_version=$(echo "${SMARTEMS_TAG}" | cut -d "v" -f 2)
+	_smartems_version=$(echo "${SMARTEMS_TAG}" | cut -d "v" -f 2)
 else
   echo "Provided tag is not a version tag, skipping packages release..."
 	exit
@@ -15,7 +15,7 @@ if grep -q "beta" <<< "$SMARTEMS_TAG"; then
   RELEASE_CHANNEL="next"
 fi
 
-echo "$_grafana_version"
+echo "$_smartems_version"
 
 # lerna bootstrap might have created yarn.lock
 git checkout .
@@ -25,7 +25,7 @@ git checkout .
 # as specified in release guideline
 PACKAGE_VERSION=$(grep '"version"' lerna.json | cut -d '"' -f 4)
 
-echo "Releasing grafana packages @ ${PACKAGE_VERSION} under ${RELEASE_CHANNEL} channel"
+echo "Releasing smartems packages @ ${PACKAGE_VERSION} under ${RELEASE_CHANNEL} channel"
 
 if [ $RELEASE_CHANNEL == "latest" ]; then
   SCRIPT="publishLatest"

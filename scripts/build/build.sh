@@ -127,7 +127,7 @@ function package_setup() {
     rm -rf dist
   fi
   mkdir dist
-  go run build.go -gen-version ${OPT} > dist/grafana.version
+  go run build.go -gen-version ${OPT} > dist/smartems.version
   # Load ruby, needed for packing with fpm
   # shellcheck disable=SC1091
   source /etc/profile.d/rvm.sh

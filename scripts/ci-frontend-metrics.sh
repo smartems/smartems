@@ -32,7 +32,7 @@ echo -e "Controllers: $CONTROLLERS"
 
 if [ "${CIRCLE_BRANCH}" == "master" ]; then
   ./scripts/ci-metrics-publisher.sh \
-    grafana.ci-code.strictErrors="$ERROR_COUNT" \
-    grafana.ci-code.directives="$DIRECTIVES" \
-    grafana.ci-code.controllers="$CONTROLLERS"
+    smartems.ci-code.strictErrors="$ERROR_COUNT" \
+    smartems.ci-code.directives="$DIRECTIVES" \
+    smartems.ci-code.controllers="$CONTROLLERS"
 fi

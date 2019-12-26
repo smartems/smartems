@@ -65,7 +65,7 @@ if [ -d "dist" ]; then
 fi
 
 mkdir dist
-go run build.go -gen-version ${OPT} > dist/grafana.version
+go run build.go -gen-version ${OPT} > dist/smartems.version
 
 # Load ruby, needed for packing with fpm
 # shellcheck disable=SC1091

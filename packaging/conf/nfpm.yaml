@@ -1,22 +1,22 @@
-name: "grafana"
+name: "smartems"
 arch: "${ARCH}"
 platform: "linux"
 version: "${VERSION}"
 section: "default"
 priority: "extra"
 replaces:
-- grafana
+- smartems
 provides:
 - smartems-server
 - smartems-cli
 depends:
 - adduser
 - libfontconfig1
-maintainer: "<contact@grafana.com>"
+maintainer: "<contact@smartems.com>"
 description: |
   Grafana
 vendor: "Grafana"
-homepage: "https://grafana.com"
+homepage: "https://smartems.com"
 license: "Apache 2"
 bindir: "/usr/sbin"
 files:

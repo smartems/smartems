@@ -4,8 +4,8 @@ blocks_dir=docker/blocks
 docker_dir=docker
 template_dir=templates
 
-grafana_config_file=conf.tmp
-grafana_config=config
+smartems_config_file=conf.tmp
+smartems_config=config
 
 compose_header_file=docker/compose_header.yml
 compose_file=docker-compose.yaml
@@ -24,7 +24,7 @@ if [ "$#" == 0 ]; then
     exit 0
 fi
 
-for file in $grafana_config_file $compose_file $env_file; do
+for file in $smartems_config_file $compose_file $env_file; do
     if [ -e $file ]; then
         echo "Deleting $file"
         rm $file
@@ -41,10 +41,10 @@ for dir in $@; do
         exit 1
     fi
 
-    if [ -e $current_dir/$grafana_config ]; then
-        echo "Adding $current_dir/$grafana_config to $grafana_config_file"
-        cat $current_dir/$grafana_config >> $grafana_config_file
-        echo "" >> $grafana_config_file
+    if [ -e $current_dir/$smartems_config ]; then
+        echo "Adding $current_dir/$smartems_config to $smartems_config_file"
+        cat $current_dir/$smartems_config >> $smartems_config_file
+        echo "" >> $smartems_config_file
     fi
 
     if [ -e $current_dir/$compose_file ]; then

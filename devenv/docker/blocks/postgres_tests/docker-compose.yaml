@@ -2,8 +2,8 @@
     build:
       context: docker/blocks/postgres_tests
     environment:
-      POSTGRES_USER: grafanatest
-      POSTGRES_PASSWORD: grafanatest
+      POSTGRES_USER: smartemstest
+      POSTGRES_PASSWORD: smartemstest
     ports:
       - "5432:5432"
     tmpfs: /var/lib/postgresql/data:rw

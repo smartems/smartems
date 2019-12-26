@@ -2,7 +2,7 @@
 
 RELEASE_TYPE="${1:-}"
 RELEASE_TAG="${2:-}"
-GCP_REPO_BUCKET="${3:-grafana-repo}"
+GCP_REPO_BUCKET="${3:-smartems-repo}"
 
 REPO="rpm"
 
@@ -30,12 +30,12 @@ gsutil -m cp /rpm-repo/*.rpm "$BUCKET" # sync binaries first to avoid cache miss
 gsutil -m rsync -r -d /rpm-repo "$BUCKET"
 
 # usage:
-# [grafana]
-# name=grafana
-# baseurl=https://packages.grafana.com/oss/rpm
+# [smartems]
+# name=smartems
+# baseurl=https://packages.smartems.com/oss/rpm
 # repo_gpgcheck=1
 # enabled=1
 # gpgcheck=1
-# gpgkey=https://packages.grafana.com/gpg.key
+# gpgkey=https://packages.smartems.com/gpg.key
 # sslverify=1
 # sslcacert=/etc/pki/tls/certs/ca-bundle.crt

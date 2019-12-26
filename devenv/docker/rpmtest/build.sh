@@ -3,8 +3,8 @@
 cp Dockerfile ../../dist
 cd ../../dist
 
-docker build --tag "grafana/rpmtest" .
+docker build --tag "smartems/rpmtest" .
 
 rm Dockerfile
 
-docker run -i -t grafana/rpmtest /bin/bash
+docker run -i -t smartems/rpmtest /bin/bash

@@ -17,13 +17,13 @@ while [ "$1" != "" ]; do
   esac
 done
 
-_raw_grafana_tag=$1
-_docker_repo=${2:-grafana/grafana-enterprise}
+_raw_smartems_tag=$1
+_docker_repo=${2:-smartems/smartems-enterprise}
 
-if echo "$_raw_grafana_tag" | grep -q "^v"; then
-  _grafana_tag=$(echo "${_raw_grafana_tag}" | cut -d "v" -f 2)
+if echo "$_raw_smartems_tag" | grep -q "^v"; then
+  _smartems_tag=$(echo "${_raw_smartems_tag}" | cut -d "v" -f 2)
 else
-  _grafana_tag="${_raw_grafana_tag}"
+  _smartems_tag="${_raw_smartems_tag}"
 fi
 
 if [ ${UBUNTU_BASE} = "0" ]; then
@@ -34,17 +34,17 @@ else
   DOCKERFILE="ubuntu.Dockerfile"
 fi
 
-echo "Building and deploying ${_docker_repo}:${_grafana_tag}${TAG_SUFFIX}"
+echo "Building and deploying ${_docker_repo}:${_smartems_tag}${TAG_SUFFIX}"
 
 docker build \
-  --tag "${_docker_repo}:${_grafana_tag}${TAG_SUFFIX}" \
+  --tag "${_docker_repo}:${_smartems_tag}${TAG_SUFFIX}" \
   --no-cache=true \
   -f ${DOCKERFILE} \
   .
 
-docker push "${_docker_repo}:${_grafana_tag}${TAG_SUFFIX}"
+docker push "${_docker_repo}:${_smartems_tag}${TAG_SUFFIX}"
 
-if echo "$_raw_grafana_tag" | grep -q "^v" && echo "$_raw_grafana_tag" | grep -qv "beta"; then
-  docker tag "${_docker_repo}:${_grafana_tag}${TAG_SUFFIX}" "${_docker_repo}:latest${TAG_SUFFIX}"
+if echo "$_raw_smartems_tag" | grep -q "^v" && echo "$_raw_smartems_tag" | grep -qv "beta"; then
+  docker tag "${_docker_repo}:${_smartems_tag}${TAG_SUFFIX}" "${_docker_repo}:latest${TAG_SUFFIX}"
   docker push "${_docker_repo}:latest${TAG_SUFFIX}"
 fi

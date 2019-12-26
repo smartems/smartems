@@ -1,8 +1,8 @@
-# This will proxy all requests for http://localhost:10081/grafana/ to
+# This will proxy all requests for http://localhost:10081/smartems/ to
 # http://localhost:3000 (Grafana running locally)
 #
 # Please note that you'll need to change the root_url in the Grafana configuration:
-# root_url = %(protocol)s://%(domain)s:10081/grafana/
+# root_url = %(protocol)s://%(domain)s:10081/smartems/
 
   apacheproxy:
     build: docker/blocks/apache_proxy

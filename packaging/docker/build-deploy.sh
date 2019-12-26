@@ -19,14 +19,14 @@ while [ "$1" != "" ]; do
   esac
 done
 
-_grafana_version=$1
-./build.sh ${OPT} "$_grafana_version"
+_smartems_version=$1
+./build.sh ${OPT} "$_smartems_version"
 docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
 
-./push_to_docker_hub.sh ${OPT} "$_grafana_version"
+./push_to_docker_hub.sh ${OPT} "$_smartems_version"
 
 if [ ${UBUNTU_BASE} = "0" ]; then
-  if echo "$_grafana_version" | grep -q "^master-"; then
-    ./deploy_to_k8s.sh "grafana/grafana-dev:$_grafana_version"
+  if echo "$_smartems_version" | grep -q "^master-"; then
+    ./deploy_to_k8s.sh "smartems/smartems-dev:$_smartems_version"
   fi
 fi
