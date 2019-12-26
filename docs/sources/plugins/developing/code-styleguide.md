@@ -17,7 +17,7 @@ The plugin metadata consists of a plugin.json file and the README.md file. These
 
 ### Plugin.json (mandatory)
 
-The plugin.json file is the same concept as the package.json file for an npm package. When smartEMS starts it will scan the plugin folders and mount every folder that contains a plugin.json file unless the folder contains a subfolder named `dist`. In that case grafana will mount the `dist` folder instead.
+The plugin.json file is the same concept as the package.json file for an npm package. When smartEMS starts it will scan the plugin folders and mount every folder that contains a plugin.json file unless the folder contains a subfolder named `dist`. In that case smartems will mount the `dist` folder instead.
 
 The most important fields are the first three, especially the id. The convention for the plugin id is **[github username/org]-[plugin name]-[datasource|app|panel]** and it has to be unique.
 
@@ -25,8 +25,8 @@ Examples:
 
 ```bash
 raintank-worldping-app
-grafana-simple-json-datasource
-grafana-piechart-panel
+smartems-simple-json-datasource
+smartems-piechart-panel
 mtanda-histogram-panel
 ```
 
@@ -41,7 +41,7 @@ Minimal plugin.json:
   "id": "yourorg-clock-panel",
 
   "info": {
-    "description": "Clock panel for grafana",
+    "description": "Clock panel for smartems",
     "author": {
       "name": "Raintank Inc.",
       "url": "http://raintank.io"
@@ -52,7 +52,7 @@ Minimal plugin.json:
   },
 
   "dependencies": {
-    "grafanaVersion": "3.x.x",
+    "smartemsVersion": "3.x.x",
     "plugins": [ ]
   }
 }
@@ -132,7 +132,7 @@ Our recommendation is to use whatever you usually use - Grunt, Gulp or npm scrip
 
 ## Linting
 
-We recommend that you use a linter for your JavaScript. For ES6, the standard linter is [eslint](http://eslint.org/). Rules for linting are described in an .eslintrc that is placed in the root directory. [Here is an example](https://github.com/grafana/worldmap-panel/blob/master/.eslintrc) of linting rules in a plugin.
+We recommend that you use a linter for your JavaScript. For ES6, the standard linter is [eslint](http://eslint.org/). Rules for linting are described in an .eslintrc that is placed in the root directory. [Here is an example](https://github.com/smartems/worldmap-panel/blob/master/.eslintrc) of linting rules in a plugin.
 
 ### ES6 features
 

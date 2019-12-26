@@ -1,7 +1,7 @@
 +++
 title = "SAML Authentication"
 description = "smartEMS SAML Authentication"
-keywords = ["grafana", "saml", "documentation", "saml-auth"]
+keywords = ["smartems", "saml", "documentation", "saml-auth"]
 aliases = ["/auth/saml/"]
 type = "docs"
 [menu.docs]

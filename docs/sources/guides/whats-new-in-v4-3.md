@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v4.3"
 description = "Feature and improvement highlights for smartEMS v4.3"
-keywords = ["grafana", "new", "documentation", "4.3.0"]
+keywords = ["smartems", "new", "documentation", "4.3.0"]
 type = "docs"
 [menu.docs]
 name = "Version 4.3"
@@ -12,18 +12,18 @@ weight = -2
 
 ## What's New in smartEMS v4.3
 
-smartEMS v4.3 Beta is now [available for download](https://grafana.com/grafana/download/4.3.0-beta1).
+smartEMS v4.3 Beta is now [available for download](https://smartems.com/smartems/download/4.3.0-beta1).
 
 ## Release Highlights
 
-- New [Heatmap Panel](http://docs.grafana.org/features/panels/heatmap/)
+- New [Heatmap Panel](http://docs.smartems.org/features/panels/heatmap/)
 - Graph Panel Histogram Mode
 - Elasticsearch Histogram Aggregation
 - Prometheus Table data format
-- New [MySQL Data Source](http://docs.grafana.org/features/datasources/mysql/) (alpha version to get some early feedback)
+- New [MySQL Data Source](http://docs.smartems.org/features/datasources/mysql/) (alpha version to get some early feedback)
 - 60+ small fixes and improvements, most of them contributed by our fantastic community!
 
-Check out the [New Features in v4.3 Dashboard](http://play.grafana.org/dashboard/db/new-features-in-v4-3?orgId=1) on the smartEMS Play site for a showcase of these new features.
+Check out the [New Features in v4.3 Dashboard](http://play.smartems.org/dashboard/db/new-features-in-v4-3?orgId=1) on the smartEMS Play site for a showcase of these new features.
 
 ## Histogram Support
 
@@ -35,11 +35,11 @@ The Graph Panel now supports Histograms.
 
 ## Histogram Aggregation Support for Elasticsearch
 
-Elasticsearch is the only supported data source that can return pre-bucketed data (data that is already grouped into ranges). With other data sources there is a risk of returning inaccurate data in a histogram due to using already aggregated data rather than raw data. This release adds support for Elasticsearch pre-bucketed data that can be visualized with the new [Heatmap Panel](http://docs.grafana.org/features/panels/heatmap/).
+Elasticsearch is the only supported data source that can return pre-bucketed data (data that is already grouped into ranges). With other data sources there is a risk of returning inaccurate data in a histogram due to using already aggregated data rather than raw data. This release adds support for Elasticsearch pre-bucketed data that can be visualized with the new [Heatmap Panel](http://docs.smartems.org/features/panels/heatmap/).
 
 ## Heatmap Panel
 
-The Histogram support in the Graph Panel does not show changes over time - it aggregates all the data together for the chosen time range. To visualize a histogram over time, we have built a new [Heatmap Panel](http://docs.grafana.org/features/panels/heatmap/).
+The Histogram support in the Graph Panel does not show changes over time - it aggregates all the data together for the chosen time range. To visualize a histogram over time, we have built a new [Heatmap Panel](http://docs.smartems.org/features/panels/heatmap/).
 
 Every column in a Heatmap is a histogram snapshot. Instead of visualizing higher values with higher bars, a heatmap visualizes higher values with color. The histogram shown above is equivalent to one column in the heatmap shown below.
 
@@ -51,10 +51,10 @@ The Heatmap panel also works with Elasticsearch Histogram Aggregations for more 
 
 ## MySQL Data Source (alpha)
 
-This release includes a [new core data source for MySQL](http://docs.grafana.org/features/datasources/mysql/). You can write any possible MySQL query and format it as either Time Series or Table Data allowing it be used with the Graph Panel, Table Panel and SingleStat Panel.
+This release includes a [new core data source for MySQL](http://docs.smartems.org/features/datasources/mysql/). You can write any possible MySQL query and format it as either Time Series or Table Data allowing it be used with the Graph Panel, Table Panel and SingleStat Panel.
 
 We are still working on the MySQL data source. As it's missing some important features, like templating and macros and future changes could be breaking, we are
-labeling the state of the data source as Alpha. Instead of holding up the release of v4.3 we are including it in its current shape to get some early feedback.  So please try it out and let us know what you think on [twitter](https://twitter.com/intent/tweet?text=.%40grafana&source=4_3_beta_blog&related=blog) or on our [community forum](https://community.grafana.com/c/releases). Is this a feature that you would use? How can we make it better?
+labeling the state of the data source as Alpha. Instead of holding up the release of v4.3 we are including it in its current shape to get some early feedback.  So please try it out and let us know what you think on [twitter](https://twitter.com/intent/tweet?text=.%40smartems&source=4_3_beta_blog&related=blog) or on our [community forum](https://community.smartems.com/c/releases). Is this a feature that you would use? How can we make it better?
 
 **The query editor can show the generated and interpolated SQL that is sent to the MySQL server.**
 
@@ -97,9 +97,9 @@ Lots more enhancements and fixes can be found in the [Changelog](https://github.
 
 ## Download
 
-Head to the [v4.3 download page](https://grafana.com/grafana/download) for download links and instructions.
+Head to the [v4.3 download page](https://smartems.com/smartems/download) for download links and instructions.
 
 ## Thanks
 
-A big thanks to all the smartEMS users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.grafana.com/) and providing feedback!
+A big thanks to all the smartEMS users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.smartems.com/) and providing feedback!
 

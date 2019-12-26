@@ -20,7 +20,7 @@ The plugin metadata consists of a `plugin.json` file and the README.md file. The
 The README.md file is shown on the plugins page in smartEMS and the plugin page on smartEMS.com. There are some differences between the GitHub markdown and the markdown allowed in smartEMS/smartEMS.com:
 
 - Cannot contain inline HTML.
-- Any image links should be absolute links. For example: https://raw.githubusercontent.com/grafana/azure-monitor-datasource/master/dist/img/grafana_cloud_install.png
+- Any image links should be absolute links. For example: https://raw.githubusercontent.com/smartems/azure-monitor-datasource/master/dist/img/smartems_cloud_install.png
 
 The README should:
 
@@ -40,7 +40,7 @@ A minimal `plugin.json` file:
   "id": "yourorg-clock-panel",
 
   "info": {
-    "description": "Clock panel for grafana",
+    "description": "Clock panel for smartems",
     "author": {
       "name": "Author Name",
       "url": "http://yourwebsite.com"
@@ -51,13 +51,13 @@ A minimal `plugin.json` file:
   },
 
   "dependencies": {
-    "grafanaVersion": "3.x.x",
+    "smartemsVersion": "3.x.x",
     "plugins": [ ]
   }
 }
 ```
 
-- The convention for the plugin id is [github username/org]-[plugin name]-[datasource|app|panel] and it has to be unique. Although if org and plugin name are the same then [plugin name]-[datasource|app|panel] is also valid. The org **cannot** be `grafana` unless it is a plugin created by the smartEMS core team.
+- The convention for the plugin id is [github username/org]-[plugin name]-[datasource|app|panel] and it has to be unique. Although if org and plugin name are the same then [plugin name]-[datasource|app|panel] is also valid. The org **cannot** be `smartems` unless it is a plugin created by the smartEMS core team.
 
     Examples:
 
@@ -69,7 +69,7 @@ A minimal `plugin.json` file:
 - The `type` field should be either `datasource` `app` or `panel`.
 - The `version` field should be in the form: x.x.x e.g. `1.0.0` or `0.4.1`.
 
-The full file format for the `plugin.json` file is described [here](http://docs.grafana.org/plugins/developing/plugin.json/).
+The full file format for the `plugin.json` file is described [here](http://docs.smartems.org/plugins/developing/plugin.json/).
 
 ## Plugin Language
 
@@ -136,7 +136,7 @@ Use the `width-x` and `max-width-x` classes to control the width of your labels 
 
 ## Data Sources
 
-A basic guide for data sources can be found [here](http://docs.grafana.org/plugins/developing/datasources/).
+A basic guide for data sources can be found [here](http://docs.smartems.org/plugins/developing/datasources/).
 
 ### Config Page Guidelines
 
@@ -171,5 +171,5 @@ Each query editor is unique and can have a unique style. It should be adapted to
 - The data source should be able to handle when a user toggles a query (by clicking on the eye icon) and not execute the query. This is done by checking the `hide` property - an [example](https://github.com/smartems/smartems/blob/master/public/app/plugins/datasource/postgres/datasource.ts#L35-L38).
 - Should not execute queries if fields in the Query Editor are empty and the query will throw an exception (defensive programming).
 - Should handle errors. There are two main ways to do this:
-  - use the notification system in smartEMS to show a toaster popup with the error message. Example [here](https://github.com/alexanderzobnin/grafana-zabbix/blob/fdbbba2fb03f5f2a4b3b0715415e09d5a4cf6cde/src/panel-triggers/triggers_panel_ctrl.js#L467-L471).
-  - provide an error notification in the query editor like the MySQL/Postgres data sources do. Example code in the `query_ctrl`  [here](https://github.com/grafana/azure-monitor-datasource/blob/b184d077f082a69f962120ef0d1f8296a0d46f03/src/query_ctrl.ts#L36-L51) and in the [html](https://github.com/grafana/azure-monitor-datasource/blob/b184d077f082a69f962120ef0d1f8296a0d46f03/src/partials/query.editor.html#L190-L193).
+  - use the notification system in smartEMS to show a toaster popup with the error message. Example [here](https://github.com/alexanderzobnin/smartems-zabbix/blob/fdbbba2fb03f5f2a4b3b0715415e09d5a4cf6cde/src/panel-triggers/triggers_panel_ctrl.js#L467-L471).
+  - provide an error notification in the query editor like the MySQL/Postgres data sources do. Example code in the `query_ctrl`  [here](https://github.com/smartems/azure-monitor-datasource/blob/b184d077f082a69f962120ef0d1f8296a0d46f03/src/query_ctrl.ts#L36-L51) and in the [html](https://github.com/smartems/azure-monitor-datasource/blob/b184d077f082a69f962120ef0d1f8296a0d46f03/src/partials/query.editor.html#L190-L193).

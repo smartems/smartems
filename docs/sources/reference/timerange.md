@@ -1,6 +1,6 @@
 +++
 title = "Time Range"
-keywords = ["grafana", "dashboard", "documentation", "time range"]
+keywords = ["smartems", "dashboard", "documentation", "time range"]
 type = "docs"
 [menu.docs]
 name = "Time Range"

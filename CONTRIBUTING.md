@@ -41,9 +41,9 @@ Read more about the ways you can [Triage issues](/contribute/triage-issues.md).
 
 ### Answering questions
 
-If you have a question and you can't find the answer in the [documentation](https://grafana.com/docs/), the next step is to ask it on the [community site](https://community.grafana.com/).
+If you have a question and you can't find the answer in the [documentation](https://smartems.com/docs/), the next step is to ask it on the [community site](https://community.smartems.com/).
 
-It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.grafana.com/), and start helping other smartEMS users by answering their questions.
+It's important to us to help these users, and we'd love your help. Sign up to our [community site](https://community.smartems.com/), and start helping other smartEMS users by answering their questions.
 
 ### Your first contribution
 
@@ -58,10 +58,10 @@ When you're ready to contribute, it's time to [Create a pull request](/contribut
 
 #### Contributor License Agreement (CLA)
 
-Before we can accept your pull request, you need to [sign our CLA](https://grafana.com/docs/contribute/cla/). If you haven't, our CLA assistant prompts you to when you create your pull request.
+Before we can accept your pull request, you need to [sign our CLA](https://smartems.com/docs/contribute/cla/). If you haven't, our CLA assistant prompts you to when you create your pull request.
 
 ## Where do I go from here?
 
 - Set up your [development environment](contribute/developer-guide.md).
 - Learn how to [contribute documentation](contribute/documentation.md).
-- Get started [developing plugins](https://grafana.com/docs/plugins/developing/development/) for smartEMS.
+- Get started [developing plugins](https://smartems.com/docs/plugins/developing/development/) for smartEMS.

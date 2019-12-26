@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Themes are implemented in Typescript.** That's because our goal is to share variables between smartEMS Typescript code and SASS files. Theme definitions are located in `packages/grafana-ui/src/themes/[default|dark|light].ts` files. `default.ts` file holds common variables like typography and spacing definitions, while `[light|dark].ts` primarily specify colors used in themes.
+**Themes are implemented in Typescript.** That's because our goal is to share variables between smartEMS Typescript code and SASS files. Theme definitions are located in `packages/smartems-ui/src/themes/[default|dark|light].ts` files. `default.ts` file holds common variables like typography and spacing definitions, while `[light|dark].ts` primarily specify colors used in themes.
 
 ## Usage
 ### Using themes in React components
@@ -108,14 +108,14 @@ There should be very few cases where theme would be used in Angular context. For
 `[_variables|_variables.dark|_variables.light].generated.scss` files are the ones that are referenced in the main SASS files for SASS variables to be available. **These files are automatically generated and should never be modified by hand!**.
 
 #### If you need to modify *SASS variable value* you need to modify corresponding Typescript file that is a source of the variables:
-- `_variables.generated.scss` - modify `grafana-ui/src/themes/default.ts`
-- `_variables.light.generated.scss` - modify `grafana-ui/src/themes/light.ts`
-- `_variables.dark.generated.scss` - modify `grafana-ui/src/themes/dark.ts`
+- `_variables.generated.scss` - modify `smartems-ui/src/themes/default.ts`
+- `_variables.light.generated.scss` - modify `smartems-ui/src/themes/light.ts`
+- `_variables.dark.generated.scss` - modify `smartems-ui/src/themes/dark.ts`
 
 #### If you need to *add new variable* to SASS variables you need to modify corresponding template file:
-- `_variables.generated.scss` - modify `grafana-ui/src/themes/_variables.scss.tmpl.ts`
-- `_variables.light.generated.scss` - modify `grafana-ui/src/themes/_variables.light.scss.tmpl.ts`
-- `_variables.dark.generated.scss` - modify `grafana-ui/src/themes/_variables.dark.scss.tmpl.ts`
+- `_variables.generated.scss` - modify `smartems-ui/src/themes/_variables.scss.tmpl.ts`
+- `_variables.light.generated.scss` - modify `smartems-ui/src/themes/_variables.light.scss.tmpl.ts`
+- `_variables.dark.generated.scss` - modify `smartems-ui/src/themes/_variables.dark.scss.tmpl.ts`
 
 
 ## Limitations

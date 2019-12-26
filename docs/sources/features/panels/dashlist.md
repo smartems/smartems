@@ -1,6 +1,6 @@
 +++
 title = "Dashboard List"
-keywords = ["grafana", "dashboard list", "documentation", "panel", "dashlist"]
+keywords = ["smartems", "dashboard list", "documentation", "panel", "dashlist"]
 type = "docs"
 aliases = ["/reference/dashlist/"]
 [menu.docs]

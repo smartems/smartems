@@ -5,4 +5,4 @@ identifier = "project"
 weight = 6
 +++
 
-# Welcome to the grafana project
+# Welcome to the smartems project

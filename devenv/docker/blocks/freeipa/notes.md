@@ -6,7 +6,7 @@ Users have to be created manually. The docker-compose up command takes a few min
 
 `docker exec -it freeipa /bin/bash`
 
-To create a user with username: `ldap-viewer` and password: `grafana123`
+To create a user with username: `ldap-viewer` and password: `smartems123`
 
 ```bash
 kinit admin
@@ -17,7 +17,7 @@ Log in with password `Secret123`
 ```bash
 ipa user-add ldap-viewer --first ldap --last viewer
 ipa passwd ldap-viewer
-ldappasswd -D uid=ldap-viewer,cn=users,cn=accounts,dc=example,dc=org -w test -a test -s grafana123
+ldappasswd -D uid=ldap-viewer,cn=users,cn=accounts,dc=example,dc=org -w test -a test -s smartems123
 ```
 
 ## Enabling FreeIPA LDAP in smartEMS

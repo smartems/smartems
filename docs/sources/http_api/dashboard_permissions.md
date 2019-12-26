@@ -1,7 +1,7 @@
 +++
 title = "Dashboard Permissions HTTP API "
 description = "smartEMS Dashboard Permissions HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "dashboard", "permission", "permissions", "acl"]
+keywords = ["smartems", "http", "documentation", "api", "dashboard", "permission", "permissions", "acl"]
 aliases = ["/http_api/dashboardpermissions/"]
 type = "docs"
 [menu.docs]

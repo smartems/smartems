@@ -1,7 +1,7 @@
 +++
 title = "Using Microsoft SQL Server in smartEMS"
 description = "Guide for using Microsoft SQL Server in smartEMS"
-keywords = ["grafana", "MSSQL", "Microsoft", "SQL", "guide", "Azure SQL Database"]
+keywords = ["smartems", "MSSQL", "Microsoft", "SQL", "guide", "Azure SQL Database"]
 type = "docs"
 [menu.docs]
 name = "Microsoft SQL Server"
@@ -65,8 +65,8 @@ executed. To protect against this we **Highly** recommend you create a specific 
 Example:
 
 ```sql
- CREATE USER grafanareader WITH PASSWORD 'password'
- GRANT SELECT ON dbo.YourTable3 TO grafanareader
+ CREATE USER smartemsreader WITH PASSWORD 'password'
+ GRANT SELECT ON dbo.YourTable3 TO smartemsreader
 ```
 
 Make sure the user does not get any unwanted privileges from the public role.
@@ -103,7 +103,7 @@ Macro example | Description
 *$__timeFrom()* | Will be replaced by the start of the currently active time selection. For example, *'2017-04-21T05:01:17Z'*
 *$__timeTo()* | Will be replaced by the end of the currently active time selection. For example, *'2017-04-21T05:06:17Z'*
 *$__timeGroup(dateColumn,'5m'[, fillvalue])* | Will be replaced by an expression usable in GROUP BY clause. Providing a *fillValue* of *NULL* or *floating value* will automatically fill empty series in timerange with that value. <br/>For example, *CAST(ROUND(DATEDIFF(second, '1970-01-01', time_column)/300.0, 0) as bigint)\*300*.
-*$__timeGroup(dateColumn,'5m', 0)* | Same as above but with a fill parameter so missing points in that series will be added by grafana and 0 will be used as value.
+*$__timeGroup(dateColumn,'5m', 0)* | Same as above but with a fill parameter so missing points in that series will be added by smartems and 0 will be used as value.
 *$__timeGroup(dateColumn,'5m', NULL)* | Same as above but NULL will be used as value for missing points.
 *$__timeGroup(dateColumn,'5m', previous)* | Same as above but the previous value in that series will be used as fill value if no value has been seen yet NULL will be used (only available in smartEMS 5.3+).
 *$__timeGroupAlias(dateColumn,'5m')* | Will be replaced identical to $__timeGroup but with an added column alias (only available in smartEMS 5.3+).
@@ -590,8 +590,8 @@ datasources:
   - name: MSSQL
     type: mssql
     url: localhost:1433
-    database: grafana
-    user: grafana
+    database: smartems
+    user: smartems
     jsonData:
       maxOpenConns: 0         # smartEMS v5.4+
       maxIdleConns: 2         # smartEMS v5.4+

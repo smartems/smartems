@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v3.1"
 description = "Feature and improvement highlights for smartEMS v3.1"
-keywords = ["grafana", "new", "documentation", "3.1"]
+keywords = ["smartems", "new", "documentation", "3.1"]
 type = "docs"
 [menu.docs]
 name = "Version 3.1"
@@ -22,7 +22,7 @@ Dashboards exported from smartEMS 3.1 are now more portable and easier for other
 
 <img src="/img/docs/v31/import_step1.png">
 
-The above screenshot shows the new import modal that gives you 3 options for how to import a dashboard. One notable new addition here is the ability to import directly from Dashboards shared on [smartEMS.com](https://grafana.com).
+The above screenshot shows the new import modal that gives you 3 options for how to import a dashboard. One notable new addition here is the ability to import directly from Dashboards shared on [smartEMS.com](https://smartems.com).
 
 The next step in the import process:
 
@@ -32,7 +32,7 @@ Here you can change the name of the dashboard and also pick what data sources yo
 
 ## Discover Dashboards
 
-On [smartEMS.com](https://grafana.com) you can now browse and search for dashboards. We have already added a few but more are being uploaded every day. To import a dashboard just copy the dashboard url and head back to smartEMS, then Dashboard Search -> Import -> Paste smartEMS.com Dashboard URL.
+On [smartEMS.com](https://smartems.com) you can now browse and search for dashboards. We have already added a few but more are being uploaded every day. To import a dashboard just copy the dashboard url and head back to smartEMS, then Dashboard Search -> Import -> Paste smartEMS.com Dashboard URL.
 
 <img src="/img/docs/v31/gnet_dashboards_list.png">
 

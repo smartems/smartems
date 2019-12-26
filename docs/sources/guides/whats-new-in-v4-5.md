@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v4.5"
 description = "Feature and improvement highlights for smartEMS v4.5"
-keywords = ["grafana", "new", "documentation", "4.5"]
+keywords = ["smartems", "new", "documentation", "4.5"]
 type = "docs"
 [menu.docs]
 name = "Version 4.5"
@@ -30,7 +30,7 @@ Create column styles that turn cells into links that use the value in the cell  
 
 ### Query Inspector
 Query Inspector is a new feature that shows query requests and responses. This can be helpful if a graph is not shown or shows something very different than what you expected.
-More information [here](https://community.grafana.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630).
+More information [here](https://community.smartems.com/t/using-smartemss-query-inspector-to-troubleshoot-issues/2630).
 ![](/img/docs/v45/query_inspector.png)
 
 ## Changelog

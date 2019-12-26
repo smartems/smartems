@@ -1,7 +1,7 @@
 +++
 title = "Other HTTP API "
 description = "smartEMS Other HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "other"]
+keywords = ["smartems", "http", "documentation", "api", "other"]
 aliases = ["/http_api/other/"]
 type = "docs"
 [menu.docs]
@@ -41,18 +41,18 @@ Content-Type: application/json
   },
   "datasources":{
     "datasourcename":{
-      "index":"grafana-dash",
+      "index":"smartems-dash",
       "meta":{
         "annotations":true,
-        "module":"plugins/datasource/grafana/datasource",
+        "module":"plugins/datasource/smartems/datasource",
         "name":"smartEMS",
         "partials":{
-          "annotations":"app/plugins/datasource/grafana/partials/annotations.editor.html",
-          "config":"app/plugins/datasource/grafana/partials/config.html"
+          "annotations":"app/plugins/datasource/smartems/partials/annotations.editor.html",
+          "config":"app/plugins/datasource/smartems/partials/config.html"
         },
         "pluginType":"datasource",
         "serviceName":"smartEMS",
-        "type":"grafanasearch"
+        "type":"smartemssearch"
       }
     }
   },

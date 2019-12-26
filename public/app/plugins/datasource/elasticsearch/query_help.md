@@ -5,6 +5,6 @@
 
 #### Documentation links
 
-[smartEMS's Elasticsearch Documentation](http://docs.grafana.org/features/datasources/elasticsearch)
+[smartEMS's Elasticsearch Documentation](http://docs.smartems.org/features/datasources/elasticsearch)
 
 [Official Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)

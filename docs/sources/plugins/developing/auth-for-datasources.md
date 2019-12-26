@@ -23,7 +23,7 @@ For backend authentication to work, the external/third-party API must either hav
 
 ## Plugin Routes
 
-You can specify routes in the `plugin.json` file for your data source plugin. [Here is an example](https://github.com/grafana/azure-monitor-datasource/blob/d74c82145c0a4af07a7e96cc8dde231bfd449bd9/src/plugin.json#L30-L95) with lots of routes (though most plugins will just have one route).
+You can specify routes in the `plugin.json` file for your data source plugin. [Here is an example](https://github.com/smartems/azure-monitor-datasource/blob/d74c82145c0a4af07a7e96cc8dde231bfd449bd9/src/plugin.json#L30-L95) with lots of routes (though most plugins will just have one route).
 
 When you build your url to the third-party API in your data source class, the url should start with the text specified in the path field for a route. The proxy will strip out the path text and replace it with the value in the url field.
 
@@ -79,7 +79,7 @@ With SecureJsonData:
 
 In the above example, the app is able to set the value for `dynamicUrl` in JsonData or SecureJsonData and it will be replaced on-demand.
 
-An app using this feature can be found [here](https://github.com/grafana/kentik-app).
+An app using this feature can be found [here](https://github.com/smartems/kentik-app).
 
 ## Encrypting Sensitive Data
 
@@ -93,7 +93,7 @@ This is an example of using the `secureJsonData` blob to save a property called 
 
 ## API Key/HTTP Header Authentication
 
-Some third-party API's accept a HTTP Header for authentication. The [example](https://github.com/grafana/azure-monitor-datasource/blob/d74c82145c0a4af07a7e96cc8dde231bfd449bd9/src/plugin.json#L91-L93) below has a `headers` section that defines the name of the HTTP Header that the API expects and it uses the `SecureJSONData` blob to fetch an encrypted API key. The smartEMS server proxy will decrypt the key, add the `X-API-Key` header to the request and forward it to the third-party API.
+Some third-party API's accept a HTTP Header for authentication. The [example](https://github.com/smartems/azure-monitor-datasource/blob/d74c82145c0a4af07a7e96cc8dde231bfd449bd9/src/plugin.json#L91-L93) below has a `headers` section that defines the name of the HTTP Header that the API expects and it uses the `SecureJSONData` blob to fetch an encrypted API key. The smartEMS server proxy will decrypt the key, add the `X-API-Key` header to the request and forward it to the third-party API.
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 This guide helps you get started developing smartEMS.
 
-Before you begin, you might want to read [How to contribute to smartEMS as a junior dev](https://medium.com/@ivanahuckova/how-to-contribute-to-grafana-as-junior-dev-c01fe3064502) by [Ivana Huckova](https://medium.com/@ivanahuckova).
+Before you begin, you might want to read [How to contribute to smartEMS as a junior dev](https://medium.com/@ivanahuckova/how-to-contribute-to-smartems-as-junior-dev-c01fe3064502) by [Ivana Huckova](https://medium.com/@ivanahuckova).
 
 
 ## Dependencies
@@ -114,7 +114,7 @@ BROWSER=1 SLOWMO=1 yarn e2e-tests
 
 ## Configure smartEMS for development
 
-The default configuration, `grafana.ini`, is located in the `conf` directory. 
+The default configuration, `smartems.ini`, is located in the `conf` directory. 
 
 To override the default configuration, create a `custom.ini` file in the `conf` directory. You only need to add the options you wish to override.
 
@@ -159,7 +159,7 @@ To build a Docker image, run:
 make build-docker-full
 ```
 
-The resulting image will be tagged as grafana/grafana:dev.
+The resulting image will be tagged as smartems/smartems:dev.
 
 **Note:** If you've already set up a local development environment, and you're running a `linux/amd64` machine, you can speed up building the Docker image:
 
@@ -200,5 +200,5 @@ Another alternative is to limit the files being watched. The directories that ar
 
 - Read our [style guides](/contribute/style-guides).
 - Learn how to [Create a pull request](/contribute/create-pull-request.md).
-- Read [How to contribute to smartEMS as a junior dev](https://medium.com/@ivanahuckova/how-to-contribute-to-grafana-as-junior-dev-c01fe3064502) by [Ivana Huckova](https://medium.com/@ivanahuckova).
+- Read [How to contribute to smartEMS as a junior dev](https://medium.com/@ivanahuckova/how-to-contribute-to-smartems-as-junior-dev-c01fe3064502) by [Ivana Huckova](https://medium.com/@ivanahuckova).
 - Read about the [architecture](architecture).

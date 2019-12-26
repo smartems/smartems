@@ -14,7 +14,7 @@ Thank you for your interest in contributing to smartEMS Labs ("We" or "Us").
 
 This contributor agreement ("Agreement") documents the rights granted by contributors to Us.
 To make this document effective, please sign it following the instructions at
-[cla-assistant](https://cla-assistant.io/grafana/grafana). This is a legally binding document,
+[cla-assistant](https://cla-assistant.io/smartems/smartems). This is a legally binding document,
 so please read it carefully before agreeing to it. The Agreement may cover more than
 one software project managed by Us.
 
@@ -24,7 +24,7 @@ one software project managed by Us.
 
 "You" (Entity) means any Legal Entity on behalf of whom a Contribution has been received by Us. "Legal Entity" means an entity which is not a natural person. "Affiliates" means other Legal Entities that control, are controlled by, or under common control with that Legal Entity. For the purposes of this definition, "control" means (i) the power, direct or indirect, to cause the direction or management of such Legal Entity, whether by contract or otherwise, (ii) ownership of fifty percent (50%) or more of the outstanding shares or securities which vote to elect the management or other persons who direct such Legal Entity or (iii) beneficial ownership of such entity.
 
-"Contribution" means any work of authorship that is Submitted by You to Us in which You own or assert ownership of the Copyright. If You do not own the Copyright in the entire work of authorship, you must notify us at contact@grafana.com before Submitting  such a Contribution.
+"Contribution" means any work of authorship that is Submitted by You to Us in which You own or assert ownership of the Copyright. If You do not own the Copyright in the entire work of authorship, you must notify us at contact@smartems.com before Submitting  such a Contribution.
 
 "Copyright" means all rights protecting works of authorship owned or controlled by You [or Your Affiliates], including copyright, moral and neighboring rights, as appropriate, for the full term of their existence including any extensions by You.
 
@@ -96,7 +96,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL YOU [OR US] 
 
 ### Sign using CLA-Assistant
 
-[https://cla-assistant.io/grafana/grafana](https://cla-assistant.io/grafana/grafana)
+[https://cla-assistant.io/smartems/smartems](https://cla-assistant.io/smartems/smartems)
 
 <br>
 <br>

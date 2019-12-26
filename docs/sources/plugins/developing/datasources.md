@@ -1,6 +1,6 @@
 +++
 title = "Developing Datasource Plugins"
-keywords = ["grafana", "plugins", "documentation"]
+keywords = ["smartems", "plugins", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Developing Datasource Plugins"
@@ -12,15 +12,15 @@ weight = 5
 
 Data source plugins enables people to develop plugins for any database that
 communicates over http. Its up to the plugin to transform the data into
-time series data so that any grafana panel can then show it.
+time series data so that any smartems panel can then show it.
 
 ## Data source development
 
 > Our goal is not to have a very extensive documentation but rather have actual
 > code that people can look at. An example implementation of a data source can be
-> found in this [example data source repo](https://github.com/grafana/simple-json-datasource)
+> found in this [example data source repo](https://github.com/smartems/simple-json-datasource)
 
-To interact with the rest of grafana the plugins module file can export 5 different components.
+To interact with the rest of smartems the plugins module file can export 5 different components.
 
 - Datasource (Required)
 - QueryCtrl (Required)
@@ -157,7 +157,7 @@ Expected result from datasource.annotationQuery:
 [
   {
     "annotation": {
-      "name": "annotation name", //should match the annotation name in grafana
+      "name": "annotation name", //should match the annotation name in smartems
       "enabled": true,
       "datasource": "generic datasource",
      },

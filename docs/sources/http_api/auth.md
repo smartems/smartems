@@ -1,7 +1,7 @@
 +++
 title = "Authentication HTTP API "
 description = "smartEMS Authentication HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "authentication"]
+keywords = ["smartems", "http", "documentation", "api", "authentication"]
 aliases = ["/http_api/authentication/"]
 type = "docs"
 [menu.docs]
@@ -37,7 +37,7 @@ You use the token in all requests in the `Authorization` header, like this:
 **Example**:
 
 ```http
-GET http://your.grafana.com/api/dashboards/db/mydash HTTP/1.1
+GET http://your.smartems.com/api/dashboards/db/mydash HTTP/1.1
 Accept: application/json
 Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 ```

@@ -1,6 +1,6 @@
 +++
 title = "JSON Model"
-keywords = ["grafana", "dashboard", "documentation", "json", "model"]
+keywords = ["smartems", "dashboard", "documentation", "json", "model"]
 type = "docs"
 [menu.docs]
 name = "JSON Model"

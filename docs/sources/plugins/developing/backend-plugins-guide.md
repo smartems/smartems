@@ -1,6 +1,6 @@
 +++
 title = "Developing Backend Plugins"
-keywords = ["grafana", "plugins", "backend", "plugin", "backend-plugins", "documentation"]
+keywords = ["smartems", "plugins", "backend", "plugin", "backend-plugins", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Developing Backend Plugins"
@@ -18,7 +18,7 @@ Once smartEMS introduced the alerting feature, external data source plugins need
 
 The backend plugin feature is implemented with the [HashiCorp plugin system](https://github.com/hashicorp/go-plugin) which is a Go plugin system over RPC. smartEMS server launches each plugin as a subprocess and communicates with it over RPC. This approach has a number of benefits:
 
-- Plugins can't crash your grafana process: a panic in a plugin doesn't panic the server.
+- Plugins can't crash your smartems process: a panic in a plugin doesn't panic the server.
 - Plugins are easy to develop: just write a Go application and `go build` (or use any other language which supports gRPC).
 - Plugins can be relatively secure: The plugin only has access to the interfaces and args given to it, not to the entire memory space of the process.
 
@@ -42,7 +42,7 @@ Thus, a datasource plugin should only implement the `Query()` method.
 
 ## Introduction to building a backend component for a plugin
 
-The [Simple JSON backend](https://github.com/grafana/simple-json-backend-datasource) data source is a good example of writing a simple backend plugin in Go. Let's take a look at some key points.
+The [Simple JSON backend](https://github.com/smartems/simple-json-backend-datasource) data source is a good example of writing a simple backend plugin in Go. Let's take a look at some key points.
 
 ### Metadata
 
@@ -50,7 +50,7 @@ The plugin needs to know it has a backend component, this is done in the `plugin
 
 ```json
 {
-  "id": "grafana-simple-json-backend-datasource",
+  "id": "smartems-simple-json-backend-datasource",
   "name": "Simple Json backend",
   "type": "datasource",
 
@@ -97,7 +97,7 @@ A `pkg/` directory contains three `.go` files:
 - `datasource.go` - contains `Query()` method implementation and other plugin logic.
 - `models.go` - types for request and response specific to your data source.
 
-The data source type is declared in [`datasource.go`](https://github.com/grafana/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/pkg/datasource.go#L21-L24):
+The data source type is declared in [`datasource.go`](https://github.com/smartems/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/pkg/datasource.go#L21-L24):
 
 ```go
 package main
@@ -120,7 +120,7 @@ type JsonDatasource struct {
 }
 ```
 
-The main method you should implement is the [`Query()`](https://github.com/grafana/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/pkg/datasource.go#L26):
+The main method you should implement is the [`Query()`](https://github.com/smartems/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/pkg/datasource.go#L26):
 
 ```go
 func (t *JsonDatasource) Query(ctx context.Context, tsdbReq *datasource.DatasourceRequest) (*datasource.DatasourceResponse, error) {
@@ -129,7 +129,7 @@ func (t *JsonDatasource) Query(ctx context.Context, tsdbReq *datasource.Datasour
 
 #### Request format
 
-In order to call this method from the [frontend part of your data source](https://github.com/grafana/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/src/datasource.ts#L116), use the `/api/tsdb/query` endpoint:
+In order to call this method from the [frontend part of your data source](https://github.com/smartems/simple-json-backend-datasource/blob/7927ff0db60c3402dbf954a454f19d7230e18deb/src/datasource.ts#L116), use the `/api/tsdb/query` endpoint:
 
 ```js
 class SimpleJSONDatasource {

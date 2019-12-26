@@ -1,7 +1,7 @@
 +++
 title = "Using MySQL in smartEMS"
 description = "Guide for using MySQL in smartEMS"
-keywords = ["grafana", "mysql", "guide"]
+keywords = ["smartems", "mysql", "guide"]
 type = "docs"
 [menu.docs]
 name = "MySQL"
@@ -67,8 +67,8 @@ executed. To protect against this we **Highly** recommend you create a specific 
 Example:
 
 ```sql
- CREATE USER 'grafanaReader' IDENTIFIED BY 'password';
- GRANT SELECT ON mydatabase.mytable TO 'grafanaReader';
+ CREATE USER 'smartemsReader' IDENTIFIED BY 'password';
+ GRANT SELECT ON mydatabase.mytable TO 'smartemsReader';
 ```
 
 You can use wildcards (`*`)  in place of database or table if you want to grant access to more databases and tables.
@@ -137,7 +137,7 @@ Macro example | Description
 *$__timeFrom()* | Will be replaced by the start of the currently active time selection. For example, *FROM_UNIXTIME(1494410783)*
 *$__timeTo()* | Will be replaced by the end of the currently active time selection. For example, *FROM_UNIXTIME(1494410983)*
 *$__timeGroup(dateColumn,'5m')* | Will be replaced by an expression usable in GROUP BY clause. For example, *cast(cast(UNIX_TIMESTAMP(dateColumn)/(300) as signed)*300 as signed),*
-*$__timeGroup(dateColumn,'5m', 0)* | Same as above but with a fill parameter so missing points in that series will be added by grafana and 0 will be used as value.
+*$__timeGroup(dateColumn,'5m', 0)* | Same as above but with a fill parameter so missing points in that series will be added by smartems and 0 will be used as value.
 *$__timeGroup(dateColumn,'5m', NULL)* | Same as above but NULL will be used as value for missing points.
 *$__timeGroup(dateColumn,'5m', previous)* | Same as above but the previous value in that series will be used as fill value if no value has been seen yet NULL will be used (only available in smartEMS 5.3+).
 *$__timeGroupAlias(dateColumn,'5m')* | Will be replaced identical to $__timeGroup but with an added column alias (only available in smartEMS 5.3+).
@@ -386,8 +386,8 @@ datasources:
   - name: MySQL
     type: mysql
     url: localhost:3306
-    database: grafana
-    user: grafana
+    database: smartems
+    user: smartems
     password: password
     jsonData:
       maxOpenConns: 0         # smartEMS v5.4+

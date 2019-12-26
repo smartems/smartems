@@ -4,4 +4,4 @@ smartEMS ships with **built in** support for CloudWatch. You just have to add it
 
 Read more about it here:
 
-[http://docs.grafana.org/datasources/cloudwatch/](http://docs.grafana.org/datasources/cloudwatch/)
+[http://docs.smartems.org/datasources/cloudwatch/](http://docs.smartems.org/datasources/cloudwatch/)

@@ -1,7 +1,7 @@
 +++
 title = "Image Rendering"
 description = ""
-keywords = ["grafana", "image", "rendering", "phantomjs"]
+keywords = ["smartems", "image", "rendering", "phantomjs"]
 type = "docs"
 aliases = ["/installation/image-rendering"]
 [menu.docs]
@@ -24,7 +24,7 @@ background responsible for the actual rendering. Further, if multiple images are
 certainly has a bigger memory footprint. Minimum free memory recommendation is 1GB.
 
 Depending on [rendering method](#rendering-methods) you would need that memory available in the system where the
-rendering process is running. For [smartEMS Image renderer plugin](#grafana-image-renderer-plugin) and [PhantomJS](#phantomjs)
+rendering process is running. For [smartEMS Image renderer plugin](#smartems-image-renderer-plugin) and [PhantomJS](#phantomjs)
 it's the system which smartEMS is installed on. For [Remote rendering service](#remote-rendering-service) it is the system where
 that's installed.
 
@@ -32,27 +32,27 @@ that's installed.
 
 ### smartEMS image renderer plugin
 
-> This plugin currently does not work if it is installed in the smartEMS docker image. See [Install in smartEMS docker image](#install-in-grafana-docker-image).
+> This plugin currently does not work if it is installed in the smartEMS docker image. See [Install in smartEMS docker image](#install-in-smartems-docker-image).
 
-The [smartEMS image renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) is a plugin that runs on the backend and handles rendering panels and dashboards as PNG-images using headless chrome.
+The [smartEMS image renderer plugin](https://smartems.com/smartems/plugins/smartems-image-renderer) is a plugin that runs on the backend and handles rendering panels and dashboards as PNG-images using headless chrome.
 
 You can install it using smartems-cli:
 
 ```bash
-smartems-cli plugins install grafana-image-renderer
+smartems-cli plugins install smartems-image-renderer
 ```
 
-For further information and instructions refer to [troubleshooting](#troubleshooting) and the [plugin details](https://grafana.com/grafana/plugins/grafana-image-renderer).
+For further information and instructions refer to [troubleshooting](#troubleshooting) and the [plugin details](https://smartems.com/smartems/plugins/smartems-image-renderer).
 
 #### Install in smartEMS docker image
 
 This plugin is not compatible with the current smartEMS Docker image without installing further system-level dependencies. We recommend setting up another Docker container for rendering and using remote rendering, see [Remote rendering service](#remote-rendering-service) for reference.
 
-If you still want to install the plugin in the smartEMS docker image we provide instructions for how to build a custom smartEMS image, see [Installing using Docker](/installation/docker/#custom-image-with-grafana-image-renderer-plugin-pre-installed).
+If you still want to install the plugin in the smartEMS docker image we provide instructions for how to build a custom smartEMS image, see [Installing using Docker](/installation/docker/#custom-image-with-smartems-image-renderer-plugin-pre-installed).
 
 ### Remote rendering service
 
-The [smartEMS image renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) can also be run as a remote HTTP rendering service. In this setup smartEMS will render an image by making a HTTP request to the remote rendering service, which in turn render the image and returns it back in the HTTP response to smartEMS.
+The [smartEMS image renderer plugin](https://smartems.com/smartems/plugins/smartems-image-renderer) can also be run as a remote HTTP rendering service. In this setup smartEMS will render an image by making a HTTP request to the remote rendering service, which in turn render the image and returns it back in the HTTP response to smartEMS.
 
 You can run the remote HTTP rendering service using Docker or as a standalone Node.js application.
 
@@ -66,16 +66,16 @@ Create a `docker-compose.yml` with the following content.
 version: '2'
 
 services:
-  grafana:
-    image: grafana/grafana:master
+  smartems:
+    image: smartems/smartems:master
     ports:
      - "3000:3000"
     environment:
       GF_RENDERING_SERVER_URL: http://renderer:8081/render
-      GF_RENDERING_CALLBACK_URL: http://grafana:3000/
+      GF_RENDERING_CALLBACK_URL: http://smartems:3000/
       GF_LOG_FILTERS: rendering:debug
   renderer:
-    image: grafana/grafana-image-renderer:latest
+    image: smartems/smartems-image-renderer:latest
     ports:
       - 8081
 ```
@@ -90,7 +90,7 @@ docker-compose up
 
 The following example describes how to build and run the remote HTTP rendering service as a standalone node.js application and configure smartEMS appropriately.
 
-1. Git clone the [smartEMS image renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) repository.
+1. Git clone the [smartEMS image renderer plugin](https://smartems.com/smartems/plugins/smartems-image-renderer) repository.
 2. Install dependencies and build:
 
 ```bash
@@ -111,7 +111,7 @@ callback_url = http://localhost:3000/
 ```
 4. Restart smartEMS
 
-For further information and instructions refer to [troubleshooting](#troubleshooting) and the [plugin details](https://grafana.com/grafana/plugins/grafana-image-renderer).
+For further information and instructions refer to [troubleshooting](#troubleshooting) and the [plugin details](https://smartems.com/smartems/plugins/smartems-image-renderer).
 
 ### PhantomJS
 
@@ -142,7 +142,7 @@ The plugin and rendering service uses [Chromium browser](https://www.chromium.or
 If you don't have all of those libraries installed in your system you may encounter errors when trying to render an image, e.g.
 
 ```bash
-Rendering failed: Error: Failed to launch chrome!/var/lib/grafana/plugins/grafana-image-renderer/chrome-linux/chrome:
+Rendering failed: Error: Failed to launch chrome!/var/lib/smartems/plugins/smartems-image-renderer/chrome-linux/chrome:
 error while loading shared libraries: libX11.so.6: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md
 ```
 
@@ -150,7 +150,7 @@ In general you can use the [`ldd`](https://en.wikipedia.org/wiki/Ldd_(Unix)) uti
 are missing/not installed in your system:
 
 ```bash
-$ cd <grafana-image-render plugin directiry>
+$ cd <smartems-image-render plugin directiry>
 $ ldd chrome-linux/chrome
         linux-vdso.so.1 (0x00007fff1bf65000)
         libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f2047945000)
@@ -182,11 +182,11 @@ libXcomposite libXdamage libXtst cups libXScrnSaver pango atk adwaita-cursor-the
 #### Using custom Chrome/Chromium
 
 As a last resort, if you already have [Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/)
-installed on your system you can configure [smartEMS Image renderer plugin](#grafana-image-renderer-plugin) to use this
+installed on your system you can configure [smartEMS Image renderer plugin](#smartems-image-renderer-plugin) to use this
 instead of the pre-packaged version of Chromium.
 
 > Please note that this is not recommended since you may encounter problems if the installed version of Chrome/Chromium is not
-> is compatible with the [smartEMS Image renderer plugin](#grafana-image-renderer-plugin).
+> is compatible with the [smartEMS Image renderer plugin](#smartems-image-renderer-plugin).
 
 To override the path to the Chrome/Chromium executable you can set an environment variable and make sure that
 it's available for the smartEMS process, e.g.

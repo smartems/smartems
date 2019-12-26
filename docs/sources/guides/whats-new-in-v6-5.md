@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.5"
 description = "Feature & improvement highlights for smartEMS v6.5"
-keywords = ["grafana", "new", "documentation", "6.5"]
+keywords = ["smartems", "new", "documentation", "6.5"]
 type = "docs"
 [menu.docs]
 name = "Version 6.5"
@@ -36,11 +36,11 @@ More details of above and highlights will be added as we're getting closer to th
 
 In smartEMS [v6.4](/guides/whats-new-in-v6-4/#alpine-based-docker-image) we switched the smartEMS docker image from Ubuntu to Alpine. The main reason for this change was to be able to provide a more secure and lightweight docker image.
 
-This change has received both negative and positive feedback as well as some bug reports. Based on this, one of the conclusions and learnings is that switching to an Alpine based docker image was a big breaking change for a lot of users and this change should have been more clearly highlighted in blog post, release notes, changelog and the [Docker Hub readme](https://hub.docker.com/r/grafana/grafana).
+This change has received both negative and positive feedback as well as some bug reports. Based on this, one of the conclusions and learnings is that switching to an Alpine based docker image was a big breaking change for a lot of users and this change should have been more clearly highlighted in blog post, release notes, changelog and the [Docker Hub readme](https://hub.docker.com/r/smartems/smartems).
 
 One additional mistake we did was to break the Docker images for ARM. Good news, in smartEMS v6.5 this have been fixed.
 
-smartEMS docker images should be as secure as possible by default and that’s why the Alpine based docker images will continue to be provided as smartEMS’s default (`grafana/grafana:<version>`). With that said, it’s good to give users options and that’s why starting from smartEMS v6.5 there’re also Ubuntu based docker images (`grafana/grafana:<version>-ubuntu`) available.
+smartEMS docker images should be as secure as possible by default and that’s why the Alpine based docker images will continue to be provided as smartEMS’s default (`smartems/smartems:<version>`). With that said, it’s good to give users options and that’s why starting from smartEMS v6.5 there’re also Ubuntu based docker images (`smartems/smartems:<version>-ubuntu`) available.
 
 ### CloudWatch data source improvements
 

@@ -1,6 +1,6 @@
 +++
 title = "Logs Panel"
-keywords = ["grafana", "dashboard", "documentation", "panels", "logs panel"]
+keywords = ["smartems", "dashboard", "documentation", "panels", "logs panel"]
 type = "docs"
 aliases = ["/reference/logs/"]
 [menu.docs]

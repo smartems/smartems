@@ -19,7 +19,7 @@ One of the major new features of smartEMS 6.0 is the new query-focused Explore w
 
 smartEMS's dashboard UI is all about building dashboards for visualization. Explore strips away all the dashboard and panel options so that you can focus on the query. Iterate until you have a working query and then think about building a dashboard.
 
-For infrastructure monitoring and incident response, you no longer need to switch to other tools to debug what went wrong. Explore allows you to dig deeper into your metrics and logs to find the cause. smartEMS's new logging data source, [Loki](https://github.com/grafana/loki) is tightly integrated into Explore and allows you to correlate metrics and logs by viewing them side-by-side. This creates a new debugging workflow where you can:
+For infrastructure monitoring and incident response, you no longer need to switch to other tools to debug what went wrong. Explore allows you to dig deeper into your metrics and logs to find the cause. smartEMS's new logging data source, [Loki](https://github.com/smartems/loki) is tightly integrated into Explore and allows you to correlate metrics and logs by viewing them side-by-side. This creates a new debugging workflow where you can:
 
 1. Receive an alert
 2. Drill down and examine metrics
@@ -105,7 +105,7 @@ Each log row has an extendable area with its labels and parsed fields, for more 
 
 ### Loki-specific Features
 
-As mentioned, one of the log integrations is for the new open source log aggregation system from smartEMS Labs - [Loki](https://github.com/grafana/loki). Loki is designed to be very cost effective, as it does not index the contents of the logs, but rather a set of labels for each log stream. The logs from Loki are queried in a similar way to querying with label selectors in Prometheus. It uses labels to group log streams which can be made to match up with your Prometheus labels. Read more about smartEMS Loki [here](https://github.com/grafana/loki) or the smartEMS Labs hosted variant: [smartEMS Cloud Logs](https://grafana.com/loki).
+As mentioned, one of the log integrations is for the new open source log aggregation system from smartEMS Labs - [Loki](https://github.com/smartems/loki). Loki is designed to be very cost effective, as it does not index the contents of the logs, but rather a set of labels for each log stream. The logs from Loki are queried in a similar way to querying with label selectors in Prometheus. It uses labels to group log streams which can be made to match up with your Prometheus labels. Read more about smartEMS Loki [here](https://github.com/smartems/loki) or the smartEMS Labs hosted variant: [smartEMS Cloud Logs](https://smartems.com/loki).
 
 See [Loki's data source documentation](../datasources/loki) on how to query for log data.
 
@@ -113,11 +113,11 @@ See [Loki's data source documentation](../datasources/loki) on how to query for 
 
 If you switch from a Prometheus query to a logs query (you can do a split first to have your metrics and logs side by side) then it will keep the labels from your query that exist in the logs and use those to query the log streams. For example, the following Prometheus query:
 
-`grafana_alerting_active_alerts{job="grafana"}`
+`smartems_alerting_active_alerts{job="smartems"}`
 
 after switching to the Logs data source, the query changes to:
 
-`{job="grafana"}`
+`{job="smartems"}`
 
 This will return a chunk of logs in the selected time range that can be grepped/text searched.
 

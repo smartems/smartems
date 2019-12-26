@@ -1,6 +1,6 @@
 +++
 title = "Singlestat Panel"
-keywords = ["grafana", "dashboard", "documentation", "panels", "singlestat"]
+keywords = ["smartems", "dashboard", "documentation", "panels", "singlestat"]
 type = "docs"
 aliases = ["/reference/singlestat/"]
 [menu.docs]

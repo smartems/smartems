@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.4"
 description = "Feature and improvement highlights for smartEMS v6.4"
-keywords = ["grafana", "new", "documentation", "6.4"]
+keywords = ["smartems", "new", "documentation", "6.4"]
 type = "docs"
 [menu.docs]
 name = "Version 6.4"
@@ -27,7 +27,7 @@ Some of those new capabilities can already be seen in this release, like sharing
 - [**Panels:** Data links improvements]({{< relref "#data-links-improvements" >}})
 - [**Graph:** Series override to turn constant (point) into a line]({{< relref "#series-override-to turn-constant-into-a-line" >}})
 - [**Dashboard:** Share query results between panels]({{< relref "#share-query-results-between-panels" >}})
-- [**Plugins:** Alpha version of grafana-toolkit]({{< relref "#alpha-version-of-grafana-toolkit" >}})
+- [**Plugins:** Alpha version of smartems-toolkit]({{< relref "#alpha-version-of-smartems-toolkit" >}})
 - [**Image Rendering:** PhantomJS deprecation]({{< relref "#phantomjs-deprecation" >}})
 - [**Docker:** Alpine based docker image]({{< relref "#alpine-based-docker-image" >}})
 - [**LDAP:** Debug UI]({{< relref "#ldap-debug-ui" >}})
@@ -70,12 +70,12 @@ Limitations: Even though Live tailing can be enabled on logs panels in dashboard
 
 ## Data Links improvements
 
-With smartEMS 6.3 we introduced a new way of creating [Data Links](https://grafana.com/blog/2019/08/27/new-in-grafana-6.3-easy-to-use-data-links/).
+With smartEMS 6.3 we introduced a new way of creating [Data Links](https://smartems.com/blog/2019/08/27/new-in-smartems-6.3-easy-to-use-data-links/).
 smartEMS 6.4 improves Data Links and adds them to the Gauge and Bar Gauge and panels.
 
 With Data Links you can define dynamic links to other dashboards and systems. The link can now reference template variables and query results like series name and labels, field name, value and time.
 
-Read more about Data Links and what you can do with them in [documentation](https://grafana.com/docs/features/panels/graph/#data-link)
+Read more about Data Links and what you can do with them in [documentation](https://smartems.com/docs/features/panels/graph/#data-link)
 
 ## Series override to turn constant into a line
 
@@ -90,24 +90,24 @@ smartEMS 6.4 continues the work started in 6.3 of creating a data model and quer
 
 The first new feature all these changes have enabled is the ability to share query results between panels. So for example if you have an expensive query you can visualize the same results in a graph, table and singlestat panel. To reuse another panel’s query result select the data source named `-- Dashboard --` and then select the panel.
 
-To make the sharing of query results even more powerful we are introducing a transformation step as well that allows you to select specific parts of the query result and transform it. This new transformation feature is in [alpha](https://grafana.com/docs/installation/configuration/#enable-alpha) state and has to be enabled in the config file.
+To make the sharing of query results even more powerful we are introducing a transformation step as well that allows you to select specific parts of the query result and transform it. This new transformation feature is in [alpha](https://smartems.com/docs/installation/configuration/#enable-alpha) state and has to be enabled in the config file.
 
 DataFrame, our primary data model, has now a [columnar](https://en.wikipedia.org/wiki/Column-oriented_DBMS) layout. This
 will support easier frontend processing. The DataSource query interface has been updated to better support streaming.
 The result can now either return a `Promise<result>` or `Observable<result>`. Be on the lookout for more on live data
 streaming in the future!
 
-## Alpha version of grafana-toolkit
+## Alpha version of smartems-toolkit
 
-[grafana-toolkit](https://www.npmjs.com/package/@smartems/toolkit/v/6.4.0-beta.1) is our attempt to simplify the life of plugin developers. It’s a CLI that helps them focus on the core value of their plugin rather than the ceremony around setting up the environment, configs, tests and builds. It’s available as an NPM package under `next` tag.
+[smartems-toolkit](https://www.npmjs.com/package/@smartems/toolkit/v/6.4.0-beta.1) is our attempt to simplify the life of plugin developers. It’s a CLI that helps them focus on the core value of their plugin rather than the ceremony around setting up the environment, configs, tests and builds. It’s available as an NPM package under `next` tag.
 
-You can read more about the grafana-toolkit [in the Readme](https://github.com/smartems/smartems/blob/master/packages/grafana-toolkit/README.md) and play with it by trying out our [react panel](https://github.com/grafana/simple-react-panel) or [angular panel](https://github.com/grafana/simple-angular-panel) templates.
+You can read more about the smartems-toolkit [in the Readme](https://github.com/smartems/smartems/blob/master/packages/smartems-toolkit/README.md) and play with it by trying out our [react panel](https://github.com/smartems/simple-react-panel) or [angular panel](https://github.com/smartems/simple-angular-panel) templates.
 
 ## PhantomJS deprecation
 
 [PhantomJS](https://phantomjs.org/), which is used for rendering images of dashboards and panels, have been deprecated and will be removed in a future smartEMS release. A deprecation warning will from now on be logged when smartEMS starts up if PhantomJS is in use.
 
-Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin](https://smartems.com/smartems/plugins/smartems-image-renderer).
 
 ## Alpine based docker image
 
@@ -137,7 +137,7 @@ This feature is currently limited to Organization Admins.
 
 GitLab OAuth gets support for Team Sync, making it possible to synchronize your GitLab Groups with Teams in smartEMS.
 
-[Read more about Team Sync](https://grafana.com/docs/auth/team-sync/)
+[Read more about Team Sync](https://smartems.com/docs/auth/team-sync/)
 
 ## Upgrading
 

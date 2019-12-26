@@ -22,6 +22,6 @@
 
 #### Documentation links:
 
-[smartEMS's InfluxDB Documentation](http://docs.grafana.org/features/datasources/influxdb)
+[smartEMS's InfluxDB Documentation](http://docs.smartems.org/features/datasources/influxdb)
 
 [Official InfluxDB Documentation](https://docs.influxdata.com/influxdb)

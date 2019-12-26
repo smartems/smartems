@@ -1,7 +1,7 @@
 ---
 page_title: Graphite + smartEMS + StatsD - Stack Setup Guide
 page_description: Installation and configuration guide and how to for smartEMS, Graphite and StatsD
-page_keywords: grafana, tutorials, graphite, statsd, setup, configuration, howto, installation
+page_keywords: smartems, tutorials, graphite, statsd, setup, configuration, howto, installation
 author: Torkel Ödegaard
 ---
 
@@ -213,8 +213,8 @@ also open `http://your_server_ip:8888/metrics/find?query?*` in your browser. You
 ### Install smartEMS
 
     cd /tmp/
-    wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.1.1_amd64.deb
-    sudo dpkg -i grafana_2.1.1_amd64.deb
+    wget https://smartemsrel.s3.amazonaws.com/builds/smartems_2.1.1_amd64.deb
+    sudo dpkg -i smartems_2.1.1_amd64.deb
     sudo service smartems-server start
 
 smartEMS should now be running with default config on port 3000.

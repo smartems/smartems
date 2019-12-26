@@ -1,6 +1,6 @@
 +++
 title = "Sharing a Dashboard"
-keywords = ["grafana", "dashboard", "documentation", "sharing"]
+keywords = ["smartems", "dashboard", "documentation", "sharing"]
 type = "docs"
 [menu.docs]
 parent = "dashboard_features"
@@ -24,6 +24,6 @@ snapshots can be accessed by anyone who has the link and can reach the URL.
 ## Publish snapshots
 
 You can publish snapshots to you local instance or to [snapshot.raintank.io](http://snapshot.raintank.io). The later is a free service
-that is provided by [Raintank](http://raintank.io) that allows you to publish dashboard snapshots to an external grafana instance.
+that is provided by [Raintank](http://raintank.io) that allows you to publish dashboard snapshots to an external smartems instance.
 The same rules still apply, anyone with the link can view it. You can set an expiration time if you want the snapshot to be removed
 after a certain time period.

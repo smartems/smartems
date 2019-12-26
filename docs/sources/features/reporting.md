@@ -1,7 +1,7 @@
 +++
 title = "Reporting"
 description = ""
-keywords = ["grafana", "reporting"]
+keywords = ["smartems", "reporting"]
 type = "docs"
 aliases = ["/administration/reports"]
 [menu.docs]
@@ -27,7 +27,7 @@ With Reports there are a few things to keep in mind, most importantly, any chang
 
 > SMTP must be configured for reports to be sent
 
-We recommend using the new image rendering plugin with reporting as it supports a wider range of panels than the built-in image rendering. Read more about it [here]({{< relref "administration/image_rendering.md#grafana-image-renderer-plugin" >}})
+We recommend using the new image rendering plugin with reporting as it supports a wider range of panels than the built-in image rendering. Read more about it [here]({{< relref "administration/image_rendering.md#smartems-image-renderer-plugin" >}})
 
 ## Usage
 

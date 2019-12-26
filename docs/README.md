@@ -1,8 +1,8 @@
 ### Note for external contributors
 
-We are currently working on migrating the docs to a new static website. The `grafana/website` repository will be private during this migration, which unfortunately means the docs site can't be built without access.
+We are currently working on migrating the docs to a new static website. The `smartems/website` repository will be private during this migration, which unfortunately means the docs site can't be built without access.
 
-The Markdown content however, is still public in this repository. We still encourage pull requests to make the docs better, and we will make sure the changed content works well on the current docs site. Include any images in your pull request, and we will move them to the `grafana/website` repository.
+The Markdown content however, is still public in this repository. We still encourage pull requests to make the docs better, and we will make sure the changed content works well on the current docs site. Include any images in your pull request, and we will move them to the `smartems/website` repository.
 
 # Building the docs
 
@@ -12,12 +12,12 @@ To build the docs locally, you need to have Docker installed. The docs are built
 
 > Due to migration to new static site, the Docker image needs to be built from `old-docs` branch.
 
-Git clone `grafana/website` repo. Run these commands in the root of that repo. **Note** that you may require `sudo`
+Git clone `smartems/website` repo. Run these commands in the root of that repo. **Note** that you may require `sudo`
 when running `make docs-build` depending on how your system's Docker
 service is configured):
 
 ```
-git clone https://github.com/grafana/website
+git clone https://github.com/smartems/website
 cd website
 make docs-build
 ```
@@ -25,7 +25,7 @@ make docs-build
 **Build the Documentation**:
 
 Now that the Docker image has been prepared we can build the
-grafana docs and start a docs server.
+smartems docs and start a docs server.
 
 If you have not cloned the smartEMS repository already then:
 
@@ -38,10 +38,10 @@ Switch your working directory to the directory this file
 (README.md) is in.
 
 ```
-cd grafana/docs
+cd smartems/docs
 ```
 
-An AWS config file is required to build the docs Docker image and to publish the site to AWS. If you are building locally only and do not have any AWS credentials for docs.grafana.org then create an empty file named `awsconfig` in the current directory.
+An AWS config file is required to build the docs Docker image and to publish the site to AWS. If you are building locally only and do not have any AWS credentials for docs.smartems.org then create an empty file named `awsconfig` in the current directory.
 
 ```
 touch awsconfig
@@ -61,9 +61,9 @@ Open [localhost:3004](http://localhost:3004) to view the docs.
 
 ### Images and Content
 
-All markdown files are part of [this repository](https://github.com/smartems/smartems). However, all images are added to the [website repository](https://github.com/grafana/website). Therefore, the process of adding images is not as straightforward. These are the steps:
+All markdown files are part of [this repository](https://github.com/smartems/smartems). However, all images are added to the [website repository](https://github.com/smartems/website). Therefore, the process of adding images is not as straightforward. These are the steps:
 
-1. Ensure you create a feature branch within the [website repository](https://github.com/grafana/website) to make the change. This branch needs to be based on the `old-docs` branch.
+1. Ensure you create a feature branch within the [website repository](https://github.com/smartems/website) to make the change. This branch needs to be based on the `old-docs` branch.
 1. Ensure the image(s) are compressed and optimised e.g. Using [tinypng](https://tinypng.com/).
 1. Add the image(s) to the `/static/img/docs` directory.
 1. Then, make a commit that adds the image(s).
@@ -87,4 +87,4 @@ Changes to the markdown files should automatically cause a docs rebuild and live
 
 #### Running `make watch` errors out with `Warning: Task "default" not found.`
 
-Ensure that the Docker image from the [website repository](https://github.com/grafana/website) is built using the `old-docs` branch.
+Ensure that the Docker image from the [website repository](https://github.com/smartems/website) is built using the `old-docs` branch.

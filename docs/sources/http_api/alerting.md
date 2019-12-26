@@ -1,7 +1,7 @@
 +++
 title = "Alerting HTTP API "
 description = "smartEMS Alerts HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "alerting", "alerts"]
+keywords = ["smartems", "http", "documentation", "api", "alerting", "alerts"]
 aliases = ["/http_api/alerting/"]
 type = "docs"
 [menu.docs]
@@ -61,7 +61,7 @@ Content-Type: application/json
     "evalDate": "0001-01-01T00:00:00Z",
     "evalData": null,
     "executionError": "",
-    "url": "http://grafana.com/dashboard/db/sensors"
+    "url": "http://smartems.com/dashboard/db/sensors"
   }
 ]
 ```
@@ -106,7 +106,7 @@ Content-Type: application/json
     }
   ],
   "executionError": "",
-  "url": "http://grafana.com/dashboard/db/sensors"
+  "url": "http://smartems.com/dashboard/db/sensors"
 }
 ```
 

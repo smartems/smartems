@@ -1,7 +1,7 @@
 +++
 title = "OAuth authentication"
 description = "smartEMS OAuthentication Guide "
-keywords = ["grafana", "configuration", "documentation", "oauth"]
+keywords = ["smartems", "configuration", "documentation", "oauth"]
 type = "docs"
 [menu.docs]
 name = "Generic OAuth"
@@ -56,7 +56,7 @@ See [JMESPath examples](#jmespath-examples) for more information.
 
 ## Set up OAuth2 with Okta
 
-First set up smartEMS as an OpenId client "webapplication" in Okta. Then set the Base URIs to `https://<grafana domain>/` and set the Login redirect URIs to `https://<grafana domain>/login/generic_oauth`.
+First set up smartEMS as an OpenId client "webapplication" in Okta. Then set the Base URIs to `https://<smartems domain>/` and set the Login redirect URIs to `https://<smartems domain>/login/generic_oauth`.
 
 Finally set up the generic oauth module like this:
 
@@ -94,9 +94,9 @@ allowed_organizations =
 1.  Create a new Custom Connector with the following settings:
     - Name: smartEMS
     - Sign On Method: OpenID Connect
-    - Redirect URI: `https://<grafana domain>/login/generic_oauth`
+    - Redirect URI: `https://<smartems domain>/login/generic_oauth`
     - Signing Algorithm: RS256
-    - Login URL: `https://<grafana domain>/login/generic_oauth`
+    - Login URL: `https://<smartems domain>/login/generic_oauth`
 
     then:
 2.  Add an App to the smartEMS Connector:
@@ -131,7 +131,7 @@ allowed_organizations =
     - Type: Regular Web Application
 
 2.  Go to the Settings tab and set:
-    - Allowed Callback URLs: `https://<grafana domain>/login/generic_oauth`
+    - Allowed Callback URLs: `https://<smartems domain>/login/generic_oauth`
 
 3. Click Save Changes, then use the values at the top of the page to configure smartEMS:
 
@@ -159,7 +159,7 @@ allowed_organizations =
 3.  Click "App Registrations" and add a new application registration:
     - Name: smartEMS
     - Application type: Web app / API
-    - Sign-on URL: `https://<grafana domain>/login/generic_oauth`
+    - Sign-on URL: `https://<smartems domain>/login/generic_oauth`
 
 4.  Click the name of the new application to open the application details page.
 
@@ -194,7 +194,7 @@ allowed_organizations =
 
 1.  Create a new Custom OpenID Connect application configuration in the Centrify dashboard.
 
-2.  Create a memorable unique Application ID, e.g. "grafana", "grafana_aws", etc.
+2.  Create a memorable unique Application ID, e.g. "smartems", "smartems_aws", etc.
 
 3.  Put in other basic configuration (name, description, logo, category)
 

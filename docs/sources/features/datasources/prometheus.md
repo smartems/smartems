@@ -1,7 +1,7 @@
 +++
 title = "Using Prometheus in smartEMS"
 description = "Guide for using Prometheus in smartEMS"
-keywords = ["grafana", "prometheus", "guide"]
+keywords = ["smartems", "prometheus", "guide"]
 type = "docs"
 aliases = ["/datasources/prometheus"]
 [menu.docs]

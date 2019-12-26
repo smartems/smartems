@@ -1,7 +1,7 @@
 +++
 title = "Enhanced LDAP Integration"
 description = "smartEMS Enhanced LDAP Integration Guide "
-keywords = ["grafana", "configuration", "documentation", "ldap", "active directory", "enterprise"]
+keywords = ["smartems", "configuration", "documentation", "ldap", "active directory", "enterprise"]
 type = "docs"
 [menu.docs]
 name = "Enhanced LDAP"
@@ -53,7 +53,7 @@ With this feature you can configure smartEMS to actively sync users with LDAP se
 sync_cron = "0 0 1 * * *" # This is default value (At 1 am every day)
 # This cron expression format uses 6 space-separated fields (including seconds), for example
 # sync_cron = "* */10 * * * *"
-# This will run the LDAP Synchronization every 10th minute, which is also the minimal interval between the grafana sync times i.e. you cannot set it for every 9th minute
+# This will run the LDAP Synchronization every 10th minute, which is also the minimal interval between the smartems sync times i.e. you cannot set it for every 9th minute
 
 # You can also disable active LDAP synchronization
 active_sync_enabled = true # enabled by default

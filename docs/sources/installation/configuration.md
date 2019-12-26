@@ -1,7 +1,7 @@
 +++
 title = "Configuration"
 description = "Configuration Docs"
-keywords = ["grafana", "configuration", "documentation"]
+keywords = ["smartems", "configuration", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Configuration"
@@ -21,7 +21,7 @@ specified in a `.ini` configuration file or specified using environment variable
 
 Semicolons (the `;` char) are the standard way to comment out lines in a `.ini` file.
 
-A common problem is forgetting to uncomment a line in the `custom.ini` (or `grafana.ini`) file which causes the configuration option to be ignored.
+A common problem is forgetting to uncomment a line in the `custom.ini` (or `smartems.ini`) file which causes the configuration option to be ignored.
 
 ## Config file locations
 
@@ -31,7 +31,7 @@ A common problem is forgetting to uncomment a line in the `custom.ini` (or `graf
 
 > **Note.** If you have installed smartEMS using the `deb` or `rpm`
 > packages, then your configuration file is located at
-> `/etc/grafana/grafana.ini` and a separate `custom.ini` is not
+> `/etc/smartems/smartems.ini` and a separate `custom.ini` is not
 > used. This path is specified in the smartEMS
 > init.d script using `--config` file parameter.
 
@@ -97,11 +97,11 @@ file.
 
 ### plugins
 
-Directory where grafana will automatically scan and look for plugins
+Directory where smartems will automatically scan and look for plugins
 
 ### provisioning
 
-Folder that contains [provisioning](/administration/provisioning) config files that grafana will apply on startup. Dashboards will be reloaded when the json files changes
+Folder that contains [provisioning](/administration/provisioning) config files that smartems will apply on startup. Dashboards will be reloaded when the json files changes
 
 ## [server]
 
@@ -162,8 +162,8 @@ Serve smartEMS from subpath specified in `root_url` setting. By
 default it is set to `false` for compatibility reasons.
 
 By enabling this setting and using a subpath in `root_url` above, e.g.
-`root_url = http://localhost:3000/grafana`, smartEMS will be accessible on
-`http://localhost:3000/grafana`.
+`root_url = http://localhost:3000/smartems`, smartEMS will be accessible on
+`http://localhost:3000/smartems`.
 
 ### static_root_path
 
@@ -189,7 +189,7 @@ Path to the certificate key file (if `protocol` is set to `https` or `h2`).
 ### router_logging
 
 Set to `true` for smartEMS to log all HTTP requests (not just errors). These are logged as Info level events
-to grafana log.
+to smartems log.
 
 <hr />
 
@@ -221,7 +221,7 @@ For example, for MySQL running on the same host as smartEMS: `host =
 
 ### name
 
-The name of the smartEMS database. Leave it set to `grafana` or some
+The name of the smartEMS database. Leave it set to `smartems` or some
 other name.
 
 ### user
@@ -309,7 +309,7 @@ Example connstr: `127.0.0.1:11211`
 
 > Only available in smartEMS v6.5+.
 
-Disable creation of admin user on first start of grafana.
+Disable creation of admin user on first start of smartems.
 
 ### admin_user
 
@@ -466,7 +466,7 @@ If enabled and user is not anonymous, data proxy will add X-smartEMS-User header
 ### reporting_enabled
 
 When enabled smartEMS will send anonymous usage statistics to
-`stats.grafana.org`. No IP addresses are being tracked, only simple counters to
+`stats.smartems.org`. No IP addresses are being tracked, only simple counters to
 track running instances, versions, dashboard and error counts. It is very helpful
 to us, so please leave this enabled. Counters are sent every 24 hours. Default
 value is `true`.
@@ -478,7 +478,7 @@ Analytics ID here. By default this feature is disabled.
 
 ### check_for_updates
 
-Set to false to disable all checks to https://grafana.com for new versions of installed plugins and to the smartEMS GitHub repository to check for a newer version of smartEMS. The version information is used in some UI views to notify that a new smartEMS update or a plugin update exists. This option does not cause any auto updates, nor send any sensitive information. The check is run every 10 minutes.
+Set to false to disable all checks to https://smartems.com for new versions of installed plugins and to the smartEMS GitHub repository to check for a newer version of smartEMS. The version information is used in some UI views to notify that a new smartEMS update or a plugin update exists. This option does not cause any auto updates, nor send any sensitive information. The check is run every 10 minutes.
 
 <hr />
 
@@ -523,7 +523,7 @@ File path to a key file, defaults to `empty`
 Verify SSL for smtp server? defaults to `false`
 
 ### from_address
-Address used when sending out emails, defaults to `admin@grafana.localhost`
+Address used when sending out emails, defaults to `admin@smartems.localhost`
 
 ### from_name
 Name to be used when sending out emails, defaults to `smartEMS`
@@ -569,7 +569,7 @@ Include this section if you want to send internal smartEMS metrics to Graphite.
 Format `<Hostname or ip>`:port
 
 ### prefix
-Graphite metric prefix. Defaults to `prod.grafana.%(instance_name)s.`
+Graphite metric prefix. Defaults to `prod.smartems.%(instance_name)s.`
 
 ## [snapshots]
 
@@ -594,7 +594,7 @@ You can choose between (s3, webdav, gcs, azure_blob, local). If left empty smart
 ## [external_image_storage.s3]
 
 ### bucket
-Bucket name for S3. e.g. grafana.snapshot
+Bucket name for S3. e.g. smartems.snapshot
 
 ### region
 Region name for S3. e.g. 'us-east-1', 'cn-north-1', etc
@@ -605,8 +605,8 @@ Optional extra path inside bucket, useful to apply expiration policies
 ### bucket_url
 (for backward compatibility, only works when no bucket or region are configured)
 Bucket URL for S3. AWS region can be specified within URL or defaults to 'us-east-1', e.g.
-- http://grafana.s3.amazonaws.com/
-- https://grafana.s3-ap-southeast-2.amazonaws.com/
+- http://smartems.s3.amazonaws.com/
+- https://smartems.s3-ap-southeast-2.amazonaws.com/
 
 ### access_key
 Access key. e.g. AAAAAAAAAAAAAAAAAAAA
@@ -705,7 +705,7 @@ URL to a remote HTTP image renderer service, e.g. http://localhost:8081/render, 
 
 ### callback_url
 
-If the remote HTTP image renderer service runs on a different server than the smartEMS server you may have to configure this to a URL where smartEMS is reachable, e.g. http://grafana.domain/.
+If the remote HTTP image renderer service runs on a different server than the smartEMS server you may have to configure this to a URL where smartEMS is reachable, e.g. http://smartems.domain/.
 
 ## [panels]
 
@@ -746,7 +746,7 @@ session provider you have configured.
 - **mysql:** go-sql-driver/mysql dsn config string, e.g. `user:password@tcp(127.0.0.1:3306)/database_name`
 - **postgres:** ex:  `user=a password=b host=localhost port=5432 dbname=c sslmode=verify-full`
 - **memcache:** ex:  `127.0.0.1:11211`
-- **redis:** ex: `addr=127.0.0.1:6379,pool_size=100,prefix=grafana`. For Unix socket, use for example: `network=unix,addr=/var/run/redis/redis.sock,pool_size=100,db=grafana`
+- **redis:** ex: `addr=127.0.0.1:6379,pool_size=100,prefix=smartems`. For Unix socket, use for example: `network=unix,addr=/var/run/redis/redis.sock,pool_size=100,db=smartems`
 
 Postgres valid `sslmode` are `disable`, `require`, `verify-ca`, and `verify-full` (default).
 

@@ -9,4 +9,4 @@ smartEMS ships with a built-in Microsoft SQL Server (MSSQL) data source plugin t
 3. Click the `+ Add data source` button in the top header.
 4. Select *Microsoft SQL Server* from the *Type* dropdown.
 
-For more information, check the [docs](http://docs.grafana.org/).
+For more information, check the [docs](http://docs.smartems.org/).

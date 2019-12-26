@@ -1,7 +1,7 @@
 +++
 title = "Installing on Debian / Ubuntu"
 description = "Install guide for smartEMS"
-keywords = ["grafana", "installation", "documentation"]
+keywords = ["smartems", "installation", "documentation"]
 type = "docs"
 aliases = ["/installation/installation/debian"]
 [menu.docs]
@@ -18,16 +18,16 @@ installation.
 
 ## Download
 
-Go to the [download page](https://grafana.com/grafana/download?platform=linux) for the latest download
+Go to the [download page](https://smartems.com/smartems/download?platform=linux) for the latest download
 links.
 
 ```bash
 wget <debian package url>
 sudo apt-get install -y adduser libfontconfig1
-sudo dpkg -i grafana_<version>_amd64.deb
+sudo dpkg -i smartems_<version>_amd64.deb
 ```
 
-You will find package urls on the [download page](https://grafana.com/grafana/download?platform=linux).
+You will find package urls on the [download page](https://smartems.com/smartems/download?platform=linux).
 
 ## APT Repository
 
@@ -39,26 +39,26 @@ apt-get install -y software-properties-common
 Install the repository for stable releases
 
 ```bash
-sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+sudo add-apt-repository "deb https://packages.smartems.com/oss/deb stable main"
 ```
 
 There is a separate repository if you want beta releases.
 
 ```bash
-sudo add-apt-repository "deb https://packages.grafana.com/oss/deb beta main"
+sudo add-apt-repository "deb https://packages.smartems.com/oss/deb beta main"
 ```
 
 Use the above line even if you are on Ubuntu or another Debian version. Then add our gpg key. This allows you to install signed packages.
 
 ```bash
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+wget -q -O - https://packages.smartems.com/gpg.key | sudo apt-key add -
 ```
 
 Update your Apt repositories and install smartEMS
 
 ```bash
 sudo apt-get update
-sudo apt-get install grafana
+sudo apt-get install smartems
 ```
 
 On some older versions of Ubuntu and Debian you may need to install the
@@ -74,11 +74,11 @@ sudo apt-get install -y apt-transport-https
 - Installs binary to `/usr/sbin/smartems-server`
 - Installs Init.d script to `/etc/init.d/smartems-server`
 - Creates default file (environment vars) to `/etc/default/smartems-server`
-- Installs configuration file to `/etc/grafana/grafana.ini`
+- Installs configuration file to `/etc/smartems/smartems.ini`
 - Installs systemd service (if systemd is available) name `smartems-server.service`
-- The default configuration sets the log file at `/var/log/grafana/grafana.log`
-- The default configuration specifies an sqlite3 db at `/var/lib/grafana/grafana.db`
-- Installs HTML/JS/CSS and other smartEMS files at `/usr/share/grafana`
+- The default configuration sets the log file at `/var/log/smartems/smartems.log`
+- The default configuration specifies an sqlite3 db at `/var/lib/smartems/smartems.db`
+- Installs HTML/JS/CSS and other smartEMS files at `/usr/share/smartems`
 
 ## Start the server (init.d service)
 
@@ -88,7 +88,7 @@ Start smartEMS by running:
 sudo service smartems-server start
 ```
 
-This will start the `smartems-server` process as the `grafana` user,
+This will start the `smartems-server` process as the `smartems` user,
 which was created during the package installation. The default HTTP port
 is `3000` and default user and group is `admin`.
 
@@ -125,17 +125,17 @@ directory and other variables.
 
 ### Logging
 
-By default smartEMS will log to `/var/log/grafana`
+By default smartEMS will log to `/var/log/smartems`
 
 ### Database
 
 The default configuration specifies a sqlite3 database located at
-`/var/lib/grafana/grafana.db`. Please backup this database before
+`/var/lib/smartems/smartems.db`. Please backup this database before
 upgrades. You can also use MySQL or Postgres as the smartEMS database, as detailed on [the configuration page]({{< relref "configuration.md#database" >}}).
 
 ## Configuration
 
-The configuration file is located at `/etc/grafana/grafana.ini`.  Go the
+The configuration file is located at `/etc/smartems/smartems.ini`.  Go the
 [Configuration]({{< relref "configuration.md" >}}) page for details on all
 those options.
 
@@ -148,7 +148,7 @@ those options.
 
 ## Installing from binary tar file
 
-Download [the latest `.tar.gz` file](https://grafana.com/get) and
+Download [the latest `.tar.gz` file](https://smartems.com/get) and
 extract it.  This will extract into a folder named after the version you
 downloaded. This folder contains all files required to run smartEMS.  There are
 no init scripts or install scripts in this package.

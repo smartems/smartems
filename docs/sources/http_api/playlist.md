@@ -1,7 +1,7 @@
 +++
 title = "Playlist HTTP API "
 description = "Playlist Admin HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "playlist"]
+keywords = ["smartems", "http", "documentation", "api", "playlist"]
 aliases = ["/http_api/playlist/"]
 type = "docs"
 [menu.docs]

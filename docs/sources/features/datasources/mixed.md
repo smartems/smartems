@@ -1,6 +1,6 @@
 +++
 title = "Using the Mixed Data Source in smartEMS"
-keywords = ["grafana", "dashboard", "documentation", "panels", "mixeddata"]
+keywords = ["smartems", "dashboard", "documentation", "panels", "mixeddata"]
 type = "docs"
 [menu.docs]
 name = "MixedData"

@@ -26,7 +26,7 @@ $ ./run.sh -d 10s
 Run load test for custom target url:
 
 ```bash
-$ ./run.sh -u http://grafana.loc
+$ ./run.sh -u http://smartems.loc
 ```
 
 Run load test for 10 virtual users:
@@ -66,7 +66,7 @@ Example output:
       █ user authenticates thru ui with username and password
 
         ✓ response status is 200
-        ✓ response has cookie 'grafana_session' with 32 characters
+        ✓ response has cookie 'smartems_session' with 32 characters
 
       █ batch tsdb requests
 

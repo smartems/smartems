@@ -1,7 +1,7 @@
 +++
 title = "Requirements"
 description = "Requirements for smartEMS"
-keywords = ["grafana", "installation", "documentation"]
+keywords = ["smartems", "installation", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Requirements"
@@ -25,7 +25,7 @@ This page includes useful information on the supported Operating Systems as well
 
 ### Unsupported
 
-Installation of smartEMS on other operating systems is possible, but not supported. Please see the [building from source](/project/building_from_source/#building-grafana-from-source) guide for more information.
+Installation of smartEMS on other operating systems is possible, but not supported. Please see the [building from source](/project/building_from_source/#building-smartems-from-source) guide for more information.
 
 ## Hardware requirements
 

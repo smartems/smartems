@@ -12,12 +12,12 @@ Included services
 
 ## Prerequisites
 
-### Build grafana docker container
+### Build smartems docker container
 
-Build a smartEMS docker container from current branch and commit and tag it as grafana/grafana:dev.
+Build a smartEMS docker container from current branch and commit and tag it as smartems/smartems:dev.
 
 ```bash
-$ cd <grafana repo>
+$ cd <smartems repo>
 $ make build-docker-full
 ```
 
@@ -42,7 +42,7 @@ Update your `/etc/hosts` to be able to access smartEMS and/or Prometheus UI usin
 
 ```bash
 $ cat /etc/hosts
-127.0.0.1       grafana.loc
+127.0.0.1       smartems.loc
 127.0.0.1       prometheus.loc
 ```
 
@@ -53,7 +53,7 @@ $ docker-compose up -d
 ```
 
 Browse
-* http://grafana.loc/
+* http://smartems.loc/
 * http://prometheus.loc/
 
 Check for any errors
@@ -67,9 +67,9 @@ $ docker-compose logs | grep error
 Scale number of smartEMS instances to `<instances>`
 
 ```bash
-$ docker-compose up --scale grafana=<instances> -d
+$ docker-compose up --scale smartems=<instances> -d
 # for example 3 instances
-$ docker-compose up --scale grafana=3 -d
+$ docker-compose up --scale smartems=3 -d
 ```
 
 ## Test alerting

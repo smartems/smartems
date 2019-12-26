@@ -1,7 +1,7 @@
 +++
 title = "HTTP Preferences API "
 description = "smartEMS HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "preferences"]
+keywords = ["smartems", "http", "documentation", "api", "preferences"]
 aliases = ["/http_api/preferences/"]
 type = "docs"
 [menu.docs]

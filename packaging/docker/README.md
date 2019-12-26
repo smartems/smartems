@@ -7,12 +7,12 @@ This topic contains instructions for installing smartEMS using the Docker image.
 Start the Docker container by binding smartEMS to external port `3000`.
 
 ```bash
-docker run -d --name=grafana -p 3000:3000 grafana/grafana
+docker run -d --name=smartems -p 3000:3000 smartems/smartems
 ```
 
 Try it out, default admin user credentials are admin/admin.
 
-Further documentation can be found at http://docs.grafana.org/installation/docker/.
+Further documentation can be found at http://docs.smartems.org/installation/docker/.
 
 ## Changelog
 
@@ -56,7 +56,7 @@ Further documentation can be found at http://docs.grafana.org/installation/docke
 * Fixed bug caused by installing multiple plugins.
 
 ### v4.0.0-beta2
-* Plugins dir (`/var/lib/grafana/plugins`) is no longer a separate volume.
+* Plugins dir (`/var/lib/smartems/plugins`) is no longer a separate volume.
 
 ### v3.1.1
 * Made it possible to install specific plugin version https://github.com/smartems/smartems-docker/issues/59#issuecomment-260584026.

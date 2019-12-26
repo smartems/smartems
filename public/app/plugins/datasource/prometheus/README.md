@@ -4,4 +4,4 @@ smartEMS ships with **built in** support for Prometheus, the open-source service
 
 Read more about it here:
 
-[http://docs.grafana.org/datasources/prometheus/](http://docs.grafana.org/datasources/prometheus/)
+[http://docs.smartems.org/datasources/prometheus/](http://docs.smartems.org/datasources/prometheus/)

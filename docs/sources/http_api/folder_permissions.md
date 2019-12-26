@@ -1,7 +1,7 @@
 +++
 title = "Folder Permissions HTTP API "
 description = "smartEMS Folder Permissions HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "folder", "permission", "permissions", "acl"]
+keywords = ["smartems", "http", "documentation", "api", "folder", "permission", "permissions", "acl"]
 aliases = ["/http_api/dashboardpermissions/"]
 type = "docs"
 [menu.docs]

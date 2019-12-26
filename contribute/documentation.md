@@ -12,7 +12,7 @@ When you’ve found an issue you want to work on, please comment on the issue to
 
 If you encounter any misspellings or violations to the style guide, please let us know by submitting an issue (or just fix them if they are minor changes).
 
-On every page in the [documentation](https://grafana.com/docs/) are two links in the upper right corner:
+On every page in the [documentation](https://smartems.com/docs/) are two links in the upper right corner:
 
 - **Edit this page** takes you directly to the file on GitHub where you can contribute a fix.
 - **Request doc changes** prepares an issue on GitHub with relevant information already filled in.
@@ -23,11 +23,11 @@ For general discussions on documentation, you’re welcome to join the `#docs` c
 
 ## Style and formatting
 
-All smartEMS documentation is written using [Markdown](https://en.wikipedia.org/wiki/Markdown), and can be found in the [docs](/docs) directory in the [smartEMS GitHub repository](https://github.com/smartems/smartems). The [documentation website](https://grafana.com/docs) is generated with [Hugo](https://gohugo.io) which uses [Blackfriday](https://github.com/russross/blackfriday) as its Markdown rendering engine.
+All smartEMS documentation is written using [Markdown](https://en.wikipedia.org/wiki/Markdown), and can be found in the [docs](/docs) directory in the [smartEMS GitHub repository](https://github.com/smartems/smartems). The [documentation website](https://smartems.com/docs) is generated with [Hugo](https://gohugo.io) which uses [Blackfriday](https://github.com/russross/blackfriday) as its Markdown rendering engine.
 
 ### Documentation structure
 
-The smartEMS documentation is organized into topics, called _sections_. You can take a look at the current build at [grafana.com/docs/](https://grafana.com/docs/).
+The smartEMS documentation is organized into topics, called _sections_. You can take a look at the current build at [smartems.com/docs/](https://smartems.com/docs/).
 
 Each top-level section is located under the [docs/sources](/docs/sources) directory. Subsections are added by creating a subdirectory in the directory of the parent section.
 

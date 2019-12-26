@@ -1,7 +1,7 @@
 +++
 title = "Basic Concepts"
 description = "smartEMS intro and concept guide"
-keywords = ["grafana", "intro", "guide", "concepts"]
+keywords = ["smartems", "intro", "guide", "concepts"]
 type = "docs"
 [menu.docs]
 name = "Basic Concepts"

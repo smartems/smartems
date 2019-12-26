@@ -1,7 +1,7 @@
 +++
 title = "Getting Started"
 description = "Getting started with smartEMS guide"
-keywords = ["grafana", "intro", "guide", "started"]
+keywords = ["smartems", "intro", "guide", "started"]
 type = "docs"
 aliases = ["/guides/gettingstarted"]
 [menu.docs]

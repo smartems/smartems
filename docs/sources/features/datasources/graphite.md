@@ -1,7 +1,7 @@
 +++
 title = "Using Graphite in smartEMS"
 description = "Guide for using graphite in smartEMS"
-keywords = ["grafana", "graphite", "guide"]
+keywords = ["smartems", "graphite", "guide"]
 type = "docs"
 aliases = ["/datasources/graphite"]
 [menu.docs]
@@ -37,7 +37,7 @@ Access mode controls how requests to the data source will be handled. Server sho
 
 ### Server access mode (Default)
 
-All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the grafana backend/server if you select this access mode.
+All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the smartems backend/server if you select this access mode.
 
 ### Browser access mode
 
@@ -147,7 +147,7 @@ Why two ways? The first syntax is easier to read and write but does not allow yo
 the second syntax in expressions like  `my.server[[serverNumber]].count`.
 
 Example:
-[Graphite Templated Dashboard](http://play.grafana.org/dashboard/db/graphite-templated-nested)
+[Graphite Templated Dashboard](http://play.smartems.org/dashboard/db/graphite-templated-nested)
 
 ### Variable Usage in Tag Queries
 

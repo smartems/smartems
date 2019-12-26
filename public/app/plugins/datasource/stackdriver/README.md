@@ -4,4 +4,4 @@ smartEMS ships with built-in support for Google Stackdriver. You just have to ad
 
 Read more about it here:
 
-[http://docs.grafana.org/datasources/stackdriver/](http://docs.grafana.org/datasources/stackdriver/)
+[http://docs.smartems.org/datasources/stackdriver/](http://docs.smartems.org/datasources/stackdriver/)

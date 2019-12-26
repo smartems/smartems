@@ -1,7 +1,7 @@
 +++
 title = "GitHub OAuth2 Authentication"
 description = "smartEMS OAuthentication Guide "
-keywords = ["grafana", "configuration", "documentation", "oauth"]
+keywords = ["smartems", "configuration", "documentation", "oauth"]
 type = "docs"
 [menu.docs]
 name = "GitHub"
@@ -21,7 +21,7 @@ settings page). When you create the application you will need to specify
 a callback URL. Specify this as callback:
 
 ```bash
-http://<my_grafana_server_name_or_ip>:<grafana_server_port>/login/github
+http://<my_smartems_server_name_or_ip>:<smartems_server_port>/login/github
 ```
 
 This callback URL must match the full HTTP address that you use in your
@@ -111,6 +111,6 @@ Your GitHub teams can be referenced in two ways:
 - `https://github.com/orgs/<org>/teams/<slug>`
 - `@<org>/<slug>`
 
-Example: `@grafana/developers`
+Example: `@smartems/developers`
 
 [Learn more about Team Sync]({{< relref "auth/team-sync.md" >}})

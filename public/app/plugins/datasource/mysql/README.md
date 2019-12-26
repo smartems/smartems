@@ -11,4 +11,4 @@ smartEMS ships with a built-in MySQL data source plugin that allow you to query 
 
 Read more about it here:
 
-[http://docs.grafana.org/features/datasources/mysql/](http://docs.grafana.org/features/datasources/mysql/)
+[http://docs.smartems.org/features/datasources/mysql/](http://docs.smartems.org/features/datasources/mysql/)

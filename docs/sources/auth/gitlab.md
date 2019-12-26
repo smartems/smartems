@@ -1,7 +1,7 @@
 +++
 title = "GitLab OAuth2 Authentication"
 description = "smartEMS OAuthentication Guide "
-keywords = ["grafana", "configuration", "documentation", "oauth"]
+keywords = ["smartems", "configuration", "documentation", "oauth"]
 type = "docs"
 [menu.docs]
 name = "GitLab"
@@ -20,10 +20,10 @@ You need to [create a GitLab OAuth application](https://docs.gitlab.com/ce/integ
 Choose a descriptive *Name*, and use the following *Redirect URI*:
 
 ```
-https://grafana.example.com/login/gitlab
+https://smartems.example.com/login/gitlab
 ```
 
-where `https://grafana.example.com` is the URL you use to connect to smartEMS.
+where `https://smartems.example.com` is the URL you use to connect to smartEMS.
 Adjust it as needed if you don't use HTTPS or if you use a different port; for
 instance, if you access smartEMS at `http://203.0.113.31:3000`, you should use
 

@@ -2,8 +2,8 @@
 
 The open-source platform for monitoring and observability.
 
-[![License](https://img.shields.io/github/license/grafana/grafana)](LICENSE)
-[![Circle CI](https://img.shields.io/circleci/build/gh/grafana/grafana)](https://circleci.com/gh/grafana/grafana)
+[![License](https://img.shields.io/github/license/smartems/smartems)](LICENSE)
+[![Circle CI](https://img.shields.io/circleci/build/gh/smartems/smartems)](https://circleci.com/gh/smartems/smartems)
 [![Go Report Card](https://goreportcard.com/badge/github.com/smartems/smartems)](https://goreportcard.com/report/github.com/smartems/smartems)
 
 smartEMS allows you to query, visualize, alert on and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data driven culture:
@@ -17,14 +17,14 @@ smartEMS allows you to query, visualize, alert on and understand your metrics no
 
 ## Get started
 
-- [Get smartEMS](https://grafana.com/get)
-- [Installation guides](http://docs.grafana.org/installation/)
+- [Get smartEMS](https://smartems.com/get)
+- [Installation guides](http://docs.smartems.org/installation/)
 
-Unsure if smartEMS is for you? Watch smartEMS in action on [play.grafana.org](https://play.grafana.org/)!
+Unsure if smartEMS is for you? Watch smartEMS in action on [play.smartems.org](https://play.smartems.org/)!
 
 ## Documentation
 
-The smartEMS documentation is available at [grafana.com/docs](https://grafana.com/docs/).
+The smartEMS documentation is available at [smartems.com/docs](https://smartems.com/docs/).
 
 ## Contributing
 
@@ -36,9 +36,9 @@ If you're interested in contributing to the smartEMS project:
 
 ## Get involved
 
-- Follow [@grafana on Twitter](https://twitter.com/grafana/)
-- Read and subscribe to the [smartEMS blog](https://grafana.com/blog/)
-- If you have a specific question, check out our [discussion forums](https://community.grafana.com/).
+- Follow [@smartems on Twitter](https://twitter.com/smartems/)
+- Read and subscribe to the [smartEMS blog](https://smartems.com/blog/)
+- If you have a specific question, check out our [discussion forums](https://community.smartems.com/).
 - For general discussions, join us on the [official Slack](http://slack.raintank.io/) team.
 
 ## License

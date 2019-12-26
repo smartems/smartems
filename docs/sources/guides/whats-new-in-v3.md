@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v3.0"
 description = "Feature and improvement highlights for smartEMS v3.0"
-keywords = ["grafana", "new", "documentation", "3.0"]
+keywords = ["smartems", "new", "documentation", "3.0"]
 type = "docs"
 [menu.docs]
 name = "Version 3.0"
@@ -14,7 +14,7 @@ weight = 6
 
 ## Commercial Support
 
-Commercial Support subscriptions for smartEMS are now [generally available](https://grafana.com/support/plans/).
+Commercial Support subscriptions for smartEMS are now [generally available](https://smartems.com/support/plans/).
 
 Raintank is committed to a 100% open-source strategy for smartEMS. We
 do not want to go down the “open core” route. If your organization
@@ -43,9 +43,9 @@ entire experience right within smartEMS.
 
 ## smartEMS.com
 
-<img src="/img/docs/v3/grafana_net_tour.png">
+<img src="/img/docs/v3/smartems_net_tour.png">
 
-[smartEMS.com](https://grafana.com) offers a central repository where the community can come together to discover, create and
+[smartEMS.com](https://smartems.com) offers a central repository where the community can come together to discover, create and
 share plugins (data sources, panels, apps) and dashboards.
 
 We are also working on a hosted Graphite-compatible data source that will be optimized for use with smartEMS.
@@ -62,7 +62,7 @@ instances. You’ll be able to monitor their health and availability,
 perform Dashboard backups, and more.
 
 smartEMS.net will officially launch along with the stable version of
-smartEMS 3.0, but go to <a href=https://grafana.com> and check out the preview
+smartEMS 3.0, but go to <a href=https://smartems.com> and check out the preview
 and sign up for an account</a> in the meantime.
 
 
@@ -73,7 +73,7 @@ can easily install plugins from smartEMS.net with it. For
 example:
 
 ```
-smartems-cli install grafana-pie-chart-panel
+smartems-cli install smartems-pie-chart-panel
 ```
 
 ## Personalization and Preferences
@@ -128,7 +128,7 @@ And here's the new look for Dashboard settings:
 
 <img src="/img/docs/v3/dashboard_settings.png">
 
-Check out the <a href="http://play.grafana.org" target="_blank">Play
+Check out the <a href="http://play.smartems.org" target="_blank">Play
 Site</a> to get a feel for some of the UI changes.
 
 ## Improved Annotations
@@ -189,37 +189,37 @@ variable is interpolated.
 data source (or panel) they need to be updated as well.
 
 * InfluxDB 0.8: This data source is no longer included in releases,
-you can still install manually from [smartEMS.com](https://grafana.com)
+you can still install manually from [smartEMS.com](https://smartems.com)
 
 * KairosDB: This data source has also no longer shipped with smartEMS,
-you can install it manually from [smartEMS.com](https://grafana.com)
+you can install it manually from [smartEMS.com](https://smartems.com)
 
 ## Plugin showcase
 
-Discovering and installing plugins is very quick and easy with smartEMS 3.0 and [smartEMS.com](https://grafana.com). Here
+Discovering and installing plugins is very quick and easy with smartEMS 3.0 and [smartEMS.com](https://smartems.com). Here
 are a couple that I encourage you try!
 
-#### [Clock Panel](https://grafana.com/plugins/grafana-clock-panel)
+#### [Clock Panel](https://smartems.com/plugins/smartems-clock-panel)
 Support's both current time and count down mode.
 <img src="/img/docs/v3/clock_panel.png">
 
-#### [Pie Chart Panel](https://grafana.com/plugins/grafana-piechart-panel)
+#### [Pie Chart Panel](https://smartems.com/plugins/smartems-piechart-panel)
 A simple pie chart panel is now available as an external plugin.
 <img src="/img/docs/v3/pie_chart_panel.png">
 
-#### [WorldPing App](https://grafana.com/plugins/raintank-worldping-app)
+#### [WorldPing App](https://smartems.com/plugins/raintank-worldping-app)
 This is full blown smartEMS App that adds new panels, data sources and pages to give
 feature rich global performance monitoring directly from your on-prem smartEMS.
 
 <img src="/img/docs/v3/wP-Screenshot-dash-web.png">
 
-#### [Zabbix App](https://grafana.com/plugins/alexanderzobnin-zabbix-app)
+#### [Zabbix App](https://smartems.com/plugins/alexanderzobnin-zabbix-app)
 This app contains the already very pouplar Zabbix data source plugin, 2 dashboards and a triggers panel. It is
-created and maintained by [Alexander Zobnin](https://github.com/alexanderzobnin/grafana-zabbix).
+created and maintained by [Alexander Zobnin](https://github.com/alexanderzobnin/smartems-zabbix).
 
 <img src="/img/docs/v3/zabbix_app.png">
 
-Checkout the full list of plugins on [smartEMS.com](https://grafana.com/plugins)
+Checkout the full list of plugins on [smartEMS.com](https://smartems.com/plugins)
 
 ## CHANGELOG
 

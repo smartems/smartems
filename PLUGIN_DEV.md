@@ -6,9 +6,9 @@ upgrading smartEMS please check here before creating an issue.
 
 ## Plugin development resources
 
-- [smartEMS plugin developer guide](http://docs.grafana.org/plugins/developing/development/)
-- [Webpack smartEMS plugin template project](https://github.com/CorpGlory/grafana-plugin-template-webpack)
-- [Simple JSON datasource plugin](https://github.com/grafana/simple-json-datasource)
+- [smartEMS plugin developer guide](http://docs.smartems.org/plugins/developing/development/)
+- [Webpack smartEMS plugin template project](https://github.com/CorpGlory/smartems-plugin-template-webpack)
+- [Simple JSON datasource plugin](https://github.com/smartems/simple-json-datasource)
 
 ## Changes in smartEMS v4.6
 

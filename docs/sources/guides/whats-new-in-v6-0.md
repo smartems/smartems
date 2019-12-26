@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.0"
 description = "Feature and improvement highlights for smartEMS v6.0"
-keywords = ["grafana", "new", "documentation", "6.0"]
+keywords = ["smartems", "new", "documentation", "6.0"]
 type = "docs"
 [menu.docs]
 name = "Version 6.0"
@@ -17,7 +17,7 @@ This update to smartEMS introduces a new way of exploring your data, support for
 The main highlights are:
 
 - [Explore]({{< relref "#explore" >}}) - A new query focused workflow for ad-hoc data exploration and troubleshooting.
-- [smartEMS Loki]({{< relref "#explore-and-grafana-loki" >}}) - Integration with the new open source log aggregation system from smartEMS Labs.
+- [smartEMS Loki]({{< relref "#explore-and-smartems-loki" >}}) - Integration with the new open source log aggregation system from smartEMS Labs.
 - [Gauge Panel]({{< relref "#gauge-panel" >}}) - A new standalone panel for gauges.
 - [New Panel Editor UX]({{< relref "#new-panel-editor" >}}) improves panel editing
     and enables easy switching between different visualizations.
@@ -33,7 +33,7 @@ The main highlights are:
 
 smartEMS's dashboard UI is all about building dashboards for visualization. **Explore** strips away all the dashboard and panel options so that you can focus on the query and metric exploration. Iterate until you have a working query and then think about building a dashboard. You can also jump from a dashboard panel into **Explore** and from there do some ad-hoc query exporation with the panel queries as a starting point.
 
-For infrastructure monitoring and incident response, you no longer need to switch to other tools to debug what went wrong. **Explore** allows you to dig deeper into your metrics and logs to find the cause. smartEMS's new logging data source, [Loki](https://github.com/grafana/loki) is tightly integrated into Explore and allows you to correlate metrics and logs by viewing them side-by-side.
+For infrastructure monitoring and incident response, you no longer need to switch to other tools to debug what went wrong. **Explore** allows you to dig deeper into your metrics and logs to find the cause. smartEMS's new logging data source, [Loki](https://github.com/smartems/loki) is tightly integrated into Explore and allows you to correlate metrics and logs by viewing them side-by-side.
 
 **Explore** is a new paradigm for smartEMS. It creates a new interactive debugging workflow that integrates two pillars
 of observability—metrics and logs. Explore works with every data source but for Prometheus we have customized the
@@ -57,11 +57,11 @@ Explore supports splitting the view so you can compare different queries, differ
 ### Explore and smartEMS Loki
 
 The log exploration and visualization features in Explore are available to any data source but are currently only implemented by the new open source log
-aggregation system from smartEMS Lab called [smartEMS Loki](https://github.com/grafana/loki).
+aggregation system from smartEMS Lab called [smartEMS Loki](https://github.com/smartems/loki).
 
 Loki is a horizontally-scalable, highly-available, multi-tenant log aggregation system inspired by Prometheus. It is designed to be very cost effective, as it does not index the contents of the logs, but rather a set of labels for each log stream. The logs from Loki are queried in a similar way to querying with label selectors in Prometheus. It uses labels to group log streams which can be made to match up with your Prometheus labels.
 
-Read more about smartEMS Loki [here](https://github.com/grafana/loki) or [smartEMS Labs hosted Loki](https://grafana.com/loki).
+Read more about smartEMS Loki [here](https://github.com/smartems/loki) or [smartEMS Labs hosted Loki](https://smartems.com/loki).
 
 The Explore feature allows you to query logs and features a new log panel. In the near future, we will be adding support
 for other log sources to Explore and the next planned integration is Elasticsearch.
@@ -120,7 +120,7 @@ To get started read the guide: [Using Google Stackdriver in smartEMS](/features/
 
 ## Azure Monitor data source
 
-One of the goals of the smartEMS v6.0 release is to add support for the three major clouds. Amazon CloudWatch has been a core data source for years and Google Stackdriver is also now supported. We developed an external plugin for Azure Monitor last year and for this release the [plugin](https://grafana.com/plugins/grafana-azure-monitor-datasource) is being moved into smartEMS to be one of the built-in data sources. For users of the external plugin, smartEMS will automatically start using the built-in version. As a core data source, the Azure Monitor data source is able to get alerting support, in the 6.0 release alerting is supported for the Azure Monitor service, with the rest to follow.
+One of the goals of the smartEMS v6.0 release is to add support for the three major clouds. Amazon CloudWatch has been a core data source for years and Google Stackdriver is also now supported. We developed an external plugin for Azure Monitor last year and for this release the [plugin](https://smartems.com/plugins/smartems-azure-monitor-datasource) is being moved into smartEMS to be one of the built-in data sources. For users of the external plugin, smartEMS will automatically start using the built-in version. As a core data source, the Azure Monitor data source is able to get alerting support, in the 6.0 release alerting is supported for the Azure Monitor service, with the rest to follow.
 
 The Azure Monitor data source integrates four Azure services with smartEMS - Azure Monitor, Azure Log Analytics, Azure Application Insights and Azure Application Insights Analytics.
 

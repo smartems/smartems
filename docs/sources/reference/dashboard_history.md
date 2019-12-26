@@ -1,6 +1,6 @@
 +++
 title = "Dashboard Version History"
-keywords = ["grafana", "dashboard", "documentation", "version", "history"]
+keywords = ["smartems", "dashboard", "documentation", "version", "history"]
 type = "docs"
 [menu.docs]
 name = "Dashboard Version History"

@@ -1,7 +1,7 @@
 +++
 title = "Using Elasticsearch in smartEMS"
 description = "Guide for using Elasticsearch in smartEMS"
-keywords = ["grafana", "elasticsearch", "guide"]
+keywords = ["smartems", "elasticsearch", "guide"]
 type = "docs"
 aliases = ["/datasources/elasticsearch"]
 [menu.docs]
@@ -35,7 +35,7 @@ Access mode controls how requests to the data source will be handled. Server sho
 
 ### Server access mode (Default)
 
-All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the grafana backend/server if you select this access mode.
+All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the smartems backend/server if you select this access mode.
 
 ### Browser (Direct) access
 
@@ -168,7 +168,7 @@ In the above example, we have a lucene query that filters documents based on the
 a variable in the *Terms* group by field input box. This allows you to use a variable to quickly change how the data is grouped.
 
 Example dashboard:
-[Elasticsearch Templated Dashboard](http://play.grafana.org/dashboard/db/elasticsearch-templated)
+[Elasticsearch Templated Dashboard](http://play.smartems.org/dashboard/db/elasticsearch-templated)
 
 ## Annotations
 

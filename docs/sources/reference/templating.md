@@ -1,6 +1,6 @@
 +++
 title = "Variables"
-keywords = ["grafana", "templating", "documentation", "guide", "template", "variable"]
+keywords = ["smartems", "templating", "documentation", "guide", "template", "variable"]
 type = "docs"
 [menu.docs]
 name = "Variables"
@@ -114,7 +114,7 @@ String to interpolate: '${servers:percentencode}'
 Interpolation result: 'foo%28%29bar%20BAZ%2Ctest2'
 ```
 
-Test the formatting options on the [smartEMS Play site](http://play.grafana.org/d/cJtIfcWiz/template-variable-formatting-options?orgId=1).
+Test the formatting options on the [smartEMS Play site](http://play.smartems.org/d/cJtIfcWiz/template-variable-formatting-options?orgId=1).
 
 If any invalid formatting option is specified, then `glob` is the default/fallback option.
 
@@ -360,7 +360,7 @@ By choosing `horizontal` the panels will be arranged side-by-side. smartEMS will
 of each repeated panel so that the whole row is filled. Currently, you cannot mix other panels on a row with a repeated
 panel.
 
-Set `Max per row` to tell grafana how many panels per row you want at most. It defaults to *4* if you don't set anything.
+Set `Max per row` to tell smartems how many panels per row you want at most. It defaults to *4* if you don't set anything.
 
 By choosing `vertical` the panels will be arranged from top to bottom in a column. The width of the repeated panels will be the same as of the first panel (the original template) being repeated.
 
@@ -378,7 +378,7 @@ you want to repeat the row for.
 
 It may be a good idea to use a variable in the row title as well.
 
-Example: [Repeated Rows Dashboard](http://play.grafana.org/dashboard/db/repeated-rows)
+Example: [Repeated Rows Dashboard](http://play.smartems.org/dashboard/db/repeated-rows)
 
 ## URL state
 
@@ -386,6 +386,6 @@ Variable values are always synced to the URL using the syntax `var-<varname>=val
 
 ## Examples
 
-- [Graphite Templated Dashboard](http://play.grafana.org/dashboard/db/graphite-templated-nested)
-- [Elasticsearch Templated Dashboard](http://play.grafana.org/dashboard/db/elasticsearch-templated)
-- [InfluxDB Templated Dashboard](http://play.grafana.org/dashboard/db/influxdb-templated-queries)
+- [Graphite Templated Dashboard](http://play.smartems.org/dashboard/db/graphite-templated-nested)
+- [Elasticsearch Templated Dashboard](http://play.smartems.org/dashboard/db/elasticsearch-templated)
+- [InfluxDB Templated Dashboard](http://play.smartems.org/dashboard/db/influxdb-templated-queries)

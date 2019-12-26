@@ -1,7 +1,7 @@
 +++
 title = "Auth Proxy"
 description = "smartEMS Auth Proxy Guide "
-keywords = ["grafana", "configuration", "documentation", "proxy"]
+keywords = ["smartems", "configuration", "documentation", "proxy"]
 type = "docs"
 aliases = ["/tutorials/authproxy/"]
 [menu.docs]
@@ -92,7 +92,7 @@ In this example we use Apache as a reverse proxy in front of smartEMS. Apache ha
             AuthType Basic
             AuthName smartEMSAuthProxy
             AuthBasicProvider file
-            AuthUserFile /etc/apache2/grafana_htpasswd
+            AuthUserFile /etc/apache2/smartems_htpasswd
             Require valid-user
 
             RewriteEngine On
@@ -110,7 +110,7 @@ In this example we use Apache as a reverse proxy in front of smartEMS. Apache ha
 
 * The first 4 lines of the virtualhost configuration are standard, so we won’t go into detail      on what they do.
 
-* We use a **\<proxy>** configuration block for applying our authentication rules to every proxied request. These rules include requiring basic authentication where user:password credentials are stored in the **/etc/apache2/grafana_htpasswd** file. This file can be created with the `htpasswd` command.
+* We use a **\<proxy>** configuration block for applying our authentication rules to every proxied request. These rules include requiring basic authentication where user:password credentials are stored in the **/etc/apache2/smartems_htpasswd** file. This file can be created with the `htpasswd` command.
 
     * The next part of the configuration is the tricky part. We use Apache’s rewrite engine to create our **X-WEBAUTH-USER header**, populated with the authenticated user.
 
@@ -124,9 +124,9 @@ In this example we use Apache as a reverse proxy in front of smartEMS. Apache ha
 
 ## Full walk through using Docker.
 
-For this example, we use the official smartEMS docker image available at [Docker Hub](https://hub.docker.com/r/grafana/grafana/)
+For this example, we use the official smartEMS docker image available at [Docker Hub](https://hub.docker.com/r/smartems/smartems/)
 
-* Create a file `grafana.ini` with the following contents
+* Create a file `smartems.ini` with the following contents
 
 ```bash
 [users]
@@ -141,11 +141,11 @@ header_property = username
 auto_sign_up = true
 ```
 
-Launch the smartEMS container, using our custom grafana.ini to replace `/etc/grafana/grafana.ini`. We don't expose
+Launch the smartEMS container, using our custom smartems.ini to replace `/etc/smartems/smartems.ini`. We don't expose
 any ports for this container as it will only be connected to by our Apache container.
 
 ```bash
-docker run -i -v $(pwd)/grafana.ini:/etc/grafana/grafana.ini --name grafana grafana/grafana
+docker run -i -v $(pwd)/smartems.ini:/etc/smartems/smartems.ini --name smartems smartems/smartems
 ```
 
 ### Apache Container
@@ -203,8 +203,8 @@ LogLevel error
 </Proxy>
 RequestHeader unset Authorization
 ProxyRequests Off
-ProxyPass / http://grafana:3000/
-ProxyPassReverse / http://grafana:3000/
+ProxyPass / http://smartems:3000/
+ProxyPassReverse / http://smartems:3000/
 ```
 
 * Create a htpasswd file. We create a new user **anthony** with the password **password**
@@ -213,13 +213,13 @@ ProxyPassReverse / http://grafana:3000/
     htpasswd -bc htpasswd anthony password
     ```
 
-* Launch the httpd container using our custom httpd.conf and our htpasswd file. The container will listen on port 80, and we create a link to the **grafana** container so that this container can resolve the hostname **grafana** to the grafana container’s ip address.
+* Launch the httpd container using our custom httpd.conf and our htpasswd file. The container will listen on port 80, and we create a link to the **smartems** container so that this container can resolve the hostname **smartems** to the smartems container’s ip address.
 
     ```bash
-    docker run -i -p 80:80 --link grafana:grafana -v $(pwd)/httpd.conf:/usr/local/apache2/conf/httpd.conf -v $(pwd)/htpasswd:/tmp/htpasswd httpd:2.4
+    docker run -i -p 80:80 --link smartems:smartems -v $(pwd)/httpd.conf:/usr/local/apache2/conf/httpd.conf -v $(pwd)/htpasswd:/tmp/htpasswd httpd:2.4
     ```
 
-### Use grafana.
+### Use smartems.
 
 With our smartEMS and Apache containers running, you can now connect to http://localhost/ and log in using the username/password we created in the htpasswd file.
 
@@ -252,7 +252,7 @@ curl -H "X-WEBAUTH-USER: admin" http://localhost:3000/api/teams/search
       "id": 1,
       "orgId": 1,
       "name": "Core",
-      "email": "core@grafana.com",
+      "email": "core@smartems.com",
       "avatarUrl": "/avatar/327a5353552d2dc3966e2e646908f540",
       "memberCount": 1,
       "permission": 0
@@ -261,7 +261,7 @@ curl -H "X-WEBAUTH-USER: admin" http://localhost:3000/api/teams/search
       "id": 2,
       "orgId": 1,
       "name": "Loki",
-      "email": "loki@grafana.com",
+      "email": "loki@smartems.com",
       "avatarUrl": "/avatar/102f937d5344d33fdb37b65d430f36ef",
       "memberCount": 0,
       "permission": 0

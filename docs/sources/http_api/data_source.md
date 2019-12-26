@@ -1,7 +1,7 @@
 +++
 title = "Data source HTTP API "
 description = "smartEMS Data source HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "data source"]
+keywords = ["smartems", "http", "documentation", "api", "data source"]
 aliases = ["/http_api/datasource/"]
 type = "docs"
 [menu.docs]
@@ -41,7 +41,7 @@ Content-Type: application/json
     "url":"http://mydatasource.com",
     "password":"",
     "user":"",
-    "database":"grafana-dash",
+    "database":"smartems-dash",
     "basicAuth":false,
     "basicAuthUser":"",
     "basicAuthPassword":"",

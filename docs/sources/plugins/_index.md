@@ -17,4 +17,4 @@ smartEMS has a strong community of contributors and plugin developers.
 By making it easier to develop and install plugins we hope that the community
 can grow even stronger and develop new plugins that we would never think about.
 
-You can discover available plugins on [smartEMS.com](https://grafana.com/plugins)
+You can discover available plugins on [smartEMS.com](https://smartems.com/plugins)

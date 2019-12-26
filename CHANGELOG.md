@@ -69,13 +69,13 @@
 
 
 ## Breaking changes
-* **CloudWatch**: Pre smartEMS 6.5.0, the CloudWatch datasource used the GetMetricStatistics API for all queries that did not have an ´id´ and did not have an ´expression´ defined in the query editor. The GetMetricStatistics API has a limit of 400 transactions per second. In this release, all queries use the GetMetricData API. The GetMetricData API has a limit of 50 transactions per second and 100 metrics per transaction. Also the GetMetricData API pricing is different from GetMetricStatistics. While GetMetricStatistics qualified for the CloudWatch API free tier, this is not the case for GetMetricData calls. For more information, please refer to the CloudWatch pricing page (https://aws.amazon.com/cloudwatch/pricing/). Read more about GetMetricData limits in [upgrading to 6.5](https://grafana.com/docs/installation/upgrading/#upgrading-to-v6-5). 
+* **CloudWatch**: Pre smartEMS 6.5.0, the CloudWatch datasource used the GetMetricStatistics API for all queries that did not have an ´id´ and did not have an ´expression´ defined in the query editor. The GetMetricStatistics API has a limit of 400 transactions per second. In this release, all queries use the GetMetricData API. The GetMetricData API has a limit of 50 transactions per second and 100 metrics per transaction. Also the GetMetricData API pricing is different from GetMetricStatistics. While GetMetricStatistics qualified for the CloudWatch API free tier, this is not the case for GetMetricData calls. For more information, please refer to the CloudWatch pricing page (https://aws.amazon.com/cloudwatch/pricing/). Read more about GetMetricData limits in [upgrading to 6.5](https://smartems.com/docs/installation/upgrading/#upgrading-to-v6-5). 
 
 * **CloudWatch**: The GetMetricData API does not return metric unit, so unit auto detection in panels is no longer supported.  
 
-* **CloudWatch**: The `HighRes` switch has been removed from the query editor. Read more about this in [upgrading to 6.5](https://grafana.com/docs/installation/upgrading/#upgrading-to-v6-5). 
+* **CloudWatch**: The `HighRes` switch has been removed from the query editor. Read more about this in [upgrading to 6.5](https://smartems.com/docs/installation/upgrading/#upgrading-to-v6-5). 
 
-* **CloudWatch**: In previous versions of smartEMS, there was partial support for using multi template variables as dimension values. When a multi template variable is being used for dimension values in smartEMS 6.5, a [search expression](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-search-expressions.html) will be generated. In the GetMetricData API, expressions are limited to 1024 characters, so it might be the case that this limit is reached when a multi template variable that has a lot of values is being used. Read about the suggested workaround in [upgrading to 6.5](https://grafana.com/docs/installation/upgrading/#upgrading-to-v6-5). 
+* **CloudWatch**: In previous versions of smartEMS, there was partial support for using multi template variables as dimension values. When a multi template variable is being used for dimension values in smartEMS 6.5, a [search expression](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-search-expressions.html) will be generated. In the GetMetricData API, expressions are limited to 1024 characters, so it might be the case that this limit is reached when a multi template variable that has a lot of values is being used. Read about the suggested workaround in [upgrading to 6.5](https://smartems.com/docs/installation/upgrading/#upgrading-to-v6-5). 
 
 # 6.4.4 (2019-11-06)
 
@@ -140,7 +140,7 @@
 
 ## Plugins that need updating when upgrading from 6.3 to 6.4
 
-* [Splunk](https://grafana.com/grafana/plugins/grafana-splunk-datasource)
+* [Splunk](https://smartems.com/smartems/plugins/smartems-splunk-datasource)
 
 # 6.4.0-beta2 (2019-09-25)
 
@@ -148,7 +148,7 @@
 * **Azure Monitor**: Remove support for cross resource queries (#19115)". [#19346](https://github.com/smartems/smartems/pull/19346), [@sunker](https://github.com/sunker)
 * **Docker**: Upgrade packages to resolve reported vulnerabilities. [#19188](https://github.com/smartems/smartems/pull/19188), [@marefr](https://github.com/marefr)
 * **Graphite**: Time range expansion reduced from 1 minute to 1 second. [#19246](https://github.com/smartems/smartems/pull/19246), [@torkelo](https://github.com/torkelo)
-* **grafana/toolkit**: Add plugin creation task. [#19207](https://github.com/smartems/smartems/pull/19207), [@dprokop](https://github.com/dprokop)
+* **smartems/toolkit**: Add plugin creation task. [#19207](https://github.com/smartems/smartems/pull/19207), [@dprokop](https://github.com/dprokop)
 
 ### Bug Fixes
 * **Alerting**: Prevents creating alerts from unsupported queries. [#19250](https://github.com/smartems/smartems/pull/19250), [@hugohaggmark](https://github.com/hugohaggmark)
@@ -223,7 +223,7 @@
 ### Annotations
 
 There are some breaking changes in the annotations HTTP API for region annotations. Region annotations are now represented
-using a single event instead of two seperate events. Check breaking changes in HTTP API [below](#http-api) and [HTTP API documentation](https://grafana.com/docs/http_api/annotations/) for more details.
+using a single event instead of two seperate events. Check breaking changes in HTTP API [below](#http-api) and [HTTP API documentation](https://smartems.com/docs/http_api/annotations/) for more details.
 
 ### Docker
 
@@ -245,7 +245,7 @@ smartEMS is now using Alpine 3.10 as docker base image.
 
 [PhantomJS](https://phantomjs.org/), which is used for rendering images of dashboards and panels, is deprecated and will be removed in a future smartEMS release. A deprecation warning will from now on be logged when smartEMS starts up if PhantomJS is in use.
 
-Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer).
+Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin](https://smartems.com/smartems/plugins/smartems-image-renderer).
 
 # 6.3.6 (2019-09-23)
 
@@ -272,7 +272,7 @@ Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin]
 
 # 6.3.4 (2019-08-29)
 
-* **Security**: Urgent security patch release. Please read more in our [blog](https://grafana.com/blog/2019/08/29/grafana-5.4.5-and-6.3.4-released-with-important-security-fix/)
+* **Security**: Urgent security patch release. Please read more in our [blog](https://smartems.com/blog/2019/08/29/smartems-5.4.5-and-6.3.4-released-with-important-security-fix/)
 
 # 6.3.3 (2019-08-15)
 
@@ -317,7 +317,7 @@ Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin]
 
 # 6.3.0-beta2 (2019-07-26)
 ### Features / Enhancements
-* **Build grafana images consistently**. [#18224](https://github.com/smartems/smartems/pull/18224), [@hassanfarid](https://github.com/hassanfarid)
+* **Build smartems images consistently**. [#18224](https://github.com/smartems/smartems/pull/18224), [@hassanfarid](https://github.com/hassanfarid)
 * **Docs**: SAML. [#18069](https://github.com/smartems/smartems/pull/18069), [@gotjosh](https://github.com/gotjosh)
 * **Permissions**: Show plugins in nav for non admin users but hide plugin configuration. [#18234](https://github.com/smartems/smartems/pull/18234), [@aocenas](https://github.com/aocenas)
 * **TimePicker**: Increase max height of quick range dropdown. [#18247](https://github.com/smartems/smartems/pull/18247), [@torkelo](https://github.com/torkelo)
@@ -473,7 +473,7 @@ More details in bug report: https://github.com/smartems/smartems/issues/17613
 
 ### Removal of old deprecated package repository
 
-5 months ago we deprecated our old package cloud repository and [replaced it](https://grafana.com/blog/2019/01/05/moving-to-packages.grafana.com/) with our own. We will remove the old depreciated
+5 months ago we deprecated our old package cloud repository and [replaced it](https://smartems.com/blog/2019/01/05/moving-to-packages.smartems.com/) with our own. We will remove the old depreciated
 repo on July 1st. Make sure you have switched to the new repo by then. The new repository has all our old releases so you are not required to upgrade just to switch package repository.
 
 # 6.2.0-beta2 (2019-05-15)
@@ -539,7 +539,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
   * **Units**: Add angle units, Arc Minutes and Seconds. [#16271](https://github.com/smartems/smartems/pull/16271), [@Dripoul](https://github.com/Dripoul)
 
 ### Bug Fixes
-  * **Build**: Fix bug where grafana didn't start after mysql on rpm packages. [#16917](https://github.com/smartems/smartems/pull/16917), [@bergquist](https://github.com/bergquist)
+  * **Build**: Fix bug where smartems didn't start after mysql on rpm packages. [#16917](https://github.com/smartems/smartems/pull/16917), [@bergquist](https://github.com/bergquist)
   * **CloudWatch**: Fixes query order not affecting series ordering & color. [#16408](https://github.com/smartems/smartems/pull/16408), [@mtanda](https://github.com/mtanda)
   * **CloudWatch**: Use default alias if there is no alias for metrics. [#16732](https://github.com/smartems/smartems/pull/16732), [@utkarshcmu](https://github.com/utkarshcmu)
   * **Config**: Fixes bug where timeouts for alerting was not parsed correctly. [#16784](https://github.com/smartems/smartems/pull/16784), [@aocenas](https://github.com/aocenas)
@@ -564,7 +564,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 
 # 6.1.5 (2019-04-29)
 
-* **Security**: Urgent security patch release. Please read more in our [blog](https://grafana.com/blog/2019/04/29/grafana-5.4.4-and-6.1.6-released-with-important-security-fix/)
+* **Security**: Urgent security patch release. Please read more in our [blog](https://smartems.com/blog/2019/04/29/smartems-5.4.4-and-6.1.6-released-with-important-security-fix/)
 
 # 6.1.4 (2019-04-16)
 
@@ -758,7 +758,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 * **Influxdb**: Add support for time zone (`tz`) clause [#10322](https://github.com/smartems/smartems/issues/10322), thx [@cykl](https://github.com/cykl)
 * **Snapshots**: Enable deletion of public snapshot [#14109](https://github.com/smartems/smartems/issues/14109)
 * **Provisioning**: Provisioning support for alert notifiers [#10487](https://github.com/smartems/smartems/issues/10487), thx [@pbakulev](https://github.com/pbakulev)
-* **Explore**: A whole new way to do ad-hoc metric queries and exploration. Split view in half and compare metrics & logs and much much more. [Read more here](http://docs.grafana.org/features/explore/)
+* **Explore**: A whole new way to do ad-hoc metric queries and exploration. Split view in half and compare metrics & logs and much much more. [Read more here](http://docs.smartems.org/features/explore/)
 * **Auth**: Replace remember me cookie solution for smartEMS's builtin, LDAP and OAuth authentication with a solution based on short-lived tokens [#15303](https://github.com/smartems/smartems/issues/15303)
 
 ### Minor
@@ -774,7 +774,7 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 * **Postgres/MySQL/MSSQL**: Nanosecond timestamp support (`$__unixEpochNanoFilter`, `$__unixEpochNanoFrom`, `$__unixEpochNanoTo`) [#14711](https://github.com/smartems/smartems/pull/14711), thx [@ander26](https://github.com/ander26)
 * **Provisioning**: Fixes bug causing infinite growth in dashboard_version table. [#12864](https://github.com/smartems/smartems/issues/12864)
 * **Auth**: Prevent password reset when login form is disabled or either LDAP or Auth Proxy is enabled [#14246](https://github.com/smartems/smartems/issues/14246), thx [@SilverFire](https://github.com/SilverFire)
-* **Admin**: Fix prevent removing last grafana admin permissions [#11067](https://github.com/smartems/smartems/issues/11067), thx [@danielbh](https://github.com/danielbh)
+* **Admin**: Fix prevent removing last smartems admin permissions [#11067](https://github.com/smartems/smartems/issues/11067), thx [@danielbh](https://github.com/danielbh)
 * **Admin**: When multiple user invitations, all links are the same as the first user who was invited [#14483](https://github.com/smartems/smartems/issues/14483)
 * **LDAP**: Upgrade go-ldap to v3 [#14548](https://github.com/smartems/smartems/issues/14548)
 * **OAuth**: Support OAuth providers that are not RFC6749 compliant [#14562](https://github.com/smartems/smartems/issues/14562), thx [@tdabasinskas](https://github.com/tdabasinskas)
@@ -811,11 +811,11 @@ repo on July 1st. Make sure you have switched to the new repo by then. The new r
 
 # 5.4.5 (2019-08-29)
 
-* **Security**: Urgent security patch release. Please read more in our [blog](https://grafana.com/blog/2019/08/29/grafana-5.4.5-and-6.3.4-released-with-important-security-fix/)
+* **Security**: Urgent security patch release. Please read more in our [blog](https://smartems.com/blog/2019/08/29/smartems-5.4.5-and-6.3.4-released-with-important-security-fix/)
 
 # 5.4.4 (2019-04-29)
 
-* **Security**: Urgent security patch release. Please read more in our [blog](https://grafana.com/blog/2019/04/29/grafana-5.4.4-and-6.1.6-released-with-important-security-fix/)
+* **Security**: Urgent security patch release. Please read more in our [blog](https://smartems.com/blog/2019/04/29/smartems-5.4.4-and-6.1.6-released-with-important-security-fix/)
 
 # 5.4.3 (2019-01-14)
 
@@ -900,7 +900,7 @@ https://github.com/smartems/smartems/pull/14313)
 * **Alerting**: More options for the Slack Alert notifier [#13993](https://github.com/smartems/smartems/issues/13993), thx [@andreykaipov](https://github.com/andreykaipov)
 * **Alerting**: Can't receive DingDing alert when alert is triggered [#13723](https://github.com/smartems/smartems/issues/13723), thx [@Yukinoshita-Yukino](https://github.com/Yukinoshita-Yukino)
 * **Alerting**: Increase Telegram captions length limit [#13876](https://github.com/smartems/smartems/pull/13876), thx [@skgsergio](https://github.com/skgsergio)
-* **Internal metrics**: Renamed `grafana_info` to `grafana_build_info` and added branch, goversion and revision [#13876](https://github.com/smartems/smartems/pull/13876)
+* **Internal metrics**: Renamed `smartems_info` to `smartems_build_info` and added branch, goversion and revision [#13876](https://github.com/smartems/smartems/pull/13876)
 * **Data Source Proxy**: Keep trailing slash for data source proxy requests [#13326](https://github.com/smartems/smartems/pull/13326), thx [@ryantxu](https://github.com/ryantxu)
 * **OAuth**: Fix Google OAuth relies on email, not google account id [#13924](https://github.com/smartems/smartems/issues/13924), thx [@vinicyusmacedo](https://github.com/vinicyusmacedo)
 * **Dashboard**: Toggle legend using keyboard shortcut [#13655](https://github.com/smartems/smartems/issues/13655), thx [@davewat](https://github.com/davewat)
@@ -926,7 +926,7 @@ https://github.com/smartems/smartems/pull/14313)
 
 ### File Exfiltration vulnerability Security fix
 
-See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-6-5-security-update/11961) for details.
+See [security announcement](https://community.smartems.com/t/smartems-5-3-3-and-4-6-5-security-update/11961) for details.
 
 # 5.3.2 (2018-10-24)
 
@@ -1091,7 +1091,7 @@ These are new features that's still being worked on and are in an experimental p
 
 ### Important fix for LDAP & OAuth login vulnerability
 
-See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
+See [security announcement](https://community.smartems.com/t/smartems-5-2-3-and-4-6-4-security-update/10050) for details.
 
 # 5.2.2 (2018-07-25)
 
@@ -1194,12 +1194,12 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 * **Singlestat**: Fix singlestat threshold tooltip [#11971](https://github.com/smartems/smartems/issues/11971)
 * **Dashboard**: Hide grid controls in fullscreen/low-activity views [#11771](https://github.com/smartems/smartems/issues/11771)
 * **Dashboard**: Validate uid when importing dashboards [#11515](https://github.com/smartems/smartems/issues/11515)
-* **Docker**: Support for env variables ending with _FILE [grafana-docker #166](https://github.com/smartems/smartems-docker/pull/166), thx [@efrecon](https://github.com/efrecon)
+* **Docker**: Support for env variables ending with _FILE [smartems-docker #166](https://github.com/smartems/smartems-docker/pull/166), thx [@efrecon](https://github.com/efrecon)
 * **Alert list panel**: Show alerts for user with viewer role [#11167](https://github.com/smartems/smartems/issues/11167)
 * **Provisioning**: Verify checksum of dashboards before updating to reduce load on database [#11670](https://github.com/smartems/smartems/issues/11670)
 * **Provisioning**: Support symlinked files in dashboard provisioning config files [#11958](https://github.com/smartems/smartems/issues/11958)
 * **Dashboard list panel**: Search dashboards by folder [#11525](https://github.com/smartems/smartems/issues/11525)
-* **Sidenav**: Always show server admin link in sidenav if grafana admin [#11657](https://github.com/smartems/smartems/issues/11657)
+* **Sidenav**: Always show server admin link in sidenav if smartems admin [#11657](https://github.com/smartems/smartems/issues/11657)
 
 # 5.1.5 (2018-06-27)
 
@@ -1251,7 +1251,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 * **Table**: Table plugin value mappings [#7119](https://github.com/smartems/smartems/issues/7119), thx [infernix](https://github.com/infernix)
 * **IE11**: IE 11 compatibility [#11165](https://github.com/smartems/smartems/issues/11165)
 * **Scrolling**: Better scrolling experience [#11053](https://github.com/smartems/smartems/issues/11053), [#11252](https://github.com/smartems/smartems/issues/11252), [#10836](https://github.com/smartems/smartems/issues/10836), [#11185](https://github.com/smartems/smartems/issues/11185), [#11168](https://github.com/smartems/smartems/issues/11168)
-* **Docker**: Improved docker image (breaking changes regarding file ownership) [grafana-docker #141](https://github.com/smartems/smartems-docker/issues/141), thx [@Spindel](https://github.com/Spindel), [@ChristianKniep](https://github.com/ChristianKniep), [@brancz](https://github.com/brancz) and [@jangaraj](https://github.com/jangaraj)
+* **Docker**: Improved docker image (breaking changes regarding file ownership) [smartems-docker #141](https://github.com/smartems/smartems-docker/issues/141), thx [@Spindel](https://github.com/Spindel), [@ChristianKniep](https://github.com/ChristianKniep), [@brancz](https://github.com/brancz) and [@jangaraj](https://github.com/jangaraj)
 * **Folders**: A folder admin cannot add user/team permissions for folder/its dashboards [#11173](https://github.com/smartems/smartems/issues/11173)
 * **Provisioning**: Improved workflow for provisioned dashboards [#10883](https://github.com/smartems/smartems/issues/10883)
 
@@ -1300,7 +1300,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 # 5.0.4 (2018-03-28)
 
-* **Docker** Can't start smartEMS on Kubernetes 1.7.14, 1.8.9, or 1.9.4 [#140 in grafana-docker repo](https://github.com/smartems/smartems-docker/issues/140) thx [@suquant](https://github.com/suquant)
+* **Docker** Can't start smartEMS on Kubernetes 1.7.14, 1.8.9, or 1.9.4 [#140 in smartems-docker repo](https://github.com/smartems/smartems-docker/issues/140) thx [@suquant](https://github.com/suquant)
 * **Dashboard** Fixed bug where collapsed panels could not be directly linked to/renderer [#11114](https://github.com/smartems/smartems/issues/11114) & [#11086](https://github.com/smartems/smartems/issues/11086) & [#11296](https://github.com/smartems/smartems/issues/11296)
 * **Dashboard** Provisioning dashboard with alert rules should create alerts [#11247](https://github.com/smartems/smartems/issues/11247)
 * **Snapshots** For snapshots, the Graph panel renders the legend incorrectly on right hand side [#11318](https://github.com/smartems/smartems/issues/11318)
@@ -1396,9 +1396,9 @@ smartEMS v5.0 is going to be the biggest and most foundational release smartEMS 
 
 ## Breaking changes
 
-* **[dashboard.json]** have been replaced with [dashboard provisioning](http://docs.grafana.org/administration/provisioning/).
+* **[dashboard.json]** have been replaced with [dashboard provisioning](http://docs.smartems.org/administration/provisioning/).
 Config files for provisioning data sources as configuration have changed from `/conf/datasources` to `/conf/provisioning/datasources`.
-From `/etc/grafana/datasources` to `/etc/grafana/provisioning/datasources` when installed with deb/rpm packages.
+From `/etc/smartems/datasources` to `/etc/smartems/provisioning/datasources` when installed with deb/rpm packages.
 
 * **Pagerduty** The notifier now defaults to not auto resolve incidents. More details at [#10222](https://github.com/smartems/smartems/issues/10222)
 
@@ -1465,7 +1465,7 @@ The following properties have been deprecated and will be removed in a future re
 
 ### Important fix for LDAP & OAuth login vulnerability
 
-See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-6-4-security-update/10050) for details.
+See [security announcement](https://community.smartems.com/t/smartems-5-2-3-and-4-6-4-security-update/10050) for details.
 
 # 4.6.3 (2017-12-14)
 
@@ -1544,7 +1544,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-2-3-and-4-
 
 ## Minor
 * **SMTP**: Make it possible to set specific HELO for smtp client. [#9319](https://github.com/smartems/smartems/issues/9319)
-* **Dataproxy**: Allow grafana to renegotiate tls connection [#9250](https://github.com/smartems/smartems/issues/9250)
+* **Dataproxy**: Allow smartems to renegotiate tls connection [#9250](https://github.com/smartems/smartems/issues/9250)
 * **HTTP**: set net.Dialer.DualStack to true for all http clients [#9367](https://github.com/smartems/smartems/pull/9367)
 * **Alerting**: Add diff and percent diff as series reducers [#9386](https://github.com/smartems/smartems/pull/9386), thx [@shanhuhai5739](https://github.com/shanhuhai5739)
 * **Slack**: Allow images to be uploaded to slack when Token is present [#7175](https://github.com/smartems/smartems/issues/7175), thx [@xginn8](https://github.com/xginn8)
@@ -1759,7 +1759,7 @@ Pull Request: [#8472](https://github.com/smartems/smartems/pull/8472)
 * **Graph**: Cannot add fill below to series override [#7916](https://github.com/smartems/smartems/issues/7916)
 * **InfluxDB**: Influxb Data source test passes even if the Database doesn't exist [#7864](https://github.com/smartems/smartems/issues/7864)
 * **Prometheus**: Displaying Prometheus annotations is incredibly slow [#7750](https://github.com/smartems/smartems/issues/7750), thx [@mtanda](https://github.com/mtanda)
-* **Graphite**: grafana generates empty find query to graphite -> 422 Unprocessable Entity [#7740](https://github.com/smartems/smartems/issues/7740)
+* **Graphite**: smartems generates empty find query to graphite -> 422 Unprocessable Entity [#7740](https://github.com/smartems/smartems/issues/7740)
 * **Admin**: make organization filter case insensitive [#8194](https://github.com/smartems/smartems/issues/8194), thx [@Alexander-N](https://github.com/Alexander-N)
 
 ## Changes
@@ -2049,7 +2049,7 @@ due to too many connections/file handles on the data source backend. This proble
 * **Time picker**: Fixed issue timepicker and UTC when reading time from URL, fixes [#5078](https://github.com/smartems/smartems/issues/5078)
 * **CloudWatch**: Support for Multiple Account by AssumeRole, closes [#3522](https://github.com/smartems/smartems/issues/3522)
 * **Singlestat**: Fixed alignment and minimum height issue, fixes [#5113](https://github.com/smartems/smartems/issues/5113), fixes [#4679](https://github.com/smartems/smartems/issues/4679)
-* **Share modal**: Fixed link when using grafana under dashboard sub url, fixes [#5109](https://github.com/smartems/smartems/issues/5109)
+* **Share modal**: Fixed link when using smartems under dashboard sub url, fixes [#5109](https://github.com/smartems/smartems/issues/5109)
 * **Prometheus**: Fixed bug in query editor that caused it not to load when reloading page, fixes [#5107](https://github.com/smartems/smartems/issues/5107)
 * **Elasticsearch**: Fixed bug when template variable query returns numeric values, fixes [#5097](https://github.com/smartems/smartems/issues/5097), fixes [#5088](https://github.com/smartems/smartems/issues/5088)
 * **Logging**: Fixed issue with reading logging level value, fixes [#5079](https://github.com/smartems/smartems/issues/5079)
@@ -2259,7 +2259,7 @@ it allows you to add queries of different data source types & instances to the s
 **Other new Features && Enhancements**
 - [Pull  #2720](https://github.com/smartems/smartems/pull/2720). Admin: Initial basic quota support (per Org)
 - [Issue #2577](https://github.com/smartems/smartems/issues/2577). Panel: Resize handles in panel bottom right corners for easy width and height change
-- [Issue #2457](https://github.com/smartems/smartems/issues/2457). Admin: admin page for all grafana organizations (list / edit view)
+- [Issue #2457](https://github.com/smartems/smartems/issues/2457). Admin: admin page for all smartems organizations (list / edit view)
 - [Issue #1186](https://github.com/smartems/smartems/issues/1186). Time Picker: New option `today`, will set time range from midnight to now
 - [Issue #2647](https://github.com/smartems/smartems/issues/2647). InfluxDB: You can now set group by time interval on each query
 - [Issue #2599](https://github.com/smartems/smartems/issues/2599). InfluxDB: Improved alias support, you can now use the `AS` clause for each select statement
@@ -2385,7 +2385,7 @@ Grunt & Watch tasks:
 # 2.0.1 (2015-04-20)
 
 **Fixes**
-- [Issue #1784](https://github.com/smartems/smartems/issues/1784). Data source proxy: Fixed issue with using data source proxy when grafana is behind nginx suburl
+- [Issue #1784](https://github.com/smartems/smartems/issues/1784). Data source proxy: Fixed issue with using data source proxy when smartems is behind nginx suburl
 - [Issue #1749](https://github.com/smartems/smartems/issues/1749). Graph Panel: Table legends are now visible when rendered to PNG
 - [Issue #1786](https://github.com/smartems/smartems/issues/1786). Graph Panel: Legend in table mode now aligns, graph area is reduced depending on how many series
 - [Issue #1734](https://github.com/smartems/smartems/issues/1734). Support for unicode / international characters in dashboard title (improved slugify)
@@ -2396,7 +2396,7 @@ Grunt & Watch tasks:
 
 **RPM / DEB Package changes (to follow HFS)**
 - binary name changed to smartems-server
-- does not install to `/opt/grafana` any more, installs to `/usr/share/grafana`
+- does not install to `/opt/smartems` any more, installs to `/usr/share/smartems`
 - binary to `/usr/sbin/smartems-server`
 - init.d script improvements, renamed to `/etc/init.d/smartems-server`
 - added default file with environment variables,
@@ -2404,8 +2404,8 @@ Grunt & Watch tasks:
   - `/etc/sysconfig/smartems-server` (centos/redhat)
 
 - added systemd service file, tested on debian jessie and centos7
-- config file in same location `/etc/grafana/grafana.ini` (now complete config file but with every setting commented out)
-- data directory (where sqlite3) file is stored is now by default `/var/lib/grafana`
+- config file in same location `/etc/smartems/smartems.ini` (now complete config file but with every setting commented out)
+- data directory (where sqlite3) file is stored is now by default `/var/lib/smartems`
 - no symlinking current to versions anymore
 - For more info see [Issue #1758](https://github.com/smartems/smartems/issues/1758).
 
@@ -2419,7 +2419,7 @@ Grunt & Watch tasks:
 - [Issue #1660](https://github.com/smartems/smartems/issues/1660). OAuth: Specify allowed email address domains for google or and github oauth logins
 
 **Fixes**
-- [Issue #1649](https://github.com/smartems/smartems/issues/1649). HTTP API: grafana /render calls nows with api keys
+- [Issue #1649](https://github.com/smartems/smartems/issues/1649). HTTP API: smartems /render calls nows with api keys
 - [Issue #1667](https://github.com/smartems/smartems/issues/1667). Data source proxy & session timeout fix (caused 401 Unauthorized error after a while)
 - [Issue #1707](https://github.com/smartems/smartems/issues/1707). Unsaved changes: Do not show for snapshots, scripted and file based dashboards
 - [Issue #1703](https://github.com/smartems/smartems/issues/1703). Unsaved changes: Do not show for users with role `Viewer`
@@ -2433,7 +2433,7 @@ Grunt & Watch tasks:
 
 **Important Note**
 
-smartEMS 2.x is fundamentally different from 1.x; it now ships with an integrated backend server. Please read the [Documentation](http://docs.grafana.org) for more detailed about this SIGNIFICANT change to smartEMS
+smartEMS 2.x is fundamentally different from 1.x; it now ships with an integrated backend server. Please read the [Documentation](http://docs.smartems.org) for more detailed about this SIGNIFICANT change to smartEMS
 
 **New features**
 - [Issue #1623](https://github.com/smartems/smartems/issues/1623). Share Dashboard: Dashboard snapshot sharing (dash and data snapshot), save to local or save to public snapshot dashboard snapshots.raintank.io site
@@ -2556,7 +2556,7 @@ smartEMS 2.x is fundamentally different from 1.x; it now ships with an integrate
 
 # 1.8.0 (2014-09-22)
 
-Read this [blog post](https://grafana.com/blog/2014/09/11/grafana-1.8.0-rc1-released) for an overview of all improvements.
+Read this [blog post](https://smartems.com/blog/2014/09/11/smartems-1.8.0-rc1-released) for an overview of all improvements.
 
 **Fixes**
 - [Issue #802](https://github.com/smartems/smartems/issues/802). Annotations: Fix when using InfluxDB data source
@@ -2710,7 +2710,7 @@ Read this [blog post](https://grafana.com/blog/2014/09/11/grafana-1.8.0-rc1-rele
 - [Issue #461](https://github.com/smartems/smartems/issues/461). New graphite function definition added isNonNull,  Thanks @tmonk42
 - [Issue #455](https://github.com/smartems/smartems/issues/455). New InfluxDB function difference add to function dropdown
 - [Issue #459](https://github.com/smartems/smartems/issues/459). Added parameter to keepLastValue graphite function definition (default 100)
-  [Issue #418](https://github.com/smartems/smartems/issues/418). to the browser cache when upgrading grafana and improve load performance
+  [Issue #418](https://github.com/smartems/smartems/issues/418). to the browser cache when upgrading smartems and improve load performance
 - [Issue #327](https://github.com/smartems/smartems/issues/327). Partial support for url encoded metrics when using Graphite data source. Thanks @axe-felix
 - [Issue #473](https://github.com/smartems/smartems/issues/473). Improvement to InfluxDB query editor and function/value column selection
 - [Issue #375](https://github.com/smartems/smartems/issues/375). Initial support for filtering (templated queries) for InfluxDB. Thanks @mavimo
@@ -2773,7 +2773,7 @@ Read this [blog post](https://grafana.com/blog/2014/09/11/grafana-1.8.0-rc1-rele
 
 # 1.5.2 (2014-03-24)
 ### New Features and improvements
-- Support for second optional params for functions like aliasByNode ([Issue #167](https://github.com/smartems/smartems/issues/167)). Read the wiki on the [Function Editor](https://github.com/torkelo/grafana/wiki/Graphite-Function-Editor) for more info.
+- Support for second optional params for functions like aliasByNode ([Issue #167](https://github.com/smartems/smartems/issues/167)). Read the wiki on the [Function Editor](https://github.com/torkelo/smartems/wiki/Graphite-Function-Editor) for more info.
 - More functions added to InfluxDB query editor ([Issue #218](https://github.com/smartems/smartems/issues/218))
 - Filters can now be used inside other filters (templated segments) ([Issue #128](https://github.com/smartems/smartems/issues/128))
 - More graphite functions added
@@ -2791,15 +2791,15 @@ The zip files now contains a sub folder with project name and version prefix. ([
 For people who are find smartEMS slow for large time spans or high resolution metrics. This is most likely due to graphite returning a large number of datapoints. The maxDataPoints parameter solves this issue. For maxDataPoints to work you need to run the latest graphite-web (some builds of 0.9.12 does not include this feature).
 
 Read this for more info:
-[Performance for large time spans](https://github.com/torkelo/grafana/wiki/Performance-for-large-time-spans)
+[Performance for large time spans](https://github.com/torkelo/smartems/wiki/Performance-for-large-time-spans)
 
 # 1.5.0 (2014-03-09)
 ### New Features and improvements
 - New function editor [video demo](http://youtu.be/I90WHRwE1ZM) ([Issue #178](https://github.com/smartems/smartems/issues/178))
 - Links to function documentation from function editor ([Issue #3](https://github.com/smartems/smartems/issues/3))
 - Reorder functions ([Issue #130](https://github.com/smartems/smartems/issues/130))
-- [Initial support for InfluxDB](https://github.com/torkelo/grafana/wiki/InfluxDB) as metric data source (#103), need feedback!
-- [Dashboard playlist](https://github.com/torkelo/grafana/wiki/Dashboard-playlist) ([Issue #36](https://github.com/smartems/smartems/issues/36))
+- [Initial support for InfluxDB](https://github.com/torkelo/smartems/wiki/InfluxDB) as metric data source (#103), need feedback!
+- [Dashboard playlist](https://github.com/torkelo/smartems/wiki/Dashboard-playlist) ([Issue #36](https://github.com/smartems/smartems/issues/36))
 - When adding aliasByNode smartly set node number ([Issue #175](https://github.com/smartems/smartems/issues/175))
 - Support graphite identifiers with embedded colons ([Issue #173](https://github.com/smartems/smartems/issues/173))
 - Typeahead & autocomplete when adding new function ([Issue #164](https://github.com/smartems/smartems/issues/164))

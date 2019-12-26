@@ -1,7 +1,7 @@
 +++
 title = "Migrating from older versions"
 description = "Upgrading and Migrating smartEMS from older versions"
-keywords = ["grafana", "configuration", "documentation", "migration"]
+keywords = ["smartems", "configuration", "documentation", "migration"]
 type = "docs"
 +++
 
@@ -56,7 +56,7 @@ You can seamlessly import your existing dashboards.
 Start by going to the `Data Sources` view (via the side menu), and make
 sure your Elasticsearch data source is added. Specify the Elasticsearch
 index name where your existing smartEMS v1.x dashboards are stored
-(the default is `grafana-dash`).
+(the default is `smartems-dash`).
 
 ![](/img/docs/v2/datasource_edit_elastic.jpg)
 
@@ -64,7 +64,7 @@ index name where your existing smartEMS v1.x dashboards are stored
 
 Start by going to the `Data Sources` view (via the side menu), and make
 sure your InfluxDB data source is added. Specify the database name where
-your smartEMS v1.x dashboards are stored, the default is `grafana`.
+your smartEMS v1.x dashboards are stored, the default is `smartems`.
 
 ### Go to Import dashboards view
 

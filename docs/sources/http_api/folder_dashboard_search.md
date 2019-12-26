@@ -1,7 +1,7 @@
 +++
 title = "Folder/Dashboard Search HTTP API "
 description = "smartEMS Folder/Dashboard Search HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "search", "folder", "dashboard"]
+keywords = ["smartems", "http", "documentation", "api", "search", "folder", "dashboard"]
 aliases = ["/http_api/folder_dashboard_search/"]
 type = "docs"
 [menu.docs]

@@ -1,7 +1,7 @@
 +++
 title = "Overview"
 description = "Overview for permissions"
-keywords = ["grafana", "configuration", "documentation", "admin", "users", "datasources", "permissions"]
+keywords = ["smartems", "configuration", "documentation", "admin", "users", "datasources", "permissions"]
 type = "docs"
 aliases = ["/reference/admin", "/administration/permissions/"]
 [menu.docs]

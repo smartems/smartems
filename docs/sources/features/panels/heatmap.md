@@ -1,7 +1,7 @@
 +++
 title = "Heatmap Panel"
 description = "Heatmap panel documentation"
-keywords = ["grafana", "heatmap", "panel", "documentation"]
+keywords = ["smartems", "heatmap", "panel", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Heatmap"

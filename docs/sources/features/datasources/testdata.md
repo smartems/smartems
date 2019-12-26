@@ -1,6 +1,6 @@
 +++
 title = "TestData"
-keywords = ["grafana", "dashboard", "documentation", "panels", "testdata"]
+keywords = ["smartems", "dashboard", "documentation", "panels", "testdata"]
 type = "docs"
 [menu.docs]
 name = "TestData"
@@ -17,7 +17,7 @@ This make is much easier to verify functionally since the data can be shared ver
 
 ## Enable
 
-`smartEMS TestData` is not enabled by default. To enable it, first navigate to the Plugins section, found in your smartEMS main menu. Click the Apps tabs in the Plugins section and select the smartEMS TestData App. (Or navigate to http://your_grafana_instance/plugins/testdata/edit to go directly there). Finally click the enable button to enable.
+`smartEMS TestData` is not enabled by default. To enable it, first navigate to the Plugins section, found in your smartEMS main menu. Click the Apps tabs in the Plugins section and select the smartEMS TestData App. (Or navigate to http://your_smartems_instance/plugins/testdata/edit to go directly there). Finally click the enable button to enable.
 
 ## Create mock data.
 

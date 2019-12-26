@@ -1,7 +1,7 @@
 +++
 title = "smartEMS Enterprise"
 description = "smartEMS Enterprise overview"
-keywords = ["grafana", "documentation", "datasource", "permissions", "ldap", "licensing", "enterprise"]
+keywords = ["smartems", "documentation", "datasource", "permissions", "ldap", "licensing", "enterprise"]
 type = "docs"
 [menu.docs]
 name = "smartEMS Enterprise"
@@ -51,26 +51,26 @@ Reporting make it possible to take any Dashboard and generate a PDF report and s
 
 With a smartEMS Enterprise license you will get access to premium plugins, including:
 
-* [Splunk](https://grafana.com/plugins/grafana-splunk-datasource)
-* [AppDynamics](https://grafana.com/plugins/dlopes7-appdynamics-datasource)
-* [DataDog](https://grafana.com/plugins/grafana-datadog-datasource)
-* [Dynatrace](https://grafana.com/plugins/grafana-dynatrace-datasource)
-* [New Relic](https://grafana.com/plugins/grafana-newrelic-datasource)
-* [Amazon Timestream](https://grafana.com/plugins/grafana-timestream-datasource)
-* [Oracle Database](https://grafana.com/plugins/grafana-oracle-datasource)
+* [Splunk](https://smartems.com/plugins/smartems-splunk-datasource)
+* [AppDynamics](https://smartems.com/plugins/dlopes7-appdynamics-datasource)
+* [DataDog](https://smartems.com/plugins/smartems-datadog-datasource)
+* [Dynatrace](https://smartems.com/plugins/smartems-dynatrace-datasource)
+* [New Relic](https://smartems.com/plugins/smartems-newrelic-datasource)
+* [Amazon Timestream](https://smartems.com/plugins/smartems-timestream-datasource)
+* [Oracle Database](https://smartems.com/plugins/smartems-oracle-datasource)
 
 ## Try smartEMS Enterprise
 
-You can learn more about smartEMS Enterprise [here](https://grafana.com/enterprise). To purchase or obtain a trial license contact
-the smartEMS Labs [Sales Team](https://grafana.com/contact?about=support&topic=smartEMS%20Enterprise).
+You can learn more about smartEMS Enterprise [here](https://smartems.com/enterprise). To purchase or obtain a trial license contact
+the smartEMS Labs [Sales Team](https://smartems.com/contact?about=support&topic=smartEMS%20Enterprise).
 
 ## License file management
 
-To download your smartEMS Enterprise license log in to your [smartEMS.com](https://grafana.com) account and go to your **Org
+To download your smartEMS Enterprise license log in to your [smartEMS.com](https://smartems.com) account and go to your **Org
 Profile**. In the side menu there is a section for smartEMS Enterprise licenses. At the bottom of the license
 details page there is **Download Token** link that will download the *license.jwt* file containing your license.
 
-Place the *license.jwt* file in smartEMS's data folder. This is usually located at `/var/lib/grafana/data` on Linux systems.
+Place the *license.jwt* file in smartEMS's data folder. This is usually located at `/var/lib/smartems/data` on Linux systems.
 
 You can also configure a custom location for the license file via the ini setting:
 

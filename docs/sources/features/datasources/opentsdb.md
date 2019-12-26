@@ -1,7 +1,7 @@
 +++
 title = "Using OpenTSDB in smartEMS"
 description = "Guide for using OpenTSDB in smartEMS"
-keywords = ["grafana", "opentsdb", "guide"]
+keywords = ["smartems", "opentsdb", "guide"]
 type = "docs"
 aliases = ["/datasources/opentsdb",	"docs/features/opentsdb"]
 [menu.docs]

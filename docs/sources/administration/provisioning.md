@@ -1,7 +1,7 @@
 +++
 title = "Provisioning"
 description = ""
-keywords = ["grafana", "provisioning"]
+keywords = ["smartems", "provisioning"]
 type = "docs"
 aliases = ["/installation/provisioning"]
 [menu.docs]
@@ -15,7 +15,7 @@ In previous versions of smartEMS, you could only use the API for provisioning da
 
 ## Config File
 
-Checkout the [configuration](/installation/configuration) page for more information on what you can configure in `grafana.ini`
+Checkout the [configuration](/installation/configuration) page for more information on what you can configure in `smartems.ini`
 
 ### Config File Locations
 
@@ -25,7 +25,7 @@ Checkout the [configuration](/installation/configuration) page for more informat
 
 > **Note.** If you have installed smartEMS using the `deb` or `rpm`
 > packages, then your configuration file is located at
-> `/etc/grafana/grafana.ini`. This path is specified in the smartEMS
+> `/etc/smartems/smartems.ini`. This path is specified in the smartEMS
 > init.d script using `--config` file parameter.
 
 ### Using Environment Variables
@@ -55,11 +55,11 @@ Currently we do not provide any scripts/manifests for configuring smartEMS. Rath
 
 Tool | Project
 -----|------------
-Puppet | [https://forge.puppet.com/puppet/grafana](https://forge.puppet.com/puppet/grafana)
-Ansible | [https://github.com/cloudalchemy/ansible-grafana](https://github.com/cloudalchemy/ansible-grafana)
-Chef | [https://github.com/JonathanTron/chef-grafana](https://github.com/JonathanTron/chef-grafana)
-Saltstack | [https://github.com/salt-formulas/salt-formula-grafana](https://github.com/salt-formulas/salt-formula-grafana)
-Jsonnet | [https://github.com/grafana/grafonnet-lib/](https://github.com/grafana/grafonnet-lib/)
+Puppet | [https://forge.puppet.com/puppet/smartems](https://forge.puppet.com/puppet/smartems)
+Ansible | [https://github.com/cloudalchemy/ansible-smartems](https://github.com/cloudalchemy/ansible-smartems)
+Chef | [https://github.com/JonathanTron/chef-smartems](https://github.com/JonathanTron/chef-smartems)
+Saltstack | [https://github.com/salt-formulas/salt-formula-smartems](https://github.com/salt-formulas/salt-formula-smartems)
+Jsonnet | [https://github.com/smartems/grafonnet-lib/](https://github.com/smartems/grafonnet-lib/)
 
 ## Datasources
 
@@ -231,7 +231,7 @@ providers:
   allowUiUpdates: false
   options:
     # <string, required> path to dashboard files on disk. Required
-    path: /var/lib/grafana/dashboards
+    path: /var/lib/smartems/dashboards
 ```
 
 When smartEMS starts, it will update/insert all dashboards available in the configured path. Then later on poll that path every **updateIntervalSeconds** and look for updated json files and update/insert those into the database.

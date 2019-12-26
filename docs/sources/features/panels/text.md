@@ -1,6 +1,6 @@
 +++
 title = "Text"
-keywords = ["grafana", "text", "documentation", "panel"]
+keywords = ["smartems", "text", "documentation", "panel"]
 type = "docs"
 aliases = ["/reference/alertlist/"]
 [menu.docs]

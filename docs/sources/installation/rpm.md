@@ -1,7 +1,7 @@
 +++
 title = "Installing on RPM-based Linux"
 description = "smartEMS Installation guide for Centos, Fedora, OpenSuse, Redhat."
-keywords = ["grafana", "installation", "documentation", "centos", "fedora", "opensuse", "redhat"]
+keywords = ["smartems", "installation", "documentation", "centos", "fedora", "opensuse", "redhat"]
 aliases = ["installation/installation/rpm"]
 type = "docs"
 [menu.docs]
@@ -18,7 +18,7 @@ installation.
 
 ## Download
 
-Go to the [download page](https://grafana.com/grafana/download?platform=linux) for the latest download
+Go to the [download page](https://smartems.com/smartems/download?platform=linux) for the latest download
 links.
 
 
@@ -28,7 +28,7 @@ You can install smartEMS using Yum directly.
 $ sudo yum install <rpm package url>
 ```
 
-You will find package urls on the [download page](https://grafana.com/grafana/download?platform=linux).
+You will find package urls on the [download page](https://smartems.com/smartems/download?platform=linux).
 
 Or install manually using `rpm`. First execute
 
@@ -51,16 +51,16 @@ $ sudo rpm -i --nodeps <local rpm package>
 
 ## Install via YUM Repository
 
-Add the following to a new file at `/etc/yum.repos.d/grafana.repo`
+Add the following to a new file at `/etc/yum.repos.d/smartems.repo`
 
 ```bash
-[grafana]
-name=grafana
-baseurl=https://packages.grafana.com/oss/rpm
+[smartems]
+name=smartems
+baseurl=https://packages.smartems.com/oss/rpm
 repo_gpgcheck=1
 enabled=1
 gpgcheck=1
-gpgkey=https://packages.grafana.com/gpg.key
+gpgkey=https://packages.smartems.com/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ```
@@ -68,13 +68,13 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 There is a separate repository if you want beta releases.
 
 ```bash
-[grafana]
-name=grafana
-baseurl=https://packages.grafana.com/oss/rpm-beta
+[smartems]
+name=smartems
+baseurl=https://packages.smartems.com/oss/rpm-beta
 repo_gpgcheck=1
 enabled=1
 gpgcheck=1
-gpgkey=https://packages.grafana.com/gpg.key
+gpgkey=https://packages.smartems.com/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ```
@@ -82,23 +82,23 @@ sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 Then install smartEMS via the `yum` command.
 
 ```bash
-$ sudo yum install grafana
+$ sudo yum install smartems
 ```
 
 ### RPM GPG Key
 
 The RPMs are signed, you can verify the signature with this [public GPG
-key](https://packages.grafana.com/gpg.key).
+key](https://packages.smartems.com/gpg.key).
 
 ## Package details
 
 - Installs binary to `/usr/sbin/smartems-server`
 - Copies init.d script to `/etc/init.d/smartems-server`
 - Installs default file (environment vars) to `/etc/sysconfig/smartems-server`
-- Copies configuration file to `/etc/grafana/grafana.ini`
+- Copies configuration file to `/etc/smartems/smartems.ini`
 - Installs systemd service (if systemd is available) name `smartems-server.service`
-- The default configuration uses a log file at `/var/log/grafana/grafana.log`
-- The default configuration specifies an sqlite3 database at `/var/lib/grafana/grafana.db`
+- The default configuration uses a log file at `/var/log/smartems/smartems.log`
+- The default configuration specifies an sqlite3 database at `/var/lib/smartems/smartems.db`
 
 ## Start the server (init.d service)
 
@@ -108,7 +108,7 @@ You can start smartEMS by running:
 $ sudo service smartems-server start
 ```
 
-This will start the `smartems-server` process as the `grafana` user,
+This will start the `smartems-server` process as the `smartems` user,
 which is created during package installation. The default HTTP port is
 `3000`, and default user and group is `admin`.
 
@@ -143,17 +143,17 @@ directory and other variables.
 
 ### Logging
 
-By default smartEMS will log to `/var/log/grafana`
+By default smartEMS will log to `/var/log/smartems`
 
 ### Database
 
 The default configuration specifies a sqlite3 database located at
-`/var/lib/grafana/grafana.db`. Please backup this database before
+`/var/lib/smartems/smartems.db`. Please backup this database before
 upgrades. You can also use MySQL or Postgres as the smartEMS database, as detailed on [the configuration page]({{< relref "configuration.md#database" >}}).
 
 ## Configuration
 
-The configuration file is located at `/etc/grafana/grafana.ini`.  Go the
+The configuration file is located at `/etc/smartems/smartems.ini`.  Go the
 [Configuration]({{< relref "configuration.md" >}}) page for details on all
 those options.
 
@@ -179,7 +179,7 @@ yum install urw-fonts
 
 ## Installing from binary tar file
 
-Download [the latest `.tar.gz` file](https://grafana.com/get) and
+Download [the latest `.tar.gz` file](https://smartems.com/get) and
 extract it.  This will extract into a folder named after the version you
 downloaded. This folder contains all files required to run smartEMS.  There are
 no init scripts or install scripts in this package.

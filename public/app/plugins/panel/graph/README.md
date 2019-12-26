@@ -4,4 +4,4 @@ This is the main Graph panel and is **included** with smartEMS. It provides a ve
 
 For full reference documentation:
 
-[http://docs.grafana.org/reference/graph/](http://docs.grafana.org/reference/graph/)
+[http://docs.smartems.org/reference/graph/](http://docs.smartems.org/reference/graph/)

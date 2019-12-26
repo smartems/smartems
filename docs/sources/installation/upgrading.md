@@ -1,7 +1,7 @@
 +++
 title = "Upgrading"
 description = "Upgrading smartEMS guide"
-keywords = ["grafana", "configuration", "documentation", "upgrade"]
+keywords = ["smartems", "configuration", "documentation", "upgrade"]
 type = "docs"
 [menu.docs]
 name = "Upgrading"
@@ -15,7 +15,7 @@ weight = 10
 We recommend everyone to upgrade smartEMS often to stay up to date with the latest fixes and enhancements.
 In order make this a reality smartEMS upgrades are backward compatible and the upgrade process is simple and quick.
 
-Upgrading is generally always safe (between many minor and one major version) and dashboards and graphs will look the same. There can be minor breaking changes in some edge cases which are usually outlined in the [Release Notes](https://community.grafana.com/c/releases) and [Changelog](https://github.com/smartems/smartems/blob/master/CHANGELOG.md)
+Upgrading is generally always safe (between many minor and one major version) and dashboards and graphs will look the same. There can be minor breaking changes in some edge cases which are usually outlined in the [Release Notes](https://community.smartems.com/c/releases) and [Changelog](https://github.com/smartems/smartems/blob/master/CHANGELOG.md)
 
 ## Update plugins
 
@@ -34,76 +34,76 @@ Before upgrading it can be a good idea to backup your smartEMS database. This wi
 
 #### sqlite
 
-If you use sqlite you only need to make a backup of your `grafana.db` file. This is usually located at `/var/lib/grafana/grafana.db` on Unix systems.
-If you are unsure what database you use and where it is stored check you grafana configuration file. If you
-installed grafana to custom location using a binary tar/zip it is usually in `<grafana_install_dir>/data`.
+If you use sqlite you only need to make a backup of your `smartems.db` file. This is usually located at `/var/lib/smartems/smartems.db` on Unix systems.
+If you are unsure what database you use and where it is stored check you smartems configuration file. If you
+installed smartems to custom location using a binary tar/zip it is usually in `<smartems_install_dir>/data`.
 
 #### mysql
 
 ```bash
 backup:
-> mysqldump -u root -p[root_password] [grafana] > grafana_backup.sql
+> mysqldump -u root -p[root_password] [smartems] > smartems_backup.sql
 
 restore:
-> mysql -u root -p grafana < grafana_backup.sql
+> mysql -u root -p smartems < smartems_backup.sql
 ```
 
 #### postgres
 
 ```bash
 backup:
-> pg_dump grafana > grafana_backup
+> pg_dump smartems > smartems_backup
 
 restore:
-> psql grafana < grafana_backup
+> psql smartems < smartems_backup
 ```
 
 ### Ubuntu / Debian
 
-If you installed grafana by downloading a debian package (`.deb`) you can just follow the same installation guide
+If you installed smartems by downloading a debian package (`.deb`) you can just follow the same installation guide
 and execute the same `dpkg -i` command but with the new package. It will upgrade your smartEMS install.
 
 If you used our APT repository:
 
 ```bash
 sudo apt-get update
-sudo apt-get install grafana
+sudo apt-get install smartems
 ```
 
 #### Upgrading from binary tar file
 
 If you downloaded the binary tar package you can just download and extract a new package
 and overwrite all your existing files. But this might overwrite your config changes. We
-recommend you place your config changes in a file named `<grafana_install_dir>/conf/custom.ini`
+recommend you place your config changes in a file named `<smartems_install_dir>/conf/custom.ini`
 as this will make upgrades easier without risking losing your config changes.
 
 ### Centos / RHEL
 
-If you installed grafana by downloading a rpm package you can just follow the same installation guide
+If you installed smartems by downloading a rpm package you can just follow the same installation guide
 and execute the same `yum install` or `rpm -i` command but with the new package. It will upgrade your smartEMS install.
 
 If you used our YUM repository:
 
 ```bash
-sudo yum update grafana
+sudo yum update smartems
 ```
 
 ### Docker
 
-This just an example, details depend on how you configured your grafana container.
+This just an example, details depend on how you configured your smartems container.
 
 ```bash
-docker pull grafana
-docker stop my-grafana-container
-docker rm my-grafana-container
-docker run --name=my-grafana-container --restart=always -v /var/lib/grafana:/var/lib/grafana
+docker pull smartems
+docker stop my-smartems-container
+docker rm my-smartems-container
+docker run --name=my-smartems-container --restart=always -v /var/lib/smartems:/var/lib/smartems
 ```
 
 ### Windows
 
 If you downloaded the Windows binary package you can just download a newer package and extract
 to the same location (and overwrite the existing files). This might overwrite your config changes. We
-recommend you place your config changes in a file named `<grafana_install_dir>/conf/custom.ini`
+recommend you place your config changes in a file named `<smartems_install_dir>/conf/custom.ini`
 as this will make upgrades easier without risking losing your config changes.
 
 ## Upgrading from 1.x
@@ -160,7 +160,7 @@ login_maximum_inactive_lifetime_days = 1
 login_maximum_lifetime_days = 1
 ```
 
-The default cookie name for storing the auth token is `grafana_session`. you can configure this with `login_cookie_name` in `[auth]` settings.
+The default cookie name for storing the auth token is `smartems_session`. you can configure this with `login_cookie_name` in `[auth]` settings.
 
 ## Upgrading to v6.2
 
@@ -207,7 +207,7 @@ smartEMS’s docker image is now based on [Alpine](http://alpinelinux.org) inste
 
 ### Plugins that need updating
 
-- [Splunk](https://grafana.com/grafana/plugins/grafana-splunk-datasource)
+- [Splunk](https://smartems.com/smartems/plugins/smartems-splunk-datasource)
 
 ## Upgrading to v6.5
 

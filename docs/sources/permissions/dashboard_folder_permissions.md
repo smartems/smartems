@@ -1,7 +1,7 @@
 +++
 title = "Dashboard and Folder Permissions"
 description = "smartEMS Dashboard and Folder Permissions Guide "
-keywords = ["grafana", "configuration", "documentation", "dashboard", "folder", "permissions", "teams"]
+keywords = ["smartems", "configuration", "documentation", "dashboard", "folder", "permissions", "teams"]
 type = "docs"
 [menu.docs]
 name = "Dashboard and Folder"

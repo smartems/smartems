@@ -1,7 +1,7 @@
 +++
 title = "Installation"
 description = "Install guide for smartEMS"
-keywords = ["grafana", "installation", "documentation"]
+keywords = ["smartems", "installation", "documentation"]
 type = "docs"
 aliases = ["installation/installation/", "v2.1/installation/install/", "install"]
 [menu.docs]
@@ -19,6 +19,6 @@ weight = 1
 - [Installing on Windows](windows)
 - [Installing on Docker](docker)
 - [Installing using Provisioning (Chef, Puppet, Salt, Ansible, etc)](provisioning)
-- [Nightly Builds](https://grafana.com/grafana/download)
+- [Nightly Builds](https://smartems.com/smartems/download)
 
 

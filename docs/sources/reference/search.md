@@ -1,6 +1,6 @@
 +++
 title = "Search"
-keywords = ["grafana", "dashboard", "documentation", "search"]
+keywords = ["smartems", "dashboard", "documentation", "search"]
 type = "docs"
 [menu.docs]
 parent = "dashboard_features"

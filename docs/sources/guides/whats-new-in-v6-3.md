@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.3"
 description = "Feature and improvement highlights for smartEMS v6.3"
-keywords = ["grafana", "new", "documentation", "6.3"]
+keywords = ["smartems", "new", "documentation", "6.3"]
 type = "docs"
 [menu.docs]
 name = "Version 6.3"
@@ -72,7 +72,7 @@ While `Data links` are used by the actual visualization and can reference data f
 
 Example:
 ```url
-http://my-grafana.com/d/bPCI6VSZz/other-dashboard?var-server=${__series_name}
+http://my-smartems.com/d/bPCI6VSZz/other-dashboard?var-server=${__series_name}
 ```
 
 You have access to these variables:

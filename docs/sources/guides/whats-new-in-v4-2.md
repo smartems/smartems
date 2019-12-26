@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v4.2"
 description = "Feature and improvement highlights for smartEMS v4.2"
-keywords = ["grafana", "new", "documentation", "4.2.0"]
+keywords = ["smartems", "new", "documentation", "4.2.0"]
 type = "docs"
 [menu.docs]
 name = "Version 4.2"
@@ -12,7 +12,7 @@ weight = -1
 
 ## What's new in smartEMS v4.2
 
-smartEMS v4.2 Beta is now [available for download](https://grafana.com/grafana/download/4.2.0).
+smartEMS v4.2 Beta is now [available for download](https://smartems.com/smartems/download/4.2.0).
 Just like the last release this one contains lots bug fixes and minor improvements.
 We are very happy to say that 27 of 40 issues was closed by pull requests from the community.
 Big thumbs up!
@@ -40,7 +40,7 @@ This release adds **five** new alert notifications channels, all of them contrib
 
 ### Templating
 
-We added two new global built in variables in grafana. `$__interval` and `$__interval_ms` are now reserved template names in grafana and can be used by any data source.
+We added two new global built in variables in smartems. `$__interval` and `$__interval_ms` are now reserved template names in smartems and can be used by any data source.
 We might add more global built in variables in the future and if we do we will prefix them with `$__`. So please avoid using that in your template variables.
 
 ### Dedupe alert notifications when running multiple servers
@@ -67,9 +67,9 @@ Making it possible to have users in multiple groups and have detailed access con
 
 ## Upgrade and Breaking changes
 
-If you're using https in grafana we now force you to use tls 1.2 and the most secure ciphers.
+If you're using https in smartems we now force you to use tls 1.2 and the most secure ciphers.
 We think its better to be secure by default rather then making it configurable.
-If you want to run https with lower versions of tls we suggest you put a reserve proxy in front of grafana.
+If you want to run https with lower versions of tls we suggest you put a reserve proxy in front of smartems.
 
 If you have template variables name `$__interval` or `$__interval_ms` they will no longer work since these keywords
 are reserved as global built in variables. We might add more global built in variables in the future and if we do, we will prefix them with `$__`. So please avoid using that in your template variables.

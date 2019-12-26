@@ -81,7 +81,7 @@ For changes to panels, the area should be the name of the panel, suffixed with P
 
 **Examples**
 
-- `Build: Support publishing MSI to grafana.com`
+- `Build: Support publishing MSI to smartems.com`
 - `Explore: Add Live option for supported data sources`
 - `GraphPanel: Fix legend sorting issues`
 - `Docs: Changed url to URL in all documentation files`

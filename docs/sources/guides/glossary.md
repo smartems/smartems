@@ -1,7 +1,7 @@
 +++
 title = "Glossary"
 description = "smartEMS glossary"
-keywords = ["grafana", "intro", "glossary", "dictionary"]
+keywords = ["smartems", "intro", "glossary", "dictionary"]
 type = "docs"
 [menu.docs]
 name = "Glossary"

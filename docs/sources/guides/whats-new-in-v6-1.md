@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.1"
 description = "Feature and improvement highlights for smartEMS v6.1"
-keywords = ["grafana", "new", "documentation", "6.1"]
+keywords = ["smartems", "new", "documentation", "6.1"]
 type = "docs"
 [menu.docs]
 name = "Version 6.1"

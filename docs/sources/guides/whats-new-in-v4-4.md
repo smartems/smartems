@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v4.4"
 description = "Feature and improvement highlights for smartEMS v4.4"
-keywords = ["grafana", "new", "documentation", "4.4.0"]
+keywords = ["smartems", "new", "documentation", "4.4.0"]
 type = "docs"
 [menu.docs]
 name = "Version 4.4"
@@ -12,7 +12,7 @@ weight = -3
 
 ## What's New in smartEMS v4.4
 
-smartEMS v4.4 is now [available for download](https://grafana.com/grafana/download/4.4.0).
+smartEMS v4.4 is now [available for download](https://smartems.com/smartems/download/4.4.0).
 
 **Highlights**:
 
@@ -42,9 +42,9 @@ Pull Request: [#8472](https://github.com/smartems/smartems/pull/8472)
 
 ## Download
 
-Head to the [v4.4 download page](https://grafana.com/grafana/download) for download links and instructions.
+Head to the [v4.4 download page](https://smartems.com/smartems/download) for download links and instructions.
 
 ## Thanks
 
-A big thanks to all the smartEMS users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.grafana.com/) and providing feedback!
+A big thanks to all the smartEMS users who contribute by submitting PRs, bug reports, helping out on our [community site](https://community.smartems.com/) and providing feedback!
 

@@ -1,7 +1,7 @@
 +++
 title = "Running smartEMS behind a reverse proxy"
 description = "Guide for running smartEMS behind a reverse proxy"
-keywords = ["grafana", "nginx", "documentation", "haproxy", "reverse"]
+keywords = ["smartems", "nginx", "documentation", "haproxy", "reverse"]
 type = "docs"
 [menu.docs]
 name = "Running smartEMS behind a reverse proxy"
@@ -20,7 +20,7 @@ Links and redirects will not be rendered correctly unless you set the server.dom
 domain = foo.bar
 ```
 
-To use sub *path* ex `http://foo.bar/grafana` make sure to include `/grafana` in the end of root_url.
+To use sub *path* ex `http://foo.bar/smartems` make sure to include `/smartems` in the end of root_url.
 Otherwise smartEMS will not behave correctly. See example below.
 
 ## Examples
@@ -49,13 +49,13 @@ server {
 }
 ```
 
-### Examples with **sub path** (ex http://foo.bar/grafana)
+### Examples with **sub path** (ex http://foo.bar/smartems)
 
 #### smartEMS configuration with sub path
 ```bash
 [server]
 domain = foo.bar
-root_url = %(protocol)s://%(domain)s/grafana/
+root_url = %(protocol)s://%(domain)s/smartems/
 ```
 
 #### Nginx configuration with sub path
@@ -65,7 +65,7 @@ server {
   root /usr/share/nginx/www;
   index index.html index.htm;
 
-  location /grafana/ {
+  location /smartems/ {
    proxy_pass http://localhost:3000/;
   }
 }
@@ -75,16 +75,16 @@ server {
 ```bash
 frontend http-in
   bind *:80
-  use_backend grafana_backend if { path /grafana } or { path_beg /grafana/ }
+  use_backend smartems_backend if { path /smartems } or { path_beg /smartems/ }
 
-backend grafana_backend
+backend smartems_backend
   # Requires haproxy >= 1.6
-  http-request set-path %[path,regsub(^/grafana/?,/)]
+  http-request set-path %[path,regsub(^/smartems/?,/)]
 
   # Works for haproxy < 1.6
-  # reqrep ^([^\ ]*\ /)grafana[/]?(.*) \1\2
+  # reqrep ^([^\ ]*\ /)smartems[/]?(.*) \1\2
 
-  server grafana localhost:3000
+  server smartems localhost:3000
 ```
 
 ### IIS URL Rewrite Rule (Windows) with Subpath
@@ -93,19 +93,19 @@ IIS requires that the URL Rewrite module is installed.
 
 Given:
 
-- subpath `grafana`
+- subpath `smartems`
 - smartEMS installed on `http://localhost:3000`
 - server config:
 
     ```bash
     [server]
     domain = localhost:8080
-    root_url = %(protocol)s://%(domain)s/grafana/
+    root_url = %(protocol)s://%(domain)s/smartems/
     ```
 
 Create an Inbound Rule for the parent website (localhost:8080 in this example) in IIS Manager with the following settings:
 
-- pattern: `grafana(/)?(.*)`
+- pattern: `smartems(/)?(.*)`
 - check the `Ignore case` checkbox
 - rewrite url set to `http://localhost:3000/{R:2}`
 - check the `Append query string` checkbox
@@ -117,11 +117,11 @@ This is the rewrite rule that is generated in the `web.config`:
   <rewrite>
       <rules>
           <rule name="smartEMS" enabled="true" stopProcessing="true">
-              <match url="grafana(/)?(.*)" />
+              <match url="smartems(/)?(.*)" />
               <action type="Rewrite" url="http://localhost:3000/{R:2}" logRewrittenUrl="false" />
           </rule>
       </rules>
   </rewrite>
 ```
 
-See the [tutorial on IIS Url Rewrites](http://docs.grafana.org/tutorials/iis/) for more in-depth instructions.
+See the [tutorial on IIS Url Rewrites](http://docs.smartems.org/tutorials/iis/) for more in-depth instructions.

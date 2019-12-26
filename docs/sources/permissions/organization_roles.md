@@ -1,7 +1,7 @@
 +++
 title = "Organization Roles"
 description = "smartEMS Organization Roles Guide "
-keywords = ["grafana", "configuration", "documentation", "organization", "roles", "permissions"]
+keywords = ["smartems", "configuration", "documentation", "organization", "roles", "permissions"]
 type = "docs"
 [menu.docs]
 name = "Organization Roles"

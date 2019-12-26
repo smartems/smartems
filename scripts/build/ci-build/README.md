@@ -1,4 +1,4 @@
-# grafana-build-container
+# smartems-build-container
 smartEMS build container
 
 ## Description

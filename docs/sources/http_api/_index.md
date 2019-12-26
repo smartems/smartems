@@ -1,7 +1,7 @@
 +++
 title = "HTTP API"
 description = "smartEMS HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "overview"]
+keywords = ["smartems", "http", "documentation", "api", "overview"]
 aliases = ["/http_api/overview"]
 type = "docs"
 [menu.docs]

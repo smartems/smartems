@@ -1,7 +1,7 @@
 +++
 title = "Using Azure Monitor in smartEMS"
 description = "Guide for using Azure Monitor in smartEMS"
-keywords = ["grafana", "microsoft", "azure", "monitor", "application", "insights", "log", "analytics", "guide"]
+keywords = ["smartems", "microsoft", "azure", "monitor", "application", "insights", "log", "analytics", "guide"]
 type = "docs"
 aliases = ["/datasources/azuremonitor"]
 [menu.docs]
@@ -142,7 +142,7 @@ Examples:
 - Resource Groups query: `ResourceGroups()`
 - Passing in metric name variable: `Namespaces(cosmo)`
 - Chaining template variables: `ResourceNames($rg, $ns)`
-- Do not quote parameters: `MetricNames(hg, Microsoft.Network/publicIPAddresses, grafanaIP)`
+- Do not quote parameters: `MetricNames(hg, Microsoft.Network/publicIPAddresses, smartemsIP)`
 
 {{< docs-imagebox img="/img/docs/v60/azuremonitor-service-variables.png" class="docs-image--no-shadow" caption="Nested Azure Monitor Template Variables" >}}
 
@@ -151,7 +151,7 @@ types of template variables.
 
 ### Azure Monitor Metrics Whitelist
 
-Not all metrics returned by the Azure Monitor API have values. The smartEMS data source has a whitelist to only return metric names if it is possible they might have values. This whitelist is updated regularly as new services and metrics are added to the Azure cloud. You can find the current whitelist [here](https://github.com/smartems/smartems/blob/master/public/app/plugins/datasource/grafana-azure-monitor-datasource/azure_monitor/supported_namespaces.ts).
+Not all metrics returned by the Azure Monitor API have values. The smartEMS data source has a whitelist to only return metric names if it is possible they might have values. This whitelist is updated regularly as new services and metrics are added to the Azure cloud. You can find the current whitelist [here](https://github.com/smartems/smartems/blob/master/public/app/plugins/datasource/smartems-azure-monitor-datasource/azure_monitor/supported_namespaces.ts).
 
 ### Azure Monitor Alerting
 
@@ -262,7 +262,7 @@ To make writing queries easier there are several smartEMS macros that can be use
 
 - `$__timeTo()` - Returns the From datetime from the smartEMS picker. Example: `datetime(2018-06-05T20:09:58.907Z)`.
 
-- `$__escapeMulti($myVar)` - is to be used with multi-value template variables that contain illegal characters. If `$myVar` has the following two values as a string `'\\grafana-vm\Network(eth0)\Total','\\hello!'`, then it expands to: `@'\\grafana-vm\Network(eth0)\Total', @'\\hello!'`. If using single value variables there is no need for this macro, simply escape the variable inline instead - `@'\$myVar'`.
+- `$__escapeMulti($myVar)` - is to be used with multi-value template variables that contain illegal characters. If `$myVar` has the following two values as a string `'\\smartems-vm\Network(eth0)\Total','\\hello!'`, then it expands to: `@'\\smartems-vm\Network(eth0)\Total', @'\\hello!'`. If using single value variables there is no need for this macro, simply escape the variable inline instead - `@'\$myVar'`.
 
 - `$__contains(colName, $myVar)` - is to be used with multi-value template variables. If `$myVar` has the value `'value1','value2'`, it expands to: `colName in ('value1','value2')`.
 

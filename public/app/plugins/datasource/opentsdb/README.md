@@ -4,4 +4,4 @@ smartEMS ships with **built in** support for OpenTSDB, a scalable, distributed t
 
 Read more about it here:
 
-[http://docs.grafana.org/datasources/opentsdb/](http://docs.grafana.org/datasources/opentsdb/)
+[http://docs.smartems.org/datasources/opentsdb/](http://docs.smartems.org/datasources/opentsdb/)

@@ -1,7 +1,7 @@
 +++
 title = "Time series"
 description = "Introduction to time series"
-keywords = ["grafana", "intro", "guide", "concepts", "timeseries"]
+keywords = ["smartems", "intro", "guide", "concepts", "timeseries"]
 type = "docs"
 [menu.docs]
 name = "Time series"

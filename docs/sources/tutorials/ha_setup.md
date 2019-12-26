@@ -1,7 +1,7 @@
 +++
 title = "Setup smartEMS for high availability"
 type = "docs"
-keywords = ["grafana", "tutorials", "HA", "high availability"]
+keywords = ["smartems", "tutorials", "HA", "high availability"]
 [menu.docs]
 parent = "tutorials"
 weight = 10
@@ -14,13 +14,13 @@ and other persistent data. So the default embedded SQLite database will not work
 MySQL or Postgres.
 
 <div class="text-center">
-  <img src="/img/docs/tutorials/grafana-high-availability.png"  max-width= "800px" class="center" />
+  <img src="/img/docs/tutorials/smartems-high-availability.png"  max-width= "800px" class="center" />
 </div>
 
 ## Configure multiple servers to use the same database
 
 First, you need to do is to setup MySQL or Postgres on another server and configure smartEMS to use that database.
-You can find the configuration for doing that in the [[database]]({{< relref "../installation/configuration.md" >}}#database) section in the grafana config.
+You can find the configuration for doing that in the [[database]]({{< relref "../installation/configuration.md" >}}#database) section in the smartems config.
 smartEMS will now persist all long term data in the database. How to configure the database for high availability is out of scope for this guide. We recommend finding an expert on for the database you're using.
 
 ## Alerting
@@ -42,9 +42,9 @@ Using sticky sessions, all traffic for one user will always be sent to the same 
 stored on disk rather than on a shared database. This is the default behavior for smartEMS and if only want multiple servers for fail over this is a good solution since it requires the least amount of work.
 
 ### Stateless sessions
-You can also choose to store session data in a Redis/Memcache/Postgres/MySQL which means that the load balancer can send a user to any smartEMS server without having to log in on each server. This requires a little bit more work from the operator but enables you to remove/add grafana servers without impacting the user experience.
+You can also choose to store session data in a Redis/Memcache/Postgres/MySQL which means that the load balancer can send a user to any smartEMS server without having to log in on each server. This requires a little bit more work from the operator but enables you to remove/add smartems servers without impacting the user experience.
 If you use MySQL/Postgres for session storage, you first need a table to store the session data in. More details about that in [[sessions]]({{< relref "../installation/configuration.md" >}}#session)
 
-For smartEMS itself it doesn't really matter if you store the session data on disk or database/redis/memcache. But we recommend using a database/redis/memcache since it makes it easier manage the grafana servers.
+For smartEMS itself it doesn't really matter if you store the session data on disk or database/redis/memcache. But we recommend using a database/redis/memcache since it makes it easier manage the smartems servers.
 
 

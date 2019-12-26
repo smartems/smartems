@@ -1,7 +1,7 @@
 +++
 title = "How to integrate Hubot and smartEMS"
 type = "docs"
-keywords = ["grafana", "tutorials", "hubot", "slack", "hipchat", "setup", "install", "config"]
+keywords = ["smartems", "tutorials", "hubot", "slack", "hipchat", "setup", "install", "config"]
 [menu.docs]
 parent = "tutorials"
 weight = 10
@@ -13,16 +13,16 @@ smartEMS 2.0 shipped with a great feature that enables it to render any graph or
 No matter what data source you are using, the PNG image of the Graph will look the same
 as it does in your browser.
 
-This guide will show you how to install and configure the [Hubot-smartEMS](https://github.com/stephenyeargin/hubot-grafana)
+This guide will show you how to install and configure the [Hubot-smartEMS](https://github.com/stephenyeargin/hubot-smartems)
 plugin. This plugin allows you to tell hubot to render any dashboard or graph right from a channel in
 Slack, Hipchat or Basecamp. The bot will respond with an image of the graph and a link that will
 take you to the graph.
 
-> *Amazon S3 Required*: The hubot-grafana script will upload the rendered graphs to Amazon S3. This
+> *Amazon S3 Required*: The hubot-smartems script will upload the rendered graphs to Amazon S3. This
 > is so Hipchat and Slack can show them reliably (they require the image to be publicly available).
 
 <div class="text-center">
-  <img src="/img/docs/tutorials/hubot_grafana.png" class="center"></a>
+  <img src="/img/docs/tutorials/hubot_smartems.png" class="center"></a>
 </div>
 
 ## What is Hubot?
@@ -40,24 +40,24 @@ read the official [Getting Started With Hubot](https://hubot.github.com/docs/) g
 
 In your Hubot project repo install the smartEMS plugin using `npm`:
 ```bash
-npm install hubot-grafana --save
+npm install hubot-smartems --save
 ```
-Edit the file external-scripts.json, and add hubot-grafana to the list of plugins.
+Edit the file external-scripts.json, and add hubot-smartems to the list of plugins.
 
 ```json
 [
 "hubot-pugme",
 "hubot-shipit",
-"hubot-grafana"
+"hubot-smartems"
 ]
 ```
 
 ## Configure
 
-The `hubot-grafana` plugin requires a number of environment variables to be set in order to work properly.
+The `hubot-smartems` plugin requires a number of environment variables to be set in order to work properly.
 
 ```bash
-export HUBOT_SMARTEMS_HOST=http://play.grafana.org
+export HUBOT_SMARTEMS_HOST=http://play.smartems.org
 export HUBOT_SMARTEMS_API_KEY=abcd01234deadbeef01234
 export HUBOT_SMARTEMS_S3_BUCKET=mybucket
 export HUBOT_SMARTEMS_S3_ACCESS_KEY_ID=ABCDEF123456XYZ
@@ -84,7 +84,7 @@ You can add these from the API Keys page which you find in the Organization drop
 ### Amazon S3
 
 The `S3` options are optional but for the images to work properly in services like Slack and Hipchat they need
-to publicly available. By specifying the `S3` options the hubot-grafana script will publish the rendered
+to publicly available. By specifying the `S3` options the hubot-smartems script will publish the rendered
 panel to `S3` and it will use that URL when it posts to Slack or Hipchat.
 
 ## Hubot commands
@@ -126,7 +126,7 @@ Now you can add an alias like this:
 
 <div class="text-center">
   Using the alias:<br>
-  <img src="/img/docs/tutorials/hubot_grafana2.png" class="center"></a>
+  <img src="/img/docs/tutorials/hubot_smartems2.png" class="center"></a>
 </div>
 
 ## Summary

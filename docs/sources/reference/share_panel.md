@@ -1,6 +1,6 @@
 +++
 title = "Sharing a Panel"
-keywords = ["grafana", "dashboard", "documentation", "sharing"]
+keywords = ["smartems", "dashboard", "documentation", "sharing"]
 type = "docs"
 [menu.docs]
 parent = "dashboard_features"
@@ -18,7 +18,7 @@ You also get a link to render a PNG image of the panel. Useful if you want to sh
 Example of a link to a server-side rendered PNG:
 
 ```bash
-https://play.grafana.org/d/000000012/grafana-play-home?orgId=1&from=1568719680173&to=1568726880174&panelId=4&fullscreen
+https://play.smartems.org/d/000000012/smartems-play-home?orgId=1&from=1568719680173&to=1568726880174&panelId=4&fullscreen
 ```
 
 #### Query String Parameters For Server-Side Rendered Images

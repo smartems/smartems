@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v5.0"
 description = "Feature and improvement highlights for smartEMS v5.0"
-keywords = ["grafana", "new", "documentation", "5.0"]
+keywords = ["smartems", "new", "documentation", "5.0"]
 type = "docs"
 [menu.docs]
 name = "Version 5.0"
@@ -37,7 +37,7 @@ This is the most substantial update that smartEMS has ever seen. This article wi
 The new dashboard layout engine allows for much easier movement and sizing of panels, as other panels now move out of the way in
 a very intuitive way. Panels are sized independently, so rows are no longer necessary to create layouts. This opens
 up many new types of layouts where panels of different heights can be aligned easily. Checkout the new grid in the video
-above or on the [play site](http://play.grafana.org). All your existing dashboards will automatically migrate to the
+above or on the [play site](http://play.smartems.org). All your existing dashboards will automatically migrate to the
 new position system and look close to identical. The new panel position makes dashboards saved in v5.0 incompatible
 with older versions of smartEMS.
 

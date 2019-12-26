@@ -1,23 +1,23 @@
 
 > **WARNING: @smartems/toolkit is currently in ALPHA**. The core API is unstable and can be a subject of breaking changes!
 
-# grafana-toolkit
-grafana-toolkit is a CLI that enables efficient development of smartEMS plugins. We want to help our community focus on the core value of their plugins rather than all the setup required to develop them.
+# smartems-toolkit
+smartems-toolkit is a CLI that enables efficient development of smartEMS plugins. We want to help our community focus on the core value of their plugins rather than all the setup required to develop them.
 
 ## Getting started
 
-Set up a new plugin with `grafana-toolkit plugin:create` command:
+Set up a new plugin with `smartems-toolkit plugin:create` command:
 
 ```sh
-npx @smartems/toolkit plugin:create my-grafana-plugin
-cd my-grafana-plugin
+npx @smartems/toolkit plugin:create my-smartems-plugin
+cd my-smartems-plugin
 yarn install
 yarn dev
 ```
 
-## Update your plugin to use grafana-toolkit
+## Update your plugin to use smartems-toolkit
 
-Follow the steps below to start using grafana-toolkit in your existing plugin.
+Follow the steps below to start using smartems-toolkit in your existing plugin.
 
 1. Add `@smartems/toolkit` package to your project by running `yarn add @smartems/toolkit` or `npm install @smartems/toolkit`.
 2. Create `tsconfig.json` file in the root dir of your plugin and paste the code below:
@@ -44,30 +44,30 @@ module.exports = {
 4. In your `package.json` file add following scripts:
 ```json
 "scripts": {
-  "build": "grafana-toolkit plugin:build",
-  "test": "grafana-toolkit plugin:test",
-  "dev": "grafana-toolkit plugin:dev",
-  "watch": "grafana-toolkit plugin:dev --watch"
+  "build": "smartems-toolkit plugin:build",
+  "test": "smartems-toolkit plugin:test",
+  "dev": "smartems-toolkit plugin:dev",
+  "watch": "smartems-toolkit plugin:dev --watch"
 },
 ```
 
 ## Usage
-With grafana-toolkit, we give you a  CLI that addresses common tasks performed when working on smartEMS plugin:
+With smartems-toolkit, we give you a  CLI that addresses common tasks performed when working on smartEMS plugin:
 
-- `grafana-toolkit plugin:create`
-- `grafana-toolkit plugin:dev`
-- `grafana-toolkit plugin:test`
-- `grafana-toolkit plugin:build`
+- `smartems-toolkit plugin:create`
+- `smartems-toolkit plugin:dev`
+- `smartems-toolkit plugin:test`
+- `smartems-toolkit plugin:build`
 
 ### Create your plugin
-`grafana-toolkit plugin:create plugin-name`
+`smartems-toolkit plugin:create plugin-name`
 
 This command creates a new smartEMS plugin from template.
 
 If `plugin-name` is provided, then the template is downloaded to `./plugin-name` directory. Otherwise, it will be downloaded to the current directory.
 
 ### Develop your plugin
-`grafana-toolkit plugin:dev`
+`smartems-toolkit plugin:dev`
 
 This command creates a development build that's easy to play with and debug using common browser tooling.
 
@@ -75,7 +75,7 @@ Available options:
 - `-w`, `--watch` - run development task in a watch mode
 
 ### Test your plugin
-`grafana-toolkit plugin:test`
+`smartems-toolkit plugin:test`
 
 This command runs Jest against your codebase.
 
@@ -88,26 +88,26 @@ Available options:
 
 
 ### Build your plugin
-`grafana-toolkit plugin:build`
+`smartems-toolkit plugin:build`
 
 This command creates a production-ready build of your plugin.
 
 ## FAQ
 
-### Which version of grafana-toolkit should I use?
+### Which version of smartems-toolkit should I use?
 See [smartEMS packages versioning guide](https://github.com/smartems/smartems/blob/master/packages/README.md#versioning).
 
-### What tools does grafana-toolkit use?
-grafana-toolkit comes with Typescript, TSLint, Prettier, Jest, CSS and SASS support.
+### What tools does smartems-toolkit use?
+smartems-toolkit comes with Typescript, TSLint, Prettier, Jest, CSS and SASS support.
 
-### How to start using grafana-toolkit in my plugin?
-See [Updating your plugin to use grafana-toolkit](#updating-your-plugin-to-use-grafana-toolkit).
+### How to start using smartems-toolkit in my plugin?
+See [Updating your plugin to use smartems-toolkit](#updating-your-plugin-to-use-smartems-toolkit).
 
 ### Can I use Typescript to develop smartEMS plugins?
-Yes! grafana-toolkit supports Typescript by default.
+Yes! smartems-toolkit supports Typescript by default.
 
 ### How can I test my plugin?
-grafana-toolkit comes with Jest as a test runner.
+smartems-toolkit comes with Jest as a test runner.
 
 Internally at smartEMS we use Enzyme. If you are developing React plugin and you want to configure Enzyme as a testing utility, then you need to configure `enzyme-adapter-react`. To do so, create `<YOUR_PLUGIN_DIR>/config/jest-setup.ts` file that will provide necessary setup. Copy the following code into that file to get Enzyme working with React:
 
@@ -141,7 +141,7 @@ The styles will be injected via `style` tag during runtime.
 > Note that imported static assets will be inlined as base64 URIs. *This can be subject of change in the future!*
 
 #### Theme-specific stylesheets
-If you want to provide different stylesheets for dark/light theme, then create `dark.[css|scss]` and `light.[css|scss]` files in the `src/styles` directory of your plugin. grafana-toolkit generates theme-specific stylesheets that are stored in `dist/styles` directory.
+If you want to provide different stylesheets for dark/light theme, then create `dark.[css|scss]` and `light.[css|scss]` files in the `src/styles` directory of your plugin. smartems-toolkit generates theme-specific stylesheets that are stored in `dist/styles` directory.
 
 In order for smartEMS to pick up your theme stylesheets, you need to use `loadPluginCss` from `@smartems/runtime` package. Typically you would do that in the entry point of your plugin:
 
@@ -199,10 +199,10 @@ Yes! However, it's important that your `tsconfig.json` file contains the followi
 ```
 
 ### Can I adjust TSLint configuration to suit my needs?
-grafana-toolkit comes with [default config for TSLint](https://github.com/smartems/smartems/blob/master/packages/grafana-toolkit/src/config/tslint.plugin.json). For now, there is now way to customise TSLint config.
+smartems-toolkit comes with [default config for TSLint](https://github.com/smartems/smartems/blob/master/packages/smartems-toolkit/src/config/tslint.plugin.json). For now, there is now way to customise TSLint config.
 
-### How is Prettier integrated into grafana-toolkit workflow?
-When building plugin with [`grafana-toolkit plugin:build`](#building-plugin) task, grafana-toolkit performs Prettier check. If the check detects any Prettier issues, the build will not pass. To avoid such situation we suggest developing plugin with [`grafana-toolkit plugin:dev --watch`](#developing-plugin) task running. This task tries to fix Prettier issues automatically.
+### How is Prettier integrated into smartems-toolkit workflow?
+When building plugin with [`smartems-toolkit plugin:build`](#building-plugin) task, smartems-toolkit performs Prettier check. If the check detects any Prettier issues, the build will not pass. To avoid such situation we suggest developing plugin with [`smartems-toolkit plugin:dev --watch`](#developing-plugin) task running. This task tries to fix Prettier issues automatically.
 
 ### My editor does not respect Prettier config, what should I do?
 In order for your editor to pick up our Prettier config you need to create `.prettierrc.js` file in the root directory of your plugin with following content:
@@ -216,21 +216,21 @@ module.exports = {
 ### How do I add 3rd party dependencies that are not npm packages?
 You can add such dependencies by putting them in `static` directory in the root of your project. The `static` directory will be copied when building the plugin.
 
-## Contribute to grafana-toolkit
-You can contribute to grafana-toolkit in the by helping develop it or by debugging it.
+## Contribute to smartems-toolkit
+You can contribute to smartems-toolkit in the by helping develop it or by debugging it.
 
-### Develop grafana-toolkit
+### Develop smartems-toolkit
 Typically plugins should be developed using the `@smartems/toolkit` installed from npm. However, when working on the toolkit, you might want to use the local version. Follow the steps below to develop with a local version:
 
 1. Clone [smartEMS repository](https://github.com/smartems/smartems).
 2. Navigate to the directory you have cloned smartEMS repo to and then run `yarn install --pure-lockfile`.
-3. Navigate to `<SMARTEMS_DIR>/packages/grafana-toolkit` and then run `yarn link`.
-2. Navigate to the directory where your plugin code is and then run `npx grafana-toolkit plugin:dev --yarnlink`. This adds all dependencies required by grafana-toolkit to your project, as well as link your local grafana-toolkit version to be used by the plugin.
+3. Navigate to `<SMARTEMS_DIR>/packages/smartems-toolkit` and then run `yarn link`.
+2. Navigate to the directory where your plugin code is and then run `npx smartems-toolkit plugin:dev --yarnlink`. This adds all dependencies required by smartems-toolkit to your project, as well as link your local smartems-toolkit version to be used by the plugin.
 
 
-### Debug grafana-toolkit
-To debug grafana-toolkit you can use standard [NodeJS debugging methods](https://nodejs.org/de/docs/guides/debugging-getting-started/#enable-inspector) (`node --inspect`, `node --inspect-brk`).
+### Debug smartems-toolkit
+To debug smartems-toolkit you can use standard [NodeJS debugging methods](https://nodejs.org/de/docs/guides/debugging-getting-started/#enable-inspector) (`node --inspect`, `node --inspect-brk`).
 
-To run grafana-toolkit in a debugging session use the following command in the toolkit's directory:
+To run smartems-toolkit in a debugging session use the following command in the toolkit's directory:
 
-`node --inspect-brk ./bin/grafana-toolkit.js [task]`
+`node --inspect-brk ./bin/smartems-toolkit.js [task]`

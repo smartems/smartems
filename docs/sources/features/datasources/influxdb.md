@@ -1,7 +1,7 @@
 +++
 title = "Using InfluxDB in smartEMS"
 description = "Guide for using InfluxDB in smartEMS"
-keywords = ["grafana", "influxdb", "guide"]
+keywords = ["smartems", "influxdb", "guide"]
 type = "docs"
 aliases = ["/datasources/influxdb"]
 [menu.docs]
@@ -38,7 +38,7 @@ Access mode controls how requests to the data source will be handled. Server sho
 
 ### Server access mode (Default)
 
-All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the grafana backend/server if you select this access mode.
+All requests will be made from the browser to smartEMS backend/server which in turn will forward the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the smartems backend/server if you select this access mode.
 
 ### Browser access mode
 
@@ -194,7 +194,7 @@ Why two ways? The first syntax is easier to read and write but does not allow yo
 options are enabled, smartEMS converts the labels from plain text to a regex compatible string. Which means you have to use `=~` instead of `=`.
 
 Example Dashboard:
-[InfluxDB Templated Dashboard](http://play.grafana.org/dashboard/db/influxdb-templated-queries)
+[InfluxDB Templated Dashboard](http://play.smartems.org/dashboard/db/influxdb-templated-queries)
 
 ### Ad hoc filters variable
 
@@ -230,8 +230,8 @@ datasources:
     type: influxdb
     access: proxy
     database: site
-    user: grafana
-    password: grafana
+    user: smartems
+    password: smartems
     url: http://localhost:8086
     jsonData:
       httpMode: GET

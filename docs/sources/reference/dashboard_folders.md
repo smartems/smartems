@@ -1,6 +1,6 @@
 +++
 title = "Dashboard Folders"
-keywords = ["grafana", "dashboard", "dashboard folders", "folder", "folders", "documentation", "guide"]
+keywords = ["smartems", "dashboard", "dashboard folders", "folder", "folders", "documentation", "guide"]
 type = "docs"
 [menu.docs]
 name = "Folders"

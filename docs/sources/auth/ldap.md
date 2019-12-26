@@ -1,7 +1,7 @@
 +++
 title = "LDAP Authentication"
 description = "smartEMS LDAP Authentication Guide "
-keywords = ["grafana", "configuration", "documentation", "ldap", "active directory"]
+keywords = ["smartems", "configuration", "documentation", "ldap", "active directory"]
 type = "docs"
 aliases = ["/installation/ldap/"]
 [menu.docs]
@@ -25,15 +25,15 @@ This means that you should be able to configure LDAP integration using any compl
 ## Enable LDAP
 
 In order to use LDAP integration you'll first need to enable LDAP in the [main config file]({{< relref "installation/configuration.md" >}}) as well as specify the path to the LDAP
-specific configuration file (default: `/etc/grafana/ldap.toml`).
+specific configuration file (default: `/etc/smartems/ldap.toml`).
 
 ```bash
 [auth.ldap]
 # Set to `true` to enable LDAP integration (default: `false`)
 enabled = true
 
-# Path to the LDAP specific configuration file (default: `/etc/grafana/ldap.toml`)
-config_file = /etc/grafana/ldap.toml
+# Path to the LDAP specific configuration file (default: `/etc/smartems/ldap.toml`)
+config_file = /etc/smartems/ldap.toml
 
 # Allow sign up should almost always be true (default) to allow new smartEMS users to be created (if ldap authentication is ok). If set to
 # false only pre-existing smartEMS users will be able to login (if ldap authentication is ok).
@@ -65,21 +65,21 @@ ssl_skip_verify = false
 # client_key = "/path/to/client.key"
 
 # Search user bind dn
-bind_dn = "cn=admin,dc=grafana,dc=org"
+bind_dn = "cn=admin,dc=smartems,dc=org"
 # Search user bind password
 # If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
-bind_password = 'grafana'
+bind_password = 'smartems'
 
 # User search filter, for example "(cn=%s)" or "(sAMAccountName=%s)" or "(uid=%s)"
 # Allow login from email or username, example "(|(sAMAccountName=%s)(userPrincipalName=%s))"
 search_filter = "(cn=%s)"
 
 # An array of base dns to search through
-search_base_dns = ["dc=grafana,dc=org"]
+search_base_dns = ["dc=smartems,dc=org"]
 
 # group_search_filter = "(&(objectClass=posixGroup)(memberUid=%s))"
 # group_search_filter_user_attribute = "distinguishedName"
-# group_search_base_dns = ["ou=groups,dc=grafana,dc=org"]
+# group_search_base_dns = ["ou=groups,dc=smartems,dc=org"]
 
 # Specify names of the ldap attributes your ldap uses
 [servers.attributes]
@@ -117,8 +117,8 @@ By default the configuration expects you to specify a bind DN and bind password.
 When the user DN is found a second bind is performed with the user provided username and password (in the normal smartEMS login form).
 
 ```bash
-bind_dn = "cn=admin,dc=grafana,dc=org"
-bind_password = "grafana"
+bind_dn = "cn=admin,dc=smartems,dc=org"
+bind_password = "smartems"
 ```
 
 #### Single Bind Example
@@ -127,7 +127,7 @@ If you can provide a single bind expression that matches all possible users, you
 This allows you to not specify a bind_password in the configuration file.
 
 ```bash
-bind_dn = "cn=%s,o=users,dc=grafana,dc=org"
+bind_dn = "cn=%s,o=users,dc=smartems,dc=org"
 ```
 
 In this case you skip providing a `bind_password` and instead provide a `bind_dn` value with a `%s` somewhere. This will be replaced with the username entered in on the smartEMS login page.
@@ -140,7 +140,7 @@ If your ldap server does not support the memberOf attribute add these options:
 ## Group search filter, to retrieve the groups of which the user is a member (only set if memberOf attribute is not available)
 group_search_filter = "(&(objectClass=posixGroup)(memberUid=%s))"
 ## An array of the base DNs to search through for groups. Typically uses ou=groups
-group_search_base_dns = ["ou=groups,dc=grafana,dc=org"]
+group_search_base_dns = ["ou=groups,dc=smartems,dc=org"]
 ## the %s in the search filter will be replaced with the attribute defined below
 group_search_filter_user_attribute = "uid"
 ```
@@ -160,16 +160,16 @@ TOML config will be used.
 # other settings omitted for clarity
 
 [[servers.group_mappings]]
-group_dn = "cn=superadmins,dc=grafana,dc=org"
+group_dn = "cn=superadmins,dc=smartems,dc=org"
 org_role = "Admin"
-grafana_admin = true # Available in smartEMS v5.3 and above
+smartems_admin = true # Available in smartEMS v5.3 and above
 
 [[servers.group_mappings]]
-group_dn = "cn=admins,dc=grafana,dc=org"
+group_dn = "cn=admins,dc=smartems,dc=org"
 org_role = "Admin"
 
 [[servers.group_mappings]]
-group_dn = "cn=users,dc=grafana,dc=org"
+group_dn = "cn=users,dc=smartems,dc=org"
 org_role = "Editor"
 
 [[servers.group_mappings]]
@@ -182,7 +182,7 @@ Setting | Required | Description | Default
 `group_dn` | Yes | LDAP distinguished name (DN) of LDAP group. If you want to match all (or no LDAP groups) then you can use wildcard (`"*"`) |
 `org_role` | Yes | Assign users of `group_dn` the organization role `"Admin"`, `"Editor"` or `"Viewer"` |
 `org_id` | No | The smartEMS organization database id. Setting this allows for multiple group_dn's to be assigned to the same `org_role` provided the `org_id` differs | `1` (default org id)
-`grafana_admin` | No | When `true` makes user of `group_dn` smartEMS server admin. A smartEMS server admin has admin access over all organizations and users. Available in smartEMS v5.3 and above | `false`
+`smartems_admin` | No | When `true` makes user of `group_dn` smartEMS server admin. A smartEMS server admin has admin access over all organizations and users. Available in smartEMS v5.3 and above | `false`
 
 ### Nested/recursive group membership
 
@@ -217,10 +217,10 @@ port = 389
 use_ssl = false
 start_tls = false
 ssl_skip_verify = false
-bind_dn = "cn=admin,dc=grafana,dc=org"
-bind_password = 'grafana'
+bind_dn = "cn=admin,dc=smartems,dc=org"
+bind_password = 'smartems'
 search_filter = "(cn=%s)"
-search_base_dns = ["dc=grafana,dc=org"]
+search_base_dns = ["dc=smartems,dc=org"]
 
 [servers.attributes]
 name = "givenName"
@@ -246,10 +246,10 @@ port = 389
 use_ssl = false
 start_tls = false
 ssl_skip_verify = false
-bind_dn = "cn=admin,dc=grafana,dc=org"
-bind_password = 'grafana'
+bind_dn = "cn=admin,dc=smartems,dc=org"
+bind_password = 'smartems'
 search_filter = "(cn=%s)"
-search_base_dns = ["ou=users,dc=grafana,dc=org"]
+search_base_dns = ["ou=users,dc=smartems,dc=org"]
 
 [servers.attributes]
 name = "givenName"
@@ -259,9 +259,9 @@ member_of = "memberOf"
 email =  "email"
 
 [[servers.group_mappings]]
-group_dn = "cn=admins,ou=groups,dc=grafana,dc=org"
+group_dn = "cn=admins,ou=groups,dc=smartems,dc=org"
 org_role = "Admin"
-grafana_admin = true
+smartems_admin = true
 
 # --- Second LDAP Server ---
 
@@ -272,10 +272,10 @@ use_ssl = false
 start_tls = false
 ssl_skip_verify = false
 
-bind_dn = "cn=admin,dc=grafana,dc=org"
-bind_password = 'grafana'
+bind_dn = "cn=admin,dc=smartems,dc=org"
+bind_password = 'smartems'
 search_filter = "(cn=%s)"
-search_base_dns = ["ou=users,dc=grafana,dc=org"]
+search_base_dns = ["ou=users,dc=smartems,dc=org"]
 
 [servers.attributes]
 name = "givenName"
@@ -285,7 +285,7 @@ member_of = "memberOf"
 email =  "email"
 
 [[servers.group_mappings]]
-group_dn = "cn=editors,ou=groups,dc=grafana,dc=org"
+group_dn = "cn=editors,ou=groups,dc=smartems,dc=org"
 org_role = "Editor"
 
 [[servers.group_mappings]]

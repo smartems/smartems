@@ -38,4 +38,4 @@ The following data sources are officially supported:
 
 ## Data source plugins
 
-Since grafana 3.0 you can install data sources as plugins. Checkout [smartEMS.net](https://grafana.com/plugins) for more data sources.
+Since smartems 3.0 you can install data sources as plugins. Checkout [smartEMS.net](https://smartems.com/plugins) for more data sources.

@@ -1,7 +1,7 @@
 +++
 title = "Installing on macOS"
 description = "Installing smartEMS on macOS"
-keywords = ["grafana", "configuration", "documentation", "mac", "homebrew", "osx"]
+keywords = ["smartems", "configuration", "documentation", "mac", "homebrew", "osx"]
 type = "docs"
 [menu.docs]
 parent = "installation"
@@ -19,31 +19,31 @@ Install latest stable:
 
 ```bash
 brew update
-brew install grafana
+brew install smartems
 ```
 
-To start grafana look at the command printed after the homebrew install completes.
+To start smartems look at the command printed after the homebrew install completes.
 
 To upgrade use the reinstall command
 
 ```bash
 brew update
-brew reinstall grafana
+brew reinstall smartems
 ```
 
 -------------
 
-You can also install the latest unstable grafana from git:
+You can also install the latest unstable smartems from git:
 
 
 ```bash
-brew install --HEAD grafana/grafana/grafana
+brew install --HEAD smartems/smartems/smartems
 ```
 
-To upgrade grafana if you've installed from HEAD:
+To upgrade smartems if you've installed from HEAD:
 
 ```bash
-brew reinstall --HEAD grafana/grafana/grafana
+brew reinstall --HEAD smartems/smartems/smartems
 ```
 
 ### Starting smartEMS
@@ -57,7 +57,7 @@ brew tap homebrew/services
 Then start smartEMS using:
 
 ```bash
-brew services start grafana
+brew services start smartems
 ```
 
 Default login and password `admin`/ `admin`
@@ -65,23 +65,23 @@ Default login and password `admin`/ `admin`
 
 ### Configuration
 
-The Configuration file should be located at `/usr/local/etc/grafana/grafana.ini`.
+The Configuration file should be located at `/usr/local/etc/smartems/smartems.ini`.
 
 ### Logs
 
-The log file should be located at `/usr/local/var/log/grafana/grafana.log`.
+The log file should be located at `/usr/local/var/log/smartems/smartems.log`.
 
 ### Plugins
 
-If you want to manually install a plugin place it here: `/usr/local/var/lib/grafana/plugins`.
+If you want to manually install a plugin place it here: `/usr/local/var/lib/smartems/plugins`.
 
 ### Database
 
-The default sqlite database is located at `/usr/local/var/lib/grafana`
+The default sqlite database is located at `/usr/local/var/lib/smartems`
 
 ## Installing from binary tar file
 
-Download [the latest `.tar.gz` file](https://grafana.com/get) and
+Download [the latest `.tar.gz` file](https://smartems.com/get) and
 extract it.  This will extract into a folder named after the version you
 downloaded. This folder contains all files required to run smartEMS.  There are
 no init scripts or install scripts in this package.

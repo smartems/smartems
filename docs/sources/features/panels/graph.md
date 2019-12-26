@@ -1,6 +1,6 @@
 +++
 title = "Graph Panel"
-keywords = ["grafana", "graph panel", "documentation", "guide", "graph"]
+keywords = ["smartems", "graph panel", "documentation", "guide", "graph"]
 type = "docs"
 aliases = ["/reference/graph/"]
 [menu.docs]
@@ -72,7 +72,7 @@ For **Mode** there are three options:
 
     {{< docs-imagebox img="/img/docs/v51/graph-x-axis-mode-series.png" max-width="800px">}}
 
-- The **Histogram** option converts the graph into a histogram. A Histogram is a kind of bar chart that groups numbers into ranges, often called buckets or bins. Taller bars show that more data falls in that range. Histograms and buckets are described in more detail [here](http://docs.grafana.org/features/panels/heatmap/#histograms-and-buckets).
+- The **Histogram** option converts the graph into a histogram. A Histogram is a kind of bar chart that groups numbers into ranges, often called buckets or bins. Taller bars show that more data falls in that range. Histograms and buckets are described in more detail [here](http://docs.smartems.org/features/panels/heatmap/#histograms-and-buckets).
 
     <img src="/img/docs/v43/heatmap_histogram.png" class="no-shadow">
 

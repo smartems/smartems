@@ -1,7 +1,7 @@
 +++
 title = "Using PostgreSQL in smartEMS"
 description = "Guide for using PostgreSQL in smartEMS"
-keywords = ["grafana", "postgresql", "guide"]
+keywords = ["smartems", "postgresql", "guide"]
 type = "docs"
 [menu.docs]
 name = "PostgreSQL"
@@ -67,9 +67,9 @@ executed. To protect against this we **highly** recommend you create a specific 
 Example:
 
 ```sql
- CREATE USER grafanareader WITH PASSWORD 'password';
- GRANT USAGE ON SCHEMA schema TO grafanareader;
- GRANT SELECT ON schema.table TO grafanareader;
+ CREATE USER smartemsreader WITH PASSWORD 'password';
+ GRANT USAGE ON SCHEMA schema TO smartemsreader;
+ GRANT SELECT ON schema.table TO smartemsreader;
 ```
 
 Make sure the user does not get any unwanted privileges from the public role.
@@ -391,8 +391,8 @@ datasources:
   - name: Postgres
     type: postgres
     url: localhost:5432
-    database: grafana
-    user: grafana
+    database: smartems
+    user: smartems
     secureJsonData:
       password: "Password!"
     jsonData:

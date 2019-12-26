@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v5.1"
 description = "Feature and improvement highlights for smartEMS v5.1"
-keywords = ["grafana", "new", "documentation", "5.1"]
+keywords = ["smartems", "new", "documentation", "5.1"]
 type = "docs"
 [menu.docs]
 name = "Version 5.1"
@@ -33,13 +33,13 @@ make the smartEMS user experience much better!
 
 smartEMS v5.1 brings an improved official docker image which should make it easier to run and use the smartEMS docker image and at the same time give more control to the user how to use/run it.
 
-We've switched the id of the grafana user running smartEMS inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
+We've switched the id of the smartems user running smartEMS inside a docker container. Unfortunately this means that files created prior to 5.1 won't have the correct permissions for later versions and thereby this introduces a breaking change.
 We made this change so that it would be easier for you to control what user smartEMS is executed as (see examples below).
 
 Version | User    | User ID
 --------|---------|---------
-< 5.1   | grafana | 104
->= 5.1  | grafana | 472
+< 5.1   | smartems | 104
+>= 5.1  | smartems | 472
 
 Please read the [updated documentation](/installation/docker/#migration-from-a-previous-version-of-the-docker-container-to-5-1-or-later) which includes migration instructions and more information.
 
@@ -95,7 +95,7 @@ New enhancements includes support for mapping a numeric value/range to text and 
 ## New variable interpolation syntax
 
 We now support a new option for rendering variables that gives the user full control of how the value(s) should be rendered.
-In the table below you can see some examples and you can find all different options in the [Variables documentation](http://docs.grafana.org/reference/templating/#advanced-formatting-options).
+In the table below you can see some examples and you can find all different options in the [Variables documentation](http://docs.smartems.org/reference/templating/#advanced-formatting-options).
 
 Filter Option | Example | Raw | Interpolated | Description
 ------------ | ------------- | ------------- | -------------  | -------------

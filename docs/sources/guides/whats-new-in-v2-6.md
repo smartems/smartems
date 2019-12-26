@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v2.6"
 description = "Feature and improvement highlights for smartEMS v2.6"
-keywords = ["grafana", "new", "documentation", "2.6"]
+keywords = ["smartems", "new", "documentation", "2.6"]
 type = "docs"
 +++
 
@@ -121,5 +121,5 @@ view the [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGEL
 
 - - -
 
-<a href="http://grafana.org/download">Download smartEMS 2.6 now</a>
+<a href="http://smartems.org/download">Download smartEMS 2.6 now</a>
 

@@ -1,7 +1,7 @@
 +++
 title = "Using Stackdriver in smartEMS"
 description = "Guide for using Stackdriver in smartEMS"
-keywords = ["grafana", "stackdriver", "google", "guide"]
+keywords = ["smartems", "stackdriver", "google", "guide"]
 type = "docs"
 aliases = ["/datasources/stackdriver"]
 [menu.docs]
@@ -70,11 +70,11 @@ Click on the links above and click the `Enable` button:
 5. Click the Create button. A JSON key file will be created and downloaded to your computer. Store this file in a secure place as it allows access to your Stackdriver data.
 6. Upload it to smartEMS on the data source Configuration page. You can either upload the file or paste in the contents of the file.
 
-    {{< docs-imagebox img="/img/docs/v53/stackdriver_grafana_upload_key.png" class="docs-image--no-shadow" caption="Upload service key file to smartEMS" >}}
+    {{< docs-imagebox img="/img/docs/v53/stackdriver_smartems_upload_key.png" class="docs-image--no-shadow" caption="Upload service key file to smartEMS" >}}
 
 7. The file contents will be encrypted and saved in the smartEMS database. Don't forget to save after uploading the file!
 
-    {{< docs-imagebox img="/img/docs/v53/stackdriver_grafana_key_uploaded.png" class="docs-image--no-shadow" caption="Service key file is uploaded to smartEMS" >}}
+    {{< docs-imagebox img="/img/docs/v53/stackdriver_smartems_key_uploaded.png" class="docs-image--no-shadow" caption="Service key file is uploaded to smartEMS" >}}
 
 ### Using GCE Default Service Account
 
@@ -98,7 +98,7 @@ Stackdriver metrics can be of different kinds (GAUGE, DELTA, CUMULATIVE) and the
 
 ### Filter
 
-To add a filter, click the plus icon and choose a field to filter by and enter a filter value e.g. `instance_name = grafana-1`. You can remove the filter by clicking on the filter name and select `--remove filter--`.
+To add a filter, click the plus icon and choose a field to filter by and enter a filter value e.g. `instance_name = smartems-1`. You can remove the filter by clicking on the filter name and select `--remove filter--`.
 
 #### Simple wildcards
 
@@ -123,7 +123,7 @@ The option is called `Stackdriver auto` and the defaults are:
 * 5m for time ranges >= 23 hours and < 6 days
 * 1h for time ranges >= 6 days
 
-The other automatic option is `smartEMS auto`. This will automatically set the group by time depending on the time range chosen and the width of the graph panel. Read more about the details [here](http://docs.grafana.org/reference/templating/#the-interval-variable).
+The other automatic option is `smartEMS auto`. This will automatically set the group by time depending on the time range chosen and the width of the graph panel. Read more about the details [here](http://docs.smartems.org/reference/templating/#the-interval-variable).
 
 It is also possible to choose fixed time intervals to group by, like `1h` or `1d`.
 
@@ -149,7 +149,7 @@ In the Group By dropdown, you can see a list of metric and resource labels for a
 
 | Alias Pattern Format     | Description                      | Alias Pattern Example            | Example Result   |
 | ------------------------ | -------------------------------- | -------------------------------- | ---------------- |
-| `{{metric.label.xxx}}`   | returns the metric label value   | `{{metric.label.instance_name}}` | `grafana-1-prod` |
+| `{{metric.label.xxx}}`   | returns the metric label value   | `{{metric.label.instance_name}}` | `smartems-1-prod` |
 | `{{resource.label.xxx}}` | returns the resource label value | `{{resource.label.zone}}`        | `us-east1-b`     |
 
 Example Alias By: `{{metric.type}} - {{metric.labels.instance_name}}`
@@ -219,7 +219,7 @@ Example Result: `monitoring.googleapis.com/uptime_check/http_status has this val
 | `{{metric.type}}`        | returns the full Metric Type     | `{{metric.type}}`                | `compute.googleapis.com/instance/cpu/utilization` |
 | `{{metric.name}}`        | returns the metric name part     | `{{metric.name}}`                | `instance/cpu/utilization`                        |
 | `{{metric.service}}`     | returns the service part         | `{{metric.service}}`             | `compute`                                         |
-| `{{metric.label.xxx}}`   | returns the metric label value   | `{{metric.label.instance_name}}` | `grafana-1-prod`                                  |
+| `{{metric.label.xxx}}`   | returns the metric label value   | `{{metric.label.instance_name}}` | `smartems-1-prod`                                  |
 | `{{resource.label.xxx}}` | returns the resource label value | `{{resource.label.zone}}`        | `us-east1-b`                                      |
 
 ## Configure the data source with provisioning

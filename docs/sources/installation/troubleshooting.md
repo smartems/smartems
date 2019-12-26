@@ -1,7 +1,7 @@
 +++
 title = "Troubleshooting"
 description = "Guide to troubleshooting smartEMS problems"
-keywords = ["grafana", "troubleshooting", "documentation", "guide"]
+keywords = ["smartems", "troubleshooting", "documentation", "guide"]
 type = "docs"
 [menu.docs]
 parent = "admin"
@@ -21,16 +21,16 @@ the data source response.
 
 To check this you should use Query Inspector (new in smartEMS v4.5). The query Inspector shows query requests and responses.
 
-For more on the query inspector read [this guide here](https://community.grafana.com/t/using-grafanas-query-inspector-to-troubleshoot-issues/2630). For
-older versions of smartEMS read the [how troubleshoot metric query issue](https://community.grafana.com/t/how-to-troubleshoot-metric-query-issues/50/2) article.
+For more on the query inspector read [this guide here](https://community.smartems.com/t/using-smartemss-query-inspector-to-troubleshoot-issues/2630). For
+older versions of smartEMS read the [how troubleshoot metric query issue](https://community.smartems.com/t/how-to-troubleshoot-metric-query-issues/50/2) article.
 
 ## Logging
 
-If you encounter an error or problem it is a good idea to check the grafana server log. Usually
-located at `/var/log/grafana/grafana.log` on Unix systems or in `<grafana_install_dir>/data/log` on
+If you encounter an error or problem it is a good idea to check the smartems server log. Usually
+located at `/var/log/smartems/smartems.log` on Unix systems or in `<smartems_install_dir>/data/log` on
 other platforms and manual installs.
 
-You can enable more logging by changing log level in your grafana configuration file.
+You can enable more logging by changing log level in your smartems configuration file.
 
 ## Diagnostics
 
@@ -86,6 +86,6 @@ See [Go command trace](https://golang.org/cmd/trace/) for more information about
 
 ## FAQ
 
-Checkout the [FAQ](https://community.grafana.com/c/howto/faq) section on our community page for frequently
+Checkout the [FAQ](https://community.smartems.com/c/howto/faq) section on our community page for frequently
 asked questions.
 

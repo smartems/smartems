@@ -1,7 +1,7 @@
 +++
 title = "Datasource Permissions HTTP API "
 description = "Data Source Permissions API"
-keywords = ["grafana", "http", "documentation", "api", "datasource", "permission", "permissions", "acl", "enterprise"]
+keywords = ["smartems", "http", "documentation", "api", "datasource", "permission", "permissions", "acl", "enterprise"]
 aliases = ["/http_api/datasourcepermissions/"]
 type = "docs"
 [menu.docs]

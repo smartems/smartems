@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v6.2"
 description = "Feature and improvement highlights for smartEMS v6.2"
-keywords = ["grafana", "new", "documentation", "6.2"]
+keywords = ["smartems", "new", "documentation", "6.2"]
 type = "docs"
 [menu.docs]
 name = "Version 6.2"
@@ -16,7 +16,7 @@ For all details please read the full [CHANGELOG.md](https://github.com/smartems/
 
 If you use a password for your data sources please read the [upgrade notes](/installation/upgrading/#upgrading-to-v6-2).
 
-Checkout the [demo dashboard](https://play.grafana.org/d/ZvPm55mWk/new-features-in-v6-2?orgId=1) of some the new features in v6.2.
+Checkout the [demo dashboard](https://play.smartems.org/d/ZvPm55mWk/new-features-in-v6-2?orgId=1) of some the new features in v6.2.
 
 ## Improved security
 
@@ -45,7 +45,7 @@ smartEMS v6.2 ships with a new exciting panel! This new panel, named Bar Gauge, 
 Gauge panel and shares almost all it's options. The main difference is that the Bar Gauge uses both horizontal and
 vertical space much better and can be more efficiently stacked both vertically and horizontally. The Bar Gauge also
 comes with 3 unique display modes, Basic, Gradient, and Retro LED. Read the
-[preview article](https://grafana.com/blog/2019/04/11/sneak-preview-of-new-visualizations-coming-to-grafana/) to learn
+[preview article](https://smartems.com/blog/2019/04/11/sneak-preview-of-new-visualizations-coming-to-smartems/) to learn
 more about the design and features of this new panel.
 
 Retro LED display mode

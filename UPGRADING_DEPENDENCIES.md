@@ -5,14 +5,14 @@ Upgrading Go or Node.js requires making changes in many different files. See bel
 ## Go
 
 - CircleCi
-- `grafana/build-container`
+- `smartems/build-container`
 - Appveyor
 - Dockerfile
 
 ## Node.js
 
 - CircleCI
-- `grafana/build-container`
+- `smartems/build-container`
 - Appveyor
 - Dockerfile
 
@@ -66,13 +66,13 @@ Our builds run on CircleCI through our build script.
 
 - nodejs
 - golang
-- grafana/build-container (our custom docker build container)
+- smartems/build-container (our custom docker build container)
 
-### grafana/build-container
+### smartems/build-container
 
 The main build step (in CircleCI) is built using a custom build container that comes pre-baked with some of the necessary dependencies.
 
-Link: [grafana/build-container](https://github.com/smartems/smartems/tree/master/scripts/build/ci-build)
+Link: [smartems/build-container](https://github.com/smartems/smartems/tree/master/scripts/build/ci-build)
 
 #### Dependencies
 
@@ -109,4 +109,4 @@ There is a Docker build for smartEMS in the root of the project that allows anyo
 
 ### Local developer environments
 
-Please send out a notice in the grafana-dev slack channel when updating Go or Node.js to make it easier for everyone to update their local developer environments.
+Please send out a notice in the smartems-dev slack channel when updating Go or Node.js to make it easier for everyone to update their local developer environments.

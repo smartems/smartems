@@ -1,6 +1,6 @@
 +++
 title = "Annotations"
-keywords = ["grafana", "annotations", "documentation", "guide"]
+keywords = ["smartems", "annotations", "documentation", "guide"]
 type = "docs"
 [menu.docs]
 name = "Annotations"

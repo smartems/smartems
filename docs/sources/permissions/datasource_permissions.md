@@ -1,7 +1,7 @@
 +++
 title = "Datasource Permissions"
 description = "smartEMS Datasource Permissions Guide "
-keywords = ["grafana", "configuration", "documentation", "datasource", "permissions", "users", "teams", "enterprise"]
+keywords = ["smartems", "configuration", "documentation", "datasource", "permissions", "users", "teams", "enterprise"]
 type = "docs"
 [menu.docs]
 name = "Datasource"

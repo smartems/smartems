@@ -1,7 +1,7 @@
 +++
 title = "AWS CloudWatch"
 description = "Guide for using CloudWatch in smartEMS"
-keywords = ["grafana", "cloudwatch", "guide"]
+keywords = ["smartems", "cloudwatch", "guide"]
 type = "docs"
 aliases = ["/datasources/cloudwatch"]
 [menu.docs]
@@ -23,7 +23,7 @@ smartEMS ships with built in support for CloudWatch. You just have to add it as 
 4. Select `Cloudwatch` from the _Type_ dropdown.
 
 > NOTE: If at any moment you have issues with getting this data source to work and smartEMS is giving you undescriptive errors then don't
-> forget to check your log file (try looking in /var/log/grafana/grafana.log).
+> forget to check your log file (try looking in /var/log/smartems/smartems.log).
 
 | Name                       | Description                                                                                             |
 | -------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -119,7 +119,7 @@ See the AWS documentation on [Configuring the AWS SDK for Go](https://docs.aws.a
 
 Create a file at `~/.aws/credentials`. That is the `HOME` path for user running smartems-server.
 
-> NOTE: If you think you have the credentials file in the right place but it is still not working then you might try moving your .aws file to '/usr/share/grafana/' and make sure your credentials file has at most 0644 permissions.
+> NOTE: If you think you have the credentials file in the right place but it is still not working then you might try moving your .aws file to '/usr/share/smartems/' and make sure your credentials file has at most 0644 permissions.
 
 Example content:
 

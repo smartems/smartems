@@ -1,6 +1,6 @@
 +++
 title = "Export and Import"
-keywords = ["grafana", "dashboard", "documentation", "export", "import"]
+keywords = ["smartems", "dashboard", "documentation", "export", "import"]
 type = "docs"
 [menu.docs]
 parent = "dashboard_features"
@@ -33,7 +33,7 @@ To import a dashboard open dashboard search and then hit the import button.
 
 {{< docs-imagebox img="/img/docs/v50/import_step1.png" max-width="700px" >}}
 
-From here you can upload a dashboard json file, paste a [smartEMS.com](https://grafana.com) dashboard
+From here you can upload a dashboard json file, paste a [smartEMS.com](https://smartems.com) dashboard
 url or paste dashboard json text directly into the text area.
 
 {{< docs-imagebox img="/img/docs/v50/import_step2.png"  max-width="700px" >}}
@@ -43,7 +43,7 @@ data source you want the dashboard to use and specify any metric prefixes (if th
 
 ## Discover dashboards on smartEMS.com
 
-Find dashboards for common server applications at [smartEMS.com/dashboards](https://grafana.com/dashboards).
+Find dashboards for common server applications at [smartEMS.com/dashboards](https://smartems.com/dashboards).
 
 {{< docs-imagebox img="/img/docs/v50/gcom_dashboard_list.png" max-width="700px" >}}
 

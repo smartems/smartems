@@ -2,7 +2,7 @@
 
 smartEMS uses a database to persist settings between restarts. In fact, if you don't specify one, smartEMS creates a [SQLite3](https://www.sqlite.org/) database file on your local disk. This guide explains how to store and retrieve data from the database.
 
-smartEMS supports the [following databases](https://grafana.com/docs/installation/requirements/#database):
+smartEMS supports the [following databases](https://smartems.com/docs/installation/requirements/#database):
 
 - [MySQL](https://www.mysql.com/)
 - [PostgreSQL](https://www.postgresql.org/)

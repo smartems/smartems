@@ -1,7 +1,7 @@
 +++
 title = "External Group Sync HTTP API "
 description = "smartEMS External Group Sync HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "team", "teams", "group", "member", "enterprise"]
+keywords = ["smartems", "http", "documentation", "api", "team", "teams", "group", "member", "enterprise"]
 aliases = ["/http_api/external_group_sync/"]
 type = "docs"
 [menu.docs]
@@ -36,7 +36,7 @@ Content-Type: application/json
   {
     "orgId": 1,
     "teamId": 1,
-    "groupId": "cn=editors,ou=groups,dc=grafana,dc=org"
+    "groupId": "cn=editors,ou=groups,dc=smartems,dc=org"
   }
 ]
 ```
@@ -60,7 +60,7 @@ Content-Type: application/json
 Authorization: Basic YWRtaW46YWRtaW4=
 
 {
-  "groupId": "cn=editors,ou=groups,dc=grafana,dc=org"
+  "groupId": "cn=editors,ou=groups,dc=smartems,dc=org"
 }
 ```
 
@@ -88,7 +88,7 @@ Status Codes:
 **Example Request**:
 
 ```http
-DELETE /api/teams/1/groups/cn=editors,ou=groups,dc=grafana,dc=org HTTP/1.1
+DELETE /api/teams/1/groups/cn=editors,ou=groups,dc=smartems,dc=org HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 Authorization: Basic YWRtaW46YWRtaW4=

@@ -1,7 +1,7 @@
 +++
 title = "Team Sync"
 description = "smartEMS Team Sync"
-keywords = ["grafana", "auth", "documentation"]
+keywords = ["smartems", "auth", "documentation"]
 aliases = ["/auth/saml/"]
 type = "docs"
 [menu.docs]

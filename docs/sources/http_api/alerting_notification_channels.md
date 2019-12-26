@@ -1,7 +1,7 @@
 +++
 title = "Alerting Notification Channels HTTP API "
 description = "smartEMS Alerting Notification Channel HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "alerting", "alerts", "notifications"]
+keywords = ["smartems", "http", "documentation", "api", "alerting", "alerts", "notifications"]
 aliases = []
 type = "docs"
 [menu.docs]
@@ -54,7 +54,7 @@ Content-Type: application/json
     "sendReminder": false,
     "disableResolveMessage": false,
     "settings": {
-      "addresses": "dev@grafana.com"
+      "addresses": "dev@smartems.com"
     },
     "created": "2018-04-23T14:44:09+02:00",
     "updated": "2018-08-20T15:47:49+02:00"
@@ -135,7 +135,7 @@ Content-Type: application/json
   "sendReminder": false,
   "disableResolveMessage": false,
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   },
   "created": "2018-04-23T14:44:09+02:00",
   "updated": "2018-08-20T15:47:49+02:00"
@@ -172,7 +172,7 @@ Content-Type: application/json
   "sendReminder": false,
   "disableResolveMessage": false,
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   },
   "created": "2018-04-23T14:44:09+02:00",
   "updated": "2018-08-20T15:47:49+02:00"
@@ -200,7 +200,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
   "isDefault": false,
   "sendReminder": false,
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   }
 }
 ```
@@ -219,7 +219,7 @@ Content-Type: application/json
   "isDefault": false,
   "sendReminder": false,
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   },
   "created": "2018-04-23T14:44:09+02:00",
   "updated": "2018-08-20T15:47:49+02:00"
@@ -248,7 +248,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
   "sendReminder": true,
   "frequency": "15m",
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   }
 }
 ```
@@ -268,7 +268,7 @@ Content-Type: application/json
   "sendReminder": true,
   "frequency": "15m",
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   },
   "created": "2017-01-01 12:34",
   "updated": "2017-01-01 12:34"
@@ -298,7 +298,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
   "sendReminder": true,
   "frequency": "15m",
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   }
 }
 ```
@@ -318,7 +318,7 @@ Content-Type: application/json
   "sendReminder": true,
   "frequency": "15m",
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   },
   "created": "2017-01-01 12:34",
   "updated": "2017-01-01 12:34"
@@ -395,7 +395,7 @@ Authorization: Bearer eyJrIjoiT0tTcG1pUlY2RnVKZTFVaDFsNFZXdE9ZWmNrMkZYbk
 {
   "type":  "email",
   "settings": {
-    "addresses": "dev@grafana.com"
+    "addresses": "dev@smartems.com"
   }
 }
 ```

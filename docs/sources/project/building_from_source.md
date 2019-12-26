@@ -8,7 +8,7 @@ weight = 5
 
 # Building smartEMS from source
 
-This guide will help you create packages from source and get grafana up and running in
+This guide will help you create packages from source and get smartems up and running in
 dev environment. smartEMS ships with its own required backend server; also completely open-source. It's written in [Go](http://golang.org) and has a full [HTTP API](/v2.1/reference/http_api/).
 
 ## Dependencies
@@ -68,9 +68,9 @@ You can run a local instance of smartEMS by running:
 ```
 Or, if you built the binary with `go run build.go build`, run `./bin/<os>-<architecture>/smartems-server`
 
-If you built it with `go build .`, run `./grafana`
+If you built it with `go build .`, run `./smartems`
 
-Open grafana in your browser (default [http://localhost:3000](http://localhost:3000)) and login with admin user (default user/pass = admin/admin).
+Open smartems in your browser (default [http://localhost:3000](http://localhost:3000)) and login with admin user (default user/pass = admin/admin).
 
 # Developing smartEMS
 
@@ -117,7 +117,7 @@ go run build.go build package
 Create a custom.ini in the conf directory to override default configuration options.
 You only need to add the options you want to override. Config files are applied in the order of:
 
-1. grafana.ini
+1. smartems.ini
 2. custom.ini
 
 ### Set app_mode to development

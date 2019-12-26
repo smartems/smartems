@@ -71,11 +71,11 @@ To add an editor tab you need to hook into the event model so that the tab is ad
 this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
 ```
 
-Then you need to create a handler function that is bound to the event. In the example above, the handler is called onInitEditMode. The tab is added by calling the controller function, *addEditorTab*. This function has three parameters; the tab name, the path to a html template for the new editor tab and the tab number. It can be a bit tricky to figure out the path, the path name will be based on the id that is specified in the plugin.json file - for example **grafana-clock-panel**. The code below hooks up an Angular template called editor.html that is located in the `src/partials` directory.
+Then you need to create a handler function that is bound to the event. In the example above, the handler is called onInitEditMode. The tab is added by calling the controller function, *addEditorTab*. This function has three parameters; the tab name, the path to a html template for the new editor tab and the tab number. It can be a bit tricky to figure out the path, the path name will be based on the id that is specified in the plugin.json file - for example **smartems-clock-panel**. The code below hooks up an Angular template called editor.html that is located in the `src/partials` directory.
 
 ```javascript
 onInitEditMode() {
-  this.addEditorTab('Options', 'public/plugins/grafana-clock-panel/editor.html', 2);
+  this.addEditorTab('Options', 'public/plugins/smartems-clock-panel/editor.html', 2);
 }
 ```
 

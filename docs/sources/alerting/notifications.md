@@ -114,7 +114,7 @@ Example json body:
   "title": "My alert",
   "ruleId": 1,
   "ruleName": "Load peaking!",
-  "ruleUrl": "http://url.to.grafana/db/dashboard/my_dashboard?panelId=2",
+  "ruleUrl": "http://url.to.smartems/db/dashboard/my_dashboard?panelId=2",
   "state": "alerting",
   "imageUrl": "http://s3.image.url",
   "message": "Load is peaking. Make sure the traffic is real and spin up more webfronts",
@@ -146,7 +146,7 @@ In DingTalk PC Client:
 
 5. In "Add Robot" panel, input a nickname for the robot and select a "message group" which the robot will join in. click "next".
 
-6. There will be a Webhook URL in the panel, looks like this: https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxx. Copy this URL to the grafana Dingtalk setting page and then click "finish".
+6. There will be a Webhook URL in the panel, looks like this: https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxx. Copy this URL to the smartems Dingtalk setting page and then click "finish".
 
 Dingtalk supports the following "message type": `text`, `link` and `markdown`. Only the `link` message type is supported.
 

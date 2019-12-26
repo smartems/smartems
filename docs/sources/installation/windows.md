@@ -1,7 +1,7 @@
 +++
 title = "Installing on Windows"
 description = "Installing smartEMS on Windows"
-keywords = ["grafana", "configuration", "documentation", "windows"]
+keywords = ["smartems", "configuration", "documentation", "windows"]
 type = "docs"
 [menu.docs]
 parent = "installation"
@@ -12,7 +12,7 @@ weight = 3
 
 Description | Download
 ------------ | -------------
-Latest stable package for Windows | [x64](https://grafana.com/grafana/download?platform=windows)
+Latest stable package for Windows | [x64](https://smartems.com/smartems/download?platform=windows)
 
 Read [Upgrading smartEMS]({{< relref "installation/upgrading.md" >}}) for tips and guidance on updating an existing
 installation.

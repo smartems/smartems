@@ -1,7 +1,7 @@
 +++
 title = "Security"
 description = "Security Docs"
-keywords = ["grafana", "security", "documentation"]
+keywords = ["smartems", "security", "documentation"]
 type = "docs"
 [menu.docs]
 name = "Security"

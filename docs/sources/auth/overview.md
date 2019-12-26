@@ -60,7 +60,7 @@ Example:
 [auth]
 
 # Login cookie name
-login_cookie_name = grafana_session
+login_cookie_name = smartems_session
 
 # The lifetime (days) an authenticated user can be inactive before being required to login at next visit. Default is 7 days.
 login_maximum_inactive_lifetime_days = 7

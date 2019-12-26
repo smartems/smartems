@@ -1,7 +1,7 @@
 +++
 title = "smartEMS documentation"
 description = "Guides, Installation and Feature Documentation"
-keywords = ["grafana", "installation", "documentation"]
+keywords = ["smartems", "installation", "documentation"]
 type = "docs"
 aliases = ["/v1.1", "/guides/reference/admin", "/v3.1"]
 +++
@@ -25,12 +25,12 @@ aliases = ["/v1.1", "/guides/reference/admin", "/v3.1"]
         </div>
         <h5>Installing on Windows</h5>
     </a>
-    <a href="https://grafana.com/cloud/grafana" class="nav-cards__item nav-cards__item--install">
+    <a href="https://smartems.com/cloud/smartems" class="nav-cards__item nav-cards__item--install">
         <div class="nav-cards__icon fa fa-cloud">
         </div>
         <h5>smartEMS Cloud</h5>
     </a>
-    <a href="https://grafana.com/grafana/download" class="nav-cards__item nav-cards__item--install">
+    <a href="https://smartems.com/smartems/download" class="nav-cards__item nav-cards__item--install">
         <div class="nav-cards__icon fa fa-moon-o">
         </div>
         <h5>Nightly Builds</h5>
@@ -44,7 +44,7 @@ aliases = ["/v1.1", "/guides/reference/admin", "/v3.1"]
 <h2>Guides</h2>
 
 <div class="nav-cards">
-    <a href="https://grafana.com/grafana" class="nav-cards__item nav-cards__item--guide">
+    <a href="https://smartems.com/smartems" class="nav-cards__item nav-cards__item--guide">
         <h4>What is smartEMS?</h4>
         <p>Get an overview of smartEMS's key features.</p>
     </a>

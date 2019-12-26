@@ -1,7 +1,7 @@
 +++
 title = "What's New in smartEMS v2.5"
 description = "Feature and improvement highlights for smartEMS v2.5"
-keywords = ["grafana", "new", "documentation", "2.5"]
+keywords = ["smartems", "new", "documentation", "2.5"]
 type = "docs"
 +++
 
@@ -37,7 +37,7 @@ and complex queries for logs or metrics.
 - Query only relevant indices based on time pattern
 - Alias patterns for short readable series names
 
-Try the new Elasticsearch query editor on the [play.grafana.org](http://play.grafana.org/dashboard/db/elasticsearch-metrics) site.
+Try the new Elasticsearch query editor on the [play.smartems.org](http://play.smartems.org/dashboard/db/elasticsearch-metrics) site.
 
 ### CloudWatch
 
@@ -102,5 +102,5 @@ view the [CHANGELOG.md](https://github.com/smartems/smartems/blob/master/CHANGEL
 
 - - -
 
-### <a href="https://grafana.com/get">Download smartEMS 2.5 now</a>
+### <a href="https://smartems.com/get">Download smartEMS 2.5 now</a>
 

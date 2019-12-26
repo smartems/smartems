@@ -17,15 +17,15 @@ smartEMS already have a strong community of contributors and plugin developers.
 By making it easier to develop and install plugins we hope that the community
 can grow even stronger and develop new plugins that we would never think about.
 
-To discover plugins checkout the official [Plugin Repository](https://grafana.com/plugins).
+To discover plugins checkout the official [Plugin Repository](https://smartems.com/plugins).
 
 # Installing Plugins
 
-The easiest way to install plugins is by using the CLI tool smartems-cli which is bundled with grafana. Before any modification take place after modifying plugins, smartems-server needs to be restarted.
+The easiest way to install plugins is by using the CLI tool smartems-cli which is bundled with smartems. Before any modification take place after modifying plugins, smartems-server needs to be restarted.
 
 ### smartEMS Plugin Directory
 
-On Linux systems the smartems-cli will assume that the grafana plugin directory is `/var/lib/grafana/plugins`. It's possible to override the directory which smartems-cli will operate on by specifying the --pluginsDir flag. On Windows systems this parameter have to be specified for every call.
+On Linux systems the smartems-cli will assume that the smartems plugin directory is `/var/lib/smartems/plugins`. It's possible to override the directory which smartems-cli will operate on by specifying the --pluginsDir flag. On Windows systems this parameter have to be specified for every call.
 
 ### smartEMS-cli Commands
 
@@ -70,11 +70,11 @@ If your smartEMS Server does not have access to the Internet, then the plugin wi
 
 The Download URL from smartEMS.com API is in this form:
 
-`https://grafana.com/api/plugins/<plugin id>/versions/<version number>/download`
+`https://smartems.com/api/plugins/<plugin id>/versions/<version number>/download`
 
 You can specify a local URL by using the `--pluginUrl` option.
 ```bash
-smartems-cli --pluginUrl https://nexus.company.com/grafana/plugins/<plugin-id>-<plugin-version>.zip plugins install <plugin-id>
+smartems-cli --pluginUrl https://nexus.company.com/smartems/plugins/<plugin-id>-<plugin-version>.zip plugins install <plugin-id>
 ```
 
 To manually install a Plugin via the smartEMS.com API:
@@ -83,7 +83,7 @@ To manually install a Plugin via the smartEMS.com API:
 
     {{< imgbox img="/img/docs/installation-tab.png" caption="Installation Tab" >}}
 
-2. Use the smartEMS API to find the plugin using this url `https://grafana.com/api/plugins/<plugin id from step 1>`. For example: https://grafana.com/api/plugins/jdbranham-diagram-panel should return:
+2. Use the smartEMS API to find the plugin using this url `https://smartems.com/api/plugins/<plugin id from step 1>`. For example: https://smartems.com/api/plugins/jdbranham-diagram-panel should return:
     ```bash
     {
       "id": 145,
@@ -92,7 +92,7 @@ To manually install a Plugin via the smartEMS.com API:
       "typeCode": "panel",
       "slug": "jdbranham-diagram-panel",
       "name": "Diagram",
-      "description": "Diagram panel for grafana",
+      "description": "Diagram panel for smartems",
     ...
     ```
 
@@ -104,6 +104,6 @@ To manually install a Plugin via the smartEMS.com API:
     }
     ```
 
-4. Download the plugin with `https://grafana.com/api/plugins/<plugin id from step 1>/versions/<current version>/download` (for example: https://grafana.com/api/plugins/jdbranham-diagram-panel/versions/1.4.0/download). Unzip the downloaded file into the smartEMS Server's `plugins` directory.
+4. Download the plugin with `https://smartems.com/api/plugins/<plugin id from step 1>/versions/<current version>/download` (for example: https://smartems.com/api/plugins/jdbranham-diagram-panel/versions/1.4.0/download). Unzip the downloaded file into the smartEMS Server's `plugins` directory.
 
 5. Restart the smartEMS Server.

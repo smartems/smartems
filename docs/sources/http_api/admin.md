@@ -1,7 +1,7 @@
 +++
 title = "Admin HTTP API "
 description = "smartEMS Admin HTTP API"
-keywords = ["grafana", "http", "documentation", "api", "admin"]
+keywords = ["smartems", "http", "documentation", "api", "admin"]
 aliases = ["/http_api/admin/"]
 type = "docs"
 [menu.docs]
@@ -19,7 +19,7 @@ must have the smartEMS Admin permission. (The default admin user is called `admi
 
 `GET /api/admin/settings`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -75,7 +75,7 @@ Content-Type: application/json
     "token_url":"https://accounts.google.com/o/oauth2/token"
   },
   "auth.ldap":{
-    "config_file":"/etc/grafana/ldap.toml",
+    "config_file":"/etc/smartems/ldap.toml",
     "enabled":"false"
   },
   "auth.proxy":{
@@ -86,13 +86,13 @@ Content-Type: application/json
   },
   "dashboards.json":{
     "enabled":"false",
-    "path":"/var/lib/grafana/dashboards"
+    "path":"/var/lib/smartems/dashboards"
   },
   "database":{
     "host":"127.0.0.1:0000",
-    "name":"grafana",
+    "name":"smartems",
     "password":"************",
-    "path":"grafana.db",
+    "path":"smartems.db",
     "ssl_mode":"disable",
     "type":"sqlite3",
     "user":"root"
@@ -120,13 +120,13 @@ Content-Type: application/json
     "max_size_shift":""
   },
   "paths":{
-    "data":"/tsdb/grafana",
-    "logs":"/logs/apps/grafana"},
+    "data":"/tsdb/smartems",
+    "logs":"/logs/apps/smartems"},
     "security":{
     "admin_password":"************",
     "admin_user":"admin",
-    "cookie_remember_name":"grafana_remember",
-    "cookie_username":"grafana_user",
+    "cookie_remember_name":"smartems_remember",
+    "cookie_username":"smartems_user",
     "disable_gravatar":"false",
     "login_remember_days":"7",
     "secret_key":"************"
@@ -146,7 +146,7 @@ Content-Type: application/json
     "static_root_path":"public"
   },
   "session":{
-    "cookie_name":"grafana_sess",
+    "cookie_name":"smartems_sess",
     "cookie_secure":"false",
     "gc_interval_time":"",
     "provider":"file",
@@ -156,7 +156,7 @@ Content-Type: application/json
   "smtp":{
     "cert_file":"",
     "enabled":"false",
-    "from_address":"admin@grafana.localhost",
+    "from_address":"admin@smartems.localhost",
     "from_name":"smartEMS",
     "ehlo_identity":"dashboard.example.com",
     "host":"localhost:25",
@@ -177,7 +177,7 @@ Content-Type: application/json
 
 `GET /api/admin/stats`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -211,7 +211,7 @@ Content-Type: application/json
 
 `POST /api/admin/users`
 
-Create new user. Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Create new user. Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 ```json
@@ -241,7 +241,7 @@ Content-Type: application/json
 
 `PUT /api/admin/users/:id/password`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 Change password for a specific user.
 
 **Example Request**:
@@ -267,7 +267,7 @@ Content-Type: application/json
 
 `PUT /api/admin/users/:id/permissions`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -292,7 +292,7 @@ Content-Type: application/json
 
 `DELETE /api/admin/users/:id`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -315,7 +315,7 @@ Content-Type: application/json
 
 `POST /api/admin/pause-all-alerts`
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -352,7 +352,7 @@ Content-Type: application/json
 
 Return a list of all auth tokens (devices) that the user currently have logged in from.
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -403,7 +403,7 @@ Content-Type: application/json
 Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in
 and will be required to authenticate again upon next activity.
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -435,7 +435,7 @@ Content-Type: application/json
 Logout user revokes all auth tokens (devices) for the user. User of issued auth tokens (devices) will no longer be logged in
 and will be required to authenticate again upon next activity.
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -468,7 +468,7 @@ Reloads the provisioning config files for specified type and provision entities 
 until the new provisioned entities are already stored in the database. In case of dashboards, it will stop
 polling for changes in dashboard files and then restart it with new configs after returning.
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 
@@ -495,7 +495,7 @@ Content-Type: application/json
 
 Reloads the LDAP configuration.
 
-Only works with Basic Authentication (username and password). See [introduction](http://docs.grafana.org/http_api/admin/#admin-api) for an explanation.
+Only works with Basic Authentication (username and password). See [introduction](http://docs.smartems.org/http_api/admin/#admin-api) for an explanation.
 
 **Example Request**:
 

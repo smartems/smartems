@@ -6,7 +6,7 @@
 
 Our goal is to deliver smartEMS's common UI elements for plugins developers and contributors.
 
-See [package source](https://github.com/smartems/smartems/tree/master/packages/grafana-ui) for more details.
+See [package source](https://github.com/smartems/smartems/tree/master/packages/smartems-ui) for more details.
 
 ## Installation
 
@@ -16,4 +16,4 @@ See [package source](https://github.com/smartems/smartems/tree/master/packages/g
 
 ## Development
 
-For development purposes we suggest using `yarn link` that will create symlink to @smartems/ui lib. To do so navigate to `packages/grafana-ui` and run `yarn link`. Then, navigate to your project and run `yarn link @smartems/ui` to use the linked version of the lib. To unlink follow the same procedure, but use `yarn unlink` instead.
+For development purposes we suggest using `yarn link` that will create symlink to @smartems/ui lib. To do so navigate to `packages/smartems-ui` and run `yarn link`. Then, navigate to your project and run `yarn link @smartems/ui` to use the linked version of the lib. To unlink follow the same procedure, but use `yarn unlink` instead.

@@ -6,9 +6,9 @@ This document contains information about smartEMS frontend package versioning an
 We use [Lerna](https://github.com/lerna/lerna) for packages versioning and releases.
 
 All packages are versioned according to the current smartEMS version:
-- smartEMS v6.3.0-alpha1 -> @grafana/* packages @ 6.3.0-alpha.1
-- smartEMS v6.2.5 -> @grafana/* packages @ 6.2.5
-- smartEMS - master branch version (based on package.json, i.e. 6.4.0-pre) -> @grafana/* packages @ 6.4.0-pre-<COMMIT-SHA> (see details below about packages publishing channels)
+- smartEMS v6.3.0-alpha1 -> @smartems/* packages @ 6.3.0-alpha.1
+- smartEMS v6.2.5 -> @smartems/* packages @ 6.2.5
+- smartEMS - master branch version (based on package.json, i.e. 6.4.0-pre) -> @smartems/* packages @ 6.4.0-pre-<COMMIT-SHA> (see details below about packages publishing channels)
 
 > Please note that @smartems/toolkit, @smartems/ui, @smartems/data, and @smartems/runtime packages are considered ALPHA even though they are not released as alpha versions.
 
@@ -39,7 +39,7 @@ Automatic prereleases are published under the `canary` dist tag.
    - Make sure you use semver convention. So, *place a dot between prerelease id and prerelease number*, i.e. 6.3.0-alpha.1
    - Make sure you confirm the version bump when prompted!
 2. Commit changes (lerna.json and package.json files) - *"Packages version update: \<VERSION\>"*
-3. Run `yarn packages:build` script that prepares distribution packages in `packages/grafana-*/dist`. These directories are going to be published to npm.
+3. Run `yarn packages:build` script that prepares distribution packages in `packages/smartems-*/dist`. These directories are going to be published to npm.
 4. Depending whether or not it's a prerelease:
    - When releasing a prerelease run `packages:publishNext` to publish new versions.
    - When releasing a stable version run `packages:publishLatest` to publish new versions.
@@ -50,5 +50,5 @@ Automatic prereleases are published under the `canary` dist tag.
 To build individual packages, run:
 
 ```
-grafana-toolkit package:build --scope=<ui|toolkit|runtime|data>
+smartems-toolkit package:build --scope=<ui|toolkit|runtime|data>
 ```

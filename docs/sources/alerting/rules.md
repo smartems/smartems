@@ -1,7 +1,7 @@
 +++
 title = "Alerting Engine and Rules Guide"
 description = "Configuring Alert Rules"
-keywords = ["grafana", "alerting", "guide", "rules"]
+keywords = ["smartems", "alerting", "guide", "rules"]
 type = "docs"
 [menu.docs]
 name = "Engine and Rules"
@@ -179,5 +179,5 @@ filters = alerting.scheduler:debug \
           tsdb.elasticsearch.client:debug \
 ```
 
-If you want to log raw query sent to your TSDB and raw response in log you also have to set grafana.ini option `app_mode` to
+If you want to log raw query sent to your TSDB and raw response in log you also have to set smartems.ini option `app_mode` to
 `development`.

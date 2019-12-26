@@ -1,7 +1,7 @@
 +++
 title = "Google OAuth2 Authentication"
 description = "smartEMS OAuthentication Guide "
-keywords = ["grafana", "configuration", "documentation", "oauth"]
+keywords = ["smartems", "configuration", "documentation", "oauth"]
 type = "docs"
 [menu.docs]
 name = "Google"
@@ -23,9 +23,9 @@ First, you need to create a Google OAuth Client:
 3. Enter the following:
    - Application Type: Web Application
    - Name: smartEMS
-   - Authorized Javascript Origins: https://grafana.mycompany.com
-   - Authorized Redirect URLs: https://grafana.mycompany.com/login/google
-   - Replace https://grafana.mycompany.com with the URL of your smartEMS instance.
+   - Authorized Javascript Origins: https://smartems.mycompany.com
+   - Authorized Redirect URLs: https://smartems.mycompany.com/login/google
+   - Replace https://smartems.mycompany.com with the URL of your smartEMS instance.
 4. Click Create
 5. Copy the Client ID and Client Secret from the 'OAuth Client' modal
 
