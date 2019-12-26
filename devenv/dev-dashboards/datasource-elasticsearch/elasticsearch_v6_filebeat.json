@@ -95,7 +95,7 @@
               "type": "count"
             }
           ],
-          "query": "fields.app:grafana",
+          "query": "fields.app:smartems",
           "refId": "A",
           "timeField": "@timestamp"
         }
@@ -220,7 +220,7 @@
               "type": "raw_document"
             }
           ],
-          "query": "fields.app:grafana",
+          "query": "fields.app:smartems",
           "refId": "A",
           "timeField": "@timestamp"
         }

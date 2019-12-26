@@ -185,7 +185,7 @@ describe('given dashboard with repeated panels', () => {
     expect(require.version).toBe('1.1.2');
   });
 
-  it('should add grafana version', () => {
+  it('should add smartems version', () => {
     const require: any = _.find(exported.__requires, { name: 'Grafana' });
     expect(require.type).toBe('smartems');
     expect(require.id).toBe('smartems');

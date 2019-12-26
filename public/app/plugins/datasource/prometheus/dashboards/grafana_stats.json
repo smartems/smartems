@@ -74,7 +74,7 @@
         "tags": [],
         "title": "Grafana docs",
         "type": "link",
-        "url": "http://docs.grafana.org/"
+        "url": "http://docs.smartEvo.de/"
       },
       {
         "icon": "external link",
@@ -146,7 +146,7 @@
             "tableColumn": "",
             "targets": [
               {
-                "expr": "up{job=\"grafana\"}",
+                "expr": "up{job=\"smartems\"}",
                 "format": "time_series",
                 "instant": true,
                 "intervalFactor": 2,
@@ -693,7 +693,7 @@
             ],
             "targets": [
               {
-                "expr": "sort(topk(8, sum by (handler) (http_request_total{job=\"grafana\"})))",
+                "expr": "sort(topk(8, sum by (handler) (http_request_total{job=\"smartems\"})))",
                 "format": "time_series",
                 "instant": true,
                 "intervalFactor": 10,
@@ -949,7 +949,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(go_goroutines{job=\"grafana\"})",
+                "expr": "sum(go_goroutines{job=\"smartems\"})",
                 "format": "time_series",
                 "hide": false,
                 "intervalFactor": 4,
@@ -960,7 +960,7 @@
                 "type": "timeserie"
               },
               {
-                "expr": "sum(process_resident_memory_bytes{job=\"grafana\"})",
+                "expr": "sum(process_resident_memory_bytes{job=\"smartems\"})",
                 "format": "time_series",
                 "intervalFactor": 4,
                 "legendFormat": "memory usage",

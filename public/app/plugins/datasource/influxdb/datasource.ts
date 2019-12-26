@@ -85,7 +85,7 @@ export default class InfluxDatasource extends DataSourceApi<InfluxQuery, InfluxO
       timeFilter += ' AND ' + queryModel.renderAdhocFilters(adhocFilters);
     }
 
-    // replace grafana variables
+    // replace smartems variables
     scopedVars.timeFilter = { value: timeFilter };
 
     // replace templated variables

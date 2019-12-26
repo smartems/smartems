@@ -167,7 +167,7 @@ describe('state functions', () => {
 
 describe('updateHistory()', () => {
   const datasourceId = 'myDatasource';
-  const key = `grafana.explore.history.${datasourceId}`;
+  const key = `smartems.explore.history.${datasourceId}`;
 
   beforeEach(() => {
     clearHistory(datasourceId);

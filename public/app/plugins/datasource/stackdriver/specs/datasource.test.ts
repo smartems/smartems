@@ -231,7 +231,7 @@ describe('StackdriverDataSource', () => {
       ds = new StackdriverDataSource(instanceSettings, noopBackendSrv, templateSrv, timeSrv);
     });
     describe('when theres only one target', () => {
-      describe('and the stackdriver unit doesnt have a corresponding grafana unit', () => {
+      describe('and the stackdriver unit doesnt have a corresponding smartems unit', () => {
         beforeEach(() => {
           res = ds.resolvePanelUnitFromTargets([{ unit: 'megaseconds' }]);
         });
@@ -239,7 +239,7 @@ describe('StackdriverDataSource', () => {
           expect(res).toBeUndefined();
         });
       });
-      describe('and the stackdriver unit has a corresponding grafana unit', () => {
+      describe('and the stackdriver unit has a corresponding smartems unit', () => {
         beforeEach(() => {
           res = ds.resolvePanelUnitFromTargets([{ unit: 'bit' }]);
         });
@@ -258,7 +258,7 @@ describe('StackdriverDataSource', () => {
           expect(res).toEqual('bits');
         });
       });
-      describe('and all target units are the same but doesnt have grafana mappings', () => {
+      describe('and all target units are the same but doesnt have smartems mappings', () => {
         beforeEach(() => {
           res = ds.resolvePanelUnitFromTargets([{ unit: 'megaseconds' }, { unit: 'megaseconds' }]);
         });

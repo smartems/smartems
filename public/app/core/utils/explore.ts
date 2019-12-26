@@ -350,13 +350,13 @@ export function updateHistory<T extends DataQuery = any>(
   }
 
   // Combine all queries of a datasource type into one history
-  const historyKey = `grafana.explore.history.${datasourceId}`;
+  const historyKey = `smartems.explore.history.${datasourceId}`;
   store.setObject(historyKey, history);
   return history;
 }
 
 export function clearHistory(datasourceId: string) {
-  const historyKey = `grafana.explore.history.${datasourceId}`;
+  const historyKey = `smartems.explore.history.${datasourceId}`;
   store.delete(historyKey);
 }
 

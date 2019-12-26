@@ -146,7 +146,7 @@ export function getFlotTickDecimals(datamin: number, datamax: number, axis: { mi
   size *= magn;
 
   const tickDecimals = Math.max(0, -Math.floor(Math.log(delta) / Math.LN10) + 1);
-  // grafana addition
+  // smartems addition
   const scaledDecimals = tickDecimals - Math.floor(Math.log(size) / Math.LN10);
   return { tickDecimals, scaledDecimals };
 }
@@ -157,7 +157,7 @@ export function getFlotTickDecimals(datamin: number, datamax: number, axis: { mi
  * @param min Time from (in milliseconds)
  * @param max Time to (in milliseconds)
  */
-export function grafanaTimeFormat(ticks: number, min: number, max: number) {
+export function smartemsTimeFormat(ticks: number, min: number, max: number) {
   if (min && max && ticks) {
     const range = max - min;
     const secPerTick = range / ticks / 1000;

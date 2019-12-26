@@ -129,7 +129,7 @@ function setViewModeBodyClass(body: JQuery, mode: KioskUrlValue) {
 }
 
 /** @ngInject */
-export function grafanaAppDirective(
+export function smartemsAppDirective(
   playlistSrv: PlaylistSrv,
   contextSrv: ContextSrv,
   $timeout: ITimeoutService,
@@ -311,4 +311,4 @@ export function grafanaAppDirective(
   };
 }
 
-coreModule.directive('smartemsApp', grafanaAppDirective);
+coreModule.directive('smartemsApp', smartemsAppDirective);

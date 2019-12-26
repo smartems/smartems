@@ -141,7 +141,7 @@ export class HeatmapCtrl extends MetricsPanelCtrl {
       aliasColors: {}, // avoids null reference
     });
 
-    // Bind grafana panel events
+    // Bind smartems panel events
     this.events.on(PanelEvents.render, this.onRender.bind(this));
     this.events.on(CoreEvents.dataFramesReceived, this.onDataFramesReceived.bind(this));
     this.events.on(PanelEvents.dataSnapshotLoad, this.onSnapshotLoad.bind(this));

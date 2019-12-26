@@ -17,7 +17,7 @@ export class TemplateSrv {
 
   private regex = variableRegex;
   private index: any = {};
-  private grafanaVariables: any = {};
+  private smartemsVariables: any = {};
   private builtIns: any = {};
   private timeRange: TimeRange = null;
   private fieldAccessorCache: FieldAccessorCache = {};
@@ -192,7 +192,7 @@ export class TemplateSrv {
   }
 
   setGrafanaVariable(name: string, value: any) {
-    this.grafanaVariables[name] = value;
+    this.smartemsVariables[name] = value;
   }
 
   getVariableName(expression: string) {
@@ -281,7 +281,7 @@ export class TemplateSrv {
         return match;
       }
 
-      const systemValue = this.grafanaVariables[variable.current.value];
+      const systemValue = this.smartemsVariables[variable.current.value];
       if (systemValue) {
         return this.formatValue(systemValue, fmt, variable);
       }
@@ -325,7 +325,7 @@ export class TemplateSrv {
         return match;
       }
 
-      const value = this.grafanaVariables[variable.current.value];
+      const value = this.smartemsVariables[variable.current.value];
 
       return typeof value === 'string' ? value : variable.current.text;
     });

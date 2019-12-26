@@ -301,7 +301,7 @@ export const loadDatasourceReady = (
   instance: DataSourceApi,
   orgId: number
 ): ActionOf<LoadDatasourceReadyPayload> => {
-  const historyKey = `grafana.explore.history.${instance.meta.id}`;
+  const historyKey = `smartems.explore.history.${instance.meta.id}`;
   const history = store.getObject(historyKey, []);
   // Save last-used datasource
 

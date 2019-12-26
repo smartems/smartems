@@ -157,7 +157,7 @@ export class DashboardExporter {
       templateizeDatasourceUsage(annotationDef);
     }
 
-    // add grafana version
+    // add smartems version
     requires['smartems'] = {
       type: 'smartems',
       id: 'smartems',

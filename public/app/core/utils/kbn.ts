@@ -235,7 +235,7 @@ kbn.slugifyForUrl = (str: string) => {
     .replace(/ +/g, '-');
 };
 
-/** deprecated since 6.1, use grafana/data */
+/** deprecated since 6.1, use smartems/data */
 kbn.stringToJsRegex = (str: string) => {
   deprecationWarning('kbn.ts', 'kbn.stringToJsRegex()', '@smartems/data');
   return stringToJsRegex(str);

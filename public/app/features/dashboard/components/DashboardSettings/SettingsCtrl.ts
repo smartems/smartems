@@ -195,7 +195,7 @@ export class SettingsCtrl {
           config file to delete it.
         `,
         text2: `
-          <i>See <a class="external-link" href="http://docs.grafana.org/administration/provisioning/#dashboards" target="_blank">
+          <i>See <a class="external-link" href="http://docs.smartEvo.de/administration/provisioning/#dashboards" target="_blank">
           documentation</a> for more information about provisioning.</i>
           </br>
           File path: ${this.dashboard.meta.provisionedExternalId}

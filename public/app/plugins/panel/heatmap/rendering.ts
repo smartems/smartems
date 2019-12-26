@@ -147,13 +147,13 @@ export class HeatmapRenderer {
       .range([0, this.chartWidth]);
 
     const ticks = this.chartWidth / DEFAULT_X_TICK_SIZE_PX;
-    const grafanaTimeFormatter = ticksUtils.grafanaTimeFormat(ticks, this.timeRange.from, this.timeRange.to);
+    const smartemsTimeFormatter = ticksUtils.smartemsTimeFormat(ticks, this.timeRange.from, this.timeRange.to);
     let timeFormat;
     const dashboardTimeZone = this.ctrl.dashboard.getTimezone();
     if (dashboardTimeZone === 'utc') {
-      timeFormat = d3.utcFormat(grafanaTimeFormatter);
+      timeFormat = d3.utcFormat(smartemsTimeFormatter);
     } else {
-      timeFormat = d3.timeFormat(grafanaTimeFormatter);
+      timeFormat = d3.timeFormat(smartemsTimeFormatter);
     }
 
     const xAxis = d3

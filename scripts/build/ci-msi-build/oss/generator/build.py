@@ -77,7 +77,7 @@ smartems_oss = {
 # Grafana 6 includes new datasources with long paths
 #
 def remove_long_paths():
-    print('Removing long pathed files - these are not needed to run grafana')
+    print('Removing long pathed files - these are not needed to run smartems')
     long_files = [
         '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/app_insights/app_insights_querystring_builder.test.ts',
         '/tmp/a/smartems/public/app/plugins/datasource/smartems-azure-monitor-datasource/app_insights/app_insights_querystring_builder.ts',
@@ -115,7 +115,7 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     # the zip file contains a version, which will not work when upgrading,
     # and ends up with paths longer
     # than light.exe can parse (windows issue)
-    # Once extracted, rename it to grafana without the version included
+    # Once extracted, rename it to smartems without the version included
     zip_file_path = '{}/{}'.format(target_dir_name, extracted_name)
     rename_to = '{}/smartems'.format(target_dir_name)
     print('Renaming extracted path {} to {}'.format(zip_file_path, rename_to))
@@ -224,7 +224,7 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
           smartems-firewall.wixobj \
           smartems-oss.wixobj \
           product.wixobj \
-          -out grafana.msi'''.strip().format(LIGHT)
+          -out smartems.msi'''.strip().format(LIGHT)
         print(cmd)
         os.system(cmd)
     except Exception as ex:

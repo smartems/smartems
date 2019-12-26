@@ -55,7 +55,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "Active grafana instances",
+          "alias": "Active smartems instances",
           "dashes": true,
           "fill": 0
         }
@@ -82,10 +82,10 @@
           "refId": "B"
         },
         {
-          "expr": "count(up{job=\"grafana\"})",
+          "expr": "count(up{job=\"smartems\"})",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "Active grafana instances",
+          "legendFormat": "Active smartems instances",
           "refId": "C"
         }
       ],

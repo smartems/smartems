@@ -525,7 +525,7 @@ describe('templateSrv', () => {
       _templateSrv.updateIndex();
     });
 
-    it('should replace with text except for grafanaVariables', () => {
+    it('should replace with text except for smartemsVariables', () => {
       const target = _templateSrv.replaceWithText('Server: $server, period: $period');
       expect(target).toBe('Server: All, period: 13m');
     });

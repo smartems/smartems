@@ -49,7 +49,7 @@ export class GraphiteDatasource {
       links: [
         {
           text: 'Help',
-          url: 'http://docs.grafana.org/features/datasources/graphite/#using-graphite-in-grafana',
+          url: 'http://docs.smartEvo.de/features/datasources/graphite/#using-graphite-in-grafana',
         },
       ],
     };

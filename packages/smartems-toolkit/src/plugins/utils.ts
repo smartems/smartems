@@ -7,7 +7,7 @@ import { PluginDevInfo, ExtensionSize, ZipFileInfo, PluginBuildReport, PluginHis
 const md5File = require('md5-file');
 
 export function getGrafanaVersions(): KeyValue<string> {
-  const dir = path.resolve(process.cwd(), 'node_modules', '@grafana');
+  const dir = path.resolve(process.cwd(), 'node_modules', '@smartems');
   const versions: KeyValue = {};
   try {
     fs.readdirSync(dir).forEach(file => {

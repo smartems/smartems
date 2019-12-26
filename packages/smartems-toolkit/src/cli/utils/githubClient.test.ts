@@ -21,7 +21,7 @@ describe('GithubClient', () => {
   });
 
   describe('#client', () => {
-    it('it should contain a grafana client', () => {
+    it('it should contain a smartems client', () => {
       // @ts-ignore
       const spy = jest.spyOn(GithubClient.prototype, 'createClient').mockImplementation(() => fakeClient);
 
@@ -35,7 +35,7 @@ describe('GithubClient', () => {
       expect(client).toEqual(fakeClient);
     });
 
-    it('it should contain a grafana enterprise client', () => {
+    it('it should contain a smartems enterprise client', () => {
       // @ts-ignore
       const spy = jest.spyOn(GithubClient.prototype, 'createClient').mockImplementation(() => fakeClient);
 

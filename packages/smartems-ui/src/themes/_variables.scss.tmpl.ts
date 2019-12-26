@@ -220,7 +220,7 @@ $external-services: (
     borderColor: #b83e31,
     icon: '',
   ),
-  grafanacom: (
+  smartemscom: (
     bgColor: #262628,
     borderColor: #393939,
     icon: '',

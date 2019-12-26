@@ -47,7 +47,7 @@ export interface CoverageInfo {
 
 export interface TestResultsInfo {
   job: string;
-  grafana?: any;
+  smartems?: any;
   error?: string;
   passed: number;
   failed: number;

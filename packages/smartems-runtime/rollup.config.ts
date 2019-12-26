@@ -20,7 +20,7 @@ const buildCjsPackage = ({ env }) => {
         globals: {},
       },
     ],
-    external: ['lodash', '@smartems/ui', '@smartems/data'], // Use Lodash from grafana
+    external: ['lodash', '@smartems/ui', '@smartems/data'], // Use Lodash from smartems
     plugins: [
       commonjs({
         include: /node_modules/,
