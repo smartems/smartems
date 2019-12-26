@@ -5,15 +5,15 @@ $config = array(
     ),
     'example-userpass' => array(
         'exampleauth:UserPass',
-        'saml-admin:grafana' => array(
+        'saml-admin:smartems' => array(
             'groups' => array('admins'),
             'email' => 'saml-admin@smartEvo.de',
         ),
-        'saml-editor:grafana' => array(
+        'saml-editor:smartems' => array(
             'groups' => array('editors'),
             'email' => 'saml-editor@smartEvo.de',
         ),
-        'saml-viewer:grafana' => array(
+        'saml-viewer:smartems' => array(
             'groups' => array(),
             'email' => 'saml-viewer@smartEvo.de',
         ),
