@@ -67,7 +67,7 @@ export class GrafanaApp {
   }
 
   init() {
-    const app = angular.module('grafana', []);
+    const app = angular.module('smartems', []);
 
     setLocale(config.bootData.user.locale);
 
@@ -123,7 +123,7 @@ export class GrafanaApp {
       'ngSanitize',
       '$strap.directives',
       'ang-drag-drop',
-      'grafana',
+      'smartems',
       'pasvaz.bindonce',
       'react',
     ];

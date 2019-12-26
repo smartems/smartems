@@ -51,7 +51,7 @@ describe('GithubClient', () => {
 
     describe('when the credentials are required', () => {
       it('should create the client when the credentials are defined', () => {
-        const username = 'grafana';
+        const username = 'smartems';
         const token = 'averysecureaccesstoken';
 
         process.env.GITHUB_USERNAME = username;
@@ -73,7 +73,7 @@ describe('GithubClient', () => {
       });
 
       it('should create the enterprise client when the credentials are defined', () => {
-        const username = 'grafana';
+        const username = 'smartems';
         const token = 'averysecureaccesstoken';
 
         process.env.GITHUB_USERNAME = username;

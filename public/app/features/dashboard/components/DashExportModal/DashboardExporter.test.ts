@@ -187,8 +187,8 @@ describe('given dashboard with repeated panels', () => {
 
   it('should add grafana version', () => {
     const require: any = _.find(exported.__requires, { name: 'Grafana' });
-    expect(require.type).toBe('grafana');
-    expect(require.id).toBe('grafana');
+    expect(require.type).toBe('smartems');
+    expect(require.id).toBe('smartems');
     expect(require.version).toBe('3.0.2');
   });
 
@@ -244,9 +244,9 @@ stubs['-- Mixed --'] = {
 stubs['-- smartEMS --'] = {
   name: '-- smartEMS --',
   meta: {
-    id: 'grafana',
+    id: 'smartems',
     info: { version: '1.2.1' },
-    name: 'grafana',
+    name: 'smartems',
     builtIn: true,
   },
 };

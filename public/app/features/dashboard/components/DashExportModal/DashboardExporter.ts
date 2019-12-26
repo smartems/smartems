@@ -158,9 +158,9 @@ export class DashboardExporter {
     }
 
     // add grafana version
-    requires['grafana'] = {
-      type: 'grafana',
-      id: 'grafana',
+    requires['smartems'] = {
+      type: 'smartems',
+      id: 'smartems',
       name: 'Grafana',
       version: config.buildInfo.version,
     };

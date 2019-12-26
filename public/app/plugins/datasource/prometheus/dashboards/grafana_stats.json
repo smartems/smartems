@@ -510,7 +510,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum by (statuscode) (irate(http_request_total{job='grafana'}[5m]))",
+                "expr": "sum by (statuscode) (irate(http_request_total{job='smartems'}[5m]))",
                 "format": "time_series",
                 "intervalFactor": 3,
                 "legendFormat": "{{statuscode}}",

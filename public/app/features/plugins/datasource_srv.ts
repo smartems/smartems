@@ -133,7 +133,7 @@ export class DatasourceSrv implements DataSourceService {
         let metricSource = { value: key, name: key, meta: value.meta, sort: key };
 
         //Make sure grafana and mixed are sorted at the bottom
-        if (value.meta.id === 'grafana') {
+        if (value.meta.id === 'smartems') {
           metricSource.sort = String.fromCharCode(253);
         } else if (value.meta.id === 'dashboard') {
           metricSource.sort = String.fromCharCode(254);

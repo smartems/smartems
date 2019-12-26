@@ -13,7 +13,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-angular.module('grafana', ['ngRoute']);
+angular.module('smartems', ['ngRoute']);
 angular.module('grafana.services', ['ngRoute', '$strap.directives']);
 angular.module('grafana.panels', []);
 angular.module('grafana.controllers', []);

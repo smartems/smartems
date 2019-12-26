@@ -62,8 +62,8 @@ describe('datasource_srv', () => {
         meta: { metrics: { m: 1 } },
       },
       '--Grafana--': {
-        type: 'grafana',
-        meta: { builtIn: true, metrics: { m: 1 }, id: 'grafana' },
+        type: 'smartems',
+        meta: { builtIn: true, metrics: { m: 1 }, id: 'smartems' },
       },
       '--Mixed--': {
         type: 'test-db',

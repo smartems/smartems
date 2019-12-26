@@ -6,7 +6,7 @@ export let options = {
 };
 
 let endpoint = __ENV.URL || 'http://localhost:10080/smartems';
-const client = createBasicAuthClient(endpoint, 'user1', 'grafana');
+const client = createBasicAuthClient(endpoint, 'user1', 'smartems');
 client.withOrgId(1);
 
 export const setup = () => {
