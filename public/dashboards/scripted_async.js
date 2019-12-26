@@ -35,7 +35,7 @@ return function(callback) {
 
   // Set default time
   // time can be overridden in the url using from/to parameters, but this is
-  // handled automatically in grafana core during dashboard initialization
+  // handled automatically in smartems core during dashboard initialization
   dashboard.time = {
       from: "now-6h",
       to: "now"

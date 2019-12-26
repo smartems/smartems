@@ -1228,7 +1228,7 @@ Licensed under the MIT license.
                 points = s.datapoints.points;
                 ps = s.datapoints.pointsize;
 
-                // grafana
+                // smartems
                 if (s.transform === 'negative-Y') {
                   for (j = 0; j < points.length; j += ps) {
                     if (points[j] == null)
@@ -1715,7 +1715,7 @@ Licensed under the MIT license.
             axis.max = max;
         }
 
-        // grafana change
+        // smartems change
         function getSignificantDigitCount(n) {
           //remove decimal and make positive
           n = Math.abs(String(n).replace(".", ""));
@@ -1781,7 +1781,7 @@ Licensed under the MIT license.
             axis.tickDecimals = Math.max(0, maxDec != null ? maxDec : dec);
             axis.tickSize = opts.tickSize || size;
 
-            // grafana addition
+            // smartems addition
             if (opts.tickDecimals === null || opts.tickDecimals === undefined) {
               axis.scaledDecimals = axis.tickDecimals + dec;
             }

@@ -19,10 +19,10 @@
 # dist-enterprise according to the -e flag toggle.
 #
 # https://s3-us-west-2.amazonaws.com/smartems-releases/release/
-#   grafana-{}.windows-amd64.zip
+#   smartems-{}.windows-amd64.zip
 #
 # https://dl.smartEvo.de/enterprise/release/
-#   grafana-enterprise-{}.windows-amd64.zip
+#   smartems-enterprise-{}.windows-amd64.zip
 #
 import os
 import shutil
@@ -56,7 +56,7 @@ DIST_LOCATION = '/tmp/dist'
 #############################
 #
 #############################
-grafana_oss = {
+smartems_oss = {
     'feature_component_group_refs': [
         'GrafanaX64',
         'GrafanaServiceX64',
@@ -220,9 +220,9 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
           -cultures:en-US \
           -ext WixUIExtension.dll -ext WixFirewallExtension -ext WixUtilExtension \
           -v -sval -spdb \
-          grafana-service.wixobj \
-          grafana-firewall.wixobj \
-          grafana-oss.wixobj \
+          smartems-service.wixobj \
+          smartems-firewall.wixobj \
+          smartems-oss.wixobj \
           product.wixobj \
           -out grafana.msi'''.strip().format(LIGHT)
         print(cmd)
@@ -238,9 +238,9 @@ def build_oss(zip_file, extracted_name, PRODUCT_VERSION, config, features):
     # extract_dir.cleanup()
 
 
-def main(file_loader, env, grafana_version, zip_file, extracted_name):
+def main(file_loader, env, smartems_version, zip_file, extracted_name):
     UPGRADE_VERSION = OSS_UPGRADE_VERSION
-    SMARTEMS_VERSION = grafana_version
+    SMARTEMS_VERSION = smartems_version
     PRODUCT_NAME = OSS_PRODUCT_NAME
     # PRODUCT_VERSION=SMARTEMS_VERSION
     # MSI version cannot have anything other
@@ -300,40 +300,40 @@ if __name__ == '__main__':
     args = parser.parse_args()
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
-    grafana_version = None
-    grafana_hash = None
+    smartems_version = None
+    smartems_hash = None
     is_enterprise = False
     if not os.path.isdir(DIST_LOCATION):
         os.mkdir(DIST_LOCATION)
     # if a build version is specified, pull it
     if args.build:
-        grafana_version = args.build
-        print('Version Specified: {}'.format(grafana_version))
+        smartems_version = args.build
+        print('Version Specified: {}'.format(smartems_version))
     else:
-        grafana_version, grafana_hash, is_enterprise = detect_version(DIST_LOCATION)
+        smartems_version, smartems_hash, is_enterprise = detect_version(DIST_LOCATION)
 
     # check for enterprise flag
     if args.enterprise:
-        grafana_version = 'enterprise-{}'.format(args.build)
+        smartems_version = 'enterprise-{}'.format(args.build)
     #
-    print('Detected Version: {}'.format(grafana_version))
-    if grafana_hash:
-        print('Detected Hash: {}'.format(grafana_hash))
+    print('Detected Version: {}'.format(smartems_version))
+    if smartems_hash:
+        print('Detected Hash: {}'.format(smartems_hash))
     print('Enterprise: {}'.format(is_enterprise))
     if is_enterprise:
-        zip_file = '{}/smartems-enterprise-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
-        extracted_name = 'smartems-enterprise-{}'.format(grafana_version)
+        zip_file = '{}/smartems-enterprise-{}.windows-amd64.zip'.format(DIST_LOCATION, smartems_version)
+        extracted_name = 'smartems-enterprise-{}'.format(smartems_version)
     else:
         # the file can have a build hash
-        if grafana_hash:
-            zip_file = '{}/smartems-{}-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version, grafana_hash)
-            extracted_name = 'smartems-{}-{}'.format(grafana_version, grafana_hash)
+        if smartems_hash:
+            zip_file = '{}/smartems-{}-{}.windows-amd64.zip'.format(DIST_LOCATION, smartems_version, smartems_hash)
+            extracted_name = 'smartems-{}-{}'.format(smartems_version, smartems_hash)
         else:
-            zip_file = '{}/smartems-{}.windows-amd64.zip'.format(DIST_LOCATION, grafana_version)
-            extracted_name = 'smartems-{}'.format(grafana_version)
+            zip_file = '{}/smartems-{}.windows-amd64.zip'.format(DIST_LOCATION, smartems_version)
+            extracted_name = 'smartems-{}'.format(smartems_version)
     print('ZipFile: {}'.format(zip_file))
     # check if file downloaded
 
     if not os.path.isfile(zip_file):
-        zip_file = get_zip(grafana_version, zip_file)
-    main(file_loader, env, grafana_version, zip_file, extracted_name)
+        zip_file = get_zip(smartems_version, zip_file)
+    main(file_loader, env, smartems_version, zip_file, extracted_name)

@@ -65,7 +65,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(increase(grafana_alerting_notification_sent_total[1m])) by(job)",
+          "expr": "sum(increase(smartems_alerting_notification_sent_total[1m])) by(job)",
           "format": "time_series",
           "instant": false,
           "interval": "1m",
@@ -74,7 +74,7 @@
           "refId": "A"
         },
         {
-          "expr": "min(grafana_alerting_active_alerts) without(instance)",
+          "expr": "min(smartems_alerting_active_alerts) without(instance)",
           "format": "time_series",
           "interval": "1m",
           "intervalFactor": 1,

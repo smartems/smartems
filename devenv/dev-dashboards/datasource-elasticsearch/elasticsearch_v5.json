@@ -640,7 +640,7 @@
       ],
       "thresholds": "0,10",
       "title": "World map panel",
-      "type": "grafana-worldmap-panel",
+      "type": "smartems-worldmap-panel",
       "unitPlural": "",
       "unitSingle": "",
       "valueName": "total"

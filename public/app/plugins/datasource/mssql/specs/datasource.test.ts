@@ -287,7 +287,7 @@ describe('MSSQLDatasource', () => {
       avg(value) as value,
       hostname as metric
     FROM
-      grafana_metric
+      smartems_metric
     WHERE
       $__timeFilter(createdAt) AND
       measurement = 'logins.count' AND
@@ -310,7 +310,7 @@ describe('MSSQLDatasource', () => {
       avg(value) as value,
       hostname as metric
     FROM
-      grafana_metric
+      smartems_metric
     WHERE
       $__timeFilter(createdAt) AND
       measurement = 'logins.count'

@@ -67,7 +67,7 @@ async function link(scope: any, elem: any, attrs: any) {
   await import('brace/snippets/json');
 
   // @ts-ignore
-  await import('./theme-grafana-dark');
+  await import('./theme-smartems-dark');
 
   const codeEditor = ace.edit(aceElem);
   const editorSession = codeEditor.getSession();

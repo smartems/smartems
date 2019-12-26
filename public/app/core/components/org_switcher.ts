@@ -16,7 +16,7 @@ const template = `
 		</a>
 	</div>
 
-  <div class="modal-content modal-content--has-scroll" grafana-scrollbar>
+  <div class="modal-content modal-content--has-scroll" smartems-scrollbar>
     <table class="filter-table form-inline">
 			<thead>
 				<tr>

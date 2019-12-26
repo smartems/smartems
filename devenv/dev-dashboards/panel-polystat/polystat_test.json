@@ -320,7 +320,7 @@
         }
       ],
       "title": "Poor use of space",
-      "type": "grafana-polystat-panel",
+      "type": "smartems-polystat-panel",
       "unitFormats": [
         {
           "submenu": [
@@ -1419,7 +1419,7 @@
         }
       ],
       "title": "Composite crash",
-      "type": "grafana-polystat-panel",
+      "type": "smartems-polystat-panel",
       "unitFormats": [
         {
           "submenu": [
@@ -2498,7 +2498,7 @@
         }
       ],
       "title": "No Value in Sensor-C Bug",
-      "type": "grafana-polystat-panel",
+      "type": "smartems-polystat-panel",
       "unitFormats": [
         {
           "submenu": [

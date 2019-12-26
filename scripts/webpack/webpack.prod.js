@@ -64,7 +64,7 @@ module.exports = merge(common, {
       checkSyntacticErrors: true,
     }),
     new MiniCssExtractPlugin({
-      filename: "grafana.[name].[hash].css"
+      filename: "smartems.[name].[hash].css"
     }),
     new ngAnnotatePlugin(),
     new HtmlWebpackPlugin({

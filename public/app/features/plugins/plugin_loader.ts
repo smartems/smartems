@@ -33,7 +33,7 @@ import * as d3 from 'd3';
 import * as emotion from 'emotion';
 import * as smartemsData from '@smartems/data';
 import * as smartemsUIraw from '@smartems/ui';
-import * as grafanaRuntime from '@smartems/runtime';
+import * as smartemsRuntime from '@smartems/runtime';
 
 // Help the 6.4 to 6.5 migration
 // The base classes were moved from @smartems/ui to @smartems/data
@@ -53,9 +53,9 @@ const bust = `?_cache=${Date.now()}`;
 function locate(load: { address: string }) {
   return load.address + bust;
 }
-grafanaRuntime.SystemJS.registry.set('plugin-loader', grafanaRuntime.SystemJS.newModule({ locate: locate }));
+smartemsRuntime.SystemJS.registry.set('plugin-loader', smartemsRuntime.SystemJS.newModule({ locate: locate }));
 
-grafanaRuntime.SystemJS.config({
+smartemsRuntime.SystemJS.config({
   baseURL: 'public',
   defaultExtension: 'js',
   packages: {
@@ -77,14 +77,14 @@ grafanaRuntime.SystemJS.config({
 });
 
 function exposeToPlugin(name: string, component: any) {
-  grafanaRuntime.SystemJS.registerDynamic(name, [], true, (require: any, exports: any, module: { exports: any }) => {
+  smartemsRuntime.SystemJS.registerDynamic(name, [], true, (require: any, exports: any, module: { exports: any }) => {
     module.exports = component;
   });
 }
 
 exposeToPlugin('@smartems/data', smartemsData);
 exposeToPlugin('@smartems/ui', smartemsUI);
-exposeToPlugin('@smartems/runtime', grafanaRuntime);
+exposeToPlugin('@smartems/runtime', smartemsRuntime);
 exposeToPlugin('lodash', _);
 exposeToPlugin('moment', moment);
 exposeToPlugin('jquery', jquery);
@@ -177,7 +177,7 @@ export async function importPluginModule(path: string): Promise<any> {
       return Promise.resolve(builtIn);
     }
   }
-  return grafanaRuntime.SystemJS.import(path);
+  return smartemsRuntime.SystemJS.import(path);
 }
 
 export function importDataSourcePlugin(meta: DataSourcePluginMeta): Promise<DataSourcePlugin<any>> {

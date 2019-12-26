@@ -2,7 +2,7 @@ import angular from 'angular';
 import { PlaylistSrv } from './playlist_srv';
 
 /** @ngInject */
-function grafanaRoutes($routeProvider: any) {
+function smartemsRoutes($routeProvider: any) {
   $routeProvider
     .when('/playlists', {
       templateUrl: 'public/app/features/playlist/partials/playlists.html',
@@ -30,4 +30,4 @@ function grafanaRoutes($routeProvider: any) {
     });
 }
 
-angular.module('smartems.routes').config(grafanaRoutes);
+angular.module('smartems.routes').config(smartemsRoutes);
