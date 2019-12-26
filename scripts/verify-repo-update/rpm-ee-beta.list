@@ -1,5 +1,5 @@
-[grafana]
-name=grafana
+[smartems]
+name=smartems
 baseurl=https://packages.smartEvo.de/enterprise/rpm-beta
 repo_gpgcheck=1
 enabled=1

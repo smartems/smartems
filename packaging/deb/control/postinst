@@ -9,8 +9,8 @@ IS_UPGRADE=false
 
 case "$1" in
 	configure)
-	[ -z "$SMARTEMS_USER" ] && SMARTEMS_USER="grafana"
-	[ -z "$SMARTEMS_GROUP" ] && SMARTEMS_GROUP="grafana"
+	[ -z "$SMARTEMS_USER" ] && SMARTEMS_USER="smartems"
+	[ -z "$SMARTEMS_GROUP" ] && SMARTEMS_GROUP="smartems"
 	if ! getent group "$SMARTEMS_GROUP" > /dev/null 2>&1 ; then
 	    addgroup --system "$SMARTEMS_GROUP" --quiet
 	fi
@@ -42,7 +42,7 @@ case "$1" in
     cp /usr/share/smartems/conf/provisioning/notifiers/sample.yaml $PROVISIONING_CFG_DIR/notifiers/sample.yaml
   fi
 
-	# configuration files should not be modifiable by grafana user, as this can be a security issue
+	# configuration files should not be modifiable by smartems user, as this can be a security issue
 	chown -Rh root:$SMARTEMS_GROUP /etc/smartems/*
 	chmod 755 /etc/smartems
 	find /etc/smartems -type f -exec chmod 640 {} ';'
@@ -55,7 +55,7 @@ case "$1" in
 
   if [ "x$IS_UPGRADE" != "xtrue" ]; then
     if command -v systemctl >/dev/null; then
-      echo "### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd"
+      echo "### NOT starting on installation, please execute the following statements to configure smartems to start automatically using systemd"
       echo " sudo /bin/systemctl daemon-reload"
       echo " sudo /bin/systemctl enable smartems-server"
       echo "### You can start smartems-server by executing"

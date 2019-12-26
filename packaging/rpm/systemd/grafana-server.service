@@ -1,18 +1,18 @@
 [Unit]
 Description=Grafana instance
-Documentation=http://docs.grafana.org
+Documentation=http://docs.smartems.org
 Wants=network-online.target
 After=network-online.target
 After=postgresql.service mariadb.service mysqld.service
 
 [Service]
 EnvironmentFile=/etc/sysconfig/smartems-server
-User=grafana
-Group=grafana
+User=smartems
+Group=smartems
 Type=notify
 Restart=on-failure
 WorkingDirectory=/usr/share/smartems
-RuntimeDirectory=grafana
+RuntimeDirectory=smartems
 RuntimeDirectoryMode=0750
 ExecStart=/usr/sbin/smartems-server                                                  \
                             --config=${CONF_FILE}                                   \

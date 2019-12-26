@@ -29,14 +29,14 @@ stopGrafana() {
 # Initial installation: $1 == 1
 # Upgrade: $1 == 2, and configured to restart on upgrade
 if [ $1 -eq 1 ] ; then
-	[ -z "$SMARTEMS_USER" ] && SMARTEMS_USER="grafana"
-	[ -z "$SMARTEMS_GROUP" ] && SMARTEMS_GROUP="grafana"
+	[ -z "$SMARTEMS_USER" ] && SMARTEMS_USER="smartems"
+	[ -z "$SMARTEMS_GROUP" ] && SMARTEMS_GROUP="smartems"
 	if ! getent group "$SMARTEMS_GROUP" > /dev/null 2>&1 ; then
     groupadd -r "$SMARTEMS_GROUP"
 	fi
 	if ! getent passwd "$SMARTEMS_USER" > /dev/null 2>&1 ; then
-    useradd -r -g grafana -d /usr/share/smartems -s /sbin/nologin \
-    -c "grafana user" grafana
+    useradd -r -g smartems -d /usr/share/smartems -s /sbin/nologin \
+    -c "smartems user" smartems
 	fi
 
   # copy user config files
@@ -61,14 +61,14 @@ if [ $1 -eq 1 ] ; then
 	chown -R $SMARTEMS_USER:$SMARTEMS_GROUP /var/log/smartems /var/lib/smartems
 	chmod 755 /var/log/smartems /var/lib/smartems
 
-	# configuration files should not be modifiable by grafana user, as this can be a security issue
+	# configuration files should not be modifiable by smartems user, as this can be a security issue
 	chown -Rh root:$SMARTEMS_GROUP /etc/smartems/*
 	chmod 755 /etc/smartems
 	find /etc/smartems -type f -exec chmod 640 {} ';'
 	find /etc/smartems -type d -exec chmod 755 {} ';'
 
   if [ -x /bin/systemctl ] ; then
-    echo "### NOT starting on installation, please execute the following statements to configure grafana to start automatically using systemd"
+    echo "### NOT starting on installation, please execute the following statements to configure smartems to start automatically using systemd"
     echo " sudo /bin/systemctl daemon-reload"
     echo " sudo /bin/systemctl enable smartems-server.service"
     echo "### You can start smartems-server by executing"
