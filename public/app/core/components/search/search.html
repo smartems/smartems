@@ -14,7 +14,7 @@
 	<div class="search-dropdown">
     <div class="search-dropdown__col_1">
       <div class="search-results-scroller">
-        <div class="search-results-container" grafana-scrollbar>
+        <div class="search-results-container" smartems-scrollbar>
           <h6 ng-show="!ctrl.isLoading && ctrl.results.length === 0">No dashboards matching your query were found.</h6>
           <dashboard-search-results
             results="ctrl.results"
@@ -49,7 +49,7 @@
         <a href="dashboard/import" class="search-filter-box-link" ng-if="ctrl.isEditor || ctrl.hasEditPermissionInFolders">
           <i class="gicon gicon-dashboard-import"></i> Import dashboard
         </a>
-        <a class="search-filter-box-link" target="_blank" href="https://smartems.com/dashboards?utm_source=grafana_search">
+        <a class="search-filter-box-link" target="_blank" href="https://smartems.com/dashboards?utm_source=smartems_search">
           <img src="public/img/icn-dashboard-tiny.svg" width="20" /> Find dashboards on smartEMS.com
         </a>
       </div>

@@ -179,14 +179,14 @@
       </p>
       <p>
         1. This could be caused by your reverse proxy settings.<br /><br />
-        2. If you host grafana under subpath make sure your grafana.ini root_url setting includes subpath<br /> <br />
+        2. If you host smartems under subpath make sure your smartems.ini root_url setting includes subpath<br /> <br />
         3. If you have a local dev build make sure you build frontend using: yarn start, yarn start:hot, or yarn build<br /> <br />
         4. Sometimes restarting smartems-server can help<br />
       </p>
     </div>
   </div>
 
-  <grafana-app class="grafana-app" ng-cloak>
+  <smartems-app class="smartems-app" ng-cloak>
     <sidemenu class="sidemenu"></sidemenu>
     <app-notifications-list class="page-alert-list"></app-notifications-list>
     <dashboard-search></dashboard-search>
@@ -199,7 +199,7 @@
           <div class="text-center">
             <ul>
               <li>
-                <a href="http://docs.grafana.org" target="_blank">
+                <a href="http://docs.smartems.org" target="_blank">
                   <i class="fa fa-file-code-o"></i>
                   Docs
                 </a>
@@ -235,7 +235,7 @@
   </smartems-app>
 
   <script>
-    window.grafanaBootData = {
+    window.smartemsBootData = {
       user: [[.User]],
       settings: [[.Settings]],
       navTree: [[.NavTree]]
