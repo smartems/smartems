@@ -408,34 +408,34 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /var/log/grafana/grafana.log
+    - /var/log/smartems/smartems.log
   include_lines: ['lvl=info']
   fields:
-    app: grafana
+    app: smartems
     level: info
 - type: log
   enabled: true
   paths:
-    - /var/log/grafana/grafana.log
+    - /var/log/smartems/smartems.log
   include_lines: ['lvl=eror']
   fields:
-    app: grafana
+    app: smartems
     level: error
 - type: log
   enabled: true
   paths:
-    - /var/log/grafana/grafana.log
+    - /var/log/smartems/smartems.log
   include_lines: ['lvl=warn']
   fields:
-    app: grafana
+    app: smartems
     level: warning
 - type: log
   enabled: true
   paths:
-    - /var/log/grafana/grafana.log
+    - /var/log/smartems/smartems.log
   include_lines: ['lvl=dbug']
   fields:
-    app: grafana
+    app: smartems
     level: debug
 
 #- type: log

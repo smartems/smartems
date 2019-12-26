@@ -71,9 +71,9 @@ func InstallPlugin(pluginName, version string, c utils.CommandLine) error {
 
 	var checksum string
 	if downloadURL == "" {
-		if strings.HasPrefix(pluginName, "grafana-") {
-			// At this point the plugin download is going through grafana.com API and thus the name is validated.
-			// Checking for grafana prefix is how it is done there so no 3rd party plugin should have that prefix.
+		if strings.HasPrefix(pluginName, "smartems-") {
+			// At this point the plugin download is going through smartems.com API and thus the name is validated.
+			// Checking for smartems prefix is how it is done there so no 3rd party plugin should have that prefix.
 			// You can supply custom plugin name and then set custom download url to 3rd party plugin but then that
 			// is up to the user to know what she is doing.
 			isInternal = true

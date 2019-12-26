@@ -18,7 +18,7 @@ var (
 	IoHelper            m.IoUtil = IoUtilImp{}
 	HttpClient          http.Client
 	HttpClientNoTimeout http.Client
-	grafanaVersion      string
+	smartemsVersion      string
 	ErrNotFoundError    = errors.New("404 not found error")
 )
 
@@ -35,7 +35,7 @@ func (e *BadRequestError) Error() string {
 }
 
 func Init(version string, skipTLSVerify bool) {
-	grafanaVersion = version
+	smartemsVersion = version
 
 	HttpClient = makeHttpClient(skipTLSVerify, 10*time.Second)
 	HttpClientNoTimeout = makeHttpClient(skipTLSVerify, 0)

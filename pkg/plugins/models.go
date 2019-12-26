@@ -87,7 +87,7 @@ func (pb *PluginBase) registerPlugin(pluginDir string) error {
 }
 
 type PluginDependencies struct {
-	GrafanaVersion string                 `json:"grafanaVersion"`
+	GrafanaVersion string                 `json:"smartemsVersion"`
 	Plugins        []PluginDependencyItem `json:"plugins"`
 }
 

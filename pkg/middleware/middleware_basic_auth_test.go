@@ -54,7 +54,7 @@ func TestMiddlewareBasicAuth(t *testing.T) {
 			var salt = "Salt"
 			var orgID int64 = 2
 
-			bus.AddHandler("grafana-auth", func(query *models.LoginUserQuery) error {
+			bus.AddHandler("smartems-auth", func(query *models.LoginUserQuery) error {
 				encoded, err := util.EncodePassword(password, salt)
 				if err != nil {
 					return err

@@ -341,8 +341,8 @@ func GetAuthProviderLabel(authModule string) string {
 		return "Google"
 	case "oauth_gitlab":
 		return "GitLab"
-	case "oauth_grafana_com", "oauth_grafananet":
-		return "grafana.com"
+	case "oauth_smartems_com", "oauth_smartemsnet":
+		return "smartems.com"
 	case "auth.saml":
 		return "SAML"
 	case "ldap", "":

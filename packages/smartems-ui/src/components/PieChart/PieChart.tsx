@@ -3,7 +3,7 @@ import { select, pie, arc, event } from 'd3';
 import sum from 'lodash/sum';
 import { DisplayValue, GrafanaThemeType } from '@smartems/data';
 import { Themeable } from '../../index';
-import { colors as grafana_colors } from '../../utils/index';
+import { colors as smartems_colors } from '../../utils/index';
 
 export enum PieChartType {
   PIE = 'pie',
@@ -54,7 +54,7 @@ export class PieChart extends PureComponent<Props> {
       if (p.color) {
         return p.color;
       }
-      return grafana_colors[idx % grafana_colors.length];
+      return smartems_colors[idx % smartems_colors.length];
     });
 
     const total = sum(data) || 1;

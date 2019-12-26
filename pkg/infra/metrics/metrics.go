@@ -8,7 +8,7 @@ import (
 	"github.com/smartems/smartems/pkg/setting"
 )
 
-const exporterName = "grafana"
+const exporterName = "smartems"
 
 var (
 	// MInstanceStart is a metric counter for started instances
@@ -146,8 +146,8 @@ var (
 	// StatsTotalActiveAdmins is a metric total amount of active admins
 	StatsTotalActiveAdmins prometheus.Gauge
 
-	// grafanaBuildVersion is a metric with a constant '1' value labeled by version, revision, branch, and goversion from which Grafana was built
-	grafanaBuildVersion *prometheus.GaugeVec
+	// smartemsBuildVersion is a metric with a constant '1' value labeled by version, revision, branch, and goversion from which Grafana was built
+	smartemsBuildVersion *prometheus.GaugeVec
 )
 
 func init() {
@@ -417,7 +417,7 @@ func init() {
 		Namespace: exporterName,
 	})
 
-	grafanaBuildVersion = prometheus.NewGaugeVec(prometheus.GaugeOpts{
+	smartemsBuildVersion = prometheus.NewGaugeVec(prometheus.GaugeOpts{
 		Name:      "build_info",
 		Help:      "A metric with a constant '1' value labeled by version, revision, branch, and goversion from which Grafana was built",
 		Namespace: exporterName,
@@ -431,7 +431,7 @@ func SetBuildInformation(version, revision, branch string) {
 		edition = "enterprise"
 	}
 
-	grafanaBuildVersion.WithLabelValues(version, revision, branch, runtime.Version(), edition).Set(1)
+	smartemsBuildVersion.WithLabelValues(version, revision, branch, runtime.Version(), edition).Set(1)
 }
 
 func initMetricVars() {
@@ -479,7 +479,7 @@ func initMetricVars() {
 		StatsTotalActiveViewers,
 		StatsTotalActiveEditors,
 		StatsTotalActiveAdmins,
-		grafanaBuildVersion,
+		smartemsBuildVersion,
 	)
 
 }

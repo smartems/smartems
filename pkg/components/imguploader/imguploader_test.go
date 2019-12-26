@@ -124,7 +124,7 @@ func TestImageUploaderFactory(t *testing.T) {
 			So(err, ShouldBeNil)
 			_, err = gcpSec.NewKey("key_file", "/etc/secrets/project-79a52befa3f6.json")
 			So(err, ShouldBeNil)
-			_, err = gcpSec.NewKey("bucket", "project-grafana-east")
+			_, err = gcpSec.NewKey("bucket", "project-smartems-east")
 			So(err, ShouldBeNil)
 
 			uploader, err := NewImageUploader()
@@ -133,7 +133,7 @@ func TestImageUploaderFactory(t *testing.T) {
 			original, ok := uploader.(*GCSUploader)
 			So(ok, ShouldBeTrue)
 			So(original.keyFile, ShouldEqual, "/etc/secrets/project-79a52befa3f6.json")
-			So(original.bucket, ShouldEqual, "project-grafana-east")
+			So(original.bucket, ShouldEqual, "project-smartems-east")
 		})
 
 		Convey("AzureBlobUploader config", func() {

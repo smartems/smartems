@@ -49,13 +49,13 @@ func (e *Error) Error() string {
 }
 
 const (
-	grafanaCom = "grafana_com"
+	smartemsCom = "smartems_com"
 )
 
 var (
 	SocialBaseUrl = "/login/"
 	SocialMap     = make(map[string]SocialConnector)
-	allOauthes    = []string{"github", "gitlab", "google", "generic_oauth", "grafananet", grafanaCom}
+	allOauthes    = []string{"github", "gitlab", "google", "generic_oauth", "smartemsnet", smartemsCom}
 )
 
 func NewOAuthService() {
@@ -96,8 +96,8 @@ func NewOAuthService() {
 			oauth2.RegisterBrokenAuthHeaderProvider(info.TokenUrl) //nolint:staticcheck
 		}
 
-		if name == "grafananet" {
-			name = grafanaCom
+		if name == "smartemsnet" {
+			name = smartemsCom
 		}
 
 		setting.OAuthService.OAuthInfos[name] = info
@@ -176,7 +176,7 @@ func NewOAuthService() {
 			}
 		}
 
-		if name == grafanaCom {
+		if name == smartemsCom {
 			config = oauth2.Config{
 				ClientID:     info.ClientId,
 				ClientSecret: info.ClientSecret,
@@ -188,7 +188,7 @@ func NewOAuthService() {
 				Scopes:      info.Scopes,
 			}
 
-			SocialMap[grafanaCom] = &SocialGrafanaCom{
+			SocialMap[smartemsCom] = &SocialGrafanaCom{
 				SocialBase: &SocialBase{
 					Config: &config,
 					log:    logger,
@@ -210,8 +210,8 @@ var GetOAuthProviders = func(cfg *setting.Cfg) map[string]bool {
 	}
 
 	for _, name := range allOauthes {
-		if name == "grafananet" {
-			name = grafanaCom
+		if name == "smartemsnet" {
+			name = smartemsCom
 		}
 
 		sec := cfg.Raw.Section("auth." + name)

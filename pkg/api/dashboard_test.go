@@ -915,7 +915,7 @@ func TestDashboardApiEndpoint(t *testing.T) {
 		})
 
 		bus.AddHandler("test", func(query *m.GetProvisionedDashboardDataByIdQuery) error {
-			query.Result = &m.DashboardProvisioning{ExternalId: "/tmp/grafana/dashboards/test/dashboard1.json"}
+			query.Result = &m.DashboardProvisioning{ExternalId: "/tmp/smartems/dashboards/test/dashboard1.json"}
 			return nil
 		})
 
@@ -949,7 +949,7 @@ func TestDashboardApiEndpoint(t *testing.T) {
 		loggedInUserScenarioWithRole("When calling GET on", "GET", "/api/dashboards/uid/dash", "/api/dashboards/uid/:uid", m.ROLE_EDITOR, func(sc *scenarioContext) {
 			mock := provisioning.NewProvisioningServiceMock()
 			mock.GetDashboardProvisionerResolvedPathFunc = func(name string) string {
-				return "/tmp/grafana/dashboards"
+				return "/tmp/smartems/dashboards"
 			}
 
 			dash := GetDashboardShouldReturn200WithConfig(sc, mock)
@@ -962,7 +962,7 @@ func TestDashboardApiEndpoint(t *testing.T) {
 		loggedInUserScenarioWithRole("When allowUiUpdates is true and calling GET on", "GET", "/api/dashboards/uid/dash", "/api/dashboards/uid/:uid", m.ROLE_EDITOR, func(sc *scenarioContext) {
 			mock := provisioning.NewProvisioningServiceMock()
 			mock.GetDashboardProvisionerResolvedPathFunc = func(name string) string {
-				return "/tmp/grafana/dashboards"
+				return "/tmp/smartems/dashboards"
 			}
 			mock.GetAllowUiUpdatesFromConfigFunc = func(name string) bool {
 				return true

@@ -27,7 +27,7 @@ func TestUserApiEndpoint(t *testing.T) {
 			bus.AddHandler("test", func(query *models.GetUserProfileQuery) error {
 				query.Result = models.UserProfileDTO{
 					Id:             int64(1),
-					Email:          "daniel@grafana.com",
+					Email:          "daniel@smartems.com",
 					Name:           "Daniel",
 					Login:          "danlee",
 					OrgId:          int64(2),
@@ -53,7 +53,7 @@ func TestUserApiEndpoint(t *testing.T) {
 			expected := `
 			{
 				"id": 1,
-				"email": "daniel@grafana.com",
+				"email": "daniel@smartems.com",
 				"name": "Daniel",
 				"login": "danlee",
 				"theme": "",
@@ -80,7 +80,7 @@ func TestUserApiEndpoint(t *testing.T) {
 
 				query.Result = &models.User{
 					Id:         int64(1),
-					Email:      "daniel@grafana.com",
+					Email:      "daniel@smartems.com",
 					Name:       "Daniel",
 					Login:      "danlee",
 					Theme:      "light",
@@ -100,7 +100,7 @@ func TestUserApiEndpoint(t *testing.T) {
 			expected := `
 			{
 				"id": 1,
-				"email": "daniel@grafana.com",
+				"email": "daniel@smartems.com",
 				"name": "Daniel",
 				"login": "danlee",
 				"theme": "light",

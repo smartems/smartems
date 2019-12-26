@@ -8,17 +8,17 @@ import (
 
 func TestEncoding(t *testing.T) {
 	Convey("When generating base64 header", t, func() {
-		result := GetBasicAuthHeader("grafana", "1234")
+		result := GetBasicAuthHeader("smartems", "1234")
 
 		So(result, ShouldEqual, "Basic Z3JhZmFuYToxMjM0")
 	})
 
 	Convey("When decoding basic auth header", t, func() {
-		header := GetBasicAuthHeader("grafana", "1234")
+		header := GetBasicAuthHeader("smartems", "1234")
 		username, password, err := DecodeBasicAuthHeader(header)
 		So(err, ShouldBeNil)
 
-		So(username, ShouldEqual, "grafana")
+		So(username, ShouldEqual, "smartems")
 		So(password, ShouldEqual, "1234")
 	})
 

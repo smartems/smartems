@@ -54,7 +54,7 @@ const EmptyListCTA: React.FunctionComponent<Props> = ({
           ''
         )}
         {infoBox ? (
-          <div key="infoBoxHtml" className={`grafana-info-box ${infoBoxStyles}`}>
+          <div key="infoBoxHtml" className={`smartems-info-box ${infoBoxStyles}`}>
             {infoBoxTitle && <h5>{infoBoxTitle}</h5>}
             <div dangerouslySetInnerHTML={infoBox} />
           </div>

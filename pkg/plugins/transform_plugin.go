@@ -126,13 +126,13 @@ func (p *TransformPlugin) Kill() {
 // ...
 
 func NewTransformWrapper(log log.Logger, plugin transform.TransformPlugin) *TransformWrapper {
-	return &TransformWrapper{plugin, log, &grafanaAPI{log}}
+	return &TransformWrapper{plugin, log, &smartemsAPI{log}}
 }
 
 type TransformWrapper struct {
 	transform.TransformPlugin
 	logger log.Logger
-	api    *grafanaAPI
+	api    *smartemsAPI
 }
 
 func (tw *TransformWrapper) Transform(ctx context.Context, query *tsdb.TsdbQuery) (*tsdb.Response, error) {
@@ -194,11 +194,11 @@ func (tw *TransformWrapper) Transform(ctx context.Context, query *tsdb.TsdbQuery
 	return res, nil
 }
 
-type grafanaAPI struct {
+type smartemsAPI struct {
 	logger log.Logger
 }
 
-func (s *grafanaAPI) QueryDatasource(ctx context.Context, req *pluginv2.QueryDatasourceRequest) (*pluginv2.QueryDatasourceResponse, error) {
+func (s *smartemsAPI) QueryDatasource(ctx context.Context, req *pluginv2.QueryDatasourceRequest) (*pluginv2.QueryDatasourceResponse, error) {
 	if len(req.Queries) == 0 {
 		return nil, fmt.Errorf("zero queries found in datasource request")
 	}

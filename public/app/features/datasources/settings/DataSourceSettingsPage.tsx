@@ -134,7 +134,7 @@ export class DataSourceSettingsPage extends PureComponent<Props, State> {
 
   renderIsReadOnlyMessage() {
     return (
-      <div className="grafana-info-box span8">
+      <div className="smartems-info-box span8">
         This datasource was added by config and cannot be modified using the UI. Please contact your server admin to
         update this datasource.
       </div>

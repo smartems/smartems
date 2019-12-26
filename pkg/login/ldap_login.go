@@ -83,7 +83,7 @@ func DisableExternalUser(username string) error {
 			userQuery.Result.Login,
 		)
 
-		// Mark user as disabled in grafana db
+		// Mark user as disabled in smartems db
 		disableUserCmd := &models.DisableUserCommand{
 			UserId:     userQuery.Result.UserId,
 			IsDisabled: true,

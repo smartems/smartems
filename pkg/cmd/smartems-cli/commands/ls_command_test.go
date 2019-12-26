@@ -36,7 +36,7 @@ func TestMissingPath(t *testing.T) {
 				CliArgs: []string{"ls"},
 				GlobalFlags: &commandstest.FakeFlagger{
 					Data: map[string]interface{}{
-						"path": "/var/lib/grafana/plugins",
+						"path": "/var/lib/smartems/plugins",
 					},
 				},
 			}
@@ -56,7 +56,7 @@ func TestMissingPath(t *testing.T) {
 				CliArgs: []string{"ls"},
 				GlobalFlags: &commandstest.FakeFlagger{
 					Data: map[string]interface{}{
-						"path": "/var/lib/grafana/plugins",
+						"path": "/var/lib/smartems/plugins",
 					},
 				},
 			}
@@ -76,7 +76,7 @@ func TestMissingPath(t *testing.T) {
 				CliArgs: []string{"ls"},
 				GlobalFlags: &commandstest.FakeFlagger{
 					Data: map[string]interface{}{
-						"path": "/var/lib/grafana/plugins",
+						"path": "/var/lib/smartems/plugins",
 					},
 				},
 			}

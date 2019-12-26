@@ -94,7 +94,7 @@ func TestMiddlewareContext(t *testing.T) {
 
 			Convey("when the cache key contains additional headers", func() {
 				setting.AuthProxyHeaders = map[string]string{"Groups": "X-WEBAUTH-GROUPS"}
-				group := "grafana-core-team"
+				group := "smartems-core-team"
 				req.Header.Add("X-WEBAUTH-GROUPS", group)
 
 				key := fmt.Sprintf(CachePrefix, base32.StdEncoding.EncodeToString([]byte(name+"-"+group)))

@@ -27,19 +27,19 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:   "pluginsDir",
-			Usage:  "path to the grafana plugin directory",
+			Usage:  "path to the smartems plugin directory",
 			Value:  utils.GetGrafanaPluginDir(runtime.GOOS),
 			EnvVar: "GF_PLUGIN_DIR",
 		},
 		cli.StringFlag{
 			Name:   "repo",
 			Usage:  "url to the plugin repository",
-			Value:  "https://grafana.com/api/plugins",
+			Value:  "https://smartems.com/api/plugins",
 			EnvVar: "GF_PLUGIN_REPO",
 		},
 		cli.StringFlag{
 			Name:   "pluginUrl",
-			Usage:  "Full url to the plugin zip file instead of downloading the plugin from grafana.com/api",
+			Usage:  "Full url to the plugin zip file instead of downloading the plugin from smartems.com/api",
 			Value:  "",
 			EnvVar: "GF_PLUGIN_URL",
 		},
@@ -57,7 +57,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:  "homepath",
-			Usage: "path to grafana install/home path, defaults to working directory",
+			Usage: "path to smartems install/home path, defaults to working directory",
 		},
 		cli.StringFlag{
 			Name:  "config",

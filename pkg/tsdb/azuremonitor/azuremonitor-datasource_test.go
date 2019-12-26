@@ -38,8 +38,8 @@ func TestAzureMonitorDatasource(t *testing.T) {
 							"azureMonitor": map[string]interface{}{
 								"timeGrain":        "PT1M",
 								"aggregation":      "Average",
-								"resourceGroup":    "grafanastaging",
-								"resourceName":     "grafana",
+								"resourceGroup":    "smartemsstaging",
+								"resourceName":     "smartems",
 								"metricDefinition": "Microsoft.Compute/virtualMachines",
 								"metricNamespace":  "Microsoft.Compute-virtualMachines",
 								"metricName":       "Percentage CPU",
@@ -58,7 +58,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 
 				So(len(queries), ShouldEqual, 1)
 				So(queries[0].RefID, ShouldEqual, "A")
-				So(queries[0].URL, ShouldEqual, "12345678-aaaa-bbbb-cccc-123456789abc/resourceGroups/grafanastaging/providers/Microsoft.Compute/virtualMachines/grafana/providers/microsoft.insights/metrics")
+				So(queries[0].URL, ShouldEqual, "12345678-aaaa-bbbb-cccc-123456789abc/resourceGroups/smartemsstaging/providers/Microsoft.Compute/virtualMachines/smartems/providers/microsoft.insights/metrics")
 				So(queries[0].Target, ShouldEqual, "aggregation=Average&api-version=2018-01-01&interval=PT1M&metricnames=Percentage+CPU&metricnamespace=Microsoft.Compute-virtualMachines&timespan=2018-03-15T13%3A00%3A00Z%2F2018-03-15T13%3A34%3A00Z")
 				So(len(queries[0].Params), ShouldEqual, 6)
 				So(queries[0].Params["timespan"][0], ShouldEqual, "2018-03-15T13:00:00Z/2018-03-15T13:34:00Z")
@@ -74,8 +74,8 @@ func TestAzureMonitorDatasource(t *testing.T) {
 					"azureMonitor": map[string]interface{}{
 						"timeGrain":        "auto",
 						"aggregation":      "Average",
-						"resourceGroup":    "grafanastaging",
-						"resourceName":     "grafana",
+						"resourceGroup":    "smartemsstaging",
+						"resourceName":     "smartems",
 						"metricDefinition": "Microsoft.Compute/virtualMachines",
 						"metricNamespace":  "Microsoft.Compute-virtualMachines",
 						"metricName":       "Percentage CPU",
@@ -96,8 +96,8 @@ func TestAzureMonitorDatasource(t *testing.T) {
 					"azureMonitor": map[string]interface{}{
 						"timeGrain":           "auto",
 						"aggregation":         "Average",
-						"resourceGroup":       "grafanastaging",
-						"resourceName":        "grafana",
+						"resourceGroup":       "smartemsstaging",
+						"resourceName":        "smartems",
 						"metricDefinition":    "Microsoft.Compute/virtualMachines",
 						"metricNamespace":     "Microsoft.Compute-virtualMachines",
 						"metricName":          "Percentage CPU",
@@ -119,8 +119,8 @@ func TestAzureMonitorDatasource(t *testing.T) {
 					"azureMonitor": map[string]interface{}{
 						"timeGrain":        "PT1M",
 						"aggregation":      "Average",
-						"resourceGroup":    "grafanastaging",
-						"resourceName":     "grafana",
+						"resourceGroup":    "smartemsstaging",
+						"resourceName":     "smartems",
 						"metricDefinition": "Microsoft.Compute/virtualMachines",
 						"metricNamespace":  "Microsoft.Compute-virtualMachines",
 						"metricName":       "Percentage CPU",
@@ -144,8 +144,8 @@ func TestAzureMonitorDatasource(t *testing.T) {
 					"azureMonitor": map[string]interface{}{
 						"timeGrain":        "PT1M",
 						"aggregation":      "Average",
-						"resourceGroup":    "grafanastaging",
-						"resourceName":     "grafana",
+						"resourceGroup":    "smartemsstaging",
+						"resourceName":     "smartems",
 						"metricDefinition": "Microsoft.Compute/virtualMachines",
 						"metricNamespace":  "Microsoft.Compute-virtualMachines",
 						"metricName":       "Percentage CPU",
@@ -174,7 +174,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Average"},
@@ -184,7 +184,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				So(err, ShouldBeNil)
 
 				So(len(res.Series), ShouldEqual, 1)
-				So(res.Series[0].Name, ShouldEqual, "grafana.Percentage CPU")
+				So(res.Series[0].Name, ShouldEqual, "smartems.Percentage CPU")
 				So(len(res.Series[0].Points), ShouldEqual, 5)
 
 				So(res.Series[0].Points[0][0].Float64, ShouldEqual, 2.0875)
@@ -210,7 +210,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Total"},
@@ -230,7 +230,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Maximum"},
@@ -250,7 +250,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Minimum"},
@@ -270,7 +270,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Count"},
@@ -290,7 +290,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				res := &tsdb.QueryResult{Meta: simplejson.New(), RefId: "A"}
 				query := &AzureMonitorQuery{
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Average"},
@@ -300,13 +300,13 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				So(err, ShouldBeNil)
 				So(len(res.Series), ShouldEqual, 3)
 
-				So(res.Series[0].Name, ShouldEqual, "grafana{blobtype=PageBlob}.Blob Count")
+				So(res.Series[0].Name, ShouldEqual, "smartems{blobtype=PageBlob}.Blob Count")
 				So(res.Series[0].Points[0][0].Float64, ShouldEqual, 3)
 
-				So(res.Series[1].Name, ShouldEqual, "grafana{blobtype=BlockBlob}.Blob Count")
+				So(res.Series[1].Name, ShouldEqual, "smartems{blobtype=BlockBlob}.Blob Count")
 				So(res.Series[1].Points[0][0].Float64, ShouldEqual, 1)
 
-				So(res.Series[2].Name, ShouldEqual, "grafana{blobtype=Azure Data Lake Storage}.Blob Count")
+				So(res.Series[2].Name, ShouldEqual, "smartems{blobtype=Azure Data Lake Storage}.Blob Count")
 				So(res.Series[2].Points[0][0].Float64, ShouldEqual, 0)
 			})
 
@@ -318,7 +318,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				query := &AzureMonitorQuery{
 					Alias: "custom {{resourcegroup}} {{namespace}} {{resourceName}} {{metric}}",
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Total"},
@@ -327,7 +327,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				err = datasource.parseResponse(res, data, query)
 				So(err, ShouldBeNil)
 
-				So(res.Series[0].Name, ShouldEqual, "custom grafanastaging Microsoft.Compute/virtualMachines grafana Percentage CPU")
+				So(res.Series[0].Name, ShouldEqual, "custom smartemsstaging Microsoft.Compute/virtualMachines smartems Percentage CPU")
 			})
 
 			Convey("when data has dimension filters and alias patterns", func() {
@@ -338,7 +338,7 @@ func TestAzureMonitorDatasource(t *testing.T) {
 				query := &AzureMonitorQuery{
 					Alias: "{{dimensionname}}={{DimensionValue}}",
 					UrlComponents: map[string]string{
-						"resourceName": "grafana",
+						"resourceName": "smartems",
 					},
 					Params: url.Values{
 						"aggregation": {"Average"},

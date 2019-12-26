@@ -67,11 +67,11 @@ func TestStackdriver(t *testing.T) {
 				So(queries[0].Params["filter"][0], ShouldEqual, `metric.type="a/metric/type" key="value" key2="value2"`)
 			})
 
-			Convey("and alignmentPeriod is set to grafana-auto", func() {
+			Convey("and alignmentPeriod is set to smartems-auto", func() {
 				Convey("and IntervalMs is larger than 60000", func() {
 					tsdbQuery.Queries[0].IntervalMs = 1000000
 					tsdbQuery.Queries[0].Model = simplejson.NewFromAny(map[string]interface{}{
-						"alignmentPeriod": "grafana-auto",
+						"alignmentPeriod": "smartems-auto",
 						"filters":         []interface{}{"key", "=", "value", "AND", "key2", "=", "value2"},
 					})
 
@@ -82,7 +82,7 @@ func TestStackdriver(t *testing.T) {
 				Convey("and IntervalMs is less than 60000", func() {
 					tsdbQuery.Queries[0].IntervalMs = 30000
 					tsdbQuery.Queries[0].Model = simplejson.NewFromAny(map[string]interface{}{
-						"alignmentPeriod": "grafana-auto",
+						"alignmentPeriod": "smartems-auto",
 						"filters":         []interface{}{"key", "=", "value", "AND", "key2", "=", "value2"},
 					})
 
@@ -275,7 +275,7 @@ func TestStackdriver(t *testing.T) {
 					So(resourceLabels["zone"][2], ShouldEqual, "us-east1-b")
 
 					So(len(resourceLabels["project_id"]), ShouldEqual, 1)
-					So(resourceLabels["project_id"][0], ShouldEqual, "grafana-prod")
+					So(resourceLabels["project_id"][0], ShouldEqual, "smartems-prod")
 				})
 			})
 

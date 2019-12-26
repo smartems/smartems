@@ -70,7 +70,7 @@ func TestLoginErrorCookieApiEndpoint(t *testing.T) {
 		hs.LoginView(c)
 	})
 
-	setting.LoginCookieName = "grafana_session"
+	setting.LoginCookieName = "smartems_session"
 	setting.SecretKey = "login_testing"
 
 	setting.OAuthService = &setting.OAuther{}
@@ -159,7 +159,7 @@ func TestAuthProxyLoginWithEnableLoginToken(t *testing.T) {
 
 	setCookie, ok := sc.resp.Header()["Set-Cookie"]
 	assert.True(t, ok, "Set-Cookie exists")
-	assert.Equal(t, "grafana_session=; Path=/; Max-Age=0; HttpOnly", setCookie[0])
+	assert.Equal(t, "smartems_session=; Path=/; Max-Age=0; HttpOnly", setCookie[0])
 }
 
 func setupAuthProxyLoginTest(enableLoginToken bool) *scenarioContext {

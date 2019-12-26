@@ -23,7 +23,7 @@ import (
 
 // To run this test, set runPostgresTests=true
 // Or from the commandline: SMARTEMS_TEST_DB=postgres go test -v ./pkg/tsdb/postgres
-// The tests require a PostgreSQL db named grafanadstest and a user/password grafanatest/grafanatest!
+// The tests require a PostgreSQL db named smartemsdstest and a user/password smartemstest/smartemstest!
 // Use the docker/blocks/postgres_tests/docker-compose.yaml to spin up a
 // preconfigured Postgres server suitable for running these tests.
 // There is also a datasource and dashboard provisioned by devenv scripts that you can
@@ -974,7 +974,7 @@ func TestPostgres(t *testing.T) {
 }
 
 func InitPostgresTestDB(t *testing.T) *xorm.Engine {
-	x, err := xorm.NewEngine(sqlutil.TestDB_Postgres.DriverName, strings.Replace(sqlutil.TestDB_Postgres.ConnStr, "dbname=grafanatest", "dbname=grafanadstest", 1))
+	x, err := xorm.NewEngine(sqlutil.TestDB_Postgres.DriverName, strings.Replace(sqlutil.TestDB_Postgres.ConnStr, "dbname=smartemstest", "dbname=smartemsdstest", 1))
 	if err != nil {
 		t.Fatalf("Failed to init postgres db %v", err)
 	}

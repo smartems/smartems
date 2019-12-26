@@ -129,11 +129,11 @@ class NewDataSourcePage extends PureComponent<Props> {
         <div className="add-data-source-more">
           <a
             className="btn btn-inverse"
-            href="https://grafana.com/plugins?type=datasource&utm_source=new-data-source"
+            href="https://smartems.com/plugins?type=datasource&utm_source=new-data-source"
             target="_blank"
             rel="noopener"
           >
-            Find more data source plugins on grafana.com
+            Find more data source plugins on smartems.com
           </a>
         </div>
       </>
@@ -197,7 +197,7 @@ const DataSourceTypeCard: FC<DataSourceTypeCardProps> = props => {
         {learnMoreLink && (
           <a
             className="btn btn-inverse"
-            href={`${learnMoreLink}?utm_source=grafana_add_ds`}
+            href={`${learnMoreLink}?utm_source=smartems_add_ds`}
             target="_blank"
             rel="noopener"
             onClick={onLearnMoreClick}
@@ -220,11 +220,11 @@ function getGrafanaCloudPhantomPlugin(): DataSourcePluginMeta {
     baseUrl: '',
     info: {
       description: 'Hosted Graphite, Prometheus and Loki',
-      logos: { small: 'public/img/grafana_icon.svg', large: 'asd' },
+      logos: { small: 'public/img/smartems_icon.svg', large: 'asd' },
       author: { name: 'Grafana Labs' },
       links: [
         {
-          url: 'https://grafana.com/products/cloud/',
+          url: 'https://smartems.com/products/cloud/',
           name: 'Learn more',
         },
       ],

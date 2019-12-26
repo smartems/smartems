@@ -223,7 +223,7 @@ func (auth *AuthProxy) LoginViaLDAP() (int64, *Error) {
 		return 0, newError(err.Error(), nil)
 	}
 
-	// Have to sync grafana and LDAP user during log in
+	// Have to sync smartems and LDAP user during log in
 	upsert := &models.UpsertUserCommand{
 		ReqContext:    auth.ctx,
 		SignupAllowed: auth.LDAPAllowSignup,

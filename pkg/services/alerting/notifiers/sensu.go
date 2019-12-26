@@ -83,11 +83,11 @@ func (sn *SensuNotifier) Notify(evalContext *alerting.EvalContext) error {
 	// Sensu alerts cannot have spaces in them
 	bodyJSON.Set("name", strings.Replace(evalContext.Rule.Name, " ", "_", -1))
 	// Sensu alerts require a source. We set it to the user-specified value (optional),
-	// else we fallback and use the grafana ruleID.
+	// else we fallback and use the smartems ruleID.
 	if sn.Source != "" {
 		bodyJSON.Set("source", sn.Source)
 	} else {
-		bodyJSON.Set("source", "grafana_rule_"+strconv.FormatInt(evalContext.Rule.ID, 10))
+		bodyJSON.Set("source", "smartems_rule_"+strconv.FormatInt(evalContext.Rule.ID, 10))
 	}
 	// Finally, sensu expects an output
 	// We set it to a default output

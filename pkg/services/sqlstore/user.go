@@ -351,7 +351,7 @@ func GetSignedInUser(query *models.GetSignedInUserQuery) error {
 
 	var rawSql = `SELECT
 		u.id             as user_id,
-		u.is_admin       as is_grafana_admin,
+		u.is_admin       as is_smartems_admin,
 		u.email          as email,
 		u.login          as login,
 		u.name           as name,

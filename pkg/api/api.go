@@ -407,7 +407,7 @@ func (hs *HTTPServer) registerRoutes() {
 	// rendering
 	r.Get("/render/*", reqSignedIn, hs.RenderToPng)
 
-	// grafana.net proxy
+	// smartems.net proxy
 	r.Any("/api/gnet/*", reqSignedIn, ProxyGnetRequest)
 
 	// Gravatar service.

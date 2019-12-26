@@ -64,7 +64,7 @@ func (e *AlertEngine) Run(ctx context.Context) error {
 	return err
 }
 
-func (e *AlertEngine) alertingTicker(grafanaCtx context.Context) error {
+func (e *AlertEngine) alertingTicker(smartemsCtx context.Context) error {
 	defer func() {
 		if err := recover(); err != nil {
 			e.log.Error("Scheduler Panic: stopping alertingTicker", "error", err, "stack", log.Stack(1))
@@ -75,8 +75,8 @@ func (e *AlertEngine) alertingTicker(grafanaCtx context.Context) error {
 
 	for {
 		select {
-		case <-grafanaCtx.Done():
-			return grafanaCtx.Err()
+		case <-smartemsCtx.Done():
+			return smartemsCtx.Err()
 		case tick := <-e.ticker.C:
 			// TEMP SOLUTION update rules ever tenth tick
 			if tickIndex%10 == 0 {
@@ -89,12 +89,12 @@ func (e *AlertEngine) alertingTicker(grafanaCtx context.Context) error {
 	}
 }
 
-func (e *AlertEngine) runJobDispatcher(grafanaCtx context.Context) error {
-	dispatcherGroup, alertCtx := errgroup.WithContext(grafanaCtx)
+func (e *AlertEngine) runJobDispatcher(smartemsCtx context.Context) error {
+	dispatcherGroup, alertCtx := errgroup.WithContext(smartemsCtx)
 
 	for {
 		select {
-		case <-grafanaCtx.Done():
+		case <-smartemsCtx.Done():
 			return dispatcherGroup.Wait()
 		case job := <-e.execQueue:
 			dispatcherGroup.Go(func() error { return e.processJobWithRetry(alertCtx, job) })
@@ -106,7 +106,7 @@ var (
 	unfinishedWorkTimeout = time.Second * 5
 )
 
-func (e *AlertEngine) processJobWithRetry(grafanaCtx context.Context, job *Job) error {
+func (e *AlertEngine) processJobWithRetry(smartemsCtx context.Context, job *Job) error {
 	defer func() {
 		if err := recover(); err != nil {
 			e.log.Error("Alert Panic", "error", err, "stack", log.Stack(1))
@@ -122,13 +122,13 @@ func (e *AlertEngine) processJobWithRetry(grafanaCtx context.Context, job *Job) 
 
 	for {
 		select {
-		case <-grafanaCtx.Done():
-			// In case grafana server context is cancel, let a chance to job processing
+		case <-smartemsCtx.Done():
+			// In case smartems server context is cancel, let a chance to job processing
 			// to finish gracefully - by waiting a timeout duration - before forcing its end.
 			unfinishedWorkTimer := time.NewTimer(unfinishedWorkTimeout)
 			select {
 			case <-unfinishedWorkTimer.C:
-				return e.endJob(grafanaCtx.Err(), cancelChan, job)
+				return e.endJob(smartemsCtx.Err(), cancelChan, job)
 			case <-attemptChan:
 				return e.endJob(nil, cancelChan, job)
 			}

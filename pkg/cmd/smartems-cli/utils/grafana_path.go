@@ -17,7 +17,7 @@ func GetGrafanaPluginDir(currentOS string) string {
 	return returnOsDefault(currentOS)
 }
 
-// getGrafanaRoot tries to get root of directory when developing grafana ie repo root. It is not perfect it just
+// getGrafanaRoot tries to get root of directory when developing smartems ie repo root. It is not perfect it just
 // checks what is the binary path and tries to guess based on that but if it is not running in dev env you get a bogus
 // path back.
 func getGrafanaRoot() (string, error) {
@@ -60,12 +60,12 @@ func returnOsDefault(currentOs string) string {
 	case "windows":
 		return "../data/plugins"
 	case "darwin":
-		return "/usr/local/var/lib/grafana/plugins"
+		return "/usr/local/var/lib/smartems/plugins"
 	case "freebsd":
-		return "/var/db/grafana/plugins"
+		return "/var/db/smartems/plugins"
 	case "openbsd":
-		return "/var/grafana/plugins"
+		return "/var/smartems/plugins"
 	default: //"linux"
-		return "/var/lib/grafana/plugins"
+		return "/var/lib/smartems/plugins"
 	}
 }

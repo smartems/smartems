@@ -14,7 +14,7 @@ type InstalledPlugin struct {
 }
 
 type Dependencies struct {
-	GrafanaVersion string   `json:"grafanaVersion"`
+	GrafanaVersion string   `json:"smartemsVersion"`
 	Plugins        []Plugin `json:"plugins"`
 }
 

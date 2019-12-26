@@ -63,7 +63,7 @@ var metricCategoryPrefix = []string{
 	"go_",
 	"process_"}
 
-var trimMetricPrefix = []string{"grafana_"}
+var trimMetricPrefix = []string{"smartems_"}
 
 // Config defines the Graphite bridge config.
 type Config struct {

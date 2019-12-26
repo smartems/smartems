@@ -68,7 +68,7 @@ export const getRowContexts = async (
           const timestamp = timestampField.values.get(fieldIndex);
 
           // We need to filter out the row we're basing our search from because of how start/end params work in Loki API
-          // see https://github.com/grafana/loki/issues/597#issuecomment-506408980
+          // see https://github.com/smartems/loki/issues/597#issuecomment-506408980
           // the alternative to create our own add 1 nanosecond method to the a timestamp string would be quite complex
           if (timestamp === row.timestamp) {
             continue;

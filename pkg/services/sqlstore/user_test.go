@@ -451,7 +451,7 @@ func TestUserDataAccess(t *testing.T) {
 			})
 		})
 
-		Convey("Given one grafana admin user", func() {
+		Convey("Given one smartems admin user", func() {
 			var err error
 			createUserCmd := &models.CreateUserCommand{
 				Email:   fmt.Sprint("admin", "@test.com"),

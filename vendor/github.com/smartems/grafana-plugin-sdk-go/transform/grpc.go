@@ -58,7 +58,7 @@ type GRPCGrafanaAPIClient struct{ client pluginv2.GrafanaAPIClient }
 func (m *GRPCGrafanaAPIClient) QueryDatasource(ctx context.Context, req *pluginv2.QueryDatasourceRequest) (*pluginv2.QueryDatasourceResponse, error) {
 	resp, err := m.client.QueryDatasource(ctx, req)
 	if err != nil {
-		hclog.Default().Info("grafana.QueryDatasource", "client", "start", "err", err)
+		hclog.Default().Info("smartems.QueryDatasource", "client", "start", "err", err)
 		return nil, err
 	}
 	return resp, err

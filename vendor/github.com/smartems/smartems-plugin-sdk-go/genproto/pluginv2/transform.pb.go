@@ -477,15 +477,15 @@ type GrafanaAPIClient interface {
 	QueryDatasource(ctx context.Context, in *QueryDatasourceRequest, opts ...grpc.CallOption) (*QueryDatasourceResponse, error)
 }
 
-type grafanaAPIClient struct {
+type smartemsAPIClient struct {
 	cc *grpc.ClientConn
 }
 
 func NewGrafanaAPIClient(cc *grpc.ClientConn) GrafanaAPIClient {
-	return &grafanaAPIClient{cc}
+	return &smartemsAPIClient{cc}
 }
 
-func (c *grafanaAPIClient) QueryDatasource(ctx context.Context, in *QueryDatasourceRequest, opts ...grpc.CallOption) (*QueryDatasourceResponse, error) {
+func (c *smartemsAPIClient) QueryDatasource(ctx context.Context, in *QueryDatasourceRequest, opts ...grpc.CallOption) (*QueryDatasourceResponse, error) {
 	out := new(QueryDatasourceResponse)
 	err := c.cc.Invoke(ctx, "/pluginv2.GrafanaAPI/QueryDatasource", in, out, opts...)
 	if err != nil {

@@ -14,7 +14,7 @@ import (
 
 func TestMiddlewareQuota(t *testing.T) {
 
-	Convey("Given the grafana quota middleware", t, func() {
+	Convey("Given the smartems quota middleware", t, func() {
 		setting.AnonymousEnabled = false
 		setting.Quota = setting.QuotaSettings{
 			Enabled: true,

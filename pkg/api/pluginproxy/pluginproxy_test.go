@@ -102,7 +102,7 @@ func TestPluginProxy(t *testing.T) {
 		bus.AddHandler("test", func(query *m.GetPluginSettingByIdQuery) error {
 			query.Result = &m.PluginSetting{
 				JsonData: map[string]interface{}{
-					"dynamicUrl": "https://dynamic.grafana.com",
+					"dynamicUrl": "https://dynamic.smartems.com",
 				},
 			}
 			return nil
@@ -123,7 +123,7 @@ func TestPluginProxy(t *testing.T) {
 			So(header.Get("X-Grafana-User"), ShouldEqual, "")
 		})
 		Convey("Should set req.URL to be interpolated value from jsonData", func() {
-			So(req.URL.String(), ShouldEqual, "https://dynamic.grafana.com")
+			So(req.URL.String(), ShouldEqual, "https://dynamic.smartems.com")
 		})
 		Convey("Route url should not be modified", func() {
 			So(route.Url, ShouldEqual, "{{.JsonData.dynamicUrl}}")

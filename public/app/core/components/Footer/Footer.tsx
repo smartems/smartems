@@ -16,13 +16,13 @@ export const Footer: FC<Props> = React.memo(
         <div className="text-center">
           <ul>
             <li>
-              <a href="http://docs.grafana.org" target="_blank" rel="noopener">
+              <a href="http://docs.smartems.org" target="_blank" rel="noopener">
                 <i className="fa fa-file-code-o" /> Docs
               </a>
             </li>
             <li>
               <a
-                href="https://grafana.com/products/enterprise/?utm_source=grafana_footer"
+                href="https://smartems.com/products/enterprise/?utm_source=smartems_footer"
                 target="_blank"
                 rel="noopener"
               >
@@ -30,12 +30,12 @@ export const Footer: FC<Props> = React.memo(
               </a>
             </li>
             <li>
-              <a href="https://community.grafana.com/" target="_blank" rel="noopener">
+              <a href="https://community.smartems.com/" target="_blank" rel="noopener">
                 <i className="fa fa-comments-o" /> Community
               </a>
             </li>
             <li>
-              <a href="https://grafana.com" target="_blank" rel="noopener">
+              <a href="https://smartems.com" target="_blank" rel="noopener">
                 {appName}
               </a>{' '}
               <span>
@@ -45,7 +45,7 @@ export const Footer: FC<Props> = React.memo(
             {newGrafanaVersionExists && (
               <li>
                 <Tooltip placement="auto" content={newGrafanaVersion}>
-                  <a href="https://grafana.com/get" target="_blank" rel="noopener">
+                  <a href="https://smartems.com/get" target="_blank" rel="noopener">
                     New version available!
                   </a>
                 </Tooltip>

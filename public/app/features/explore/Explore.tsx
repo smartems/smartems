@@ -287,7 +287,7 @@ export class Explore extends React.PureComponent<ExploreProps> {
                   <main className={`m-t-2 ${styles.logsMain}`} style={{ width }}>
                     <ErrorBoundaryAlert>
                       {showingStartPage && (
-                        <div className="grafana-info-box grafana-info-box--max-lg">
+                        <div className="smartems-info-box smartems-info-box--max-lg">
                           <StartPage onClickExample={this.onClickExample} datasource={datasourceInstance} />
                         </div>
                       )}

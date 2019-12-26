@@ -11,9 +11,9 @@ import (
 func TestDashboardModel(t *testing.T) {
 
 	Convey("Generate full dashboard url", t, func() {
-		setting.AppUrl = "http://grafana.local/"
+		setting.AppUrl = "http://smartems.local/"
 		fullUrl := GetFullDashboardUrl("uid", "my-dashboard")
-		So(fullUrl, ShouldEqual, "http://grafana.local/d/uid/my-dashboard")
+		So(fullUrl, ShouldEqual, "http://smartems.local/d/uid/my-dashboard")
 	})
 
 	Convey("Generate relative dashboard url", t, func() {
@@ -26,13 +26,13 @@ func TestDashboardModel(t *testing.T) {
 		dashboard := NewDashboard("Grafana Play Home")
 		dashboard.UpdateSlug()
 
-		So(dashboard.Slug, ShouldEqual, "grafana-play-home")
+		So(dashboard.Slug, ShouldEqual, "smartems-play-home")
 	})
 
 	Convey("Can slugify title", t, func() {
 		slug := SlugifyTitle("Grafana Play Home")
 
-		So(slug, ShouldEqual, "grafana-play-home")
+		So(slug, ShouldEqual, "smartems-play-home")
 	})
 
 	Convey("Given a dashboard json", t, func() {

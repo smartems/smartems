@@ -96,7 +96,7 @@ func TestGetUserFromLDAPApiEndpoint_OrgNotfound(t *testing.T) {
 		Name:           "John Doe",
 		Email:          "john.doe@example.com",
 		Login:          "johndoe",
-		Groups:         []string{"cn=admins,ou=groups,dc=grafana,dc=org"},
+		Groups:         []string{"cn=admins,ou=groups,dc=smartems,dc=org"},
 		OrgRoles:       map[int64]models.RoleType{1: models.ROLE_ADMIN, 2: models.ROLE_VIEWER},
 		IsGrafanaAdmin: &isAdmin,
 	}
@@ -110,12 +110,12 @@ func TestGetUserFromLDAPApiEndpoint_OrgNotfound(t *testing.T) {
 		},
 		Groups: []*ldap.GroupToOrgRole{
 			{
-				GroupDN: "cn=admins,ou=groups,dc=grafana,dc=org",
+				GroupDN: "cn=admins,ou=groups,dc=smartems,dc=org",
 				OrgId:   1,
 				OrgRole: models.ROLE_ADMIN,
 			},
 			{
-				GroupDN: "cn=admins,ou=groups,dc=grafana,dc=org",
+				GroupDN: "cn=admins,ou=groups,dc=smartems,dc=org",
 				OrgId:   2,
 				OrgRole: models.ROLE_VIEWER,
 			},
@@ -158,7 +158,7 @@ func TestGetUserFromLDAPApiEndpoint(t *testing.T) {
 		Name:           "John Doe",
 		Email:          "john.doe@example.com",
 		Login:          "johndoe",
-		Groups:         []string{"cn=admins,ou=groups,dc=grafana,dc=org", "another-group-not-matched"},
+		Groups:         []string{"cn=admins,ou=groups,dc=smartems,dc=org", "another-group-not-matched"},
 		OrgRoles:       map[int64]models.RoleType{1: models.ROLE_ADMIN},
 		IsGrafanaAdmin: &isAdmin,
 	}
@@ -172,12 +172,12 @@ func TestGetUserFromLDAPApiEndpoint(t *testing.T) {
 		},
 		Groups: []*ldap.GroupToOrgRole{
 			{
-				GroupDN: "cn=admins,ou=groups,dc=grafana,dc=org",
+				GroupDN: "cn=admins,ou=groups,dc=smartems,dc=org",
 				OrgId:   1,
 				OrgRole: models.ROLE_ADMIN,
 			},
 			{
-				GroupDN: "cn=admins2,ou=groups,dc=grafana,dc=org",
+				GroupDN: "cn=admins2,ou=groups,dc=smartems,dc=org",
 				OrgId:   1,
 				OrgRole: models.ROLE_ADMIN,
 			},
@@ -222,7 +222,7 @@ func TestGetUserFromLDAPApiEndpoint(t *testing.T) {
 			"isGrafanaAdmin": true,
 			"isDisabled": false,
 			"roles": [
-				{ "orgId": 1, "orgRole": "Admin", "orgName": "Main Org.", "groupDN": "cn=admins,ou=groups,dc=grafana,dc=org" },
+				{ "orgId": 1, "orgRole": "Admin", "orgName": "Main Org.", "groupDN": "cn=admins,ou=groups,dc=smartems,dc=org" },
 				{ "orgId": 0, "orgRole": "", "orgName": "", "groupDN": "another-group-not-matched" }
 			],
 			"teams": null
@@ -238,7 +238,7 @@ func TestGetUserFromLDAPApiEndpoint_WithTeamHandler(t *testing.T) {
 		Name:           "John Doe",
 		Email:          "john.doe@example.com",
 		Login:          "johndoe",
-		Groups:         []string{"cn=admins,ou=groups,dc=grafana,dc=org"},
+		Groups:         []string{"cn=admins,ou=groups,dc=smartems,dc=org"},
 		OrgRoles:       map[int64]models.RoleType{1: models.ROLE_ADMIN},
 		IsGrafanaAdmin: &isAdmin,
 	}
@@ -252,7 +252,7 @@ func TestGetUserFromLDAPApiEndpoint_WithTeamHandler(t *testing.T) {
 		},
 		Groups: []*ldap.GroupToOrgRole{
 			{
-				GroupDN: "cn=admins,ou=groups,dc=grafana,dc=org",
+				GroupDN: "cn=admins,ou=groups,dc=smartems,dc=org",
 				OrgId:   1,
 				OrgRole: models.ROLE_ADMIN,
 			},
@@ -302,7 +302,7 @@ func TestGetUserFromLDAPApiEndpoint_WithTeamHandler(t *testing.T) {
 			"isGrafanaAdmin": true,
 			"isDisabled": false,
 			"roles": [
-				{ "orgId": 1, "orgRole": "Admin", "orgName": "Main Org.", "groupDN": "cn=admins,ou=groups,dc=grafana,dc=org" }
+				{ "orgId": 1, "orgRole": "Admin", "orgName": "Main Org.", "groupDN": "cn=admins,ou=groups,dc=smartems,dc=org" }
 			],
 			"teams": []
 		}
@@ -510,7 +510,7 @@ func TestPostSyncUserWithLDAPAPIEndpoint_WhenGrafanaAdmin(t *testing.T) {
 	expected := `
 	{
 		"error": "Did not find a user",
-		"message": "Refusing to sync grafana super admin \"ldap-daniel\" - it would be disabled"
+		"message": "Refusing to sync smartems super admin \"ldap-daniel\" - it would be disabled"
 	}
 	`
 

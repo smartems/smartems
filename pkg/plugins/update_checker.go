@@ -47,10 +47,10 @@ func (pm *PluginManager) checkForUpdates() {
 	pm.log.Debug("Checking for updates")
 
 	pluginSlugs := getAllExternalPluginSlugs()
-	resp, err := httpClient.Get("https://grafana.com/api/plugins/versioncheck?slugIn=" + pluginSlugs + "&grafanaVersion=" + setting.BuildVersion)
+	resp, err := httpClient.Get("https://smartems.com/api/plugins/versioncheck?slugIn=" + pluginSlugs + "&smartemsVersion=" + setting.BuildVersion)
 
 	if err != nil {
-		log.Trace("Failed to get plugins repo from grafana.com, %v", err.Error())
+		log.Trace("Failed to get plugins repo from smartems.com, %v", err.Error())
 		return
 	}
 
@@ -58,14 +58,14 @@ func (pm *PluginManager) checkForUpdates() {
 
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Trace("Update check failed, reading response from grafana.com, %v", err.Error())
+		log.Trace("Update check failed, reading response from smartems.com, %v", err.Error())
 		return
 	}
 
 	gNetPlugins := []GrafanaNetPlugin{}
 	err = json.Unmarshal(body, &gNetPlugins)
 	if err != nil {
-		log.Trace("Failed to unmarshal plugin repo, reading response from grafana.com, %v", err.Error())
+		log.Trace("Failed to unmarshal plugin repo, reading response from smartems.com, %v", err.Error())
 		return
 	}
 
@@ -86,7 +86,7 @@ func (pm *PluginManager) checkForUpdates() {
 		}
 	}
 
-	resp2, err := httpClient.Get("https://raw.githubusercontent.com/grafana/grafana/master/latest.json")
+	resp2, err := httpClient.Get("https://raw.githubusercontent.com/smartems/smartems/master/latest.json")
 	if err != nil {
 		log.Trace("Failed to get latest.json repo from github.com: %v", err.Error())
 		return

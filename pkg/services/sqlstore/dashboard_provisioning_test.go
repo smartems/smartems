@@ -43,7 +43,7 @@ func TestDashboardProvisioningTest(t *testing.T) {
 				DashboardCmd: saveDashboardCmd,
 				DashboardProvisioning: &models.DashboardProvisioning{
 					Name:       "default",
-					ExternalId: "/var/grafana.json",
+					ExternalId: "/var/smartems.json",
 					Updated:    now.Unix(),
 				},
 			}

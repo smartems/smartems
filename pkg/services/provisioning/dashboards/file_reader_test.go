@@ -52,9 +52,9 @@ func TestCreatingNewDashboardFileReader(t *testing.T) {
 		})
 
 		Convey("using full path", func() {
-			fullPath := "/var/lib/grafana/dashboards"
+			fullPath := "/var/lib/smartems/dashboards"
 			if runtime.GOOS == "windows" {
-				fullPath = `c:\var\lib\grafana`
+				fullPath = `c:\var\lib\smartems`
 			}
 
 			cfg.Options["folder"] = fullPath
@@ -127,7 +127,7 @@ func TestDashboardFileReader(t *testing.T) {
 
 				fakeService.getDashboard = append(fakeService.getDashboard, &models.Dashboard{
 					Updated: stat.ModTime().AddDate(0, 0, -1),
-					Slug:    "grafana",
+					Slug:    "smartems",
 				})
 
 				reader, err := NewDashboardFileReader(cfg, logger)

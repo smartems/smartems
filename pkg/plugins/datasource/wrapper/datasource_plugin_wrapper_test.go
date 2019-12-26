@@ -84,10 +84,10 @@ func TestMappingRowValue(t *testing.T) {
 		t.Fatalf("Expected %d, was %d", 42, haveInt)
 	}
 
-	stringRowValue, _ := dpw.mapRowValue(&datasource.RowValue{Kind: datasource.RowValue_TYPE_STRING, StringValue: "grafana"})
+	stringRowValue, _ := dpw.mapRowValue(&datasource.RowValue{Kind: datasource.RowValue_TYPE_STRING, StringValue: "smartems"})
 	haveString, ok := stringRowValue.(string)
-	if !ok || haveString != "grafana" {
-		t.Fatalf("Expected %s, was %s", "grafana", haveString)
+	if !ok || haveString != "smartems" {
+		t.Fatalf("Expected %s, was %s", "smartems", haveString)
 	}
 
 	doubleRowValue, _ := dpw.mapRowValue(&datasource.RowValue{Kind: datasource.RowValue_TYPE_DOUBLE, DoubleValue: 1.5})

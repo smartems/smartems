@@ -23,7 +23,7 @@ const (
 	DS_ACCESS_DIRECT = "direct"
 	DS_ACCESS_PROXY  = "proxy"
 	DS_STACKDRIVER   = "stackdriver"
-	DS_AZURE_MONITOR = "grafana-azure-monitor-datasource"
+	DS_AZURE_MONITOR = "smartems-azure-monitor-datasource"
 	DS_LOKI          = "loki"
 )
 
@@ -103,11 +103,11 @@ var knownDatasourcePlugins = map[string]bool{
 	"gnocci":                                 true,
 	"zabbix":                                 true,
 	"newrelic-app":                           true,
-	"grafana-datadog-datasource":             true,
-	"grafana-simple-json":                    true,
-	"grafana-splunk-datasource":              true,
+	"smartems-datadog-datasource":             true,
+	"smartems-simple-json":                    true,
+	"smartems-splunk-datasource":              true,
 	"udoprog-heroic-datasource":              true,
-	"grafana-openfalcon-datasource":          true,
+	"smartems-openfalcon-datasource":          true,
 	"opennms-datasource":                     true,
 	"rackerlabs-blueflood-datasource":        true,
 	"crate-datasource":                       true,
@@ -115,9 +115,9 @@ var knownDatasourcePlugins = map[string]bool{
 	"monasca-datasource":                     true,
 	"vertamedia-clickhouse-datasource":       true,
 	"alexanderzobnin-zabbix-datasource":      true,
-	"grafana-influxdb-flux-datasource":       true,
+	"smartems-influxdb-flux-datasource":       true,
 	"doitintl-bigquery-datasource":           true,
-	"grafana-azure-data-explorer-datasource": true,
+	"smartems-azure-data-explorer-datasource": true,
 }
 
 func IsKnownDataSourcePlugin(dsType string) bool {

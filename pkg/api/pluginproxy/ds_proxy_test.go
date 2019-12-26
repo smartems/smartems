@@ -70,7 +70,7 @@ func TestDSRouteRule(t *testing.T) {
 			ds := &m.DataSource{
 				JsonData: simplejson.NewFromAny(map[string]interface{}{
 					"clientId":   "asd",
-					"dynamicUrl": "https://dynamic.grafana.com",
+					"dynamicUrl": "https://dynamic.smartems.com",
 				}),
 				SecureJsonData: map[string][]byte{
 					"key": key,
@@ -102,7 +102,7 @@ func TestDSRouteRule(t *testing.T) {
 				ApplyRoute(proxy.ctx.Req.Context(), req, proxy.proxyPath, proxy.route, proxy.ds)
 
 				Convey("should add headers and interpolate the url", func() {
-					So(req.URL.String(), ShouldEqual, "https://dynamic.grafana.com/some/method")
+					So(req.URL.String(), ShouldEqual, "https://dynamic.smartems.com/some/method")
 					So(req.Header.Get("x-header"), ShouldEqual, "my secret 123")
 				})
 			})
@@ -242,7 +242,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "/render", &setting.Cfg{})
-			req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
+			req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
 			So(err, ShouldBeNil)
 
 			proxy.getDirector()(req)
@@ -268,7 +268,7 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "", &setting.Cfg{})
 
-			req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
+			req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
 			So(err, ShouldBeNil)
 
 			proxy.getDirector()(req)
@@ -292,9 +292,9 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "", &setting.Cfg{})
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://smartems.com/sub")
 			req := http.Request{URL: requestURL, Header: make(http.Header)}
-			cookies := "grafana_user=admin; grafana_remember=99; grafana_sess=11; JSESSION_ID=test"
+			cookies := "smartems_user=admin; smartems_remember=99; smartems_sess=11; JSESSION_ID=test"
 			req.Header.Set("Cookie", cookies)
 
 			proxy.getDirector()(&req)
@@ -318,9 +318,9 @@ func TestDSRouteRule(t *testing.T) {
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "", &setting.Cfg{})
 
-			requestURL, _ := url.Parse("http://grafana.com/sub")
+			requestURL, _ := url.Parse("http://smartems.com/sub")
 			req := http.Request{URL: requestURL, Header: make(http.Header)}
-			cookies := "grafana_user=admin; grafana_remember=99; grafana_sess=11; JSESSION_ID=test"
+			cookies := "smartems_user=admin; smartems_remember=99; smartems_sess=11; JSESSION_ID=test"
 			req.Header.Set("Cookie", cookies)
 
 			proxy.getDirector()(&req)
@@ -338,9 +338,9 @@ func TestDSRouteRule(t *testing.T) {
 			}
 			ctx := &m.ReqContext{}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "/path/to/folder/", &setting.Cfg{})
-			req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
-			req.Header.Add("Origin", "grafana.com")
-			req.Header.Add("Referer", "grafana.com")
+			req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
+			req.Header.Add("Origin", "smartems.com")
+			req.Header.Add("Referer", "smartems.com")
 			req.Header.Add("X-Canary", "stillthere")
 			So(err, ShouldBeNil)
 
@@ -394,7 +394,7 @@ func TestDSRouteRule(t *testing.T) {
 				},
 			}
 			proxy := NewDataSourceProxy(ds, plugin, ctx, "/path/to/folder/", &setting.Cfg{})
-			req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
+			req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
 
 			So(err, ShouldBeNil)
 
@@ -554,7 +554,7 @@ func getDatasourceProxiedRequest(ctx *m.ReqContext, cfg *setting.Cfg) *http.Requ
 	}
 
 	proxy := NewDataSourceProxy(ds, plugin, ctx, "", cfg)
-	req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
+	req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
 	So(err, ShouldBeNil)
 
 	proxy.getDirector()(req)
@@ -664,7 +664,7 @@ func runDatasourceAuthTest(test *Test) {
 	ctx := &m.ReqContext{}
 	proxy := NewDataSourceProxy(test.datasource, plugin, ctx, "", &setting.Cfg{})
 
-	req, err := http.NewRequest(http.MethodGet, "http://grafana.com/sub", nil)
+	req, err := http.NewRequest(http.MethodGet, "http://smartems.com/sub", nil)
 	So(err, ShouldBeNil)
 
 	proxy.getDirector()(req)

@@ -23,11 +23,11 @@ const loginServices: () => LoginServices = () => {
       enabled: oauthEnabled && config.oauth.gitlab,
       name: 'GitLab',
     },
-    grafanacom: {
-      enabled: oauthEnabled && config.oauth.grafana_com,
+    smartemscom: {
+      enabled: oauthEnabled && config.oauth.smartems_com,
       name: 'Grafana.com',
-      hrefName: 'grafana_com',
-      icon: 'grafana_com',
+      hrefName: 'smartems_com',
+      icon: 'smartems_com',
     },
     oauth: {
       enabled: oauthEnabled && config.oauth.generic_oauth,

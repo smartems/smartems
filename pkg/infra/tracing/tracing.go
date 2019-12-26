@@ -64,7 +64,7 @@ func (ts *TracingService) parseSettings() {
 
 func (ts *TracingService) initGlobalTracer() error {
 	cfg := jaegercfg.Configuration{
-		ServiceName: "grafana",
+		ServiceName: "smartems",
 		Disabled:    !ts.enabled,
 		Sampler: &jaegercfg.SamplerConfig{
 			Type:  ts.samplerType,

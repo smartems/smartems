@@ -4,7 +4,7 @@ import Typeahead from './typeahead';
 import { getKeybindingSrv, KeybindingSrv } from 'app/core/services/keybindingSrv';
 
 import { Block, Document, Text, Value, Editor as CoreEditor } from 'slate';
-import { Editor } from '@grafana/slate-react';
+import { Editor } from '@smartems/slate-react';
 import Plain from 'slate-plain-serializer';
 import ReactDOM from 'react-dom';
 import React from 'react';

@@ -101,7 +101,7 @@ func (client *GrafanaComClient) DownloadFile(pluginName string, tmpFile *os.File
 	}
 	w.Flush()
 	if len(checksum) > 0 && checksum != fmt.Sprintf("%x", h.Sum(nil)) {
-		return xerrors.New("Expected MD5 checksum does not match the downloaded archive. Please contact security@grafana.com.")
+		return xerrors.New("Expected MD5 checksum does not match the downloaded archive. Please contact security@smartems.com.")
 	}
 	return nil
 }
@@ -157,10 +157,10 @@ func createRequest(repoUrl string, subPaths ...string) (*http.Request, error) {
 		return nil, err
 	}
 
-	req.Header.Set("grafana-version", grafanaVersion)
-	req.Header.Set("grafana-os", runtime.GOOS)
-	req.Header.Set("grafana-arch", runtime.GOARCH)
-	req.Header.Set("User-Agent", "grafana "+grafanaVersion)
+	req.Header.Set("smartems-version", smartemsVersion)
+	req.Header.Set("smartems-os", runtime.GOOS)
+	req.Header.Set("smartems-arch", runtime.GOARCH)
+	req.Header.Set("User-Agent", "smartems "+smartemsVersion)
 
 	return req, err
 }

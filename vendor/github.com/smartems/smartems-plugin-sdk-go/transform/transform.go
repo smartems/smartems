@@ -63,7 +63,7 @@ func (p *transformPluginWrapper) Transform(ctx context.Context, req *pluginv2.Tr
 	}
 
 	// Makes SDK request, get SDK response
-	results, err := p.handler.Transform(ctx, tr, queries, &grafanaAPIWrapper{api: api})
+	results, err := p.handler.Transform(ctx, tr, queries, &smartemsAPIWrapper{api: api})
 	if err != nil {
 		return nil, err
 	}
@@ -109,15 +109,15 @@ type GrafanaAPIHandler interface {
 	QueryDatasource(ctx context.Context, orgID int64, datasourceID int64, tr datasource.TimeRange, queries []datasource.Query) ([]datasource.DatasourceQueryResult, error)
 }
 
-// grafanaAPIWrapper converts protobuf types to sdk go types - allowing consumers to use the GrafanaAPIHandler interface.
+// smartemsAPIWrapper converts protobuf types to sdk go types - allowing consumers to use the GrafanaAPIHandler interface.
 // This allows consumers to use the GrafanaAPIHandler interface which uses sdk types instead of
 // the generated protobuf types. SDK requests are turned into protobuf requests, and the protobuf responses are turned
 // into SDK responses. Note: (This is a mirror of the converion that happens on the TransformHandler).
-type grafanaAPIWrapper struct {
+type smartemsAPIWrapper struct {
 	api GrafanaAPI
 }
 
-func (w *grafanaAPIWrapper) QueryDatasource(ctx context.Context, orgID int64, datasourceID int64, tr datasource.TimeRange, queries []datasource.Query) ([]datasource.DatasourceQueryResult, error) {
+func (w *smartemsAPIWrapper) QueryDatasource(ctx context.Context, orgID int64, datasourceID int64, tr datasource.TimeRange, queries []datasource.Query) ([]datasource.DatasourceQueryResult, error) {
 	// Create protobuf requests from SDK requests
 	rawQueries := make([]*pluginv2.DatasourceQuery, 0, len(queries))
 

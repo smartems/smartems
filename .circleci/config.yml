@@ -23,8 +23,8 @@ jobs:
       - image: circleci/mysql:5.6-ram
         environment:
           MYSQL_ROOT_PASSWORD: rootpass
-          MYSQL_DATABASE: grafana_tests
-          MYSQL_USER: grafana
+          MYSQL_DATABASE: smartems_tests
+          MYSQL_USER: smartems
           MYSQL_PASSWORD: password
     working_directory: /go/src/github.com/smartems/smartems
     steps:
@@ -42,16 +42,16 @@ jobs:
       - image: circleci/golang:1.13.1
       - image: circleci/postgres:9.3-ram
         environment:
-          POSTGRES_USER: grafanatest
-          POSTGRES_PASSWORD: grafanatest
-          POSTGRES_DB: grafanatest
+          POSTGRES_USER: smartemstest
+          POSTGRES_PASSWORD: smartemstest
+          POSTGRES_DB: smartemstest
     working_directory: /go/src/github.com/smartems/smartems
     steps:
         - checkout
         - run: sudo apt update
         - run: sudo apt install -y postgresql-client
         - run: dockerize -wait tcp://127.0.0.1:5432 -timeout 120s
-        - run: 'PGPASSWORD=grafanatest psql -p 5432 -h 127.0.0.1 -U grafanatest -d grafanatest -f devenv/docker/blocks/postgres_tests/setup.sql'
+        - run: 'PGPASSWORD=smartemstest psql -p 5432 -h 127.0.0.1 -U smartemstest -d smartemstest -f devenv/docker/blocks/postgres_tests/setup.sql'
         - run:
             name: postgres integration tests
             command: './scripts/circle-test-postgres.sh'
@@ -73,7 +73,7 @@ jobs:
   end-to-end-test:
       docker:
         - image: circleci/node:10-browsers
-        - image: grafana/grafana-dev:master-$CIRCLE_SHA1
+        - image: smartems/smartems-dev:master-$CIRCLE_SHA1
       steps:
           - run: dockerize -wait tcp://127.0.0.1:3000 -timeout 120s
           - checkout
@@ -101,7 +101,7 @@ jobs:
   end-to-end-test-release:
       docker:
         - image: circleci/node:10-browsers
-        - image: grafana/grafana-dev:$CIRCLE_TAG
+        - image: smartems/smartems-dev:$CIRCLE_TAG
       steps:
           - run: dockerize -wait tcp://127.0.0.1:3000 -timeout 120s
           - checkout
@@ -195,7 +195,7 @@ jobs:
 
   build-all:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -212,7 +212,7 @@ jobs:
           paths:
             - /tmp/phantomjs
       - run:
-          name: build and package grafana
+          name: build and package smartems
           command: './scripts/build/build-all.sh'
       - run:
           name: Prepare GPG private key
@@ -239,7 +239,7 @@ jobs:
 
   build:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -247,7 +247,7 @@ jobs:
           name: prepare build tools
           command: '/tmp/bootstrap.sh'
       - run:
-          name: build and package grafana
+          name: build and package smartems
           command: './scripts/build/build.sh'
       - run:
           name: Prepare GPG private key
@@ -268,7 +268,7 @@ jobs:
 
   build-fast-backend:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -276,7 +276,7 @@ jobs:
           name: prepare build tools
           command: '/tmp/bootstrap.sh'
       - run:
-          name: build grafana backend
+          name: build smartems backend
           command: './scripts/build/build.sh --fast --backend-only'
       - persist_to_workspace:
           root: .
@@ -285,7 +285,7 @@ jobs:
 
   build-fast-frontend:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -295,7 +295,7 @@ jobs:
       - restore_cache:
           key: frontend-dependency-cache-{{ checksum "yarn.lock" }}
       - run:
-          name: build grafana frontend
+          name: build smartems frontend
           command: './scripts/build/build.sh --fast --frontend-only'
       - save_cache:
           key: frontend-dependency-cache-{{ checksum "yarn.lock" }}
@@ -309,7 +309,7 @@ jobs:
 
   build-fast-package:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -321,7 +321,7 @@ jobs:
           name: prepare build tools
           command: '/tmp/bootstrap.sh'
       - run:
-          name: package grafana
+          name: package smartems
           command: './scripts/build/build.sh --fast --package-only'
       - run:
           name: sha-sum packages
@@ -336,7 +336,7 @@ jobs:
 
   build-fast-save:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -351,17 +351,17 @@ jobs:
           name: prepare build tools
           command: '/tmp/bootstrap.sh'
       - run:
-          name: build grafana backend
+          name: build smartems backend
           command: './scripts/build/build.sh --fast --backend-only'
       - run:
-          name: build grafana frontend
+          name: build smartems frontend
           command: './scripts/build/build.sh --fast --frontend-only'
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - /go/src/github.com/smartems/smartems/node_modules
       - run:
-          name: package grafana
+          name: package smartems
           command: './scripts/build/build.sh --fast --package-only'
       - run:
           name: Prepare GPG private key
@@ -380,7 +380,7 @@ jobs:
           paths:
             - dist/*
 
-  grafana-docker-master:
+  smartems-docker-master:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -389,13 +389,13 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build-deploy.sh "master-${CIRCLE_SHA1}"
-      - run: rm packaging/docker/grafana-latest.linux-*.tar.gz
-      - run: cp enterprise-dist/grafana-enterprise-*.linux-amd64-musl.tar.gz packaging/docker/grafana-latest.linux-x64-musl.tar.gz
+      - run: rm packaging/docker/smartems-latest.linux-*.tar.gz
+      - run: cp enterprise-dist/smartems-enterprise-*.linux-amd64-musl.tar.gz packaging/docker/smartems-latest.linux-x64-musl.tar.gz
       - run: cd packaging/docker && ./build-enterprise.sh "master"
 
-  grafana-docker-ubuntu-master:
+  smartems-docker-ubuntu-master:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -404,13 +404,13 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build-deploy.sh --ubuntu "master-${CIRCLE_SHA1}"
-      - run: rm packaging/docker/grafana-latest.linux-*.tar.gz
-      - run: cp enterprise-dist/grafana-enterprise-*.linux-amd64.tar.gz packaging/docker/grafana-latest.linux-x64.tar.gz
+      - run: rm packaging/docker/smartems-latest.linux-*.tar.gz
+      - run: cp enterprise-dist/smartems-enterprise-*.linux-amd64.tar.gz packaging/docker/smartems-latest.linux-x64.tar.gz
       - run: cd packaging/docker && ./build-enterprise.sh --ubuntu "master"
 
-  grafana-docker-pr:
+  smartems-docker-pr:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -419,10 +419,10 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build.sh --fast "${CIRCLE_SHA1}"
 
-  grafana-docker-ubuntu-pr:
+  smartems-docker-ubuntu-pr:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -431,10 +431,10 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build.sh --fast --ubuntu "${CIRCLE_SHA1}"
 
-  grafana-docker-release:
+  smartems-docker-release:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -443,13 +443,13 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build-deploy.sh "${CIRCLE_TAG}"
-      - run: rm packaging/docker/grafana-latest.linux-*.tar.gz
-      - run: cp enterprise-dist/grafana-enterprise-*.linux-amd64-musl.tar.gz packaging/docker/grafana-latest.linux-x64-musl.tar.gz
+      - run: rm packaging/docker/smartems-latest.linux-*.tar.gz
+      - run: cp enterprise-dist/smartems-enterprise-*.linux-amd64-musl.tar.gz packaging/docker/smartems-latest.linux-x64-musl.tar.gz
       - run: cd packaging/docker && ./build-enterprise.sh "${CIRCLE_TAG}"
 
-  grafana-docker-ubuntu-release:
+  smartems-docker-ubuntu-release:
     machine:
       image: circleci/classic:201808-01
     steps:
@@ -458,15 +458,15 @@ jobs:
           at: .
       - run: docker info
       - run: docker run --privileged linuxkit/binfmt:v0.6
-      - run: cp dist/grafana-latest.linux-*.tar.gz packaging/docker
+      - run: cp dist/smartems-latest.linux-*.tar.gz packaging/docker
       - run: cd packaging/docker && ./build-deploy.sh --ubuntu "${CIRCLE_TAG}"
-      - run: rm packaging/docker/grafana-latest.linux-*.tar.gz
-      - run: cp enterprise-dist/grafana-enterprise-*.linux-amd64.tar.gz packaging/docker/grafana-latest.linux-x64.tar.gz
+      - run: rm packaging/docker/smartems-latest.linux-*.tar.gz
+      - run: cp enterprise-dist/smartems-enterprise-*.linux-amd64.tar.gz packaging/docker/smartems-latest.linux-x64.tar.gz
       - run: cd packaging/docker && ./build-enterprise.sh --ubuntu "${CIRCLE_TAG}"
 
   build-enterprise:
     docker:
-      - image: grafana/build-container:1.2.11
+      - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
       - checkout
@@ -501,7 +501,7 @@ jobs:
 
   build-all-enterprise:
     docker:
-    - image: grafana/build-container:1.2.11
+    - image: smartems/build-container:1.2.11
     working_directory: /go/src/github.com/smartems/smartems
     steps:
     - checkout
@@ -524,7 +524,7 @@ jobs:
         name: test enterprise
         command: 'go test ./pkg/extensions/...'
     - run:
-        name: build and package grafana
+        name: build and package smartems
         command: './scripts/build/build-all.sh -enterprise'
     - run:
         name: Prepare GPG private key
@@ -548,7 +548,7 @@ jobs:
 
   deploy-enterprise-master:
     docker:
-      - image: grafana/grafana-ci-deploy:1.2.2
+      - image: smartems/smartems-ci-deploy:1.2.2
     steps:
       - attach_workspace:
           at: .
@@ -562,15 +562,15 @@ jobs:
           name: deploy to gcp
           command: '/opt/google-cloud-sdk/bin/gsutil cp ./enterprise-dist/* gs://$GCP_BUCKET_NAME/enterprise/master'
       - run:
-          name: Deploy to grafana.com
+          name: Deploy to smartems.com
           command: |
             cd enterprise-dist
-            ../scripts/build/release_publisher/release_publisher -apikey ${SMARTEMS_COM_API_KEY} -enterprise -version "v$(cat grafana.version)" --nightly
+            ../scripts/build/release_publisher/release_publisher -apikey ${SMARTEMS_COM_API_KEY} -enterprise -version "v$(cat smartems.version)" --nightly
 
 
   deploy-enterprise-release:
     docker:
-    - image: grafana/grafana-ci-deploy:1.2.2
+    - image: smartems/smartems-ci-deploy:1.2.2
     steps:
       - checkout
       - attach_workspace:
@@ -609,7 +609,7 @@ jobs:
 
   deploy-master:
     docker:
-      - image: grafana/grafana-ci-deploy:1.2.2
+      - image: smartems/smartems-ci-deploy:1.2.2
     steps:
       - attach_workspace:
           at: .
@@ -629,11 +629,11 @@ jobs:
           name: Publish to Grafana.com
           command: |
             rm dist/*latest* || true
-            cd dist && ../scripts/build/release_publisher/release_publisher -apikey ${SMARTEMS_COM_API_KEY} -version "v$(cat grafana.version)" --nightly
+            cd dist && ../scripts/build/release_publisher/release_publisher -apikey ${SMARTEMS_COM_API_KEY} -version "v$(cat smartems.version)" --nightly
 
   deploy-release:
     docker:
-      - image: grafana/grafana-ci-deploy:1.2.2
+      - image: smartems/smartems-ci-deploy:1.2.2
     steps:
       - checkout
       - attach_workspace:
@@ -671,7 +671,7 @@ jobs:
 
   build-oss-msi:
     docker:
-      - image: grafana/wix-toolset-ci:v3
+      - image: smartems/wix-toolset-ci:v3
     steps:
       - checkout
       - attach_workspace:
@@ -682,8 +682,8 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - dist/grafana-*.msi
-            - dist/grafana-*.msi.sha256
+            - dist/smartems-*.msi
+            - dist/smartems-*.msi.sha256
 
   store-build-artifacts:
     docker:
@@ -706,13 +706,13 @@ jobs:
               echo "Build URL:"
               curl -s -u "$DOCS_CIRCLE_TOKEN:" \
                 -d build_parameters[CIRCLE_JOB]=pull-submodule-changes \
-                https://circleci.com/api/v1.1/project/github/grafana/docs.grafana.com/tree/master \
+                https://circleci.com/api/v1.1/project/github/smartems/docs.smartems.com/tree/master \
               | jq .build_url
             else
               echo "-- no changes to docs files --"
             fi
 
-  build-grafana-packages:
+  build-smartems-packages:
     docker:
       - image: circleci/node:10
     steps:
@@ -775,8 +775,8 @@ jobs:
             tar zxvf trivy_${VERSION}_Linux-64bit.tar.gz
             sudo mv trivy /usr/local/bin
       - run:
-          name: Scan the latest grafana master image with trivy
-          command: trivy --exit-code 1 --quiet --auto-refresh --clear-cache grafana/grafana:master
+          name: Scan the latest smartems master image with trivy
+          command: trivy --exit-code 1 --quiet --auto-refresh --clear-cache smartems/smartems:master
       - save_cache:
           key: vulnerability-db
           paths:
@@ -816,7 +816,7 @@ workflows:
             - postgres-integration-test
             - build-oss-msi
           filters: *filter-only-master
-      - grafana-docker-master:
+      - smartems-docker-master:
           requires:
             - build-all
             - build-all-enterprise
@@ -828,7 +828,7 @@ workflows:
             - mysql-integration-test
             - postgres-integration-test
           filters: *filter-only-master
-      - grafana-docker-ubuntu-master:
+      - smartems-docker-ubuntu-master:
           requires:
             - build-all
             - build-all-enterprise
@@ -865,7 +865,7 @@ workflows:
           filters: *filter-only-master
       - end-to-end-test:
           requires:
-            - grafana-docker-master
+            - smartems-docker-master
           filters: *filter-only-master
       - trigger-docs-update:
           requires:
@@ -921,7 +921,7 @@ workflows:
             - mysql-integration-test
             - postgres-integration-test
           filters: *filter-only-release
-      - grafana-docker-release:
+      - smartems-docker-release:
           requires:
             - build-all
             - build-all-enterprise
@@ -933,7 +933,7 @@ workflows:
             - mysql-integration-test
             - postgres-integration-test
           filters: *filter-only-release
-      - grafana-docker-ubuntu-release:
+      - smartems-docker-ubuntu-release:
           requires:
             - build-all
             - build-all-enterprise
@@ -970,7 +970,7 @@ workflows:
           filters: *filter-only-release
       - end-to-end-test-release:
           requires:
-            - grafana-docker-release
+            - smartems-docker-release
           filters: *filter-only-release
 
   build-branches-and-prs:
@@ -979,7 +979,7 @@ workflows:
             filters: *filter-not-release-or-master
         - build-fast-frontend:
             filters: *filter-not-release-or-master
-        - build-grafana-packages:
+        - build-smartems-packages:
             filters: *filter-not-release-or-master
         - build-fast-package:
             filters: *filter-not-release-or-master
@@ -1002,7 +1002,7 @@ workflows:
             filters: *filter-not-release-or-master
         - cache-server-test:
             filters: *filter-not-release-or-master
-        - grafana-docker-pr:
+        - smartems-docker-pr:
             requires:
               - build-fast-package
               - test-backend
@@ -1014,7 +1014,7 @@ workflows:
               - postgres-integration-test
               - cache-server-test
             filters: *filter-not-release-or-master
-        - grafana-docker-ubuntu-pr:
+        - smartems-docker-ubuntu-pr:
             requires:
               - build-fast-package
               - test-backend

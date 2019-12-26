@@ -13,7 +13,7 @@ const settingsMock: DataSourceSettings<any, any> = {
   access: 'direct',
   url: 'http://localhost:8086',
   password: '',
-  user: 'grafana',
+  user: 'smartems',
   database: 'site',
   basicAuth: false,
   basicAuthUser: '',

@@ -23,7 +23,7 @@ func init() {
       <h3 class="page-heading">HipChat settings</h3>
 			      <div class="gf-form max-width-30">
 			        <span class="gf-form-label width-8">Hip Chat Url</span>
-			        <input type="text" required class="gf-form-input max-width-30" ng-model="ctrl.model.settings.url" placeholder="HipChat URL (ex https://grafana.hipchat.com)"></input>
+			        <input type="text" required class="gf-form-input max-width-30" ng-model="ctrl.model.settings.url" placeholder="HipChat URL (ex https://smartems.hipchat.com)"></input>
 			      </div>
       <div class="gf-form max-width-30">
         <span class="gf-form-label width-8">API Key</span>
@@ -143,7 +143,7 @@ func (hc *HipChatNotifier) Notify(evalContext *alerting.EvalContext) error {
 		"title":       evalContext.GetNotificationTitle(),
 		"description": message,
 		"icon": map[string]interface{}{
-			"url": "https://grafana.com/assets/img/fav32.png",
+			"url": "https://smartems.com/assets/img/fav32.png",
 		},
 		"date":       evalContext.EndTime.Unix(),
 		"attributes": attributes,

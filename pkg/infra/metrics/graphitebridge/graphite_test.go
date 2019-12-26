@@ -128,7 +128,7 @@ func TestWriteSummary(t *testing.T) {
 		prometheus.SummaryOpts{
 			Name:        "name",
 			Help:        "docstring",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 			Objectives:  map[float64]float64{0.5: 0.05, 0.9: 0.01, 0.99: 0.001},
 		},
@@ -188,7 +188,7 @@ func TestWriteHistogram(t *testing.T) {
 		prometheus.HistogramOpts{
 			Name:        "name",
 			Help:        "docstring",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 			Buckets:     []float64{0.01, 0.02, 0.05, 0.1},
 		},
@@ -250,7 +250,7 @@ func TestCounterVec(t *testing.T) {
 	cntVec := prometheus.NewCounterVec(
 		prometheus.CounterOpts{
 			Name:        "page_response",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			Help:        "docstring",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 		},
@@ -260,7 +260,7 @@ func TestCounterVec(t *testing.T) {
 	apicntVec := prometheus.NewCounterVec(
 		prometheus.CounterOpts{
 			Name:        "api_response",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			Help:        "docstring",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 		},
@@ -338,7 +338,7 @@ func TestCounter(t *testing.T) {
 		prometheus.CounterOpts{
 			Name:        "page_response",
 			Help:        "docstring",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 		})
 
@@ -480,7 +480,7 @@ func TestPush(t *testing.T) {
 		prometheus.CounterOpts{
 			Name:        "name",
 			Help:        "docstring",
-			Namespace:   "grafana",
+			Namespace:   "smartems",
 			ConstLabels: prometheus.Labels{"constname": "constvalue"},
 		},
 		[]string{"labelname"},

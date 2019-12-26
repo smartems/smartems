@@ -59,7 +59,7 @@ type GroupToOrgRole struct {
 	OrgId   int64  `toml:"org_id"`
 
 	// This pointer specifies if setting was set (for backwards compatibility)
-	IsGrafanaAdmin *bool `toml:"grafana_admin"`
+	IsGrafanaAdmin *bool `toml:"smartems_admin"`
 
 	OrgRole m.RoleType `toml:"org_role"`
 }

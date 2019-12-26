@@ -174,15 +174,15 @@ func makeLatestDistCopies() {
 	}
 
 	latestMapping := map[string]string{
-		"_amd64.deb":               "dist/grafana_latest_amd64.deb",
-		".x86_64.rpm":              "dist/grafana-latest-1.x86_64.rpm",
-		".linux-amd64.tar.gz":      "dist/grafana-latest.linux-x64.tar.gz",
-		".linux-amd64-musl.tar.gz": "dist/grafana-latest.linux-x64-musl.tar.gz",
-		".linux-armv7.tar.gz":      "dist/grafana-latest.linux-armv7.tar.gz",
-		".linux-armv7-musl.tar.gz": "dist/grafana-latest.linux-armv7-musl.tar.gz",
-		".linux-armv6.tar.gz":      "dist/grafana-latest.linux-armv6.tar.gz",
-		".linux-arm64.tar.gz":      "dist/grafana-latest.linux-arm64.tar.gz",
-		".linux-arm64-musl.tar.gz": "dist/grafana-latest.linux-arm64-musl.tar.gz",
+		"_amd64.deb":               "dist/smartems_latest_amd64.deb",
+		".x86_64.rpm":              "dist/smartems-latest-1.x86_64.rpm",
+		".linux-amd64.tar.gz":      "dist/smartems-latest.linux-x64.tar.gz",
+		".linux-amd64-musl.tar.gz": "dist/smartems-latest.linux-x64-musl.tar.gz",
+		".linux-armv7.tar.gz":      "dist/smartems-latest.linux-armv7.tar.gz",
+		".linux-armv7-musl.tar.gz": "dist/smartems-latest.linux-armv7-musl.tar.gz",
+		".linux-armv6.tar.gz":      "dist/smartems-latest.linux-armv6.tar.gz",
+		".linux-arm64.tar.gz":      "dist/smartems-latest.linux-arm64.tar.gz",
+		".linux-arm64-musl.tar.gz": "dist/smartems-latest.linux-arm64-musl.tar.gz",
 	}
 
 	for _, file := range files {
@@ -264,10 +264,10 @@ func createDebPackages() {
 	createPackage(linuxPackageOptions{
 		packageType:            "deb",
 		packageArch:            debPkgArch,
-		homeDir:                "/usr/share/grafana",
-		homeBinDir:             "/usr/share/grafana/bin",
+		homeDir:                "/usr/share/smartems",
+		homeBinDir:             "/usr/share/smartems/bin",
 		binPath:                "/usr/sbin",
-		configDir:              "/etc/grafana",
+		configDir:              "/etc/smartems",
 		etcDefaultPath:         "/etc/default",
 		etcDefaultFilePath:     "/etc/default/smartems-server",
 		initdScriptFilePath:    "/etc/init.d/smartems-server",
@@ -294,10 +294,10 @@ func createRpmPackages() {
 	createPackage(linuxPackageOptions{
 		packageType:            "rpm",
 		packageArch:            rpmPkgArch,
-		homeDir:                "/usr/share/grafana",
-		homeBinDir:             "/usr/share/grafana/bin",
+		homeDir:                "/usr/share/smartems",
+		homeBinDir:             "/usr/share/smartems/bin",
 		binPath:                "/usr/sbin",
-		configDir:              "/etc/grafana",
+		configDir:              "/etc/smartems",
 		etcDefaultPath:         "/etc/sysconfig",
 		etcDefaultFilePath:     "/etc/sysconfig/smartems-server",
 		initdScriptFilePath:    "/etc/init.d/smartems-server",
@@ -324,7 +324,7 @@ func createLinuxPackages() {
 }
 
 func createPackage(options linuxPackageOptions) {
-	packageRoot, _ := ioutil.TempDir("", "grafana-linux-pack")
+	packageRoot, _ := ioutil.TempDir("", "smartems-linux-pack")
 
 	// create directories
 	runPrint("mkdir", "-p", filepath.Join(packageRoot, options.homeDir))
@@ -362,8 +362,8 @@ func createPackage(options linuxPackageOptions) {
 		"-s", "dir",
 		"--description", "Grafana",
 		"-C", packageRoot,
-		"--url", "https://grafana.com",
-		"--maintainer", "contact@grafana.com",
+		"--url", "https://smartems.com",
+		"--maintainer", "contact@smartems.com",
 		"--config-files", options.initdScriptFilePath,
 		"--config-files", options.etcDefaultFilePath,
 		"--config-files", options.systemdServiceFilePath,
@@ -373,15 +373,15 @@ func createPackage(options linuxPackageOptions) {
 		"-p", "./dist",
 	}
 
-	name := "grafana"
+	name := "smartems"
 	if enterprise {
 		name += "-enterprise"
-		args = append(args, "--replaces", "grafana")
+		args = append(args, "--replaces", "smartems")
 	}
 	fmt.Printf("pkgArch is set to '%s', generated arch is '%s'\n", pkgArch, options.packageArch)
 	if pkgArch == "armv6" {
 		name += "-rpi"
-		args = append(args, "--replaces", "grafana")
+		args = append(args, "--replaces", "smartems")
 	}
 	args = append(args, "--name", name)
 
@@ -565,7 +565,7 @@ func clean() {
 
 	rmr("dist")
 	rmr("tmp")
-	rmr(filepath.Join(os.Getenv("GOPATH"), fmt.Sprintf("pkg/%s_%s/github.com/grafana", goos, goarch)))
+	rmr(filepath.Join(os.Getenv("GOPATH"), fmt.Sprintf("pkg/%s_%s/github.com/smartems", goos, goarch)))
 }
 
 func setBuildEnv() {

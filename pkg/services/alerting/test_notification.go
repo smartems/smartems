@@ -52,13 +52,13 @@ func createTestEvalContext(cmd *NotificationTestCommand) *EvalContext {
 		DashboardID: 1,
 		PanelID:     1,
 		Name:        "Test notification",
-		Message:     "Someone is testing the alert notification within grafana.",
+		Message:     "Someone is testing the alert notification within smartems.",
 		State:       models.AlertStateAlerting,
 	}
 
 	ctx := NewEvalContext(context.Background(), testRule)
 	if cmd.Settings.Get("uploadImage").MustBool(true) {
-		ctx.ImagePublicURL = "https://grafana.com/assets/img/blog/mixed_styles.png"
+		ctx.ImagePublicURL = "https://smartems.com/assets/img/blog/mixed_styles.png"
 	}
 	ctx.IsTestRun = true
 	ctx.Firing = true

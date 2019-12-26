@@ -72,7 +72,7 @@ func validateDashboardAsConfig(t *testing.T, cfg []*DashboardsAsConfig) {
 	So(ds.FolderUid, ShouldEqual, "xyz")
 	So(ds.Editable, ShouldBeTrue)
 	So(len(ds.Options), ShouldEqual, 1)
-	So(ds.Options["path"], ShouldEqual, "/var/lib/grafana/dashboards")
+	So(ds.Options["path"], ShouldEqual, "/var/lib/smartems/dashboards")
 	So(ds.DisableDeletion, ShouldBeTrue)
 	So(ds.UpdateIntervalSeconds, ShouldEqual, 15)
 
@@ -84,7 +84,7 @@ func validateDashboardAsConfig(t *testing.T, cfg []*DashboardsAsConfig) {
 	So(ds2.FolderUid, ShouldEqual, "")
 	So(ds2.Editable, ShouldBeFalse)
 	So(len(ds2.Options), ShouldEqual, 1)
-	So(ds2.Options["path"], ShouldEqual, "/var/lib/grafana/dashboards")
+	So(ds2.Options["path"], ShouldEqual, "/var/lib/smartems/dashboards")
 	So(ds2.DisableDeletion, ShouldBeFalse)
 	So(ds2.UpdateIntervalSeconds, ShouldEqual, 10)
 }

@@ -15,7 +15,7 @@ import (
 	"github.com/smartems/smartems/pkg/setting"
 )
 
-var usageStatsURL = "https://stats.grafana.org/grafana-usage-report"
+var usageStatsURL = "https://stats.smartems.org/smartems-usage-report"
 
 func (uss *UsageStatsService) sendUsageStats(oauthProviders map[string]bool) {
 	if !setting.ReportingEnabled {

@@ -18,7 +18,7 @@ export const ThrottlingErrorMessage: FunctionComponent<Props> = ({ region }) => 
     <a
       target="_blank"
       className="text-link"
-      href={`https://grafana.com/docs/features/datasources/cloudwatch/#service-quotas`}
+      href={`https://smartems.com/docs/features/datasources/cloudwatch/#service-quotas`}
     >
       documentation
     </a>

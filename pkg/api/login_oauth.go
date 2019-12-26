@@ -166,7 +166,7 @@ func (hs *HTTPServer) OAuthLogin(ctx *m.ReqContext) {
 		return
 	}
 
-	// validate that the email is allowed to login to grafana
+	// validate that the email is allowed to login to smartems
 	if !connect.IsEmailAllowed(userInfo.Email) {
 		hs.redirectWithError(ctx, login.ErrEmailNotAllowed)
 		return
@@ -190,7 +190,7 @@ func (hs *HTTPServer) OAuthLogin(ctx *m.ReqContext) {
 		}
 	}
 
-	// add/update user in grafana
+	// add/update user in smartems
 	cmd := &m.UpsertUserCommand{
 		ReqContext:    ctx,
 		ExternalUser:  extUser,

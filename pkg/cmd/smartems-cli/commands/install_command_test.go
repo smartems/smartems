@@ -52,27 +52,27 @@ func TestExtractFiles(t *testing.T) {
 		pluginDir, del := setupFakePluginsDir(t)
 		defer del()
 
-		archive := "testdata/grafana-simple-json-datasource-ec18fa4da8096a952608a7e4c7782b4260b41bcf.zip"
-		err := extractFiles(archive, "grafana-simple-json-datasource", pluginDir, false)
+		archive := "testdata/smartems-simple-json-datasource-ec18fa4da8096a952608a7e4c7782b4260b41bcf.zip"
+		err := extractFiles(archive, "smartems-simple-json-datasource", pluginDir, false)
 		assert.Nil(t, err)
 
 		//File in zip has permissions 755
-		fileInfo, err := os.Stat(pluginDir + "/grafana-simple-json-datasource/simple-plugin_darwin_amd64")
+		fileInfo, err := os.Stat(pluginDir + "/smartems-simple-json-datasource/simple-plugin_darwin_amd64")
 		assert.Nil(t, err)
 		assert.Equal(t, "-rwxr-xr-x", fileInfo.Mode().String())
 
 		//File in zip has permission 755
-		fileInfo, err = os.Stat(pluginDir + "/grafana-simple-json-datasource/simple-plugin_linux_amd64")
+		fileInfo, err = os.Stat(pluginDir + "/smartems-simple-json-datasource/simple-plugin_linux_amd64")
 		assert.Nil(t, err)
 		assert.Equal(t, "-rwxr-xr-x", fileInfo.Mode().String())
 
 		//File in zip has permission 644
-		fileInfo, err = os.Stat(pluginDir + "/grafana-simple-json-datasource/simple-plugin_windows_amd64.exe")
+		fileInfo, err = os.Stat(pluginDir + "/smartems-simple-json-datasource/simple-plugin_windows_amd64.exe")
 		assert.Nil(t, err)
 		assert.Equal(t, "-rw-r--r--", fileInfo.Mode().String())
 
 		//File in zip has permission 755
-		fileInfo, err = os.Stat(pluginDir + "/grafana-simple-json-datasource/non-plugin-binary")
+		fileInfo, err = os.Stat(pluginDir + "/smartems-simple-json-datasource/non-plugin-binary")
 		assert.Nil(t, err)
 		assert.Equal(t, "-rwxr-xr-x", fileInfo.Mode().String())
 	})
@@ -224,7 +224,7 @@ func setupPluginInstallCmd(t *testing.T, pluginDir string) utils.CommandLine {
 		assert.Equal(t, "test-plugin-panel", pluginName)
 		assert.Equal(t, "/test-plugin-panel/versions/1.0.0/download", url)
 		assert.Equal(t, "test", checksum)
-		f, err := os.Open("testdata/grafana-simple-json-datasource-ec18fa4da8096a952608a7e4c7782b4260b41bcf.zip")
+		f, err := os.Open("testdata/smartems-simple-json-datasource-ec18fa4da8096a952608a7e4c7782b4260b41bcf.zip")
 		assert.Nil(t, err)
 		_, err = io.Copy(tmpFile, f)
 		assert.Nil(t, err)

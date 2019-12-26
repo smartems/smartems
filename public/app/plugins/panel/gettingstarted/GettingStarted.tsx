@@ -37,7 +37,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
       {
         title: 'Install Grafana',
         icon: 'icon-gf icon-gf-check',
-        href: 'http://docs.grafana.org/',
+        href: 'http://docs.smartems.org/',
         target: '_blank',
         note: 'Review the installation docs',
         check: () => Promise.resolve(true),
@@ -89,7 +89,7 @@ export class GettingStarted extends PureComponent<PanelProps, State> {
         title: 'Install apps & plugins',
         cta: 'Explore plugin repository',
         icon: 'gicon gicon-plugins',
-        href: 'https://grafana.com/plugins?utm_source=grafana_getting_started',
+        href: 'https://smartems.com/plugins?utm_source=smartems_getting_started',
         check: () => {
           return getBackendSrv()
             .get('/api/plugins', { embedded: 0, core: 0 })

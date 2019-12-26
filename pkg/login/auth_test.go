@@ -24,7 +24,7 @@ func TestAuthenticateUser(t *testing.T) {
 			err := AuthenticateUser(&loginQuery)
 
 			Convey("login should fail", func() {
-				So(sc.grafanaLoginWasCalled, ShouldBeFalse)
+				So(sc.smartemsLoginWasCalled, ShouldBeFalse)
 				So(sc.ldapLoginWasCalled, ShouldBeFalse)
 				So(err, ShouldEqual, ErrPasswordEmpty)
 			})
@@ -41,13 +41,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, ErrTooManyLoginAttempts)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeFalse)
+				So(sc.smartemsLoginWasCalled, ShouldBeFalse)
 				So(sc.ldapLoginWasCalled, ShouldBeFalse)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When grafana user authenticate with valid credentials", func(sc *authScenarioContext) {
+		authScenario("When smartems user authenticate with valid credentials", func(sc *authScenarioContext) {
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(nil, sc)
 			mockLoginUsingLDAP(true, ErrInvalidCredentials, sc)
@@ -58,13 +58,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, nil)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeFalse)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When grafana user authenticate and unexpected error occurs", func(sc *authScenarioContext) {
+		authScenario("When smartems user authenticate and unexpected error occurs", func(sc *authScenarioContext) {
 			customErr := errors.New("custom")
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(customErr, sc)
@@ -76,13 +76,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, customErr)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeFalse)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When a non-existing grafana user authenticate and ldap disabled", func(sc *authScenarioContext) {
+		authScenario("When a non-existing smartems user authenticate and ldap disabled", func(sc *authScenarioContext) {
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(models.ErrUserNotFound, sc)
 			mockLoginUsingLDAP(false, nil, sc)
@@ -93,13 +93,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, ErrInvalidCredentials)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeTrue)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When a non-existing grafana user authenticate and invalid ldap credentials", func(sc *authScenarioContext) {
+		authScenario("When a non-existing smartems user authenticate and invalid ldap credentials", func(sc *authScenarioContext) {
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(models.ErrUserNotFound, sc)
 			mockLoginUsingLDAP(true, ldap.ErrInvalidCredentials, sc)
@@ -110,13 +110,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, ErrInvalidCredentials)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeTrue)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeTrue)
 			})
 		})
 
-		authScenario("When a non-existing grafana user authenticate and valid ldap credentials", func(sc *authScenarioContext) {
+		authScenario("When a non-existing smartems user authenticate and valid ldap credentials", func(sc *authScenarioContext) {
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(models.ErrUserNotFound, sc)
 			mockLoginUsingLDAP(true, nil, sc)
@@ -127,13 +127,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldBeNil)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeTrue)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When a non-existing grafana user authenticate and ldap returns unexpected error", func(sc *authScenarioContext) {
+		authScenario("When a non-existing smartems user authenticate and ldap returns unexpected error", func(sc *authScenarioContext) {
 			customErr := errors.New("custom")
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(models.ErrUserNotFound, sc)
@@ -145,13 +145,13 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, customErr)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeTrue)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeFalse)
 			})
 		})
 
-		authScenario("When grafana user authenticate with invalid credentials and invalid ldap credentials", func(sc *authScenarioContext) {
+		authScenario("When smartems user authenticate with invalid credentials and invalid ldap credentials", func(sc *authScenarioContext) {
 			mockLoginAttemptValidation(nil, sc)
 			mockLoginUsingGrafanaDB(ErrInvalidCredentials, sc)
 			mockLoginUsingLDAP(true, ldap.ErrInvalidCredentials, sc)
@@ -162,7 +162,7 @@ func TestAuthenticateUser(t *testing.T) {
 			Convey("it should result in", func() {
 				So(err, ShouldEqual, ErrInvalidCredentials)
 				So(sc.loginAttemptValidationWasCalled, ShouldBeTrue)
-				So(sc.grafanaLoginWasCalled, ShouldBeTrue)
+				So(sc.smartemsLoginWasCalled, ShouldBeTrue)
 				So(sc.ldapLoginWasCalled, ShouldBeTrue)
 				So(sc.saveInvalidLoginAttemptWasCalled, ShouldBeTrue)
 			})
@@ -172,7 +172,7 @@ func TestAuthenticateUser(t *testing.T) {
 
 type authScenarioContext struct {
 	loginUserQuery                   *models.LoginUserQuery
-	grafanaLoginWasCalled            bool
+	smartemsLoginWasCalled            bool
 	ldapLoginWasCalled               bool
 	loginAttemptValidationWasCalled  bool
 	saveInvalidLoginAttemptWasCalled bool
@@ -182,7 +182,7 @@ type authScenarioFunc func(sc *authScenarioContext)
 
 func mockLoginUsingGrafanaDB(err error, sc *authScenarioContext) {
 	loginUsingGrafanaDB = func(query *models.LoginUserQuery) error {
-		sc.grafanaLoginWasCalled = true
+		sc.smartemsLoginWasCalled = true
 		return err
 	}
 }

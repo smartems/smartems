@@ -252,7 +252,7 @@ func (s *Server) loadConfiguration() {
 	}
 
 	if err := s.cfg.Load(args); err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to start grafana. error: %s\n", err.Error())
+		fmt.Fprintf(os.Stderr, "Failed to start smartems. error: %s\n", err.Error())
 		os.Exit(1)
 	}
 

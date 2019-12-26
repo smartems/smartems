@@ -44,7 +44,7 @@ export class PluginListPage extends PureComponent<Props> {
     } = this.props;
 
     const linkButton = {
-      href: 'https://grafana.com/plugins?utm_source=grafana_plugin_list',
+      href: 'https://smartems.com/plugins?utm_source=smartems_plugin_list',
       title: 'Find more plugins on Grafana.com',
     };
 

@@ -22,7 +22,7 @@ import (
 
 // To run this test, set runMySqlTests=true
 // Or from the commandline: SMARTEMS_TEST_DB=mysql go test -v ./pkg/tsdb/mysql
-// The tests require a MySQL db named grafana_ds_tests and a user/password grafana/password
+// The tests require a MySQL db named smartems_ds_tests and a user/password smartems/password
 // Use the docker/blocks/mysql_tests/docker-compose.yaml to spin up a
 // preconfigured MySQL server suitable for running these tests.
 // There is also a datasource and dashboard provisioned by devenv scripts that you can
@@ -1043,7 +1043,7 @@ func TestMySQL(t *testing.T) {
 }
 
 func InitMySQLTestDB(t *testing.T) *xorm.Engine {
-	x, err := xorm.NewEngine(sqlutil.TestDB_Mysql.DriverName, strings.Replace(sqlutil.TestDB_Mysql.ConnStr, "/grafana_tests", "/grafana_ds_tests", 1))
+	x, err := xorm.NewEngine(sqlutil.TestDB_Mysql.DriverName, strings.Replace(sqlutil.TestDB_Mysql.ConnStr, "/smartems_tests", "/smartems_ds_tests", 1))
 	if err != nil {
 		t.Fatalf("Failed to init mysql db %v", err)
 	}

@@ -812,7 +812,7 @@ func (cfg *Cfg) Load(args *CommandLineArgs) error {
 	// auth
 	auth := iniFile.Section("auth")
 
-	LoginCookieName, err = valueAsString(auth, "login_cookie_name", "grafana_session")
+	LoginCookieName, err = valueAsString(auth, "login_cookie_name", "smartems_session")
 	cfg.LoginCookieName = LoginCookieName
 	if err != nil {
 		return err
@@ -993,12 +993,12 @@ func (cfg *Cfg) Load(args *CommandLineArgs) error {
 	}
 
 	// check old key  name
-	GrafanaComUrl, err = valueAsString(iniFile.Section("grafana_net"), "url", "")
+	GrafanaComUrl, err = valueAsString(iniFile.Section("smartems_net"), "url", "")
 	if err != nil {
 		return err
 	}
 	if GrafanaComUrl == "" {
-		GrafanaComUrl, err = valueAsString(iniFile.Section("grafana_com"), "url", "https://grafana.com")
+		GrafanaComUrl, err = valueAsString(iniFile.Section("smartems_com"), "url", "https://smartems.com")
 		if err != nil {
 			return err
 		}

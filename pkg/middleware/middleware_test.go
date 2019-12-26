@@ -43,7 +43,7 @@ func resetGetTime() {
 func TestMiddleWareSecurityHeaders(t *testing.T) {
 	setting.ERR_TEMPLATE_NAME = errorTemplate
 
-	Convey("Given the grafana middleware", t, func() {
+	Convey("Given the smartems middleware", t, func() {
 
 		middlewareScenario(t, "middleware should get correct x-xss-protection header", func(sc *scenarioContext) {
 			setting.XSSProtectionHeader = true
@@ -76,7 +76,7 @@ func TestMiddleWareSecurityHeaders(t *testing.T) {
 func TestMiddlewareContext(t *testing.T) {
 	setting.ERR_TEMPLATE_NAME = errorTemplate
 
-	Convey("Given the grafana middleware", t, func() {
+	Convey("Given the smartems middleware", t, func() {
 		middlewareScenario(t, "middleware should add context to injector", func(sc *scenarioContext) {
 			sc.fakeReq("GET", "/").exec()
 			So(sc.context, ShouldNotBeNil)
@@ -339,7 +339,7 @@ func TestMiddlewareContext(t *testing.T) {
 			setting.AuthProxyHeaderProperty = "username"
 			setting.AuthProxyHeaders = map[string]string{"Groups": "X-WEBAUTH-GROUPS"}
 			name := "markelog"
-			group := "grafana-core-team"
+			group := "smartems-core-team"
 
 			middlewareScenario(t, "Should not sync the user if it's in the cache", func(sc *scenarioContext) {
 				bus.AddHandler("test", func(query *models.GetSignedInUserQuery) error {
@@ -522,7 +522,7 @@ func middlewareScenario(t *testing.T, desc string, fn scenarioFunc) {
 	Convey(desc, func() {
 		defer bus.ClearBusHandlers()
 
-		setting.LoginCookieName = "grafana_session"
+		setting.LoginCookieName = "smartems_session"
 		setting.LoginMaxLifetimeDays = 30
 
 		sc := &scenarioContext{}

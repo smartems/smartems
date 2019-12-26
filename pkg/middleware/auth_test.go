@@ -10,7 +10,7 @@ import (
 
 func TestMiddlewareAuth(t *testing.T) {
 
-	Convey("Given the grafana middleware", t, func() {
+	Convey("Given the smartems middleware", t, func() {
 		reqSignIn := Auth(&AuthOptions{ReqSignedIn: true})
 
 		middlewareScenario(t, "ReqSignIn true and unauthenticated request", func(sc *scenarioContext) {

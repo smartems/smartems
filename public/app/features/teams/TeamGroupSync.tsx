@@ -106,7 +106,7 @@ export class TeamGroupSync extends PureComponent<Props, State> {
                   className="gf-form-input width-30"
                   value={newGroupId}
                   onChange={this.onNewGroupIdChanged}
-                  placeholder="cn=ops,ou=groups,dc=grafana,dc=org"
+                  placeholder="cn=ops,ou=groups,dc=smartems,dc=org"
                 />
               </div>
 
@@ -127,7 +127,7 @@ export class TeamGroupSync extends PureComponent<Props, State> {
             buttonTitle="Add Group"
             proTip={headerTooltip}
             proTipLinkTitle="Learn more"
-            proTipLink="http://docs.grafana.org/auth/enhanced_ldap/"
+            proTipLink="http://docs.smartems.org/auth/enhanced_ldap/"
             proTipTarget="_blank"
           />
         )}

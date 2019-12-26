@@ -31,7 +31,7 @@ const DEFAULT_ACCESS_OPTION = {
 };
 
 const HttpAccessHelp = () => (
-  <div className="grafana-info-box m-t-2">
+  <div className="smartems-info-box m-t-2">
     <p>
       Access mode controls how requests to the data source will be handled.
       <strong>
@@ -43,7 +43,7 @@ const HttpAccessHelp = () => (
     <p>
       All requests will be made from the browser to Grafana backend/server which in turn will forward the requests to
       the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements. The URL needs
-      to be accessible from the grafana backend/server if you select this access mode.
+      to be accessible from the smartems backend/server if you select this access mode.
     </p>
     <div className="alert-title">Browser access mode:</div>
     <p>
@@ -80,7 +80,7 @@ export const DataSourceHttpSettings: React.FC<HttpSettingsProps> = props => {
     case 'proxy':
       urlTooltip = (
         <>
-          Your access method is <em>Server</em>, this means the URL needs to be accessible from the grafana
+          Your access method is <em>Server</em>, this means the URL needs to be accessible from the smartems
           backend/server.
         </>
       );

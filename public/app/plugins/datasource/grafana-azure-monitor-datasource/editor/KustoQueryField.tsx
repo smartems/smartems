@@ -6,7 +6,7 @@ import debounce from 'lodash/debounce';
 import { DOMUtil } from '@smartems/ui';
 import { Editor as CoreEditor } from 'slate';
 
-import { KEYWORDS, functionTokens, operatorTokens, grafanaMacros } from './kusto/kusto';
+import { KEYWORDS, functionTokens, operatorTokens, smartemsMacros } from './kusto/kusto';
 // import '../sass/editor.base.scss';
 
 const TYPEAHEAD_DELAY = 100;
@@ -320,7 +320,7 @@ export default class KustoQueryField extends QueryField {
       {
         prefixMatch: true,
         label: 'Macros',
-        items: grafanaMacros.map((s: any) => {
+        items: smartemsMacros.map((s: any) => {
           s.type = 'function';
           return s;
         }),
@@ -346,7 +346,7 @@ export default class KustoQueryField extends QueryField {
       {
         prefixMatch: true,
         label: 'Macros',
-        items: grafanaMacros.map((s: any) => {
+        items: smartemsMacros.map((s: any) => {
           s.type = 'function';
           return s;
         }),

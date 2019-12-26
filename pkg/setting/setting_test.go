@@ -71,7 +71,7 @@ func TestLoadingSettings(t *testing.T) {
 		})
 
 		Convey("Should return an error when url is invalid", func() {
-			os.Setenv("GF_DATABASE_URL", "postgres.%31://grafana:secret@postgres:5432/grafana")
+			os.Setenv("GF_DATABASE_URL", "postgres.%31://smartems:secret@postgres:5432/smartems")
 
 			cfg := NewCfg()
 			err := cfg.Load(&CommandLineArgs{HomePath: "../../"})
@@ -281,7 +281,7 @@ func TestLoadingSettings(t *testing.T) {
 		Convey("If key is found - should return value from ini file", func() {
 			value, err := valueAsString(iniFile.Section("server"), "alt_url", "")
 			So(err, ShouldBeNil)
-			So(value, ShouldEqual, "https://grafana.com/")
+			So(value, ShouldEqual, "https://smartems.com/")
 		})
 
 		Convey("If key is not found - should return default value", func() {

@@ -92,7 +92,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 
 			tags := simplejson.New()
 			tags.Set("env", "prod")
-			tags.Set("app", "grafana")
+			tags.Set("app", "smartems")
 			query.Model.Set("tags", tags.MustMap())
 
 			metric := exec.buildMetric(query)
@@ -103,7 +103,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 			So(metric["downsample"], ShouldEqual, nil)
 			So(len(metric["tags"].(map[string]interface{})), ShouldEqual, 2)
 			So(metric["tags"].(map[string]interface{})["env"], ShouldEqual, "prod")
-			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "grafana")
+			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "smartems")
 			So(metric["tags"].(map[string]interface{})["ip"], ShouldEqual, nil)
 		})
 
@@ -121,7 +121,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 
 			tags := simplejson.New()
 			tags.Set("env", "prod")
-			tags.Set("app", "grafana")
+			tags.Set("app", "smartems")
 			query.Model.Set("tags", tags.MustMap())
 
 			metric := exec.buildMetric(query)
@@ -131,7 +131,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 			So(metric["aggregator"], ShouldEqual, "avg")
 			So(len(metric["tags"].(map[string]interface{})), ShouldEqual, 2)
 			So(metric["tags"].(map[string]interface{})["env"], ShouldEqual, "prod")
-			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "grafana")
+			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "smartems")
 			So(metric["tags"].(map[string]interface{})["ip"], ShouldEqual, nil)
 			So(metric["rate"], ShouldEqual, true)
 			So(metric["rateOptions"].(map[string]interface{})["counter"], ShouldEqual, false)
@@ -153,7 +153,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 
 			tags := simplejson.New()
 			tags.Set("env", "prod")
-			tags.Set("app", "grafana")
+			tags.Set("app", "smartems")
 			query.Model.Set("tags", tags.MustMap())
 
 			metric := exec.buildMetric(query)
@@ -163,7 +163,7 @@ func TestOpenTsdbExecutor(t *testing.T) {
 			So(metric["aggregator"], ShouldEqual, "avg")
 			So(len(metric["tags"].(map[string]interface{})), ShouldEqual, 2)
 			So(metric["tags"].(map[string]interface{})["env"], ShouldEqual, "prod")
-			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "grafana")
+			So(metric["tags"].(map[string]interface{})["app"], ShouldEqual, "smartems")
 			So(metric["tags"].(map[string]interface{})["ip"], ShouldEqual, nil)
 			So(metric["rate"], ShouldEqual, true)
 			So(len(metric["rateOptions"].(map[string]interface{})), ShouldEqual, 3)

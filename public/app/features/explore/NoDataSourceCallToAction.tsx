@@ -12,7 +12,7 @@ export const NoDataSourceCallToAction = () => {
       <i className="fa fa-rocket" />
       <> ProTip: You can also define data sources through configuration files. </>
       <a
-        href="http://docs.grafana.org/administration/provisioning/#datasources?utm_source=explore"
+        href="http://docs.smartems.org/administration/provisioning/#datasources?utm_source=explore"
         target="_blank"
         rel="noopener"
         className="text-link"

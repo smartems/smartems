@@ -209,7 +209,7 @@ func TestLDAPPrivateMethods(t *testing.T) {
 		Convey("it should allow single bind", func() {
 			server := &Server{
 				Config: &ServerConfig{
-					BindDN: "cn=%s,dc=grafana,dc=org",
+					BindDN: "cn=%s,dc=smartems,dc=org",
 				},
 			}
 
@@ -220,7 +220,7 @@ func TestLDAPPrivateMethods(t *testing.T) {
 		Convey("it should not allow single bind", func() {
 			server := &Server{
 				Config: &ServerConfig{
-					BindDN: "cn=admin,dc=grafana,dc=org",
+					BindDN: "cn=admin,dc=smartems,dc=org",
 				},
 			}
 
@@ -233,12 +233,12 @@ func TestLDAPPrivateMethods(t *testing.T) {
 		Convey("it should allow single bind", func() {
 			server := &Server{
 				Config: &ServerConfig{
-					BindDN: "cn=%s,dc=grafana,dc=org",
+					BindDN: "cn=%s,dc=smartems,dc=org",
 				},
 			}
 
 			result := server.singleBindDN("test")
-			So(result, ShouldEqual, "cn=test,dc=grafana,dc=org")
+			So(result, ShouldEqual, "cn=test,dc=smartems,dc=org")
 		})
 	})
 

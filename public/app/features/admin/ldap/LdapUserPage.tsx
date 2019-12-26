@@ -105,7 +105,7 @@ export class LdapUserPage extends PureComponent<Props, State> {
     return (
       <Page navModel={navModel}>
         <Page.Contents isLoading={isLoading}>
-          <div className="grafana-info-box">
+          <div className="smartems-info-box">
             This user is synced via LDAP – All changes must be done in LDAP or mappings.
           </div>
           {userError && userError.title && (

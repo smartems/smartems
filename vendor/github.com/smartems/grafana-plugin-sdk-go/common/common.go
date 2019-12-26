@@ -3,7 +3,7 @@ package common
 import plugin "github.com/hashicorp/go-plugin"
 
 const (
-	MagicCookieKey   = "grafana_plugin_type"
+	MagicCookieKey   = "smartems_plugin_type"
 	MagicCookieValue = "datasource"
 	ProtocolVersion  = 2
 )

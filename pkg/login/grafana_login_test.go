@@ -11,7 +11,7 @@ import (
 
 func TestGrafanaLogin(t *testing.T) {
 	Convey("Login using Grafana DB", t, func() {
-		grafanaLoginScenario("When login with non-existing user", func(sc *grafanaLoginScenarioContext) {
+		smartemsLoginScenario("When login with non-existing user", func(sc *smartemsLoginScenarioContext) {
 			sc.withNonExistingUser()
 			err := loginUsingGrafanaDB(sc.loginUserQuery)
 
@@ -28,7 +28,7 @@ func TestGrafanaLogin(t *testing.T) {
 			})
 		})
 
-		grafanaLoginScenario("When login with invalid credentials", func(sc *grafanaLoginScenarioContext) {
+		smartemsLoginScenario("When login with invalid credentials", func(sc *smartemsLoginScenarioContext) {
 			sc.withInvalidPassword()
 			err := loginUsingGrafanaDB(sc.loginUserQuery)
 
@@ -45,7 +45,7 @@ func TestGrafanaLogin(t *testing.T) {
 			})
 		})
 
-		grafanaLoginScenario("When login with valid credentials", func(sc *grafanaLoginScenarioContext) {
+		smartemsLoginScenario("When login with valid credentials", func(sc *smartemsLoginScenarioContext) {
 			sc.withValidCredentials()
 			err := loginUsingGrafanaDB(sc.loginUserQuery)
 
@@ -64,7 +64,7 @@ func TestGrafanaLogin(t *testing.T) {
 			})
 		})
 
-		grafanaLoginScenario("When login with disabled user", func(sc *grafanaLoginScenarioContext) {
+		smartemsLoginScenario("When login with disabled user", func(sc *smartemsLoginScenarioContext) {
 			sc.withDisabledUser()
 			err := loginUsingGrafanaDB(sc.loginUserQuery)
 
@@ -83,18 +83,18 @@ func TestGrafanaLogin(t *testing.T) {
 	})
 }
 
-type grafanaLoginScenarioContext struct {
+type smartemsLoginScenarioContext struct {
 	loginUserQuery         *m.LoginUserQuery
 	validatePasswordCalled bool
 }
 
-type grafanaLoginScenarioFunc func(c *grafanaLoginScenarioContext)
+type smartemsLoginScenarioFunc func(c *smartemsLoginScenarioContext)
 
-func grafanaLoginScenario(desc string, fn grafanaLoginScenarioFunc) {
+func smartemsLoginScenario(desc string, fn smartemsLoginScenarioFunc) {
 	Convey(desc, func() {
 		origValidatePassword := validatePassword
 
-		sc := &grafanaLoginScenarioContext{
+		sc := &smartemsLoginScenarioContext{
 			loginUserQuery: &m.LoginUserQuery{
 				Username:  "user",
 				Password:  "pwd",
@@ -111,7 +111,7 @@ func grafanaLoginScenario(desc string, fn grafanaLoginScenarioFunc) {
 	})
 }
 
-func mockPasswordValidation(valid bool, sc *grafanaLoginScenarioContext) {
+func mockPasswordValidation(valid bool, sc *smartemsLoginScenarioContext) {
 	validatePassword = func(providedPassword string, userPassword string, userSalt string) error {
 		sc.validatePasswordCalled = true
 
@@ -123,7 +123,7 @@ func mockPasswordValidation(valid bool, sc *grafanaLoginScenarioContext) {
 	}
 }
 
-func (sc *grafanaLoginScenarioContext) getUserByLoginQueryReturns(user *m.User) {
+func (sc *smartemsLoginScenarioContext) getUserByLoginQueryReturns(user *m.User) {
 	bus.AddHandler("test", func(query *m.GetUserByLoginQuery) error {
 		if user == nil {
 			return m.ErrUserNotFound
@@ -134,7 +134,7 @@ func (sc *grafanaLoginScenarioContext) getUserByLoginQueryReturns(user *m.User) 
 	})
 }
 
-func (sc *grafanaLoginScenarioContext) withValidCredentials() {
+func (sc *smartemsLoginScenarioContext) withValidCredentials() {
 	sc.getUserByLoginQueryReturns(&m.User{
 		Id:       1,
 		Login:    sc.loginUserQuery.Username,
@@ -144,11 +144,11 @@ func (sc *grafanaLoginScenarioContext) withValidCredentials() {
 	mockPasswordValidation(true, sc)
 }
 
-func (sc *grafanaLoginScenarioContext) withNonExistingUser() {
+func (sc *smartemsLoginScenarioContext) withNonExistingUser() {
 	sc.getUserByLoginQueryReturns(nil)
 }
 
-func (sc *grafanaLoginScenarioContext) withInvalidPassword() {
+func (sc *smartemsLoginScenarioContext) withInvalidPassword() {
 	sc.getUserByLoginQueryReturns(&m.User{
 		Password: sc.loginUserQuery.Password,
 		Salt:     "salt",
@@ -156,7 +156,7 @@ func (sc *grafanaLoginScenarioContext) withInvalidPassword() {
 	mockPasswordValidation(false, sc)
 }
 
-func (sc *grafanaLoginScenarioContext) withDisabledUser() {
+func (sc *smartemsLoginScenarioContext) withDisabledUser() {
 	sc.getUserByLoginQueryReturns(&m.User{
 		IsDisabled: true,
 	})

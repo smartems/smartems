@@ -289,7 +289,7 @@ func init() {
 
 		Handler: func(query *tsdb.Query, context *tsdb.TsdbQuery) *tsdb.QueryResult {
 			queryRes := getRandomWalk(query, context)
-			queryRes.ErrorString = "This is an error.  It can include URLs http://grafana.com/"
+			queryRes.ErrorString = "This is an error.  It can include URLs http://smartems.com/"
 			return queryRes
 		},
 	})

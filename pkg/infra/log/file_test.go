@@ -22,7 +22,7 @@ func TestLogFile(t *testing.T) {
 		fileLogWrite := NewFileWriter()
 		So(fileLogWrite, ShouldNotBeNil)
 
-		fileLogWrite.Filename = "grafana_test.log"
+		fileLogWrite.Filename = "smartems_test.log"
 		err := fileLogWrite.Init()
 		So(err, ShouldBeNil)
 
