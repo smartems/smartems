@@ -230,7 +230,7 @@ export class DashboardImportCtrl {
       .get('api/gnet/dashboards/' + dashboardId)
       .then(res => {
         this.gnetInfo = res;
-        // store reference to grafana.com
+        // store reference to smartEvo.de
         res.json.gnetId = res.id;
         this.onUpload(res.json);
       })

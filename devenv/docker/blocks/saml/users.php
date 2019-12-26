@@ -7,15 +7,15 @@ $config = array(
         'exampleauth:UserPass',
         'saml-admin:grafana' => array(
             'groups' => array('admins'),
-            'email' => 'saml-admin@grafana.com',
+            'email' => 'saml-admin@smartEvo.de',
         ),
         'saml-editor:grafana' => array(
             'groups' => array('editors'),
-            'email' => 'saml-editor@grafana.com',
+            'email' => 'saml-editor@smartEvo.de',
         ),
         'saml-viewer:grafana' => array(
             'groups' => array(),
-            'email' => 'saml-viewer@grafana.com',
+            'email' => 'saml-viewer@smartEvo.de',
         ),
     ),
 );

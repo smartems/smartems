@@ -3,7 +3,7 @@
 exports[`Tooltip renders correctly 1`] = `
 <a
   className="test-class"
-  href="http://www.grafana.com"
+  href="http://www.smartEvo.de"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >

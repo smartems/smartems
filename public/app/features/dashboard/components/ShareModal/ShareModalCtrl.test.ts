@@ -63,23 +63,23 @@ describe('ShareModalCtrl', () => {
     });
 
     it('should generate render url', () => {
-      ctx.$location.absUrl = () => 'http://dashboards.grafana.com/d/abcdefghi/my-dash';
+      ctx.$location.absUrl = () => 'http://dashboards.smartEvo.de/d/abcdefghi/my-dash';
 
       ctx.scope.panel = { id: 22 };
 
       ctx.scope.init();
-      const base = 'http://dashboards.grafana.com/render/d-solo/abcdefghi/my-dash';
+      const base = 'http://dashboards.smartEvo.de/render/d-solo/abcdefghi/my-dash';
       const params = '?from=1000&to=2000&orgId=1&panelId=22&width=1000&height=500&tz=UTC';
       expect(ctx.scope.imageUrl).toContain(base + params);
     });
 
     it('should generate render url for scripted dashboard', () => {
-      ctx.$location.absUrl = () => 'http://dashboards.grafana.com/dashboard/script/my-dash.js';
+      ctx.$location.absUrl = () => 'http://dashboards.smartEvo.de/dashboard/script/my-dash.js';
 
       ctx.scope.panel = { id: 22 };
 
       ctx.scope.init();
-      const base = 'http://dashboards.grafana.com/render/dashboard-solo/script/my-dash.js';
+      const base = 'http://dashboards.smartEvo.de/render/dashboard-solo/script/my-dash.js';
       const params = '?from=1000&to=2000&orgId=1&panelId=22&width=1000&height=500&tz=UTC';
       expect(ctx.scope.imageUrl).toContain(base + params);
     });

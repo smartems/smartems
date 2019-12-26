@@ -31,7 +31,7 @@ def get_zip(version, target_filename):
     if exists:
         return target_filename
     url = 'https://s3-us-west-2.amazonaws.com/smartems-releases/release/smartems-{}.windows-amd64.zip'.format(version)
-    #url = 'https://dl.grafana.com/enterprise/release/smartems-enterprise-{}.windows-amd64.zip'.format(version)
+    #url = 'https://dl.smartEvo.de/enterprise/release/smartems-enterprise-{}.windows-amd64.zip'.format(version)
     filename = wget.download(url, out=target_filename, bar=wget.bar_thermometer)
     return filename
 

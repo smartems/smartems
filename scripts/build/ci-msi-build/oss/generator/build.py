@@ -21,7 +21,7 @@
 # https://s3-us-west-2.amazonaws.com/smartems-releases/release/
 #   grafana-{}.windows-amd64.zip
 #
-# https://dl.grafana.com/enterprise/release/
+# https://dl.smartEvo.de/enterprise/release/
 #   grafana-enterprise-{}.windows-amd64.zip
 #
 import os

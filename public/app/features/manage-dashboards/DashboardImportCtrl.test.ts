@@ -57,7 +57,7 @@ describe('DashboardImportCtrl', () => {
     });
   });
 
-  describe('when specifying grafana.com url', () => {
+  describe('when specifying smartEvo.de url', () => {
     beforeEach(() => {
       ctx.ctrl.gnetUrl = 'http://smartems.com/dashboards/123';
       // setup api mock
