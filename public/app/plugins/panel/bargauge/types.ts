@@ -1,6 +1,6 @@
 import { SingleStatBaseOptions } from '@smartems/ui';
 import { standardGaugeFieldOptions } from '../gauge/types';
-import { VizOrientation, SelectableValue } from '@grafana/data';
+import { VizOrientation, SelectableValue } from '@smartems/data';
 
 export interface BarGaugeOptions extends SingleStatBaseOptions {
   displayMode: 'basic' | 'lcd' | 'gradient';

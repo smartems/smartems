@@ -1,7 +1,7 @@
-import { DataFrame, TimeRange } from '@grafana/data';
+import { DataFrame, TimeRange } from '@smartems/data';
 import { IHttpResponse } from 'angular';
 import { DashboardModel } from 'app/features/dashboard/state';
-import { eventFactory } from '@grafana/data';
+import { eventFactory } from '@smartems/data';
 
 /**
  * Event Payloads

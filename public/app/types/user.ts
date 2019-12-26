@@ -1,4 +1,4 @@
-import { TimeZone } from '@grafana/data';
+import { TimeZone } from '@smartems/data';
 
 export interface OrgUser {
   avatarUrl: string;

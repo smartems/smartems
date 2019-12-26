@@ -1,7 +1,7 @@
 import 'vendor/flot/jquery.flot';
 import $ from 'jquery';
 import _ from 'lodash';
-import { getColorFromHexRgbOrName } from '@grafana/data';
+import { getColorFromHexRgbOrName } from '@smartems/data';
 import { CoreEvents } from 'app/types';
 import { PanelCtrl } from 'app/features/panel/panel_ctrl';
 

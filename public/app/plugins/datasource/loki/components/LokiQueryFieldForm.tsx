@@ -12,7 +12,7 @@ import { Plugin, Node } from 'slate';
 // Types
 import { LokiQuery } from '../types';
 import { DOMUtil } from '@smartems/ui';
-import { ExploreQueryFieldProps, AbsoluteTimeRange } from '@grafana/data';
+import { ExploreQueryFieldProps, AbsoluteTimeRange } from '@smartems/data';
 import { Grammar } from 'prismjs';
 import LokiLanguageProvider, { LokiHistoryItem } from '../language_provider';
 import LokiDatasource from '../datasource';

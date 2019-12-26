@@ -10,8 +10,8 @@ import EmptyListCTA from 'app/core/components/EmptyListCTA/EmptyListCTA';
 import DataSourcesList from './DataSourcesList';
 
 // Types
-import { DataSourceSettings } from '@grafana/data';
-import { NavModel } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
+import { NavModel } from '@smartems/data';
 import { StoreState } from 'app/types';
 import { LayoutMode } from 'app/core/components/LayoutSelector/LayoutSelector';
 

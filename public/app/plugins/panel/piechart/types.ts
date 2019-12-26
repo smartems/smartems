@@ -1,6 +1,6 @@
 import { PieChartType, SingleStatBaseOptions } from '@smartems/ui';
 import { standardFieldDisplayOptions } from '../singlestat2/types';
-import { ReducerID, VizOrientation } from '@grafana/data';
+import { ReducerID, VizOrientation } from '@smartems/data';
 
 export interface PieChartOptions extends SingleStatBaseOptions {
   pieType: PieChartType;

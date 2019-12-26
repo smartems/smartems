@@ -2,7 +2,7 @@ import StackdriverDataSource from '../datasource';
 import { metricDescriptors } from './testData';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { CustomVariable } from 'app/features/templating/all';
-import { DataSourceInstanceSettings, toUtc } from '@grafana/data';
+import { DataSourceInstanceSettings, toUtc } from '@smartems/data';
 import { StackdriverOptions } from '../types';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';

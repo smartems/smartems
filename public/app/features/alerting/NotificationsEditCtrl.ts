@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { appEvents, coreModule, NavModelSrv } from 'app/core/core';
 import { BackendSrv } from 'app/core/services/backend_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class AlertNotificationEditCtrl {
   theForm: any;

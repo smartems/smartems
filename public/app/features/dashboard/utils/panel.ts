@@ -4,12 +4,12 @@ import store from 'app/core/store';
 // Models
 import { DashboardModel } from 'app/features/dashboard/state/DashboardModel';
 import { PanelModel, panelRemoved, panelAdded } from 'app/features/dashboard/state/PanelModel';
-import { TimeRange, AppEvents } from '@grafana/data';
+import { TimeRange, AppEvents } from '@smartems/data';
 
 // Utils
 import { isString as _isString } from 'lodash';
-import { rangeUtil } from '@grafana/data';
-import { dateMath } from '@grafana/data';
+import { rangeUtil } from '@smartems/data';
+import { dateMath } from '@smartems/data';
 import appEvents from 'app/core/app_events';
 import config from 'app/core/config';
 

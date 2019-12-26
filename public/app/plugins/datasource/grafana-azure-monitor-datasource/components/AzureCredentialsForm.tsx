@@ -1,5 +1,5 @@
 import React, { ChangeEvent, PureComponent } from 'react';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 import { Input, FormLabel, Select, Button } from '@smartems/ui';
 
 export interface Props {

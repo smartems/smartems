@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import { InputOptions } from './types';
 
 import { TableInputCSV } from '@smartems/ui';
-import { DataSourcePluginOptionsEditorProps, DataFrame, MutableDataFrame } from '@grafana/data';
+import { DataSourcePluginOptionsEditorProps, DataFrame, MutableDataFrame } from '@smartems/data';
 import { dataFrameToCSV } from './utils';
 
 interface Props extends DataSourcePluginOptionsEditorProps<InputOptions> {}

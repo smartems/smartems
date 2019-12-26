@@ -20,7 +20,7 @@ import {
   DataQueryRequest,
   PanelEvents,
   TimeZone,
-} from '@grafana/data';
+} from '@smartems/data';
 import { RefreshPicker } from '@smartems/ui';
 import {
   HigherOrderAction,

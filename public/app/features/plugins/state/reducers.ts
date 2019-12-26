@@ -2,7 +2,7 @@ import { Action, ActionTypes } from './actions';
 import { PluginsState } from 'app/types';
 import { LayoutModes } from '../../../core/components/LayoutSelector/LayoutSelector';
 import { PluginDashboard } from '../../../types/plugins';
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 
 export const initialState: PluginsState = {
   plugins: [] as PluginMeta[],

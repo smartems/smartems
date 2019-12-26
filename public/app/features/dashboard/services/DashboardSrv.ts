@@ -7,8 +7,8 @@ import { DashboardMeta, CoreEvents } from 'app/types';
 import { GrafanaRootScope } from 'app/routes/GrafanaCtrl';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { ILocationService } from 'angular';
-import { AppEvents } from '@grafana/data';
-import { PanelEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
+import { PanelEvents } from '@smartems/data';
 
 interface DashboardSaveOptions {
   folderId?: number;

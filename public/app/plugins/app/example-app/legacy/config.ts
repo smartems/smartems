@@ -1,4 +1,4 @@
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 
 export class ExampleConfigCtrl {
   static templateUrl = 'legacy/config.html';

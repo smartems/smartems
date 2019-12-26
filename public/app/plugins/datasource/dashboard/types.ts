@@ -1,4 +1,4 @@
-import { DataQuery } from '@grafana/data';
+import { DataQuery } from '@smartems/data';
 
 export const SHARED_DASHBODARD_QUERY = '-- Dashboard --';
 

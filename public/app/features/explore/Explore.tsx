@@ -34,7 +34,7 @@ import {
   GraphSeriesXY,
   TimeZone,
   AbsoluteTimeRange,
-} from '@grafana/data';
+} from '@smartems/data';
 import {
   ExploreItemState,
   ExploreUrlState,

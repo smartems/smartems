@@ -13,7 +13,7 @@ import {
   Select,
 } from '@smartems/ui';
 
-import { Threshold, ValueMapping, FieldConfig, DataLink, PanelEditorProps, FieldDisplayOptions } from '@grafana/data';
+import { Threshold, ValueMapping, FieldConfig, DataLink, PanelEditorProps, FieldDisplayOptions } from '@smartems/data';
 
 import { SingleStatOptions, SparklineOptions, displayModes, colorModes } from './types';
 import { SparklineEditor } from './SparklineEditor';

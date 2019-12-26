@@ -16,7 +16,7 @@ import {
   DataQueryResponseData,
   DataSourceApi,
   DataSourceInstanceSettings,
-} from '@grafana/data';
+} from '@smartems/data';
 import { from, merge, Observable, of, forkJoin } from 'rxjs';
 import { filter, map, tap } from 'rxjs/operators';
 

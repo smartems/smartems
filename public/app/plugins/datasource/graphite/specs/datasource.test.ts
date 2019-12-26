@@ -3,7 +3,7 @@ import _ from 'lodash';
 // @ts-ignore
 import $q from 'q';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 
 describe('graphiteDatasource', () => {
   const ctx: any = {

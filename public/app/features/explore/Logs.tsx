@@ -14,7 +14,7 @@ import {
   GraphSeriesXY,
   LinkModel,
   Field,
-} from '@grafana/data';
+} from '@smartems/data';
 import { Switch, LogLabels, ToggleButtonGroup, ToggleButton, LogRows } from '@smartems/ui';
 
 import { ExploreGraphPanel } from './ExploreGraphPanel';

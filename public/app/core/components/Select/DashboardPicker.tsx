@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { AsyncSelect } from '@smartems/ui';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 import { debounce } from 'lodash';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { DashboardSearchHit, DashboardDTO } from 'app/types';

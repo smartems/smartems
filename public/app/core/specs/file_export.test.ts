@@ -1,6 +1,6 @@
 import * as fileExport from '../utils/file_export';
 import { beforeEach, expect } from 'test/lib/common';
-import { TableData } from '@grafana/data';
+import { TableData } from '@smartems/data';
 
 describe('file_export', () => {
   const ctx: any = {};

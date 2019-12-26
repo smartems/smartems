@@ -5,7 +5,7 @@ import React, { PureComponent, ReactNode } from 'react';
 // Types
 import { AppNotificationSeverity } from 'app/types';
 import { Alert } from '@smartems/ui';
-import { PanelProps, PanelPlugin, PluginType, PanelPluginMeta } from '@grafana/data';
+import { PanelProps, PanelPlugin, PluginType, PanelPluginMeta } from '@smartems/data';
 
 interface Props {
   title: string;

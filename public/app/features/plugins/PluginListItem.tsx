@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 
 interface Props {
   plugin: PluginMeta;

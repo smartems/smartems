@@ -5,7 +5,7 @@ import {
   getSearchFilterScopedVar,
   SEARCH_FILTER_VARIABLE,
 } from '../variable';
-import { ScopedVars } from '@grafana/data';
+import { ScopedVars } from '@smartems/data';
 
 describe('containsVariable', () => {
   describe('when checking if a string contains a variable', () => {

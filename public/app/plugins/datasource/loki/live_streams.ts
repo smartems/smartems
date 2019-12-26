@@ -1,4 +1,4 @@
-import { DataFrame, FieldType, parseLabels, KeyValue, CircularDataFrame } from '@grafana/data';
+import { DataFrame, FieldType, parseLabels, KeyValue, CircularDataFrame } from '@smartems/data';
 import { Observable } from 'rxjs';
 import { webSocket } from 'rxjs/webSocket';
 import { LokiResponse } from './types';

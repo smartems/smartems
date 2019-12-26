@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataSourcePluginOptionsEditorProps, DataSourceSettings } from '@grafana/data';
+import { DataSourcePluginOptionsEditorProps, DataSourceSettings } from '@smartems/data';
 import { DataSourceHttpSettings } from '@smartems/ui';
 import { LokiOptions } from '../types';
 import { MaxLinesField } from './MaxLinesField';

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AlphaNotice } from '@smartems/ui';
-import { PluginState } from '@grafana/data';
+import { PluginState } from '@smartems/data';
 import { css } from 'emotion';
 
 interface Props {

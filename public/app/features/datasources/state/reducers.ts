@@ -1,5 +1,5 @@
 import { DataSourcesState } from 'app/types';
-import { DataSourceSettings, DataSourcePluginMeta } from '@grafana/data';
+import { DataSourceSettings, DataSourcePluginMeta } from '@smartems/data';
 import {
   dataSourceLoaded,
   dataSourcesLoaded,

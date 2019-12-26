@@ -10,7 +10,7 @@ import {
   createSuccessNotification,
   createWarningNotification,
 } from '../../copy/appNotification';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export interface Props {
   appNotifications: AppNotification[];

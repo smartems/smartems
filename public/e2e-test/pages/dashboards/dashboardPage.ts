@@ -1,4 +1,4 @@
-import { ClickablePageObject, ClickablePageObjectType, Selector, TestPage } from '@grafana/toolkit/src/e2e';
+import { ClickablePageObject, ClickablePageObjectType, Selector, TestPage } from '@smartems/toolkit/src/e2e';
 
 export interface DashboardPage {
   settings: ClickablePageObjectType;

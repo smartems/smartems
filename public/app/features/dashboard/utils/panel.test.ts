@@ -1,7 +1,7 @@
-import { TimeRange } from '@grafana/data';
+import { TimeRange } from '@smartems/data';
 import { applyPanelTimeOverrides } from 'app/features/dashboard/utils/panel';
 import { advanceTo, clear } from 'jest-date-mock';
-import { dateTime, DateTime } from '@grafana/data';
+import { dateTime, DateTime } from '@smartems/data';
 
 const dashboardTimeRange: TimeRange = {
   from: dateTime([2019, 1, 11, 12, 0]),

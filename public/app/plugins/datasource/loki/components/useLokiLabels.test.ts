@@ -1,7 +1,7 @@
 import { renderHook, act } from 'react-hooks-testing-library';
 import LanguageProvider from 'app/plugins/datasource/loki/language_provider';
 import { useLokiLabels } from './useLokiLabels';
-import { AbsoluteTimeRange } from '@grafana/data';
+import { AbsoluteTimeRange } from '@smartems/data';
 import { makeMockLokiDatasource } from '../mocks';
 
 describe('useLokiLabels hook', () => {

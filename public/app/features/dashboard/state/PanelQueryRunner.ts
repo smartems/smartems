@@ -22,7 +22,7 @@ import {
   DataTransformerConfig,
   transformDataFrame,
   ScopedVars,
-} from '@grafana/data';
+} from '@smartems/data';
 
 export interface QueryRunnerOptions<
   TQuery extends DataQuery = DataQuery,

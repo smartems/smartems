@@ -2,10 +2,10 @@ import angular, { IQService } from 'angular';
 import _ from 'lodash';
 
 import { getPluginSettings } from './PluginSettingsCache';
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 import { NavModelSrv } from 'app/core/core';
 import { GrafanaRootScope } from 'app/routes/GrafanaCtrl';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class AppPageCtrl {
   page: any;

@@ -7,7 +7,7 @@ import { getAngularLoader, AngularComponent } from '@grafana/runtime';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import StackdriverDatasource from '../datasource';
 import '../query_filter_ctrl';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export interface Props {
   filtersChanged: (filters: string[]) => void;

@@ -1,5 +1,5 @@
 import { SingleStatBaseOptions, SingleStatDisplayMode } from '@smartems/ui';
-import { VizOrientation, ReducerID, FieldDisplayOptions, SelectableValue } from '@grafana/data';
+import { VizOrientation, ReducerID, FieldDisplayOptions, SelectableValue } from '@smartems/data';
 
 export interface SparklineOptions {
   show: boolean;

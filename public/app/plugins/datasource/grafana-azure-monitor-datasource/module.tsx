@@ -1,4 +1,4 @@
-import { DataSourcePlugin } from '@grafana/data';
+import { DataSourcePlugin } from '@smartems/data';
 import { AzureMonitorQueryCtrl } from './query_ctrl';
 import Datasource from './datasource';
 import { ConfigEditor } from './components/ConfigEditor';

@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from 'react';
 import { EventsWithValidation, FormField, FormLabel, Input, regexValidation, Select } from '@smartems/ui';
-import { DataSourceSettings } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
 import { PromOptions } from '../types';
 
 const httpOptions = [{ value: 'GET', label: 'GET' }, { value: 'POST', label: 'POST' }];

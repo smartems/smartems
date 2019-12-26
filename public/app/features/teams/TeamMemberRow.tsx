@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { DeleteButton, Select } from '@smartems/ui';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 
 import { TeamMember, teamsPermissionLevels, TeamPermissionLevel } from 'app/types';
 import { WithFeatureToggle } from 'app/core/components/WithFeatureToggle';

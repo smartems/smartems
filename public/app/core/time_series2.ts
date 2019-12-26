@@ -1,6 +1,6 @@
 import { getFlotTickDecimals } from 'app/core/utils/ticks';
 import _ from 'lodash';
-import { getValueFormat, ValueFormatter, stringToJsRegex, DecimalCount } from '@grafana/data';
+import { getValueFormat, ValueFormatter, stringToJsRegex, DecimalCount } from '@smartems/data';
 
 function matchSeriesOverride(aliasOrRegex: string, seriesAlias: string) {
   if (!aliasOrRegex) {

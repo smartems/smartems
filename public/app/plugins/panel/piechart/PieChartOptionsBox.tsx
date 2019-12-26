@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import { Select, FormLabel, PanelOptionsGroup } from '@smartems/ui';
 
 // Types
-import { PanelEditorProps } from '@grafana/data';
+import { PanelEditorProps } from '@smartems/data';
 import { FormField, PieChartType } from '@smartems/ui';
 import { PieChartOptions } from './types';
 

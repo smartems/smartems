@@ -1,5 +1,5 @@
 import { logStreamToDataFrame, appendResponseToBufferedData } from './result_transformer';
-import { FieldType, MutableDataFrame } from '@grafana/data';
+import { FieldType, MutableDataFrame } from '@smartems/data';
 import { LokiLogsStream } from './types';
 
 const streams: LokiLogsStream[] = [

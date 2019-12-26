@@ -15,7 +15,7 @@ import {
 import { auto } from 'angular';
 import { getProcessedDataFrames } from 'app/features/dashboard/state/runRequest';
 import { DataProcessor } from '../graph/data_processor';
-import { LegacyResponseData, PanelEvents, DataFrame } from '@grafana/data';
+import { LegacyResponseData, PanelEvents, DataFrame } from '@smartems/data';
 import { CoreEvents } from 'app/types';
 
 const X_BUCKET_NUMBER_DEFAULT = 30;

@@ -12,7 +12,7 @@ import {
   VariableType,
   variableTypes,
 } from './variable';
-import { stringToJsRegex } from '@grafana/data';
+import { stringToJsRegex } from '@smartems/data';
 import DatasourceSrv from '../plugins/datasource_srv';
 import { TemplateSrv } from './template_srv';
 import { VariableSrv } from './variable_srv';

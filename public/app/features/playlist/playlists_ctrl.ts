@@ -3,7 +3,7 @@ import coreModule from '../../core/core_module';
 import { BackendSrv } from '@grafana/runtime';
 import { NavModelSrv } from 'app/core/nav_model_srv';
 import { CoreEvents } from 'app/types';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class PlaylistsCtrl {
   playlists: any;

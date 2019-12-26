@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
-import { renderMarkdown } from '@grafana/data';
+import { renderMarkdown } from '@smartems/data';
 import Page from 'app/core/components/Page/Page';
 import UsersActionBar from './UsersActionBar';
 import UsersTable from './UsersTable';
@@ -11,7 +11,7 @@ import appEvents from 'app/core/app_events';
 import { loadUsers, loadInvitees, setUsersSearchQuery, updateUser, removeUser } from './state/actions';
 import { getNavModel } from 'app/core/selectors/navModel';
 import { getInvitees, getUsers, getUsersSearchQuery } from './state/selectors';
-import { NavModel } from '@grafana/data';
+import { NavModel } from '@smartems/data';
 
 export interface Props {
   navModel: NavModel;

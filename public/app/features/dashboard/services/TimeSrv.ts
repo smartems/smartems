@@ -13,7 +13,7 @@ import {
   toUtc,
   dateTime,
   isDateTime,
-} from '@grafana/data';
+} from '@smartems/data';
 import { ITimeoutService, ILocationService } from 'angular';
 import { ContextSrv } from 'app/core/services/context_srv';
 import { DashboardModel } from '../state/DashboardModel';

@@ -10,7 +10,7 @@ import { Gauge, DataLinksContextMenu } from '@smartems/ui';
 // Types
 import { GaugeOptions } from './types';
 import { VizRepeater } from '@smartems/ui';
-import { FieldDisplay, getFieldDisplayValues, VizOrientation, PanelProps } from '@grafana/data';
+import { FieldDisplay, getFieldDisplayValues, VizOrientation, PanelProps } from '@smartems/data';
 import { getFieldLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 
 export class GaugePanel extends PureComponent<PanelProps<GaugeOptions>> {

@@ -1,7 +1,7 @@
 import { PrometheusDatasource } from './datasource';
-import { DataSourceInstanceSettings } from '@grafana/data';
+import { DataSourceInstanceSettings } from '@smartems/data';
 import { PromContext, PromOptions } from './types';
-import { dateTime, LoadingState } from '@grafana/data';
+import { dateTime, LoadingState } from '@smartems/data';
 
 const defaultInstanceSettings: DataSourceInstanceSettings<PromOptions> = {
   url: 'test_prom',

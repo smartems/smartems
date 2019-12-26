@@ -4,7 +4,7 @@ import tinycolor from 'tinycolor2';
 import { SearchQuery } from './search';
 import { css, cx } from 'emotion';
 import { ThemeContext, selectThemeVariant } from '@smartems/ui';
-import { GrafanaTheme } from '@grafana/data';
+import { GrafanaTheme } from '@smartems/data';
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 

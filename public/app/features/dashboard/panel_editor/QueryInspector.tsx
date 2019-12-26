@@ -3,7 +3,7 @@ import appEvents from 'app/core/app_events';
 import { CopyToClipboard } from 'app/core/components/CopyToClipboard/CopyToClipboard';
 import { LoadingPlaceholder, JSONFormatter } from '@smartems/ui';
 import { CoreEvents } from 'app/types';
-import { AppEvents, PanelEvents } from '@grafana/data';
+import { AppEvents, PanelEvents } from '@smartems/data';
 
 interface DsQuery {
   isLoading: boolean;

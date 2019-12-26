@@ -1,12 +1,12 @@
 import '../datasource';
 import CloudWatchDatasource from '../datasource';
 import * as redux from 'app/store/store';
-import { dateMath } from '@grafana/data';
+import { dateMath } from '@smartems/data';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { CustomVariable } from 'app/features/templating/all';
 import _ from 'lodash';
 import { CloudWatchQuery } from '../types';
-import { DataSourceInstanceSettings } from '@grafana/data';
+import { DataSourceInstanceSettings } from '@smartems/data';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 

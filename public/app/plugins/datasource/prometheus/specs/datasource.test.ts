@@ -8,7 +8,7 @@ import {
   prometheusRegularEscape,
   prometheusSpecialRegexEscape,
 } from '../datasource';
-import { DataSourceInstanceSettings, DataQueryResponseData, DataQueryRequest, dateTime } from '@grafana/data';
+import { DataSourceInstanceSettings, DataQueryResponseData, DataQueryRequest, dateTime } from '@smartems/data';
 import { PromOptions, PromQuery, PromContext } from '../types';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';

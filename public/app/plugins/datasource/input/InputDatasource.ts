@@ -8,7 +8,7 @@ import {
   DataFrame,
   DataFrameDTO,
   toDataFrame,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { InputQuery, InputOptions } from './types';
 

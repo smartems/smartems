@@ -10,7 +10,7 @@ All packages are versioned according to the current smartEMS version:
 - smartEMS v6.2.5 -> @grafana/* packages @ 6.2.5
 - smartEMS - master branch version (based on package.json, i.e. 6.4.0-pre) -> @grafana/* packages @ 6.4.0-pre-<COMMIT-SHA> (see details below about packages publishing channels)
 
-> Please note that @grafana/toolkit, @smartems/ui, @grafana/data, and @grafana/runtime packages are considered ALPHA even though they are not released as alpha versions.
+> Please note that @smartems/toolkit, @smartems/ui, @smartems/data, and @grafana/runtime packages are considered ALPHA even though they are not released as alpha versions.
 
 ### Stable releases
 > **Even though packages are released under a stable version, they are considered ALPHA until further notice!**

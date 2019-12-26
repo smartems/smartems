@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 // Types
 import { ThemeContext } from '@smartems/ui';
-import { PanelProps } from '@grafana/data';
+import { PanelProps } from '@smartems/data';
 import { Options } from './types';
 import Table from '@smartems/ui/src/components/Table/Table';
 

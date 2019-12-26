@@ -1,4 +1,4 @@
-import { VizOrientation, FieldDisplayOptions } from '@grafana/data';
+import { VizOrientation, FieldDisplayOptions } from '@smartems/data';
 import { SingleStatBaseOptions } from '@smartems/ui/src/components/SingleStatShared/SingleStatBaseOptions';
 import { standardFieldDisplayOptions } from '../singlestat2/types';
 

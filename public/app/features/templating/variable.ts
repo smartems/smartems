@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { assignModelProperties } from 'app/core/utils/model_utils';
-import { ScopedVars } from '@grafana/data';
+import { ScopedVars } from '@smartems/data';
 
 /*
  * This regex matches 3 types of variable reference with an optional format specifier

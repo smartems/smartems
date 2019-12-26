@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 import {
   AzureLogsVariable,
   AzureLogsTableData,
@@ -9,7 +9,7 @@ import {
   KustoSchema,
   KustoColumn,
 } from '../types';
-import { TimeSeries, AnnotationEvent } from '@grafana/data';
+import { TimeSeries, AnnotationEvent } from '@smartems/data';
 
 export default class ResponseParser {
   columns: string[];

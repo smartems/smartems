@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import TableModel from 'app/core/table_model';
 import { TableRenderer } from '../renderer';
-import { getColorDefinitionByName } from '@grafana/data';
-import { ScopedVars } from '@grafana/data';
+import { getColorDefinitionByName } from '@smartems/data';
+import { ScopedVars } from '@smartems/data';
 
 describe('when rendering table', () => {
   const SemiDarkOrange = getColorDefinitionByName('semi-dark-orange');

@@ -25,7 +25,7 @@ import {
   getFlotPairs,
   TimeZone,
   getDisplayProcessor,
-} from '@grafana/data';
+} from '@smartems/data';
 import { getThemeColor } from 'app/core/utils/colors';
 import { hasAnsiCodes } from 'app/core/utils/text';
 import { sortInAscendingOrder } from 'app/core/utils/explore';

@@ -18,7 +18,7 @@ import {
   TimeRange,
   LoadingState,
   toLegacyResponseData,
-} from '@grafana/data';
+} from '@smartems/data';
 import { DashboardModel } from '../state/DashboardModel';
 
 interface Props {

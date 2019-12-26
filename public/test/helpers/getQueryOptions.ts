@@ -1,5 +1,5 @@
-import { DataQueryRequest, DataQuery } from '@grafana/data';
-import { dateTime } from '@grafana/data';
+import { DataQueryRequest, DataQuery } from '@smartems/data';
+import { dateTime } from '@smartems/data';
 
 export function getQueryOptions<TQuery extends DataQuery>(
   options: Partial<DataQueryRequest<TQuery>>

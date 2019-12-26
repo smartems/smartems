@@ -4,7 +4,7 @@ import appEvents from 'app/core/app_events';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { ValidationSrv } from 'app/features/manage-dashboards';
 import { ContextSrv } from 'app/core/services/context_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class FolderPickerCtrl {
   initialTitle: string;

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { QueryCtrl } from 'app/plugins/sdk';
 import { auto } from 'angular';
-import { PanelEvents } from '@grafana/data';
+import { PanelEvents } from '@smartems/data';
 
 export interface MssqlQuery {
   refId: string;

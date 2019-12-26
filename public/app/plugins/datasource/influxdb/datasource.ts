@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { dateMath, DataSourceApi, DataSourceInstanceSettings } from '@grafana/data';
+import { dateMath, DataSourceApi, DataSourceInstanceSettings } from '@smartems/data';
 import InfluxSeries from './influx_series';
 import InfluxQueryModel from './influx_query_model';
 import ResponseParser from './response_parser';

@@ -1,4 +1,4 @@
-import { DataQuery } from '@grafana/data';
+import { DataQuery } from '@smartems/data';
 import { getNextRefIdChar } from './query';
 
 const dataQueries: DataQuery[] = [

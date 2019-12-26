@@ -1,4 +1,4 @@
-import { PanelPlugin } from '@grafana/data';
+import { PanelPlugin } from '@smartems/data';
 import { GaugePanelEditor } from './GaugePanelEditor';
 import { GaugePanel } from './GaugePanel';
 import { GaugeOptions, defaults } from './types';

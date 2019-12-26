@@ -1,4 +1,4 @@
-import { PanelPlugin } from '@grafana/data';
+import { PanelPlugin } from '@smartems/data';
 import { GraphPanelEditor } from './GraphPanelEditor';
 import { GraphPanel } from './GraphPanel';
 import { Options, defaults } from './types';

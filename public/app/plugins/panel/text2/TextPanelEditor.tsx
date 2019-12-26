@@ -3,7 +3,7 @@ import React, { PureComponent, ChangeEvent } from 'react';
 
 // Components
 import { PanelOptionsGroup, Select } from '@smartems/ui';
-import { PanelEditorProps, SelectableValue } from '@grafana/data';
+import { PanelEditorProps, SelectableValue } from '@smartems/data';
 
 // Types
 import { TextOptions, TextMode } from './types';

@@ -1,4 +1,4 @@
-import { DataSourcePlugin } from '@grafana/data';
+import { DataSourcePlugin } from '@smartems/data';
 import { ElasticDatasource } from './datasource';
 import { ElasticQueryCtrl } from './query_ctrl';
 import ElasticsearchQueryField from './components/ElasticsearchQueryField';

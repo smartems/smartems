@@ -1,11 +1,11 @@
 // Libaries
 import React, { Component } from 'react';
-import { dateMath } from '@grafana/data';
+import { dateMath } from '@smartems/data';
 
 // Types
 import { DashboardModel } from '../../state';
 import { LocationState, CoreEvents } from 'app/types';
-import { TimeRange, TimeOption, RawTimeRange } from '@grafana/data';
+import { TimeRange, TimeOption, RawTimeRange } from '@smartems/data';
 
 // State
 import { updateLocation } from 'app/core/actions';

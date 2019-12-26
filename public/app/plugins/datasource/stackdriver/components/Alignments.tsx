@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { MetricSelect } from 'app/core/components/Select/MetricSelect';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 
 export interface Props {
   onChange: (perSeriesAligner: any) => void;

@@ -1,4 +1,4 @@
-import { DataSourceSettings, DataSourcePluginMeta } from '@grafana/data';
+import { DataSourceSettings, DataSourcePluginMeta } from '@smartems/data';
 import { DataSourcesState } from '../../../types/datasources';
 import { UrlQueryValue } from '@grafana/runtime';
 

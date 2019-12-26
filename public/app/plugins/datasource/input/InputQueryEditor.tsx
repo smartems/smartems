@@ -6,7 +6,7 @@ import { InputDatasource, describeDataFrame } from './InputDatasource';
 import { InputQuery, InputOptions } from './types';
 
 import { FormLabel, Select, TableInputCSV } from '@smartems/ui';
-import { DataFrame, toCSV, SelectableValue, MutableDataFrame, QueryEditorProps } from '@grafana/data';
+import { DataFrame, toCSV, SelectableValue, MutableDataFrame, QueryEditorProps } from '@smartems/data';
 
 import { dataFrameToCSV } from './utils';
 

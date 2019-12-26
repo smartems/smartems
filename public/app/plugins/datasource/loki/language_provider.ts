@@ -7,7 +7,7 @@ import syntax from './syntax';
 
 // Types
 import { LokiQuery } from './types';
-import { dateTime, AbsoluteTimeRange, LanguageProvider, HistoryItem } from '@grafana/data';
+import { dateTime, AbsoluteTimeRange, LanguageProvider, HistoryItem } from '@smartems/data';
 import { PromQuery } from '../prometheus/types';
 
 import LokiDatasource from './datasource';

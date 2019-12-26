@@ -6,7 +6,7 @@ import {
   stringToJsRegex,
   TimeRange,
   deprecationWarning,
-} from '@grafana/data';
+} from '@smartems/data';
 
 const kbn: any = {};
 
@@ -237,7 +237,7 @@ kbn.slugifyForUrl = (str: string) => {
 
 /** deprecated since 6.1, use grafana/data */
 kbn.stringToJsRegex = (str: string) => {
-  deprecationWarning('kbn.ts', 'kbn.stringToJsRegex()', '@grafana/data');
+  deprecationWarning('kbn.ts', 'kbn.stringToJsRegex()', '@smartems/data');
   return stringToJsRegex(str);
 };
 

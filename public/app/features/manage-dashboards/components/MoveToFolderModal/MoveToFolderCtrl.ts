@@ -1,7 +1,7 @@
 import coreModule from 'app/core/core_module';
 import appEvents from 'app/core/app_events';
 import { BackendSrv } from 'app/core/services/backend_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class MoveToFolderCtrl {
   dashboards: any;

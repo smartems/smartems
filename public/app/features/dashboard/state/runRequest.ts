@@ -17,7 +17,7 @@ import {
   toDataFrame,
   DataFrame,
   guessFieldTypes,
-} from '@grafana/data';
+} from '@smartems/data';
 import { ExpressionDatasourceID, expressionDatasource } from 'app/features/expressions/ExpressionDatasource';
 
 type MapOfResponsePackets = { [str: string]: DataQueryResponse };

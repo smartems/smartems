@@ -10,7 +10,7 @@ import {
   DataQueryRequest,
   DataQueryResponse,
   DataSourceInstanceSettings,
-} from '@grafana/data';
+} from '@smartems/data';
 import { getDataSourceSrv } from '@grafana/runtime';
 import { mergeMap, map } from 'rxjs/operators';
 

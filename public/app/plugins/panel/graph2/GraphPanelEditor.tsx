@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 
 // Types
-import { PanelEditorProps, FieldConfig } from '@grafana/data';
+import { PanelEditorProps, FieldConfig } from '@smartems/data';
 import {
   Switch,
   LegendOptions,

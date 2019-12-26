@@ -7,7 +7,7 @@ import { config } from 'app/core/config';
 // Types
 import { SingleStatOptions } from './types';
 import { VizRepeater, BigValue, DataLinksContextMenu, BigValueSparkline } from '@smartems/ui';
-import { PanelProps, getFieldDisplayValues, FieldDisplay } from '@grafana/data';
+import { PanelProps, getFieldDisplayValues, FieldDisplay } from '@smartems/data';
 import { getFieldLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 
 export class SingleStatPanel extends PureComponent<PanelProps<SingleStatOptions>> {

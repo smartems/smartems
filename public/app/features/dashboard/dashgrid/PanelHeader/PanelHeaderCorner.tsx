@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { renderMarkdown, LinkModelSupplier, ScopedVars } from '@grafana/data';
+import { renderMarkdown, LinkModelSupplier, ScopedVars } from '@smartems/data';
 import { Tooltip, PopoverContent } from '@smartems/ui';
 
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';

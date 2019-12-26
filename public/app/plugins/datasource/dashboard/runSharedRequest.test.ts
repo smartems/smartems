@@ -1,5 +1,5 @@
 import { isSharedDashboardQuery } from './runSharedRequest';
-import { DataSourceApi } from '@grafana/data';
+import { DataSourceApi } from '@smartems/data';
 
 describe('SharedQueryRunner', () => {
   it('should identify shared queries', () => {

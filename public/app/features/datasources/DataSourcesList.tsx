@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import DataSourcesListItem from './DataSourcesListItem';
 
 // Types
-import { DataSourceSettings } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
 import { LayoutMode, LayoutModes } from '../../core/components/LayoutSelector/LayoutSelector';
 
 export interface Props {

@@ -7,10 +7,10 @@ import { getTimeSrv } from 'app/features/dashboard/services/TimeSrv';
 
 // Types
 import { Emitter } from 'app/core/utils/emitter';
-import { DataQuery } from '@grafana/data';
-import { TimeRange } from '@grafana/data';
+import { DataQuery } from '@smartems/data';
+import { TimeRange } from '@smartems/data';
 import 'app/features/plugins/plugin_loader';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 
 interface QueryEditorProps {
   error?: any;

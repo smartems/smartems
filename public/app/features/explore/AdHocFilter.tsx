@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Select, ThemeContext } from '@smartems/ui';
 import { css, cx } from 'emotion';
-import { GrafanaTheme, SelectableValue } from '@grafana/data';
+import { GrafanaTheme, SelectableValue } from '@smartems/data';
 
 const getStyles = (theme: GrafanaTheme) => ({
   keyValueContainer: css`

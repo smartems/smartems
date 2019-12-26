@@ -1,5 +1,5 @@
 import { getLinksFromLogsField } from './linkSuppliers';
-import { ArrayVector, dateTime, Field, FieldType } from '@grafana/data';
+import { ArrayVector, dateTime, Field, FieldType } from '@smartems/data';
 import { getLinkSrv, LinkService, LinkSrv, setLinkSrv } from './link_srv';
 import { TemplateSrv } from '../../templating/template_srv';
 import { TimeSrv } from '../../dashboard/services/TimeSrv';

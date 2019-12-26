@@ -16,7 +16,7 @@ import {
   hasMsResolution,
   MS_DATE_TIME_FORMAT,
   DEFAULT_DATE_TIME_FORMAT,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { SeriesOptions, GraphOptions } from './types';
 import { GraphLegendEditorLegendOptions } from './GraphLegendEditor';

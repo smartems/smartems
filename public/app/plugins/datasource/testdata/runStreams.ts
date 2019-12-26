@@ -9,7 +9,7 @@ import {
   CSVReader,
   Field,
   LoadingState,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { TestDataQuery, StreamingQuery } from './types';
 import { getRandomLine } from './LogIpsum';

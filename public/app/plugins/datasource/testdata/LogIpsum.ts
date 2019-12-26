@@ -1,4 +1,4 @@
-import { LogLevel } from '@grafana/data';
+import { LogLevel } from '@smartems/data';
 
 let index = 0;
 

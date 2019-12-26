@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { DataFrame, dateMath, ScopedVars, DataQueryResponse, DataQueryRequest, toDataFrame } from '@grafana/data';
+import { DataFrame, dateMath, ScopedVars, DataQueryResponse, DataQueryRequest, toDataFrame } from '@smartems/data';
 import { isVersionGtOrEq, SemVersion } from 'app/core/utils/version';
 import gfunc from './gfunc';
 import { IQService } from 'angular';

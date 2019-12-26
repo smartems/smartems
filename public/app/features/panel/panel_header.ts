@@ -1,5 +1,5 @@
 import { coreModule } from 'app/core/core';
-import { AngularPanelMenuItem } from '@grafana/data';
+import { AngularPanelMenuItem } from '@smartems/data';
 
 const template = `
 <span class="panel-title">

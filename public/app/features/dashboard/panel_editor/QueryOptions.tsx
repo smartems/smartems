@@ -2,7 +2,7 @@
 import React, { PureComponent, ChangeEvent, FocusEvent, ReactText } from 'react';
 
 // Utils
-import { rangeUtil, DataSourceSelectItem } from '@grafana/data';
+import { rangeUtil, DataSourceSelectItem } from '@smartems/data';
 
 // Components
 import { EventsWithValidation, Input, InputStatus, Switch, ValidationEvents, FormLabel } from '@smartems/ui';

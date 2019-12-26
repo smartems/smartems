@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { QueryCtrl } from 'app/plugins/sdk';
 import { defaultQuery } from './runStreams';
 import { getBackendSrv } from 'app/core/services/backend_srv';
-import { dateTime, dateMath } from '@grafana/data';
+import { dateTime, dateMath } from '@smartems/data';
 
 export const defaultPulse: any = {
   timeStep: 60,

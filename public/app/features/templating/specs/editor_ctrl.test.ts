@@ -1,6 +1,6 @@
 import { VariableEditorCtrl } from '../editor_ctrl';
 import { TemplateSrv } from '../template_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 let mockEmit: any;
 jest.mock('app/core/app_events', () => {

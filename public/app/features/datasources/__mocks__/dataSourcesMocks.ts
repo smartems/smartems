@@ -1,4 +1,4 @@
-import { DataSourceSettings } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
 
 export const getMockDataSources = (amount: number) => {
   const dataSources = [];

@@ -7,7 +7,7 @@ import { getBackendSrv } from '@grafana/runtime';
 
 // Components
 import { FormLabel, Select } from '@smartems/ui';
-import { QueryEditorProps, SelectableValue } from '@grafana/data';
+import { QueryEditorProps, SelectableValue } from '@smartems/data';
 
 // Types
 import { TestDataDataSource } from './datasource';

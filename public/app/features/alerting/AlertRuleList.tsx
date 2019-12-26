@@ -10,7 +10,7 @@ import { StoreState, AlertRule, CoreEvents } from 'app/types';
 import { getAlertRulesAsync, setSearchQuery, togglePauseAlertRule } from './state/actions';
 import { getAlertRuleItems, getSearchQuery } from './state/selectors';
 import { FilterInput } from 'app/core/components/FilterInput/FilterInput';
-import { NavModel } from '@grafana/data';
+import { NavModel } from '@smartems/data';
 
 export interface Props {
   navModel: NavModel;

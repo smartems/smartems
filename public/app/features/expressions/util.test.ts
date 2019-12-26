@@ -1,5 +1,5 @@
 import { gelResponseToDataFrames } from './util';
-import { toDataFrameDTO } from '@grafana/data';
+import { toDataFrameDTO } from '@smartems/data';
 
 /* tslint:disable */
 const resp = {

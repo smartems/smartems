@@ -20,7 +20,7 @@ import {
   TimeRange,
   AbsoluteTimeRange,
   LoadingState,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { ExploreItemState, ExploreId, ExploreMode } from 'app/types/explore';
 import { Emitter } from 'app/core/utils/emitter';

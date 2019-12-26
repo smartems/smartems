@@ -17,8 +17,8 @@ import { getDataSource } from './state/selectors';
 
 // Types
 import { PluginDashboard, StoreState } from 'app/types';
-import { DataSourceSettings } from '@grafana/data';
-import { NavModel } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
+import { NavModel } from '@smartems/data';
 
 export interface Props {
   navModel: NavModel;

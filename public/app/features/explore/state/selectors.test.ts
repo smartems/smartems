@@ -1,5 +1,5 @@
 import { deduplicatedRowsSelector } from './selectors';
-import { LogLevel, LogsDedupStrategy } from '@grafana/data';
+import { LogLevel, LogsDedupStrategy } from '@smartems/data';
 import { ExploreItemState } from 'app/types';
 
 const state: any = {

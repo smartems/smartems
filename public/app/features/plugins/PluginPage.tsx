@@ -18,7 +18,7 @@ import {
   PluginType,
   NavModel,
   NavModelItem,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import Page from 'app/core/components/Page/Page';
 import { getPluginSettings } from './PluginSettingsCache';

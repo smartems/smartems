@@ -1,7 +1,7 @@
 import coreModule from '../core_module';
 import config from 'app/core/config';
 import { BackendSrv } from '../services/backend_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export class ResetPasswordCtrl {
   /** @ngInject */

@@ -20,7 +20,7 @@ import {
   TimeRange,
   TimeZone,
   toUtc,
-} from '@grafana/data';
+} from '@smartems/data';
 import { renderUrl } from 'app/core/utils/url';
 import store from 'app/core/store';
 import kbn from 'app/core/utils/kbn';

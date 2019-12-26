@@ -22,7 +22,7 @@ import config from 'app/core/config';
 import TimeSeries from 'app/core/time_series2';
 import TableModel from 'app/core/table_model';
 import { coreModule, appEvents, contextSrv } from 'app/core/core';
-import { DataSourcePlugin, AppPlugin, PanelPlugin, PluginMeta, DataSourcePluginMeta, dateMath } from '@grafana/data';
+import { DataSourcePlugin, AppPlugin, PanelPlugin, PluginMeta, DataSourcePluginMeta, dateMath } from '@smartems/data';
 import * as fileExport from 'app/core/utils/file_export';
 import * as flatten from 'app/core/utils/flatten';
 import * as ticks from 'app/core/utils/ticks';
@@ -31,12 +31,12 @@ import impressionSrv from 'app/core/services/impression_srv';
 import builtInPlugins from './built_in_plugins';
 import * as d3 from 'd3';
 import * as emotion from 'emotion';
-import * as grafanaData from '@grafana/data';
+import * as grafanaData from '@smartems/data';
 import * as grafanaUIraw from '@smartems/ui';
 import * as grafanaRuntime from '@grafana/runtime';
 
 // Help the 6.4 to 6.5 migration
-// The base classes were moved from @smartems/ui to @grafana/data
+// The base classes were moved from @smartems/ui to @smartems/data
 // This exposes the same classes on both import paths
 const grafanaUI = grafanaUIraw as any;
 grafanaUI.PanelPlugin = grafanaData.PanelPlugin;
@@ -82,7 +82,7 @@ function exposeToPlugin(name: string, component: any) {
   });
 }
 
-exposeToPlugin('@grafana/data', grafanaData);
+exposeToPlugin('@smartems/data', grafanaData);
 exposeToPlugin('@smartems/ui', grafanaUI);
 exposeToPlugin('@grafana/runtime', grafanaRuntime);
 exposeToPlugin('lodash', _);

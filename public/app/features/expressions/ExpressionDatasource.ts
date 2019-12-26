@@ -4,7 +4,7 @@ import {
   DataQueryResponse,
   DataSourceInstanceSettings,
   DataSourcePluginMeta,
-} from '@grafana/data';
+} from '@smartems/data';
 import { ExpressionQuery, GELQueryType } from './types';
 import { ExpressionQueryEditor } from './ExpressionQueryEditor';
 import { Observable, from } from 'rxjs';

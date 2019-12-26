@@ -24,7 +24,7 @@ import {
   PanelEvents,
   PanelData,
   PanelPlugin,
-} from '@grafana/data';
+} from '@smartems/data';
 
 const DEFAULT_PLUGIN_ERROR = 'Error in plugin';
 

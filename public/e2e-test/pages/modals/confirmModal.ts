@@ -1,4 +1,4 @@
-import { ClickablePageObject, ClickablePageObjectType, PageObject, Selector, TestPage } from '@grafana/toolkit/src/e2e';
+import { ClickablePageObject, ClickablePageObjectType, PageObject, Selector, TestPage } from '@smartems/toolkit/src/e2e';
 
 export interface ConfirmModal {
   delete: ClickablePageObjectType;

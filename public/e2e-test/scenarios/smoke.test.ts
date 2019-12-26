@@ -1,6 +1,6 @@
 import { Browser, Page, Target } from 'puppeteer-core';
 
-import { compareScreenShots, constants, e2eScenario, takeScreenShot } from '@grafana/toolkit/src/e2e';
+import { compareScreenShots, constants, e2eScenario, takeScreenShot } from '@smartems/toolkit/src/e2e';
 import { addDataSourcePage } from 'e2e-test/pages/datasources/addDataSourcePage';
 import { editDataSourcePage } from 'e2e-test/pages/datasources/editDataSourcePage';
 import { dataSourcesPageFactory } from 'e2e-test/pages/datasources/dataSources';

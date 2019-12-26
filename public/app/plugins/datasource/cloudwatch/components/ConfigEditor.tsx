@@ -1,7 +1,7 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 import { FormLabel, Select, Input, Button } from '@smartems/ui';
-import { DataSourcePluginOptionsEditorProps, DataSourceSettings } from '@grafana/data';
-import { SelectableValue } from '@grafana/data';
+import { DataSourcePluginOptionsEditorProps, DataSourceSettings } from '@smartems/data';
+import { SelectableValue } from '@smartems/data';
 import { getDatasourceSrv } from 'app/features/plugins/datasource_srv';
 import CloudWatchDatasource from '../datasource';
 import { CloudWatchJsonData, CloudWatchSecureJsonData } from '../types';

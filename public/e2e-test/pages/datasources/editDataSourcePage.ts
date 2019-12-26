@@ -7,7 +7,7 @@ import {
   PageObjectType,
   Selector,
   TestPage,
-} from '@grafana/toolkit/src/e2e';
+} from '@smartems/toolkit/src/e2e';
 
 export interface EditDataSourcePage {
   name: InputPageObjectType;

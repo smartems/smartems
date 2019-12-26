@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { StoreState } from 'app/types';
-import { NavModel } from '@grafana/data';
+import { NavModel } from '@smartems/data';
 import { getNavModel } from 'app/core/selectors/navModel';
 import { UserProvider } from 'app/core/utils/UserProvider';
 import Page from 'app/core/components/Page/Page';

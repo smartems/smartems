@@ -1,4 +1,4 @@
-import { DataFrameView, KeyValue, MutableDataFrame } from '@grafana/data';
+import { DataFrameView, KeyValue, MutableDataFrame } from '@smartems/data';
 import { ElasticResponse } from '../elastic_response';
 
 describe('ElasticResponse', () => {

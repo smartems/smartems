@@ -1,7 +1,7 @@
 // Libraries
 import React, { PureComponent } from 'react';
 import { debounce } from 'lodash';
-import { renderMarkdown } from '@grafana/data';
+import { renderMarkdown } from '@smartems/data';
 
 // Utils
 import { sanitize } from 'app/core/utils/text';
@@ -9,7 +9,7 @@ import config from 'app/core/config';
 
 // Types
 import { TextOptions } from './types';
-import { PanelProps } from '@grafana/data';
+import { PanelProps } from '@smartems/data';
 
 interface Props extends PanelProps<TextOptions> {}
 interface State {

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 
 // Types
-import { PanelEditorProps } from '@grafana/data';
+import { PanelEditorProps } from '@smartems/data';
 import { Switch, FormField } from '@smartems/ui';
 import { Options } from './types';
 

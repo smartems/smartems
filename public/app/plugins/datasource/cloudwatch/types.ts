@@ -1,4 +1,4 @@
-import { DataQuery, SelectableValue, DataSourceJsonData } from '@grafana/data';
+import { DataQuery, SelectableValue, DataSourceJsonData } from '@smartems/data';
 
 export interface CloudWatchQuery extends DataQuery {
   id: string;

@@ -1,6 +1,6 @@
 import angular, { ILocationService } from 'angular';
 import config from 'app/core/config';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 import { appendQueryToUrl, toUrlParams } from 'app/core/utils/url';
 import { TimeSrv } from '../../services/TimeSrv';
 import { TemplateSrv } from 'app/features/templating/template_srv';

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import LRU from 'lru-cache';
 
-import { dateTime, LanguageProvider, HistoryItem } from '@grafana/data';
+import { dateTime, LanguageProvider, HistoryItem } from '@smartems/data';
 import { CompletionItem, TypeaheadInput, TypeaheadOutput, CompletionItemGroup } from '@smartems/ui';
 
 import { parseSelector, processLabels, processHistogramLabels } from './language_utils';

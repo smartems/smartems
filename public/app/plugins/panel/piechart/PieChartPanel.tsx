@@ -6,11 +6,11 @@ import { config } from 'app/core/config';
 
 // Components
 import { PieChart } from '@smartems/ui';
-import { getFieldDisplayValues } from '@grafana/data';
+import { getFieldDisplayValues } from '@smartems/data';
 
 // Types
 import { PieChartOptions } from './types';
-import { PanelProps } from '@grafana/data';
+import { PanelProps } from '@smartems/data';
 
 interface Props extends PanelProps<PieChartOptions> {}
 

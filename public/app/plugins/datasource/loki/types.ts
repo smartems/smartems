@@ -1,4 +1,4 @@
-import { Labels, DataQuery, DataSourceJsonData } from '@grafana/data';
+import { Labels, DataQuery, DataSourceJsonData } from '@smartems/data';
 
 export interface LokiQuery extends DataQuery {
   expr: string;

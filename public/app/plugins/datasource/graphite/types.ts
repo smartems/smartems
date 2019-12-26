@@ -1,4 +1,4 @@
-import { DataQuery } from '@grafana/data';
+import { DataQuery } from '@smartems/data';
 
 export interface GraphiteQuery extends DataQuery {
   target?: string;

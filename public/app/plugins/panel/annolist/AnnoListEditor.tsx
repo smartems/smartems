@@ -4,7 +4,7 @@ import React, { PureComponent, ChangeEvent } from 'react';
 // Components
 import { PanelOptionsGroup, PanelOptionsGrid, Switch, FormField, FormLabel } from '@smartems/ui';
 
-import { PanelEditorProps, toIntegerOrUndefined, toNumberString } from '@grafana/data';
+import { PanelEditorProps, toIntegerOrUndefined, toNumberString } from '@smartems/data';
 
 // Types
 import { AnnoOptions } from './types';

@@ -15,7 +15,7 @@ import { PanelResizer } from './PanelResizer';
 
 // Types
 import { PanelModel, DashboardModel } from '../state';
-import { PanelPluginMeta, PanelPlugin } from '@grafana/data';
+import { PanelPluginMeta, PanelPlugin } from '@smartems/data';
 import { AutoSizer } from 'react-virtualized';
 
 export interface Props {

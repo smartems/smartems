@@ -16,7 +16,7 @@ import { VizPickerSearch } from './VizPickerSearch';
 import PluginStateinfo from 'app/features/plugins/PluginStateInfo';
 import { PanelCtrl } from 'app/plugins/sdk';
 import { Unsubscribable } from 'rxjs';
-import { PanelPlugin, PanelPluginMeta, PanelData, LoadingState, DefaultTimeRange } from '@grafana/data';
+import { PanelPlugin, PanelPluginMeta, PanelData, LoadingState, DefaultTimeRange } from '@smartems/data';
 
 interface Props {
   panel: PanelModel;

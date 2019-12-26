@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import PluginListItem from './PluginListItem';
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 import { LayoutMode, LayoutModes } from '../../core/components/LayoutSelector/LayoutSelector';
 
 interface Props {

@@ -1,5 +1,5 @@
 import { assignModelProperties, containsVariable, VariableActions, variableTypes } from './variable';
-import { stringToJsRegex } from '@grafana/data';
+import { stringToJsRegex } from '@smartems/data';
 import { VariableSrv } from './variable_srv';
 import { TemplateSrv } from './template_srv';
 import { DatasourceSrv } from '../plugins/datasource_srv';

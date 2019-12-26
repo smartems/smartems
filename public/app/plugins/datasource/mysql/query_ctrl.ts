@@ -8,7 +8,7 @@ import sqlPart from './sql_part';
 import { auto, IQService } from 'angular';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { CoreEvents } from 'app/types';
-import { PanelEvents } from '@grafana/data';
+import { PanelEvents } from '@smartems/data';
 
 export interface QueryMeta {
   sql: string;

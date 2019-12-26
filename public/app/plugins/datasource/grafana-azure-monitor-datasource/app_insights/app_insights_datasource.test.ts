@@ -1,5 +1,5 @@
 import Datasource from '../datasource';
-import { DataFrame, toUtc } from '@grafana/data';
+import { DataFrame, toUtc } from '@smartems/data';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 // @ts-ignore
 import Q from 'q';

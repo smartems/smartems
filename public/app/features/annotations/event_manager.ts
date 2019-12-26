@@ -10,7 +10,7 @@ import {
 } from '@smartems/ui';
 
 import { MetricsPanelCtrl } from 'app/plugins/sdk';
-import { AnnotationEvent } from '@grafana/data';
+import { AnnotationEvent } from '@smartems/data';
 
 export class EventManager {
   event: AnnotationEvent;

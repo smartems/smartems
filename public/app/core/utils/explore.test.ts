@@ -15,7 +15,7 @@ import {
 } from './explore';
 import { ExploreUrlState, ExploreMode } from 'app/types/explore';
 import store from 'app/core/store';
-import { DataQueryError, LogsDedupStrategy, LogsModel, LogLevel, dateTime, MutableDataFrame } from '@grafana/data';
+import { DataQueryError, LogsDedupStrategy, LogsModel, LogLevel, dateTime, MutableDataFrame } from '@smartems/data';
 import { RefreshPicker } from '@smartems/ui';
 
 const DEFAULT_EXPLORE_STATE: ExploreUrlState = {

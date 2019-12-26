@@ -1,5 +1,5 @@
 import LokiDatasource from './datasource';
-import { DataSourceSettings } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
 import { LokiOptions } from './types';
 import { createDatasourceSettings } from '../../../features/datasources/mocks';
 

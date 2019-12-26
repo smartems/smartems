@@ -1,4 +1,4 @@
-import { LogsModel, GraphSeriesXY, DataFrame, FieldType, TimeZone } from '@grafana/data';
+import { LogsModel, GraphSeriesXY, DataFrame, FieldType, TimeZone } from '@smartems/data';
 
 import { ExploreItemState, ExploreMode } from 'app/types/explore';
 import TableModel, { mergeTablesIntoModel } from 'app/core/table_model';

@@ -26,7 +26,7 @@ import config from 'app/core/config';
 import TimeSeries from 'app/core/time_series2';
 import $ from 'jquery';
 import { graphDirective } from '../graph';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 
 const ctx = {} as any;
 let ctrl: any;

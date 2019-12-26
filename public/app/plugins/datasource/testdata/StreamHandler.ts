@@ -13,7 +13,7 @@ import {
   MutableDataFrame,
   CircularVector,
   DataFrame,
-} from '@grafana/data';
+} from '@smartems/data';
 import { TestDataQuery, StreamingQuery } from './types';
 
 export const defaultQuery: StreamingQuery = {

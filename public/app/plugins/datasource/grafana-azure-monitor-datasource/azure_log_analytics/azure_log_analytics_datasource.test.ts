@@ -4,7 +4,7 @@ import FakeSchemaData from './__mocks__/schema';
 import Q from 'q';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { KustoSchema } from '../types';
-import { toUtc } from '@grafana/data';
+import { toUtc } from '@smartems/data';
 
 describe('AzureLogAnalyticsDatasource', () => {
   const ctx: any = {

@@ -2,7 +2,7 @@ import { PrometheusDatasource } from '../datasource';
 import PrometheusMetricFindQuery from '../metric_find_query';
 //@ts-ignore
 import q from 'q';
-import { toUtc, DataSourceInstanceSettings } from '@grafana/data';
+import { toUtc, DataSourceInstanceSettings } from '@smartems/data';
 import { PromOptions } from '../types';
 
 describe('PrometheusMetricFindQuery', () => {

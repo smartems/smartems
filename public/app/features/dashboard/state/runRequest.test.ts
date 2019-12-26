@@ -6,7 +6,7 @@ import {
   DataSourceApi,
   DataQueryRequest,
   DataQueryResponse,
-} from '@grafana/data';
+} from '@smartems/data';
 import { Subscriber, Observable, Subscription } from 'rxjs';
 import { runRequest } from './runRequest';
 import { deepFreeze } from '../../../../test/core/redux/reducerTester';

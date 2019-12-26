@@ -11,7 +11,7 @@ import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 import { DashboardModel } from 'app/features/dashboard/state/DashboardModel';
 
 // Types
-import { TimeRange } from '@grafana/data';
+import { TimeRange } from '@smartems/data';
 import { CoreEvents } from 'app/types';
 
 export class VariableSrv {

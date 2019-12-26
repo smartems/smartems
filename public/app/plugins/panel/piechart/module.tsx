@@ -1,4 +1,4 @@
-import { PanelPlugin } from '@grafana/data';
+import { PanelPlugin } from '@smartems/data';
 import { PieChartPanelEditor } from './PieChartPanelEditor';
 import { PieChartPanel } from './PieChartPanel';
 import { PieChartOptions, defaults } from './types';

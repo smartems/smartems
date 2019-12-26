@@ -1,4 +1,4 @@
-import { PanelPlugin } from '@grafana/data';
+import { PanelPlugin } from '@smartems/data';
 
 import { TextPanelEditor } from './TextPanelEditor';
 import { TextPanel } from './TextPanel';

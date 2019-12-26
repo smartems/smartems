@@ -13,7 +13,7 @@ import config from 'app/core/config';
 import appEvents from 'app/core/app_events';
 import EmptyListCTA from 'app/core/components/EmptyListCTA/EmptyListCTA';
 import { DeleteButton, EventsWithValidation, FormLabel, Input, ValidationEvents } from '@smartems/ui';
-import { NavModel, dateTime, isDateTime } from '@grafana/data';
+import { NavModel, dateTime, isDateTime } from '@smartems/data';
 import { FilterInput } from 'app/core/components/FilterInput/FilterInput';
 import { store } from 'app/store/store';
 import kbn from 'app/core/utils/kbn';

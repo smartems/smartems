@@ -1,5 +1,5 @@
 import { EventEmitter } from 'eventemitter3';
-import { AppEvent } from '@grafana/data';
+import { AppEvent } from '@smartems/data';
 
 export class Emitter {
   private emitter: EventEmitter;

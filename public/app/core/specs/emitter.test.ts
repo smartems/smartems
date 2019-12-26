@@ -1,5 +1,5 @@
 import { Emitter } from '../utils/emitter';
-import { eventFactory } from '@grafana/data';
+import { eventFactory } from '@smartems/data';
 
 const testEvent = eventFactory('test');
 

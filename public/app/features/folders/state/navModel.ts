@@ -1,5 +1,5 @@
 import { FolderDTO } from 'app/types';
-import { NavModelItem, NavModel } from '@grafana/data';
+import { NavModelItem, NavModel } from '@smartems/data';
 
 export function buildNavModel(folder: FolderDTO): NavModelItem {
   return {

@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Types
-import { PluginConfigPageProps, DataSourcePlugin } from '@grafana/data';
+import { PluginConfigPageProps, DataSourcePlugin } from '@smartems/data';
 import { TestDataDataSource } from './datasource';
 
 interface Props extends PluginConfigPageProps<DataSourcePlugin<TestDataDataSource>> {}

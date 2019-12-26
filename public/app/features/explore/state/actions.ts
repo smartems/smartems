@@ -38,7 +38,7 @@ import {
   QueryFixAction,
   RawTimeRange,
   TimeRange,
-} from '@grafana/data';
+} from '@smartems/data';
 import { ExploreId, ExploreMode, ExploreUIState, QueryOptions } from 'app/types/explore';
 import {
   addQueryRowAction,

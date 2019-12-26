@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Select } from '@smartems/ui';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 import { dashboardPermissionLevels, DashboardAcl, PermissionLevel } from 'app/types/acl';
 import { FolderInfo } from 'app/types';
 

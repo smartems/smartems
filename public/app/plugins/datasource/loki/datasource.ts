@@ -12,7 +12,7 @@ import {
   ArrayVector,
   FieldType,
   FieldConfig,
-} from '@grafana/data';
+} from '@smartems/data';
 import { addLabelToSelector, keepSelectorFilters } from 'app/plugins/datasource/prometheus/add_label_to_query';
 import LanguageProvider from './language_provider';
 import { logStreamToDataFrame } from './result_transformer';
@@ -26,7 +26,7 @@ import {
   DataQueryRequest,
   DataQueryResponse,
   AnnotationQueryRequest,
-} from '@grafana/data';
+} from '@smartems/data';
 import { LokiQuery, LokiOptions, LokiLogsStream, LokiResponse } from './types';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { TemplateSrv } from 'app/features/templating/template_srv';

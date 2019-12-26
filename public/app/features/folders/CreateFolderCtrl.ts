@@ -4,7 +4,7 @@ import { BackendSrv } from 'app/core/services/backend_srv';
 import { ILocationService } from 'angular';
 import { ValidationSrv } from 'app/features/manage-dashboards';
 import { NavModelSrv } from 'app/core/nav_model_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export default class CreateFolderCtrl {
   title = '';

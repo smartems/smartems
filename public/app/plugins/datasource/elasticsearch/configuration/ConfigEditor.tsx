@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { DataSourceHttpSettings } from '@smartems/ui';
-import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
+import { DataSourcePluginOptionsEditorProps } from '@smartems/data';
 import { ElasticsearchOptions } from '../types';
 import { defaultMaxConcurrentShardRequests, ElasticDetails } from './ElasticDetails';
 import { LogsConfig } from './LogsConfig';

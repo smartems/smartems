@@ -14,7 +14,7 @@ import {
   TimeRange,
   LogsMetaItem,
   GraphSeriesXY,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { ExploreId, ExploreItemState } from 'app/types/explore';
 import { StoreState } from 'app/types';

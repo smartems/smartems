@@ -13,7 +13,7 @@ import {
 import { updateNavIndex, updateLocation } from 'app/core/actions';
 import { buildNavModel } from './navModel';
 import appEvents from 'app/core/app_events';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 export enum ActionTypes {
   LoadFolder = 'LOAD_FOLDER',

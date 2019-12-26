@@ -8,7 +8,7 @@ import PageHeader from '../PageHeader/PageHeader';
 import Footer from '../Footer/Footer';
 import PageContents from './PageContents';
 import { CustomScrollbar } from '@smartems/ui';
-import { NavModel } from '@grafana/data';
+import { NavModel } from '@smartems/data';
 import { isEqual } from 'lodash';
 
 interface Props {

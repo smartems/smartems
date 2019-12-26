@@ -1,7 +1,7 @@
 import React, { PureComponent, SyntheticEvent, ChangeEvent } from 'react';
 import { Tooltip } from '@smartems/ui';
 import appEvents from 'app/core/app_events';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 interface Props {
   onSubmit: (pw: string) => void;

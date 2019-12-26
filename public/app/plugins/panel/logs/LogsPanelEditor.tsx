@@ -5,7 +5,7 @@ import { Switch, PanelOptionsGrid, PanelOptionsGroup, FormLabel, Select } from '
 // Types
 import { Options } from './types';
 import { SortOrder } from 'app/core/utils/explore';
-import { PanelEditorProps, SelectableValue } from '@grafana/data';
+import { PanelEditorProps, SelectableValue } from '@smartems/data';
 
 const sortOrderOptions = [
   { value: SortOrder.Descending, label: 'Descending' },

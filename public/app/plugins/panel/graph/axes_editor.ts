@@ -1,4 +1,4 @@
-import { getValueFormats } from '@grafana/data';
+import { getValueFormats } from '@smartems/data';
 import { GraphCtrl } from './module';
 
 export class AxesEditorCtrl {

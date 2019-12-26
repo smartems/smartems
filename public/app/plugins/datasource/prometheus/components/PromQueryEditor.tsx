@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 // Types
 import { FormLabel, Select, Switch } from '@smartems/ui';
-import { SelectableValue, QueryEditorProps } from '@grafana/data';
+import { SelectableValue, QueryEditorProps } from '@smartems/data';
 
 import { PrometheusDatasource } from '../datasource';
 import { PromQuery, PromOptions } from '../types';

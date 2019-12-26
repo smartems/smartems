@@ -7,7 +7,7 @@ import {
   TableData,
   TimeSeries,
   DataQueryError,
-} from '@grafana/data';
+} from '@smartems/data';
 import { Scenario, TestDataQuery } from './types';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { queryMetricTree } from './metricTree';

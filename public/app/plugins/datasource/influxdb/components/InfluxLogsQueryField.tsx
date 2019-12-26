@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExploreQueryFieldProps } from '@grafana/data';
+import { ExploreQueryFieldProps } from '@smartems/data';
 // @ts-ignore
 import Cascader from 'rc-cascader';
 

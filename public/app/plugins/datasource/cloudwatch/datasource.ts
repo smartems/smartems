@@ -14,7 +14,7 @@ import {
   DataSourceApi,
   DataQueryRequest,
   DataSourceInstanceSettings,
-} from '@grafana/data';
+} from '@smartems/data';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';

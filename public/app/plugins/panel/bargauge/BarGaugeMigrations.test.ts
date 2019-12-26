@@ -1,4 +1,4 @@
-import { PanelModel } from '@grafana/data';
+import { PanelModel } from '@smartems/data';
 import { barGaugePanelMigrationHandler } from './BarGaugeMigrations';
 
 describe('BarGauge Panel Migrations', () => {

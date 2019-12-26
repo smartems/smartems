@@ -1,12 +1,12 @@
 import angular, { IQService } from 'angular';
-import { dateMath } from '@grafana/data';
+import { dateMath } from '@smartems/data';
 import _ from 'lodash';
 import { ElasticDatasource } from '../datasource';
-import { toUtc, dateTime } from '@grafana/data';
+import { toUtc, dateTime } from '@smartems/data';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { DataSourceInstanceSettings } from '@grafana/data';
+import { DataSourceInstanceSettings } from '@smartems/data';
 import { ElasticsearchOptions } from '../types';
 
 describe('ElasticDatasource', function(this: any) {

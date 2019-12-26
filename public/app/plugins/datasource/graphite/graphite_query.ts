@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { Parser } from './parser';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { ScopedVars } from '@grafana/data';
+import { ScopedVars } from '@smartems/data';
 
 export default class GraphiteQuery {
   datasource: any;

@@ -16,7 +16,7 @@ import { GRID_COLUMN_COUNT } from 'app/core/constants';
 import { auto } from 'angular';
 import { TemplateSrv } from '../templating/template_srv';
 import { getPanelLinksSupplier } from './panellinks/linkSuppliers';
-import { AppEvent, PanelEvents, PanelPluginMeta, renderMarkdown } from '@grafana/data';
+import { AppEvent, PanelEvents, PanelPluginMeta, renderMarkdown } from '@smartems/data';
 import { getLocationSrv } from '@grafana/runtime';
 
 export class PanelCtrl {

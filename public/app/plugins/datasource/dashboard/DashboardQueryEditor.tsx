@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 // Types
 import { Select } from '@smartems/ui';
-import { DataQuery, DataQueryError, PanelData, DataFrame, SelectableValue } from '@grafana/data';
+import { DataQuery, DataQueryError, PanelData, DataFrame, SelectableValue } from '@smartems/data';
 import { DashboardQuery } from './types';
 import config from 'app/core/config';
 import { css } from 'emotion';

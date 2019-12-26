@@ -7,7 +7,7 @@ import {
   MutableDataFrame,
   toDataFrame,
   LogRowModel,
-} from '@grafana/data';
+} from '@smartems/data';
 import { dedupLogRows, dataFrameToLogsModel } from './logs_model';
 
 describe('dedupLogRows()', () => {

@@ -2,7 +2,7 @@ import AzureMonitorDatasource from '../datasource';
 // @ts-ignore
 import Q from 'q';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { toUtc, DataFrame } from '@grafana/data';
+import { toUtc, DataFrame } from '@smartems/data';
 
 describe('AzureMonitorDatasource', () => {
   const ctx: any = {

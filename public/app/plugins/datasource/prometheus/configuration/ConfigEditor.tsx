@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataSourceHttpSettings } from '@smartems/ui';
-import { DataSourcePluginOptionsEditorProps } from '@grafana/data';
+import { DataSourcePluginOptionsEditorProps } from '@smartems/data';
 import { PromSettings } from './PromSettings';
 import { PromOptions } from '../types';
 

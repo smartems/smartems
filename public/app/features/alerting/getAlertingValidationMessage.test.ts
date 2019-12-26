@@ -1,5 +1,5 @@
 import { DataSourceSrv } from '@grafana/runtime';
-import { DataSourceApi, PluginMeta, DataTransformerConfig } from '@grafana/data';
+import { DataSourceApi, PluginMeta, DataTransformerConfig } from '@smartems/data';
 
 import { ElasticsearchQuery } from '../../plugins/datasource/elasticsearch/types';
 import { getAlertingValidationMessage } from './getAlertingValidationMessage';

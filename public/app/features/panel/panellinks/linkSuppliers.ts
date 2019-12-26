@@ -8,7 +8,7 @@ import {
   ScopedVar,
   Field,
   LinkModel,
-} from '@grafana/data';
+} from '@smartems/data';
 import { getLinkSrv } from './link_srv';
 
 interface SeriesVars {

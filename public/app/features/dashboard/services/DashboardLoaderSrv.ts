@@ -4,7 +4,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import $ from 'jquery';
 import kbn from 'app/core/utils/kbn';
-import { dateMath, AppEvents } from '@grafana/data';
+import { dateMath, AppEvents } from '@smartems/data';
 import impressionSrv from 'app/core/services/impression_srv';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { DashboardSrv } from './DashboardSrv';

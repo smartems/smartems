@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 // Components
 import { Select } from '@smartems/ui';
-import { SelectableValue, DataSourceSelectItem } from '@grafana/data';
+import { SelectableValue, DataSourceSelectItem } from '@smartems/data';
 
 export interface Props {
   onChange: (ds: DataSourceSelectItem) => void;

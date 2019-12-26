@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 
 import { QueryField, SlatePrism } from '@smartems/ui';
-import { ExploreQueryFieldProps } from '@grafana/data';
+import { ExploreQueryFieldProps } from '@smartems/data';
 import { ElasticDatasource } from '../datasource';
 import { ElasticsearchOptions, ElasticsearchQuery } from '../types';
 

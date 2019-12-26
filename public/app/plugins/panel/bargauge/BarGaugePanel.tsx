@@ -9,7 +9,7 @@ import { BarGauge, VizRepeater, DataLinksContextMenu } from '@smartems/ui';
 
 // Types
 import { BarGaugeOptions } from './types';
-import { getFieldDisplayValues, FieldDisplay, PanelProps } from '@grafana/data';
+import { getFieldDisplayValues, FieldDisplay, PanelProps } from '@smartems/data';
 import { getFieldLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 
 export class BarGaugePanel extends PureComponent<PanelProps<BarGaugeOptions>> {

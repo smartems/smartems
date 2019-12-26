@@ -7,7 +7,7 @@ import { QueryCtrl } from 'app/plugins/sdk';
 import appEvents from 'app/core/app_events';
 import { auto } from 'angular';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { AppEvents } from '@grafana/data';
+import { AppEvents } from '@smartems/data';
 
 const GRAPHITE_TAG_OPERATORS = ['=', '!=', '=~', '!=~'];
 const TAG_PREFIX = 'tag: ';

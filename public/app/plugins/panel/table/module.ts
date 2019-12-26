@@ -6,9 +6,9 @@ import { transformDataToTable } from './transformers';
 import { tablePanelEditor } from './editor';
 import { columnOptionsTab } from './column_options';
 import { TableRenderer } from './renderer';
-import { isTableData } from '@grafana/data';
+import { isTableData } from '@smartems/data';
 import { TemplateSrv } from 'app/features/templating/template_srv';
-import { PanelEvents } from '@grafana/data';
+import { PanelEvents } from '@smartems/data';
 import { CoreEvents } from 'app/types';
 
 class TablePanelCtrl extends MetricsPanelCtrl {

@@ -3,7 +3,7 @@ import { css, cx } from 'emotion';
 import tinycolor from 'tinycolor2';
 
 import { Themeable, withTheme, getLogRowStyles } from '@smartems/ui';
-import { GrafanaTheme, LogRowModel, TimeZone } from '@grafana/data';
+import { GrafanaTheme, LogRowModel, TimeZone } from '@smartems/data';
 
 import ElapsedTime from './ElapsedTime';
 

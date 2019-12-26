@@ -3,7 +3,7 @@ import { TimeSrvStub } from 'test/specs/helpers';
 import { CustomVariable } from 'app/features/templating/custom_variable';
 // @ts-ignore
 import q from 'q';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 
 describe('MSSQLDatasource', () => {

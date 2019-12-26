@@ -1,4 +1,4 @@
-import { DataSourceSettings } from '@grafana/data';
+import { DataSourceSettings } from '@smartems/data';
 
 export function createDatasourceSettings<T>(jsonData: T): DataSourceSettings<T> {
   return {

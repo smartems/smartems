@@ -1,4 +1,4 @@
-import { PanelPluginMeta, PluginMeta, PluginType, PanelPlugin, PanelProps } from '@grafana/data';
+import { PanelPluginMeta, PluginMeta, PluginType, PanelPlugin, PanelProps } from '@smartems/data';
 import { ComponentType } from 'enzyme';
 
 export const getMockPlugins = (amount: number): PluginMeta[] => {

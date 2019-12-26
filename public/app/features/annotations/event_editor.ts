@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import { coreModule } from 'app/core/core';
 import { MetricsPanelCtrl } from 'app/plugins/sdk';
-import { AnnotationEvent } from '@grafana/data';
-import { dateTime } from '@grafana/data';
+import { AnnotationEvent } from '@smartems/data';
+import { dateTime } from '@smartems/data';
 import { AnnotationsSrv } from './all';
 
 export class EventEditorCtrl {

@@ -1,6 +1,6 @@
 import { createRootReducer, recursiveCleanState } from './root';
 import { describe, expect } from '../../../test/lib/common';
-import { NavModelItem } from '@grafana/data';
+import { NavModelItem } from '@smartems/data';
 import { reducerTester } from '../../../test/core/redux/reducerTester';
 import { StoreState } from '../../types/store';
 import { ActionTypes } from '../../features/teams/state/actions';

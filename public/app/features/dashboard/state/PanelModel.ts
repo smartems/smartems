@@ -12,12 +12,12 @@ import {
   DataLink,
   DataTransformerConfig,
   ScopedVars,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import config from 'app/core/config';
 
 import { PanelQueryRunner } from './PanelQueryRunner';
-import { eventFactory } from '@grafana/data';
+import { eventFactory } from '@smartems/data';
 
 export const panelAdded = eventFactory<PanelModel | undefined>('panel-added');
 export const panelRemoved = eventFactory<PanelModel | undefined>('panel-removed');

@@ -1,4 +1,4 @@
-import { DataFrame, FieldType, Field, Vector } from '@grafana/data';
+import { DataFrame, FieldType, Field, Vector } from '@smartems/data';
 import { Table, ArrowType } from 'apache-arrow';
 
 export function base64StringToArrowTable(text: string): Table {

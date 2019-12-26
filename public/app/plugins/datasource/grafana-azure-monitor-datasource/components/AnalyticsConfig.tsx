@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 import { AzureCredentialsForm } from './AzureCredentialsForm';
 import { Switch, FormLabel, Select, Button } from '@smartems/ui';
 

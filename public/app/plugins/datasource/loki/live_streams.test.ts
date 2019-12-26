@@ -1,7 +1,7 @@
 import { Subject, Observable } from 'rxjs';
 import * as rxJsWebSocket from 'rxjs/webSocket';
 import { LiveStreams } from './live_streams';
-import { DataFrameView, Labels, formatLabels, DataFrame } from '@grafana/data';
+import { DataFrameView, Labels, formatLabels, DataFrame } from '@smartems/data';
 import { noop } from 'lodash';
 
 let fakeSocket: Subject<any>;

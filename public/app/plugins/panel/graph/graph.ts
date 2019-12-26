@@ -35,7 +35,7 @@ import {
   getDisplayProcessor,
   getFlotPairsConstant,
   PanelEvents,
-} from '@grafana/data';
+} from '@smartems/data';
 import { GraphContextMenuCtrl } from './GraphContextMenuCtrl';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 import { ContextSrv } from 'app/core/services/context_srv';

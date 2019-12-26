@@ -13,11 +13,11 @@ import sortByKeys from 'app/core/utils/sort_by_keys';
 // Types
 import { PanelModel, GridPos, panelAdded, panelRemoved } from './PanelModel';
 import { DashboardMigrator } from './DashboardMigrator';
-import { TimeRange, TimeZone, AppEvent } from '@grafana/data';
+import { TimeRange, TimeZone, AppEvent } from '@smartems/data';
 import { UrlQueryValue } from '@grafana/runtime';
-import { PanelEvents } from '@grafana/data';
+import { PanelEvents } from '@smartems/data';
 import { KIOSK_MODE_TV, DashboardMeta, CoreEvents } from 'app/types';
-import { toUtc, DateTimeInput, dateTime, isDateTime } from '@grafana/data';
+import { toUtc, DateTimeInput, dateTime, isDateTime } from '@smartems/data';
 
 export interface CloneOptions {
   saveVariables?: boolean;

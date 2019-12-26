@@ -7,8 +7,8 @@ import kbn from 'app/core/utils/kbn';
 
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { auto, IPromise } from 'angular';
-import { DataFrame } from '@grafana/data';
-import { PanelEvents } from '@grafana/data';
+import { DataFrame } from '@smartems/data';
+import { PanelEvents } from '@smartems/data';
 
 export interface ResultFormat {
   text: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExploreStartPageProps, DataQuery } from '@grafana/data';
+import { ExploreStartPageProps, DataQuery } from '@smartems/data';
 
 const CHEAT_SHEET_ITEMS = [
   {

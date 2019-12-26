@@ -6,7 +6,7 @@ import { PluginDashboard } from 'app/types';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { appEvents } from 'app/core/core';
 import DashboardsTable from 'app/features/datasources/DashboardsTable';
-import { AppEvents, PluginMeta, DataSourceApi } from '@grafana/data';
+import { AppEvents, PluginMeta, DataSourceApi } from '@smartems/data';
 
 interface Props {
   plugin: PluginMeta;

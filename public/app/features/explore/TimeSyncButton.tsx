@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { css } from 'emotion';
 
 import { Tooltip, useTheme, stylesFactory } from '@smartems/ui';
-import { GrafanaTheme } from '@grafana/data';
+import { GrafanaTheme } from '@smartems/data';
 
 const getStyles = stylesFactory((theme: GrafanaTheme) => {
   return {

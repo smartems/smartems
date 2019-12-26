@@ -16,7 +16,7 @@ import {
   LogsDedupStrategy,
   AbsoluteTimeRange,
   GraphSeriesXY,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { Emitter } from 'app/core/core';
 import TableModel from 'app/core/table_model';

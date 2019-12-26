@@ -7,7 +7,7 @@ import { addDataSource, loadDataSourceTypes, setDataSourceTypeSearchQuery } from
 import { getDataSourceTypes } from './state/selectors';
 import { FilterInput } from 'app/core/components/FilterInput/FilterInput';
 import { List } from '@smartems/ui';
-import { DataSourcePluginMeta, NavModel, PluginType } from '@grafana/data';
+import { DataSourcePluginMeta, NavModel, PluginType } from '@smartems/data';
 
 export interface Props {
   navModel: NavModel;

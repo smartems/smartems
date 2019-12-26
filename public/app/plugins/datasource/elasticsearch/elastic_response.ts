@@ -2,7 +2,7 @@ import _ from 'lodash';
 import flatten from 'app/core/utils/flatten';
 import * as queryDef from './query_def';
 import TableModel from 'app/core/table_model';
-import { DataQueryResponse, DataFrame, toDataFrame, FieldType, MutableDataFrame } from '@grafana/data';
+import { DataQueryResponse, DataFrame, toDataFrame, FieldType, MutableDataFrame } from '@smartems/data';
 import { ElasticsearchAggregation } from './types';
 
 export class ElasticResponse {

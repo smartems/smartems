@@ -7,7 +7,7 @@ import {
   ArrayVector,
   MutableDataFrame,
   findUniqueLabels,
-} from '@grafana/data';
+} from '@smartems/data';
 
 /**
  * Transforms LokiLogStream structure into a dataFrame. Used when doing standard queries.

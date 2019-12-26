@@ -1,4 +1,4 @@
-import { PanelModel } from '@grafana/data';
+import { PanelModel } from '@smartems/data';
 import { sharedSingleStatMigrationHandler } from '@smartems/ui';
 import { BarGaugeOptions } from './types';
 

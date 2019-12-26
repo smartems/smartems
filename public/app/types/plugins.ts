@@ -1,4 +1,4 @@
-import { PluginMeta } from '@grafana/data';
+import { PluginMeta } from '@smartems/data';
 
 export interface PluginDashboard {
   dashboardId: number;

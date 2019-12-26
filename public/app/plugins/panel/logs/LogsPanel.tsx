@@ -1,6 +1,6 @@
 import React from 'react';
 import { LogRows, CustomScrollbar } from '@smartems/ui';
-import { LogsDedupStrategy, PanelProps } from '@grafana/data';
+import { LogsDedupStrategy, PanelProps } from '@smartems/data';
 import { Options } from './types';
 import { dataFrameToLogsModel } from 'app/core/logs_model';
 import { sortLogsResult } from 'app/core/utils/explore';

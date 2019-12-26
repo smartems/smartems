@@ -13,7 +13,7 @@ import config from 'app/core/config';
 import TimeSeries from 'app/core/time_series2';
 import { VariableSuggestion } from '@smartems/ui';
 import { getProcessedDataFrames } from 'app/features/dashboard/state/runRequest';
-import { getColorFromHexRgbOrName, PanelEvents, DataFrame, DataLink, DateTimeInput } from '@grafana/data';
+import { getColorFromHexRgbOrName, PanelEvents, DataFrame, DataLink, DateTimeInput } from '@smartems/data';
 
 import { GraphContextMenuCtrl } from './GraphContextMenuCtrl';
 import { getDataLinksVariableSuggestions } from 'app/features/panel/panellinks/link_srv';

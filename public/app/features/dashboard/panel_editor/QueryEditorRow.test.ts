@@ -1,4 +1,4 @@
-import { LoadingState, toDataFrame, dateTime, PanelData, DataQueryRequest } from '@grafana/data';
+import { LoadingState, toDataFrame, dateTime, PanelData, DataQueryRequest } from '@smartems/data';
 import { filterPanelDataToQuery } from './QueryEditorRow';
 
 function makePretendRequest(requestId: string, subRequests?: DataQueryRequest[]): DataQueryRequest {

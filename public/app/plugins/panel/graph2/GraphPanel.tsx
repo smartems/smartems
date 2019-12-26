@@ -1,6 +1,6 @@
 import React from 'react';
 import { GraphWithLegend, Chart } from '@smartems/ui';
-import { PanelProps } from '@grafana/data';
+import { PanelProps } from '@smartems/data';
 import { Options } from './types';
 import { GraphPanelController } from './GraphPanelController';
 import { LegendDisplayMode } from '@smartems/ui/src/components/Legend/Legend';

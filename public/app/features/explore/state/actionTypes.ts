@@ -13,7 +13,7 @@ import {
   TimeRange,
   LoadingState,
   AbsoluteTimeRange,
-} from '@grafana/data';
+} from '@smartems/data';
 import { ExploreId, ExploreItemState, ExploreUIState, ExploreMode } from 'app/types/explore';
 import { actionCreatorFactory, ActionOf } from 'app/core/redux/actionCreatorFactory';
 

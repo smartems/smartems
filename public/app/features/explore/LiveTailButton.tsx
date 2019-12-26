@@ -4,7 +4,7 @@ import tinycolor from 'tinycolor2';
 import { css } from 'emotion';
 import { CSSTransition } from 'react-transition-group';
 import { useTheme, Tooltip, stylesFactory, selectThemeVariant } from '@smartems/ui';
-import { GrafanaTheme } from '@grafana/data';
+import { GrafanaTheme } from '@smartems/data';
 
 //Components
 import { ResponsiveButton } from './ResponsiveButton';

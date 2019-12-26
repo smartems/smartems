@@ -1,5 +1,5 @@
 import { LegendOptions, GraphTooltipOptions } from '@smartems/ui';
-import { YAxis, FieldDisplayOptions } from '@grafana/data';
+import { YAxis, FieldDisplayOptions } from '@smartems/data';
 
 import { GraphLegendEditorLegendOptions } from './GraphLegendEditor';
 // TODO move out from single stat

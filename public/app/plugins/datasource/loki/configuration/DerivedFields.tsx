@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { css } from 'emotion';
 import { Button, DataLinkBuiltInVars, stylesFactory, useTheme, VariableOrigin } from '@smartems/ui';
-import { GrafanaTheme } from '@grafana/data';
+import { GrafanaTheme } from '@smartems/data';
 import { DerivedFieldConfig } from '../types';
 import { DerivedField } from './DerivedField';
 import { DebugSection } from './DebugSection';

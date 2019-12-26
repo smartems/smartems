@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 
 // Types
 import { AnnoOptions } from './types';
-import { PanelProps, dateTime, DurationUnit, AnnotationEvent, AppEvents } from '@grafana/data';
+import { PanelProps, dateTime, DurationUnit, AnnotationEvent, AppEvents } from '@smartems/data';
 import { Tooltip } from '@smartems/ui';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 import { AbstractList } from '@smartems/ui/src/components/List/AbstractList';

@@ -1,4 +1,4 @@
-import { DataQuery, DataSourceJsonData } from '@grafana/data';
+import { DataQuery, DataSourceJsonData } from '@smartems/data';
 
 export interface AzureMonitorQuery extends DataQuery {
   refId: string;

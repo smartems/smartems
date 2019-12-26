@@ -1,5 +1,5 @@
 import { renderHook, act } from 'react-hooks-testing-library';
-import { AbsoluteTimeRange } from '@grafana/data';
+import { AbsoluteTimeRange } from '@smartems/data';
 
 import LanguageProvider from 'app/plugins/datasource/loki/language_provider';
 

@@ -1,5 +1,5 @@
 import { GraphCtrl } from '../module';
-import { dateTime } from '@grafana/data';
+import { dateTime } from '@smartems/data';
 
 jest.mock('../graph', () => ({}));
 

@@ -4,7 +4,7 @@ import cloneDeep from 'lodash/cloneDeep';
 import extend from 'lodash/extend';
 
 import { Button } from '@smartems/ui';
-import { PluginMeta, AppPlugin, deprecationWarning } from '@grafana/data';
+import { PluginMeta, AppPlugin, deprecationWarning } from '@smartems/data';
 
 import { AngularComponent, getAngularLoader } from '@grafana/runtime';
 import { getBackendSrv } from 'app/core/services/backend_srv';

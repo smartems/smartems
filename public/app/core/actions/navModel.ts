@@ -1,4 +1,4 @@
-import { NavModelItem } from '@grafana/data';
+import { NavModelItem } from '@smartems/data';
 
 export enum ActionTypes {
   UpdateNavIndex = 'UPDATE_NAV_INDEX',

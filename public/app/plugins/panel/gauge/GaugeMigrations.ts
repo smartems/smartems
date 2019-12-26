@@ -1,5 +1,5 @@
 import { sharedSingleStatPanelChangedHandler, sharedSingleStatMigrationHandler } from '@smartems/ui';
-import { PanelModel } from '@grafana/data';
+import { PanelModel } from '@smartems/data';
 import { GaugeOptions } from './types';
 
 // This is called when the panel first loads

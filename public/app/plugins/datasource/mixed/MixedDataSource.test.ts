@@ -1,7 +1,7 @@
 import { DatasourceSrvMock, MockDataSourceApi } from 'test/mocks/datasource_srv';
 import { getDataSourceSrv } from '@grafana/runtime';
 import { getQueryOptions } from 'test/helpers/getQueryOptions';
-import { LoadingState, DataSourceInstanceSettings } from '@grafana/data';
+import { LoadingState, DataSourceInstanceSettings } from '@smartems/data';
 import { MixedDatasource } from './module';
 import { from } from 'rxjs';
 

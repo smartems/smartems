@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import { Select } from '@smartems/ui';
-import { SelectableValue } from '@grafana/data';
+import { SelectableValue } from '@smartems/data';
 import { Variable } from 'app/types/templates';
 
 export interface Props {

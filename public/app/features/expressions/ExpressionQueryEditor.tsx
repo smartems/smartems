@@ -2,7 +2,7 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 
 import { FormLabel, Select, FormField } from '@smartems/ui';
-import { SelectableValue, ReducerID, QueryEditorProps } from '@grafana/data';
+import { SelectableValue, ReducerID, QueryEditorProps } from '@smartems/data';
 
 // Types
 import { ExpressionQuery, GELQueryType } from './types';

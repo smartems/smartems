@@ -1,6 +1,6 @@
 import InputDatasource, { describeDataFrame } from './InputDatasource';
 import { InputQuery, InputOptions } from './types';
-import { readCSV, DataFrame, MutableDataFrame, DataSourceInstanceSettings, PluginMeta } from '@grafana/data';
+import { readCSV, DataFrame, MutableDataFrame, DataSourceInstanceSettings, PluginMeta } from '@smartems/data';
 
 import { getQueryOptions } from 'test/helpers/getQueryOptions';
 

@@ -21,7 +21,7 @@ import {
   getDisplayProcessor,
   getColorFromHexRgbOrName,
   PanelEvents,
-} from '@grafana/data';
+} from '@smartems/data';
 
 import { convertOldAngularValueMapping } from '@smartems/ui';
 

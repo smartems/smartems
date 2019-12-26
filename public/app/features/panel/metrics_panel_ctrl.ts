@@ -17,7 +17,7 @@ import {
   TimeRange,
   toDataFrameDTO,
   toLegacyResponseData,
-} from '@grafana/data';
+} from '@smartems/data';
 import { Unsubscribable } from 'rxjs';
 import { PanelModel } from 'app/features/dashboard/state';
 import { CoreEvents } from 'app/types';
