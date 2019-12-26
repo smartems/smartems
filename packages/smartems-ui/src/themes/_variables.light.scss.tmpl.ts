@@ -4,7 +4,7 @@ import { GrafanaTheme } from '@smartems/data';
 import { renderGeneratedFileBanner } from '../utils/generatedFileBanner';
 
 export const lightThemeVarsTemplate = (theme: GrafanaTheme) =>
-  `${renderGeneratedFileBanner('grafana-ui/src/themes/light.ts', 'grafana-ui/src/themes/_variable.light.scss.tmpl.ts')}
+  `${renderGeneratedFileBanner('smartems-ui/src/themes/light.ts', 'smartems-ui/src/themes/_variable.light.scss.tmpl.ts')}
 // Global values
 // --------------------------------------------------
 

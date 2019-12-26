@@ -4,7 +4,7 @@ import { GrafanaThemeCommons } from '@smartems/data';
 import { renderGeneratedFileBanner } from '../utils/generatedFileBanner';
 
 export const commonThemeVarsTemplate = (theme: GrafanaThemeCommons) =>
-  `${renderGeneratedFileBanner('grafana-ui/src/themes/default.ts', 'grafana-ui/src/themes/_variables.scss.tmpl.ts')}
+  `${renderGeneratedFileBanner('smartems-ui/src/themes/default.ts', 'smartems-ui/src/themes/_variables.scss.tmpl.ts')}
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
