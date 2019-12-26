@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { LogsConfig } from './LogsConfig';
 import { createDefaultConfigOptions } from './mocks';
-import { FormField } from '@grafana/ui';
+import { FormField } from '@smartems/ui';
 
 describe('ElasticDetails', () => {
   it('should render without error', () => {

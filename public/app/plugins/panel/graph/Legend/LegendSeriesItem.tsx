@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
 import { TimeSeries } from 'app/core/core';
-import { SeriesColorPicker } from '@grafana/ui';
+import { SeriesColorPicker } from '@smartems/ui';
 
 export const LEGEND_STATS = ['min', 'max', 'avg', 'current', 'total'];
 

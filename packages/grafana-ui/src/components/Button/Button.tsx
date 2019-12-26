@@ -10,7 +10,7 @@ type CommonProps = {
   variant?: ButtonVariant;
   /**
    * icon prop is a temporary solution. It accepts legacy icon class names for the icon to be rendered.
-   * TODO: migrate to a component when we are going to migrate icons to @grafana/ui
+   * TODO: migrate to a component when we are going to migrate icons to @smartems/ui
    */
   icon?: string;
   className?: string;

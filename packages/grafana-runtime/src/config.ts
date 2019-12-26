@@ -1,5 +1,5 @@
 import extend from 'lodash/extend';
-import { getTheme } from '@grafana/ui';
+import { getTheme } from '@smartems/ui';
 import { GrafanaTheme, GrafanaThemeType, PanelPluginMeta, DataSourceInstanceSettings } from '@grafana/data';
 
 export interface BuildInfo {

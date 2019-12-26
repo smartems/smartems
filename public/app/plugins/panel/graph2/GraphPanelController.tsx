@@ -1,10 +1,10 @@
 import React from 'react';
-import { GraphSeriesToggler } from '@grafana/ui';
+import { GraphSeriesToggler } from '@smartems/ui';
 import { PanelData, GraphSeriesXY, AbsoluteTimeRange, TimeZone } from '@grafana/data';
 
 import { getGraphSeriesModel } from './getGraphSeriesModel';
 import { Options, SeriesOptions } from './types';
-import { SeriesColorChangeHandler, SeriesAxisToggleHandler } from '@grafana/ui/src/components/Graph/GraphWithLegend';
+import { SeriesColorChangeHandler, SeriesAxisToggleHandler } from '@smartems/ui/src/components/Graph/GraphWithLegend';
 
 interface GraphPanelControllerAPI {
   series: GraphSeriesXY[];

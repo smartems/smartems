@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FlotDataPoint } from './GraphContextMenuCtrl';
-import { ContextMenu, ContextMenuProps, SeriesIcon, ThemeContext } from '@grafana/ui';
+import { ContextMenu, ContextMenuProps, SeriesIcon, ThemeContext } from '@smartems/ui';
 import { DateTimeInput } from '@grafana/data';
 import { css } from 'emotion';
 

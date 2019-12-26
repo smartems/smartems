@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Alert } from '@grafana/ui';
+import { Alert } from '@smartems/ui';
 import { AppNotificationSeverity, LdapConnectionInfo, LdapServerInfo } from 'app/types';
 
 interface Props {

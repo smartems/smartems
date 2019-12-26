@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import tinycolor from 'tinycolor2';
 import { css } from 'emotion';
 import { CSSTransition } from 'react-transition-group';
-import { useTheme, Tooltip, stylesFactory, selectThemeVariant } from '@grafana/ui';
+import { useTheme, Tooltip, stylesFactory, selectThemeVariant } from '@smartems/ui';
 import { GrafanaTheme } from '@grafana/data';
 
 //Components

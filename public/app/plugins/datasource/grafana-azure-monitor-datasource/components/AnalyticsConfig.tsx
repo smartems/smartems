@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { SelectableValue } from '@grafana/data';
 import { AzureCredentialsForm } from './AzureCredentialsForm';
-import { Switch, FormLabel, Select, Button } from '@grafana/ui';
+import { Switch, FormLabel, Select, Button } from '@smartems/ui';
 
 export interface Props {
   datasourceConfig: any;

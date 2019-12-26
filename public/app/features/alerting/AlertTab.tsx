@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { css } from 'emotion';
-import { Alert, Button } from '@grafana/ui';
+import { Alert, Button } from '@smartems/ui';
 
 import { AngularComponent, getAngularLoader, getDataSourceSrv } from '@grafana/runtime';
 import appEvents from 'app/core/app_events';

@@ -2,7 +2,7 @@
 import React, { FunctionComponent } from 'react';
 
 // Components
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 
 interface Props {
   icon: string;

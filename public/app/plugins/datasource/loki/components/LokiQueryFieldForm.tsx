@@ -3,7 +3,7 @@ import React from 'react';
 // @ts-ignore
 import Cascader from 'rc-cascader';
 
-import { SlatePrism, TypeaheadOutput, SuggestionsState, QueryField, TypeaheadInput, BracesPlugin } from '@grafana/ui';
+import { SlatePrism, TypeaheadOutput, SuggestionsState, QueryField, TypeaheadInput, BracesPlugin } from '@smartems/ui';
 
 // Utils & Services
 // dom also includes Element polyfills
@@ -11,7 +11,7 @@ import { Plugin, Node } from 'slate';
 
 // Types
 import { LokiQuery } from '../types';
-import { DOMUtil } from '@grafana/ui';
+import { DOMUtil } from '@smartems/ui';
 import { ExploreQueryFieldProps, AbsoluteTimeRange } from '@grafana/data';
 import { Grammar } from 'prismjs';
 import LokiLanguageProvider, { LokiHistoryItem } from '../language_provider';

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { FormLabel, Button, Input } from '@grafana/ui';
+import { FormLabel, Button, Input } from '@smartems/ui';
 
 export interface Props {
   datasourceConfig: any;

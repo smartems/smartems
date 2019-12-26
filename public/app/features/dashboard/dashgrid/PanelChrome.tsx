@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Unsubscribable } from 'rxjs';
 // Components
 import { PanelHeader } from './PanelHeader/PanelHeader';
-import { ErrorBoundary } from '@grafana/ui';
+import { ErrorBoundary } from '@smartems/ui';
 // Utils & Services
 import { getTimeSrv, TimeSrv } from '../services/TimeSrv';
 import { applyPanelTimeOverrides, calculateInnerPanelHeight } from 'app/features/dashboard/utils/panel';

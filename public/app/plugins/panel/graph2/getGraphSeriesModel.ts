@@ -1,4 +1,4 @@
-import { colors } from '@grafana/ui';
+import { colors } from '@smartems/ui';
 import {
   getFlotPairs,
   getColorFromHexRgbOrName,

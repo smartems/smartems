@@ -5,7 +5,7 @@ import React, { PureComponent, ChangeEvent, FocusEvent, ReactText } from 'react'
 import { rangeUtil, DataSourceSelectItem } from '@grafana/data';
 
 // Components
-import { EventsWithValidation, Input, InputStatus, Switch, ValidationEvents, FormLabel } from '@grafana/ui';
+import { EventsWithValidation, Input, InputStatus, Switch, ValidationEvents, FormLabel } from '@smartems/ui';
 import { DataSourceOption } from './DataSourceOption';
 
 // Types

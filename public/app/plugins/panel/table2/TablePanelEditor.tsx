@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 
 // Types
 import { PanelEditorProps } from '@grafana/data';
-import { Switch, FormField } from '@grafana/ui';
+import { Switch, FormField } from '@smartems/ui';
 import { Options } from './types';
 
 export class TablePanelEditor extends PureComponent<PanelEditorProps<Options>> {

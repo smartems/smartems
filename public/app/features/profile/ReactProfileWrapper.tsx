@@ -5,7 +5,7 @@ import { SharedPreferences } from 'app/core/components/SharedPreferences/SharedP
 import { UserTeams } from './UserTeams';
 import { UserOrganizations } from './UserOrganizations';
 import { config } from '@grafana/runtime';
-import { LoadingPlaceholder } from '@grafana/ui';
+import { LoadingPlaceholder } from '@smartems/ui';
 
 export const ReactProfileWrapper = () => (
   <UserProvider userId={config.bootData.user.id}>

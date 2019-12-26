@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { colors, ansicolor } from '@grafana/ui';
+import { colors, ansicolor } from '@smartems/ui';
 
 import {
   Labels,

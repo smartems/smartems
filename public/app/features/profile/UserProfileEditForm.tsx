@@ -1,5 +1,5 @@
 import React, { PureComponent, ChangeEvent, MouseEvent } from 'react';
-import { Button, FormLabel, Input, Tooltip } from '@grafana/ui';
+import { Button, FormLabel, Input, Tooltip } from '@smartems/ui';
 import { User } from 'app/types';
 import config from 'app/core/config';
 import { ProfileUpdateFields } from 'app/core/utils/UserProvider';

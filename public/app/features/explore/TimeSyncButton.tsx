@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { css } from 'emotion';
 
-import { Tooltip, useTheme, stylesFactory } from '@grafana/ui';
+import { Tooltip, useTheme, stylesFactory } from '@smartems/ui';
 import { GrafanaTheme } from '@grafana/data';
 
 const getStyles = stylesFactory((theme: GrafanaTheme) => {

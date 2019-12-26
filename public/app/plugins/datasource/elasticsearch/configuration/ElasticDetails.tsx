@@ -1,5 +1,5 @@
 import React from 'react';
-import { EventsWithValidation, FormField, Input, regexValidation, Select } from '@grafana/ui';
+import { EventsWithValidation, FormField, Input, regexValidation, Select } from '@smartems/ui';
 import { ElasticsearchOptions } from '../types';
 import { DataSourceSettings, SelectableValue } from '@grafana/data';
 

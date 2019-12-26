@@ -1,10 +1,10 @@
 import * as fs from 'fs';
-import darkTheme from '@grafana/ui/src/themes/dark';
-import lightTheme from '@grafana/ui/src/themes/light';
-import defaultTheme from '@grafana/ui/src/themes/default';
-import { darkThemeVarsTemplate } from '@grafana/ui/src/themes/_variables.dark.scss.tmpl';
-import { lightThemeVarsTemplate } from '@grafana/ui/src/themes/_variables.light.scss.tmpl';
-import { commonThemeVarsTemplate } from '@grafana/ui/src/themes/_variables.scss.tmpl';
+import darkTheme from '@smartems/ui/src/themes/dark';
+import lightTheme from '@smartems/ui/src/themes/light';
+import defaultTheme from '@smartems/ui/src/themes/default';
+import { darkThemeVarsTemplate } from '@smartems/ui/src/themes/_variables.dark.scss.tmpl';
+import { lightThemeVarsTemplate } from '@smartems/ui/src/themes/_variables.light.scss.tmpl';
+import { commonThemeVarsTemplate } from '@smartems/ui/src/themes/_variables.scss.tmpl';
 
 const darkThemeVariablesPath = __dirname + '/../../public/sass/_variables.dark.generated.scss';
 const lightThemeVariablesPath = __dirname + '/../../public/sass/_variables.light.generated.scss';

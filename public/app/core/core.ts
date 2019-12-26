@@ -16,7 +16,7 @@ import './utils/outline';
 import './components/colorpicker/spectrum_picker';
 import './services/search_srv';
 import './services/ng_react';
-import { colors, JsonExplorer } from '@grafana/ui/';
+import { colors, JsonExplorer } from '@smartems/ui/';
 
 import { searchDirective } from './components/search/search';
 import { infoPopover } from './components/info_popover';

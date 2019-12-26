@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from '@grafana/ui';
+import { Input } from '@smartems/ui';
 
 import { TemplateSrv } from 'app/features/templating/template_srv';
 

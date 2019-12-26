@@ -3,7 +3,7 @@ import Plain from 'slate-plain-serializer';
 
 import QueryField from './query_field';
 import debounce from 'lodash/debounce';
-import { DOMUtil } from '@grafana/ui';
+import { DOMUtil } from '@smartems/ui';
 import { Editor as CoreEditor } from 'slate';
 
 import { KEYWORDS, functionTokens, operatorTokens, grafanaMacros } from './kusto/kusto';

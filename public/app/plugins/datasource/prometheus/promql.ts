@@ -1,4 +1,4 @@
-import { CompletionItem } from '@grafana/ui';
+import { CompletionItem } from '@smartems/ui';
 
 export const RATE_RANGES: CompletionItem[] = [
   { label: '$__interval', sortText: '$__interval' },

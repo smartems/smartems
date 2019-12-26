@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Components
-import { Select } from '@grafana/ui';
+import { Select } from '@smartems/ui';
 import { SelectableValue, DataSourceSelectItem } from '@grafana/data';
 
 export interface Props {

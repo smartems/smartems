@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormField } from '@grafana/ui';
+import { FormField } from '@smartems/ui';
 import { ElasticsearchOptions } from '../types';
 
 type Props = {

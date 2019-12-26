@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 
-import { QueryField, SlatePrism } from '@grafana/ui';
+import { QueryField, SlatePrism } from '@smartems/ui';
 import { ExploreQueryFieldProps } from '@grafana/data';
 import { ElasticDatasource } from '../datasource';
 import { ElasticsearchOptions, ElasticsearchQuery } from '../types';

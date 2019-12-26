@@ -12,7 +12,7 @@ import {
   PanelOptionsGroup,
   FieldPropertiesEditor,
   Select,
-} from '@grafana/ui';
+} from '@smartems/ui';
 import { Options, GraphOptions } from './types';
 import { GraphLegendEditor } from './GraphLegendEditor';
 

@@ -8,7 +8,7 @@ import AsyncSelect from '@torkelo/react-select/lib/Async';
 // Components
 import { TagOption } from './TagOption';
 import { TagBadge } from './TagBadge';
-import { NoOptionsMessage, IndicatorsContainer, resetSelectStyles } from '@grafana/ui';
+import { NoOptionsMessage, IndicatorsContainer, resetSelectStyles } from '@smartems/ui';
 import { escapeStringForRegex } from '../FilterInput/FilterInput';
 
 export interface TermCount {

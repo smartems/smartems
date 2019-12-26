@@ -6,7 +6,7 @@ import { StoreState } from 'app/types';
 import { ExploreId } from 'app/types/explore';
 
 import Explore from './Explore';
-import { CustomScrollbar, ErrorBoundaryAlert } from '@grafana/ui';
+import { CustomScrollbar, ErrorBoundaryAlert } from '@smartems/ui';
 import { resetExploreAction } from './state/actionTypes';
 
 interface WrapperProps {

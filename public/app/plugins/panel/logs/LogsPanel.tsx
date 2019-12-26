@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogRows, CustomScrollbar } from '@grafana/ui';
+import { LogRows, CustomScrollbar } from '@smartems/ui';
 import { LogsDedupStrategy, PanelProps } from '@grafana/data';
 import { Options } from './types';
 import { dataFrameToLogsModel } from 'app/core/logs_model';

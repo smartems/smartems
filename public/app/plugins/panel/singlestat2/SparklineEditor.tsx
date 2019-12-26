@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Components
-import { Switch } from '@grafana/ui';
+import { Switch } from '@smartems/ui';
 
 // Types
 import { SparklineOptions } from './types';

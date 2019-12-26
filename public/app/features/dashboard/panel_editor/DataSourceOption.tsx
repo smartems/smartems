@@ -1,5 +1,5 @@
 import React, { FC, ChangeEvent } from 'react';
-import { FormLabel, Input } from '@grafana/ui';
+import { FormLabel, Input } from '@smartems/ui';
 
 interface Props {
   label: string;

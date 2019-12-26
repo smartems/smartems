@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 import { LdapRole } from 'app/types';
 
 interface Props {

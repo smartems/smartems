@@ -1,4 +1,4 @@
-import { sharedSingleStatPanelChangedHandler } from '@grafana/ui';
+import { sharedSingleStatPanelChangedHandler } from '@smartems/ui';
 import { PanelPlugin } from '@grafana/data';
 import { BarGaugePanel } from './BarGaugePanel';
 import { BarGaugePanelEditor } from './BarGaugePanelEditor';

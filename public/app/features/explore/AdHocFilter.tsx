@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Select, ThemeContext } from '@grafana/ui';
+import { Select, ThemeContext } from '@smartems/ui';
 import { css, cx } from 'emotion';
 import { GrafanaTheme, SelectableValue } from '@grafana/data';
 

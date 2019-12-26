@@ -1,4 +1,4 @@
-import { LegendOptions, GraphTooltipOptions } from '@grafana/ui';
+import { LegendOptions, GraphTooltipOptions } from '@smartems/ui';
 import { YAxis, FieldDisplayOptions } from '@grafana/data';
 
 import { GraphLegendEditorLegendOptions } from './GraphLegendEditor';

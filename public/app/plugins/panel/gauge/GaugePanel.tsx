@@ -5,11 +5,11 @@ import React, { PureComponent } from 'react';
 import { config } from 'app/core/config';
 
 // Components
-import { Gauge, DataLinksContextMenu } from '@grafana/ui';
+import { Gauge, DataLinksContextMenu } from '@smartems/ui';
 
 // Types
 import { GaugeOptions } from './types';
-import { VizRepeater } from '@grafana/ui';
+import { VizRepeater } from '@smartems/ui';
 import { FieldDisplay, getFieldDisplayValues, VizOrientation, PanelProps } from '@grafana/data';
 import { getFieldLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 

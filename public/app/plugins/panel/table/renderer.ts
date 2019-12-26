@@ -7,7 +7,7 @@ import {
   stringToJsRegex,
   ScopedVars,
 } from '@grafana/data';
-import { ColumnStyle } from '@grafana/ui/src/components/Table/TableCellBuilder';
+import { ColumnStyle } from '@smartems/ui/src/components/Table/TableCellBuilder';
 import { TemplateSrv } from 'app/features/templating/template_srv';
 import { TableRenderModel, ColumnRender } from './types';
 

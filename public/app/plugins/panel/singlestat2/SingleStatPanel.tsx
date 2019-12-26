@@ -6,7 +6,7 @@ import { config } from 'app/core/config';
 
 // Types
 import { SingleStatOptions } from './types';
-import { VizRepeater, BigValue, DataLinksContextMenu, BigValueSparkline } from '@grafana/ui';
+import { VizRepeater, BigValue, DataLinksContextMenu, BigValueSparkline } from '@smartems/ui';
 import { PanelProps, getFieldDisplayValues, FieldDisplay } from '@grafana/data';
 import { getFieldLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 

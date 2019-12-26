@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input } from '@grafana/ui';
+import { Input } from '@smartems/ui';
 import StackdriverDatasource from '../datasource';
 
 export interface Props {

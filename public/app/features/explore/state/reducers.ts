@@ -21,7 +21,7 @@ import {
   PanelEvents,
   TimeZone,
 } from '@grafana/data';
-import { RefreshPicker } from '@grafana/ui';
+import { RefreshPicker } from '@smartems/ui';
 import {
   HigherOrderAction,
   ActionTypes,

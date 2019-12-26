@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGES=("@grafana/ui" "@grafana/data" "@grafana/toolkit" "@grafana/runtime")
+PACKAGES=("@smartems/ui" "@grafana/data" "@grafana/toolkit" "@grafana/runtime")
 SMARTEMS_TAG=${1:-}
 RELEASE_CHANNEL="latest"
 

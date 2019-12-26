@@ -1,9 +1,9 @@
 import React from 'react';
-import { GraphWithLegend, Chart } from '@grafana/ui';
+import { GraphWithLegend, Chart } from '@smartems/ui';
 import { PanelProps } from '@grafana/data';
 import { Options } from './types';
 import { GraphPanelController } from './GraphPanelController';
-import { LegendDisplayMode } from '@grafana/ui/src/components/Legend/Legend';
+import { LegendDisplayMode } from '@smartems/ui/src/components/Legend/Legend';
 
 interface GraphPanelProps extends PanelProps<Options> {}
 

@@ -31,7 +31,7 @@ Let's say you need to style a component that has different background depending 
 
 ```tsx
 import { css, cx }  from 'emotion';
-import { smartEMSTheme, useTheme, selectThemeVariant, stylesFactory } from '@grafana/ui';
+import { smartEMSTheme, useTheme, selectThemeVariant, stylesFactory } from '@smartems/ui';
 
 const getStyles = stylesFactory((theme: smartEMSTheme) => {
   const backgroundColor = selectThemeVariant({ light: theme.colors.red, dark: theme.colors.blue }, theme.type);

@@ -12,7 +12,7 @@ import {
   GraphSeriesToggler,
   GraphSeriesTogglerAPI,
   Chart,
-} from '@grafana/ui';
+} from '@smartems/ui';
 
 const MAX_NUMBER_OF_TIME_SERIES = 20;
 

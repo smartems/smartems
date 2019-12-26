@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { DeleteButton, Select } from '@grafana/ui';
+import { DeleteButton, Select } from '@smartems/ui';
 import { SelectableValue } from '@grafana/data';
 
 import { TeamMember, teamsPermissionLevels, TeamPermissionLevel } from 'app/types';

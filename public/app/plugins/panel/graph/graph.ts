@@ -24,7 +24,7 @@ import ReactDOM from 'react-dom';
 import { GraphLegendProps, Legend } from './Legend/Legend';
 
 import { GraphCtrl } from './module';
-import { ContextMenuGroup, ContextMenuItem } from '@grafana/ui';
+import { ContextMenuGroup, ContextMenuItem } from '@smartems/ui';
 import { provideTheme, getCurrentTheme } from 'app/core/utils/ConfigProvider';
 import {
   toUtc,

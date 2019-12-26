@@ -9,7 +9,7 @@ import {
   Switch,
   PanelOptionsGroup,
   DataLinksEditor,
-} from '@grafana/ui';
+} from '@smartems/ui';
 import { PanelEditorProps, FieldDisplayOptions, Threshold, ValueMapping, FieldConfig, DataLink } from '@grafana/data';
 
 import { GaugeOptions } from './types';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { RefreshPicker } from '@grafana/ui';
+import { RefreshPicker } from '@smartems/ui';
 import memoizeOne from 'memoize-one';
 import { css } from 'emotion';
 import classNames from 'classnames';

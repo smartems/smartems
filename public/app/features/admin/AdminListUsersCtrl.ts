@@ -1,4 +1,4 @@
-import { getTagColorsFromName } from '@grafana/ui';
+import { getTagColorsFromName } from '@smartems/ui';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { NavModelSrv } from 'app/core/core';
 

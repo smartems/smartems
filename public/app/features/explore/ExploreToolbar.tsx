@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { css } from 'emotion';
 
 import { ExploreId, ExploreItemState, ExploreMode } from 'app/types/explore';
-import { ToggleButtonGroup, ToggleButton, Tooltip, ButtonSelect, SetInterval } from '@grafana/ui';
+import { ToggleButtonGroup, ToggleButton, Tooltip, ButtonSelect, SetInterval } from '@smartems/ui';
 import { RawTimeRange, TimeZone, TimeRange, DataSourceSelectItem, DataQuery } from '@grafana/data';
 import { DataSourcePicker } from 'app/core/components/Select/DataSourcePicker';
 import { StoreState } from 'app/types/store';

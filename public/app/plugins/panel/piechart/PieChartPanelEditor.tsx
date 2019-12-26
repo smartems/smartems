@@ -5,7 +5,7 @@ import {
   FieldDisplayEditor,
   FieldPropertiesEditor,
   PanelOptionsGroup,
-} from '@grafana/ui';
+} from '@smartems/ui';
 import { ValueMapping, FieldConfig, PanelEditorProps, FieldDisplayOptions } from '@grafana/data';
 
 import { PieChartOptionsBox } from './PieChartOptionsBox';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LegendOptions, PanelOptionsGroup, Switch, Input, StatsPicker } from '@grafana/ui';
+import { LegendOptions, PanelOptionsGroup, Switch, Input, StatsPicker } from '@smartems/ui';
 
 export interface GraphLegendEditorLegendOptions extends LegendOptions {
   stats?: string[];

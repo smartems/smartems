@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react';
-import { EventsWithValidation, FormField, FormLabel, Input, regexValidation, Select } from '@grafana/ui';
+import { EventsWithValidation, FormField, FormLabel, Input, regexValidation, Select } from '@smartems/ui';
 import { DataSourceSettings } from '@grafana/data';
 import { PromOptions } from '../types';
 

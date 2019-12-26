@@ -13,7 +13,7 @@ import {
   SecretFormField,
   DataLinksEditor,
   DataSourceHttpSettings,
-} from '@grafana/ui';
+} from '@smartems/ui';
 import { FunctionEditor } from 'app/plugins/datasource/graphite/FunctionEditor';
 import { SearchField } from './components/search/SearchField';
 import { GraphContextMenu } from 'app/plugins/panel/graph/GraphContextMenu';

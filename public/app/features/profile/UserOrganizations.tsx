@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { User } from 'app/types';
 import { UserOrg } from 'app/core/utils/UserProvider';
-import { LoadingPlaceholder, Button } from '@grafana/ui';
+import { LoadingPlaceholder, Button } from '@smartems/ui';
 
 export interface Props {
   user: User;

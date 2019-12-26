@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
-import { Collapse } from '@grafana/ui';
+import { Collapse } from '@smartems/ui';
 
 import { ExploreId, ExploreItemState } from 'app/types/explore';
 import { StoreState } from 'app/types';

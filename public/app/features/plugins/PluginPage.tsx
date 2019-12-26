@@ -6,7 +6,7 @@ import find from 'lodash/find';
 // Types
 import { UrlQueryMap } from '@grafana/runtime';
 import { StoreState, AppNotificationSeverity, CoreEvents } from 'app/types';
-import { Alert, Tooltip } from '@grafana/ui';
+import { Alert, Tooltip } from '@smartems/ui';
 import {
   AppPlugin,
   GrafanaPlugin,

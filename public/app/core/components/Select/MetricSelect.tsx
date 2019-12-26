@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Select } from '@grafana/ui';
+import { Select } from '@smartems/ui';
 import { SelectableValue } from '@grafana/data';
 import { Variable } from 'app/types/templates';
 

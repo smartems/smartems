@@ -1,6 +1,6 @@
 import React, { PureComponent, MouseEvent } from 'react';
 import config from 'app/core/config';
-import { Button, LinkButton } from '@grafana/ui';
+import { Button, LinkButton } from '@smartems/ui';
 import { ChangePasswordFields } from 'app/core/utils/UserProvider';
 import { PasswordInput } from 'app/core/components/PasswordInput/PasswordInput';
 

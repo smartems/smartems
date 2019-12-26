@@ -1,4 +1,4 @@
-import { SingleStatBaseOptions } from '@grafana/ui';
+import { SingleStatBaseOptions } from '@smartems/ui';
 import { standardGaugeFieldOptions } from '../gauge/types';
 import { VizOrientation, SelectableValue } from '@grafana/data';
 

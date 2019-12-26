@@ -4,9 +4,9 @@ import React, { PureComponent } from 'react';
 // Types
 import { AnnoOptions } from './types';
 import { PanelProps, dateTime, DurationUnit, AnnotationEvent, AppEvents } from '@grafana/data';
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 import { getBackendSrv } from 'app/core/services/backend_srv';
-import { AbstractList } from '@grafana/ui/src/components/List/AbstractList';
+import { AbstractList } from '@smartems/ui/src/components/List/AbstractList';
 import { TagBadge } from 'app/core/components/TagFilter/TagBadge';
 import { getDashboardSrv } from 'app/features/dashboard/services/DashboardSrv';
 import appEvents from 'app/core/app_events';

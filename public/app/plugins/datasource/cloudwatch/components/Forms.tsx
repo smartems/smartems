@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes, FunctionComponent } from 'react';
-import { FormLabel } from '@grafana/ui';
+import { FormLabel } from '@smartems/ui';
 
 export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label: string;

@@ -1,5 +1,5 @@
 import React, { PureComponent, SyntheticEvent, ChangeEvent } from 'react';
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 import appEvents from 'app/core/app_events';
 import { AppEvents } from '@grafana/data';
 

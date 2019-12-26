@@ -11,11 +11,11 @@ import { TimeRange, TimeOption, RawTimeRange } from '@grafana/data';
 import { updateLocation } from 'app/core/actions';
 
 // Components
-import { TimePicker, RefreshPicker } from '@grafana/ui';
+import { TimePicker, RefreshPicker } from '@smartems/ui';
 
 // Utils & Services
 import { getTimeSrv, TimeSrv } from 'app/features/dashboard/services/TimeSrv';
-import { defaultSelectOptions } from '@grafana/ui/src/components/TimePicker/TimePicker';
+import { defaultSelectOptions } from '@smartems/ui/src/components/TimePicker/TimePicker';
 
 export interface Props {
   $injector: any;

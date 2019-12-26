@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import extend from 'lodash/extend';
 
-import { Button } from '@grafana/ui';
+import { Button } from '@smartems/ui';
 import { PluginMeta, AppPlugin, deprecationWarning } from '@grafana/data';
 
 import { AngularComponent, getAngularLoader } from '@grafana/runtime';

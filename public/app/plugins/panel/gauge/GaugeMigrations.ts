@@ -1,4 +1,4 @@
-import { sharedSingleStatPanelChangedHandler, sharedSingleStatMigrationHandler } from '@grafana/ui';
+import { sharedSingleStatPanelChangedHandler, sharedSingleStatMigrationHandler } from '@smartems/ui';
 import { PanelModel } from '@grafana/data';
 import { GaugeOptions } from './types';
 

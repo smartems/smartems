@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Fragment, useState, useEffect } from 'react';
 import isEqual from 'lodash/isEqual';
 import { SelectableValue } from '@grafana/data';
-import { SegmentAsync } from '@grafana/ui';
+import { SegmentAsync } from '@smartems/ui';
 import { SelectableStrings } from '../types';
 
 export interface Props {

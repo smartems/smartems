@@ -5,7 +5,7 @@ import $ from 'jquery';
 import Drop from 'tether-drop';
 
 // Utils and servies
-import { colors } from '@grafana/ui';
+import { colors } from '@smartems/ui';
 import { setBackendSrv, BackendSrv, setDataSourceSrv } from '@grafana/runtime';
 import config from 'app/core/config';
 import coreModule from 'app/core/core_module';

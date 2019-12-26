@@ -10,7 +10,7 @@
 #### Using `ThemeContext` directly
 
 ```tsx
-import { ThemeContext } from '@grafana/ui';
+import { ThemeContext } from '@smartems/ui';
 
 <ThemeContext.Consumer>{theme => <Foo theme={theme} />}</ThemeContext.Consumer>;
 ```
@@ -19,7 +19,7 @@ or
 
 ```tsx
 import React, { useContext } from 'react';
-import { ThemeContext } from '@grafana/ui';
+import { ThemeContext } from '@smartems/ui';
 
 const Foo: React.FunctionComponent<FooProps> = () => {
   const theme = useContext(ThemeContext);
@@ -34,7 +34,7 @@ const Foo: React.FunctionComponent<FooProps> = () => {
 With this method your component will be automatically wrapped in `ThemeContext.Consumer` and provided with current theme via `theme` prop. Component used with `withTheme` must implement `Themeable` interface.
 
 ```ts
-import  { ThemeContext, Themeable } from '@grafana/ui';
+import  { ThemeContext, Themeable } from '@smartems/ui';
 
 interface FooProps extends Themeable {}
 
@@ -50,7 +50,7 @@ When implementing snapshot tests for components that use the `withTheme` HOC, th
 To make your snapshot theme independent, use the `mockThemeContext` helper function:
 
 ```tsx
-import { mockThemeContext } from '@grafana/ui';
+import { mockThemeContext } from '@smartems/ui';
 import { MyComponent } from './MyComponent';
 
 describe('MyComponent', () => {

@@ -9,7 +9,7 @@ import memoizeOne from 'memoize-one';
 // Services & Utils
 import store from 'app/core/store';
 // Components
-import { ErrorBoundaryAlert } from '@grafana/ui';
+import { ErrorBoundaryAlert } from '@smartems/ui';
 import LogsContainer from './LogsContainer';
 import QueryRows from './QueryRows';
 import TableContainer from './TableContainer';

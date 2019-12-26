@@ -1,5 +1,5 @@
 import React, { useContext, MouseEvent } from 'react';
-import { CallToActionCard, LinkButton, ThemeContext } from '@grafana/ui';
+import { CallToActionCard, LinkButton, ThemeContext } from '@smartems/ui';
 import { css } from 'emotion';
 export interface Props {
   title: string;

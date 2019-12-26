@@ -1,4 +1,4 @@
-import { sharedSingleStatMigrationHandler, sharedSingleStatPanelChangedHandler } from '@grafana/ui';
+import { sharedSingleStatMigrationHandler, sharedSingleStatPanelChangedHandler } from '@smartems/ui';
 import { PanelPlugin } from '@grafana/data';
 import { SingleStatOptions, defaults } from './types';
 import { SingleStatPanel } from './SingleStatPanel';

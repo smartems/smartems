@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Select } from '@grafana/ui';
+import { Select } from '@smartems/ui';
 import { dashboardPermissionLevels } from 'app/types/acl';
 
 export interface Props {

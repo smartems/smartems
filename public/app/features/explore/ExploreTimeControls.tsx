@@ -8,11 +8,11 @@ import { TimeRange, TimeOption, TimeZone, RawTimeRange, dateTimeForTimeZone } fr
 // State
 
 // Components
-import { TimePicker } from '@grafana/ui';
+import { TimePicker } from '@smartems/ui';
 import { TimeSyncButton } from './TimeSyncButton';
 
 // Utils & Services
-import { defaultSelectOptions } from '@grafana/ui/src/components/TimePicker/TimePicker';
+import { defaultSelectOptions } from '@smartems/ui/src/components/TimePicker/TimePicker';
 import { getShiftedTimeRange, getZoomedTimeRange } from 'app/core/utils/timePicker';
 
 export interface Props {

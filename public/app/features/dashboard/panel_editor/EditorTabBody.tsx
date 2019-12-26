@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Components
-import { CustomScrollbar, PanelOptionsGroup } from '@grafana/ui';
+import { CustomScrollbar, PanelOptionsGroup } from '@smartems/ui';
 import { FadeIn } from 'app/core/components/Animations/FadeIn';
 
 interface Props {

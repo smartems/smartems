@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import { FormLabel, Select } from '@grafana/ui';
+import { FormLabel, Select } from '@smartems/ui';
 
 import { DashboardSearchHit, DashboardSearchHitType } from 'app/types';
 import { getBackendSrv } from 'app/core/services/backend_srv';

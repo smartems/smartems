@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import { debounce } from 'lodash';
-import { Input } from '@grafana/ui';
+import { Input } from '@smartems/ui';
 
 export interface Props {
   onChange: (alias: any) => void;

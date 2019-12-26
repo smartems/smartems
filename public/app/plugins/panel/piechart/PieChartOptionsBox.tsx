@@ -2,11 +2,11 @@
 import React, { PureComponent } from 'react';
 
 // Components
-import { Select, FormLabel, PanelOptionsGroup } from '@grafana/ui';
+import { Select, FormLabel, PanelOptionsGroup } from '@smartems/ui';
 
 // Types
 import { PanelEditorProps } from '@grafana/data';
-import { FormField, PieChartType } from '@grafana/ui';
+import { FormField, PieChartType } from '@smartems/ui';
 import { PieChartOptions } from './types';
 
 const labelWidth = 8;

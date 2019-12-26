@@ -1,6 +1,6 @@
 import React, { PureComponent, ChangeEvent } from 'react';
 import { SelectableValue, ExploreQueryFieldProps } from '@grafana/data';
-import { Input, Segment, SegmentAsync, ValidationEvents, EventsWithValidation, Switch } from '@grafana/ui';
+import { Input, Segment, SegmentAsync, ValidationEvents, EventsWithValidation, Switch } from '@smartems/ui';
 import { CloudWatchQuery } from '../types';
 import CloudWatchDatasource from '../datasource';
 import { SelectableStrings } from '../types';

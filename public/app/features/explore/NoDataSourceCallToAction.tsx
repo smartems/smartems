@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { css } from 'emotion';
-import { ThemeContext, LinkButton, CallToActionCard } from '@grafana/ui';
+import { ThemeContext, LinkButton, CallToActionCard } from '@smartems/ui';
 
 export const NoDataSourceCallToAction = () => {
   const theme = useContext(ThemeContext);

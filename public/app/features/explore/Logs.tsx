@@ -15,7 +15,7 @@ import {
   LinkModel,
   Field,
 } from '@grafana/data';
-import { Switch, LogLabels, ToggleButtonGroup, ToggleButton, LogRows } from '@grafana/ui';
+import { Switch, LogLabels, ToggleButtonGroup, ToggleButton, LogRows } from '@smartems/ui';
 
 import { ExploreGraphPanel } from './ExploreGraphPanel';
 

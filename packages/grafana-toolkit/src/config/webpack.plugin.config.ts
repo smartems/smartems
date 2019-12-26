@@ -159,7 +159,7 @@ export const getWebpackConfig: WebpackConfigurationGetter = options => {
       'rxjs',
       'd3',
       'angular',
-      '@grafana/ui',
+      '@smartems/ui',
       '@grafana/runtime',
       '@grafana/data',
       // @ts-ignore

@@ -11,7 +11,7 @@ import {
   FormLabel,
   Select,
   DataLinksEditor,
-} from '@grafana/ui';
+} from '@smartems/ui';
 import { FieldDisplayOptions, FieldConfig, DataLink, PanelEditorProps } from '@grafana/data';
 
 import { Threshold, ValueMapping } from '@grafana/data';

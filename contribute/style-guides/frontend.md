@@ -18,7 +18,7 @@ Generally we follow the Airbnb [React Style Guide](https://github.com/airbnb/jav
 
 ## Organization
 
-- Components and types that needs to be used by external plugins needs to go into @grafana/ui
+- Components and types that needs to be used by external plugins needs to go into @smartems/ui
 - Components should get their own folder under features/xxx/components
   - Sub components can live in that component folders, so small component do not need their own folder
   - Place test next to their component file (same dir)

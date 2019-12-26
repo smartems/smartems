@@ -1,4 +1,4 @@
-import { ContextMenuItem } from '@grafana/ui';
+import { ContextMenuItem } from '@smartems/ui';
 
 export interface FlotDataPoint {
   dataIndex: number;

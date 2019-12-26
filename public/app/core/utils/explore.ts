@@ -26,7 +26,7 @@ import store from 'app/core/store';
 import kbn from 'app/core/utils/kbn';
 import { getNextRefIdChar } from './query';
 // Types
-import { RefreshPicker } from '@grafana/ui';
+import { RefreshPicker } from '@smartems/ui';
 import { ExploreMode, ExploreUrlState, QueryOptions, QueryTransaction } from 'app/types/explore';
 import { config } from '../config';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';

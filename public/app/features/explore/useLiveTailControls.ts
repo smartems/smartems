@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { changeRefreshInterval } from './state/actions';
 import { setPausedStateAction } from './state/actionTypes';
-import { RefreshPicker } from '@grafana/ui';
+import { RefreshPicker } from '@smartems/ui';
 import { ExploreId } from '../../types';
 
 /**

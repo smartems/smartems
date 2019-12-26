@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { SelectableStrings } from '../types';
 import { SelectableValue } from '@grafana/data';
-import { Segment } from '@grafana/ui';
+import { Segment } from '@smartems/ui';
 
 export interface Props {
   values: string[];

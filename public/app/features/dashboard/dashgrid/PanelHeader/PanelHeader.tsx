@@ -9,7 +9,7 @@ import templateSrv from 'app/features/templating/template_srv';
 
 import { DashboardModel } from 'app/features/dashboard/state/DashboardModel';
 import { PanelModel } from 'app/features/dashboard/state/PanelModel';
-import { ClickOutsideWrapper } from '@grafana/ui';
+import { ClickOutsideWrapper } from '@smartems/ui';
 import { DataLink } from '@grafana/data';
 import { getPanelLinksSupplier } from 'app/features/panel/panellinks/linkSuppliers';
 

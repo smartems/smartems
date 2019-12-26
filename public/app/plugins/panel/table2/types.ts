@@ -1,4 +1,4 @@
-import { ColumnStyle } from '@grafana/ui/src/components/Table/TableCellBuilder';
+import { ColumnStyle } from '@smartems/ui/src/components/Table/TableCellBuilder';
 
 export interface Options {
   showHeader: boolean;

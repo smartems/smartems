@@ -11,7 +11,7 @@ import { dateTime, AbsoluteTimeRange, LanguageProvider, HistoryItem } from '@gra
 import { PromQuery } from '../prometheus/types';
 
 import LokiDatasource from './datasource';
-import { CompletionItem, TypeaheadInput, TypeaheadOutput } from '@grafana/ui';
+import { CompletionItem, TypeaheadInput, TypeaheadOutput } from '@smartems/ui';
 
 const DEFAULT_KEYS = ['job', 'namespace'];
 const EMPTY_SELECTOR = '{}';

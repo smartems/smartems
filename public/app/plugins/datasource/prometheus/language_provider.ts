@@ -2,7 +2,7 @@ import _ from 'lodash';
 import LRU from 'lru-cache';
 
 import { dateTime, LanguageProvider, HistoryItem } from '@grafana/data';
-import { CompletionItem, TypeaheadInput, TypeaheadOutput, CompletionItemGroup } from '@grafana/ui';
+import { CompletionItem, TypeaheadInput, TypeaheadOutput, CompletionItemGroup } from '@smartems/ui';
 
 import { parseSelector, processLabels, processHistogramLabels } from './language_utils';
 import PromqlSyntax, { FUNCTIONS, RATE_RANGES } from './promql';

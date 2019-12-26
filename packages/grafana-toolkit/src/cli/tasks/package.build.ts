@@ -54,10 +54,10 @@ const preparePackage = async (pkg: any) => {
     deps['@grafana/data'] = version;
   } else if (name.endsWith('/runtime')) {
     deps['@grafana/data'] = version;
-    deps['@grafana/ui'] = version;
+    deps['@smartems/ui'] = version;
   } else if (name.endsWith('/toolkit')) {
     deps['@grafana/data'] = version;
-    deps['@grafana/ui'] = version;
+    deps['@smartems/ui'] = version;
   }
 
   await savePackage({

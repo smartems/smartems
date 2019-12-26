@@ -2,7 +2,7 @@
 import _ from 'lodash';
 
 // Constants
-import { DEFAULT_ANNOTATION_COLOR } from '@grafana/ui';
+import { DEFAULT_ANNOTATION_COLOR } from '@smartems/ui';
 import { GRID_COLUMN_COUNT, REPEAT_DIR_VERTICAL, GRID_CELL_HEIGHT, GRID_CELL_VMARGIN } from 'app/core/constants';
 
 // Utils & Services

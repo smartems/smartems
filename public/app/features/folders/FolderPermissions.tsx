@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import Page from 'app/core/components/Page/Page';
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 import { NavModel } from '@grafana/data';
 import { SlideDown } from 'app/core/components/Animations/SlideDown';
 import { getNavModel } from 'app/core/selectors/navModel';

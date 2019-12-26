@@ -23,7 +23,7 @@ import {
   PanelEvents,
 } from '@grafana/data';
 
-import { convertOldAngularValueMapping } from '@grafana/ui';
+import { convertOldAngularValueMapping } from '@smartems/ui';
 
 import { CoreEvents } from 'app/types';
 import kbn from 'app/core/utils/kbn';

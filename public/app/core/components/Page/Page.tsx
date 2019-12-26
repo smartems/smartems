@@ -7,7 +7,7 @@ import { getTitleFromNavModel } from 'app/core/selectors/navModel';
 import PageHeader from '../PageHeader/PageHeader';
 import Footer from '../Footer/Footer';
 import PageContents from './PageContents';
-import { CustomScrollbar } from '@grafana/ui';
+import { CustomScrollbar } from '@smartems/ui';
 import { NavModel } from '@grafana/data';
 import { isEqual } from 'lodash';
 

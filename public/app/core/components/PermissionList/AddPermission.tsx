@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { UserPicker } from 'app/core/components/Select/UserPicker';
 import { TeamPicker, Team } from 'app/core/components/Select/TeamPicker';
-import { Select } from '@grafana/ui';
+import { Select } from '@smartems/ui';
 import { SelectableValue } from '@grafana/data';
 import { User } from 'app/types';
 import {

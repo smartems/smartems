@@ -9,7 +9,7 @@ import { PlaylistSrv } from 'app/features/playlist/playlist_srv';
 // Components
 import { DashNavButton } from './DashNavButton';
 import { DashNavTimeControls } from './DashNavTimeControls';
-import { Tooltip } from '@grafana/ui';
+import { Tooltip } from '@smartems/ui';
 
 // State
 import { updateLocation } from 'app/core/actions';

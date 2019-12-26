@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { css, cx } from 'emotion';
 import tinycolor from 'tinycolor2';
 
-import { Themeable, withTheme, getLogRowStyles } from '@grafana/ui';
+import { Themeable, withTheme, getLogRowStyles } from '@smartems/ui';
 import { GrafanaTheme, LogRowModel, TimeZone } from '@grafana/data';
 
 import ElapsedTime from './ElapsedTime';

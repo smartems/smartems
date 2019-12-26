@@ -3,7 +3,7 @@ import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
 import templateSrv, { TemplateSrv } from 'app/features/templating/template_srv';
 import coreModule from 'app/core/core_module';
 import { appendQueryToUrl, toUrlParams } from 'app/core/utils/url';
-import { VariableSuggestion, VariableOrigin, DataLinkBuiltInVars } from '@grafana/ui';
+import { VariableSuggestion, VariableOrigin, DataLinkBuiltInVars } from '@smartems/ui';
 import { DataLink, KeyValue, deprecationWarning, LinkModel, DataFrame, ScopedVars } from '@grafana/data';
 
 const timeRangeVars = [

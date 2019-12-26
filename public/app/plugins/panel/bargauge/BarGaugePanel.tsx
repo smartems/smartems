@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react';
 import { config } from 'app/core/config';
 
 // Components
-import { BarGauge, VizRepeater, DataLinksContextMenu } from '@grafana/ui';
+import { BarGauge, VizRepeater, DataLinksContextMenu } from '@smartems/ui';
 
 // Types
 import { BarGaugeOptions } from './types';

@@ -7,7 +7,7 @@ import { EditorTabBody, EditorToolbarView } from './EditorTabBody';
 import { DataSourcePicker } from 'app/core/components/Select/DataSourcePicker';
 import { QueryInspector } from './QueryInspector';
 import { QueryOptions } from './QueryOptions';
-import { PanelOptionsGroup, TransformationsEditor, AlphaNotice } from '@grafana/ui';
+import { PanelOptionsGroup, TransformationsEditor, AlphaNotice } from '@smartems/ui';
 import { QueryEditorRows } from './QueryEditorRows';
 // Services
 import { getDatasourceSrv } from 'app/features/plugins/datasource_srv';

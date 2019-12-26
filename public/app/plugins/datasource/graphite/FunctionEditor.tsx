@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { PopoverController, Popover } from '@grafana/ui';
+import { PopoverController, Popover } from '@smartems/ui';
 import { FunctionDescriptor, FunctionEditorControls, FunctionEditorControlsProps } from './FunctionEditorControls';
 
 interface FunctionEditorProps extends FunctionEditorControlsProps {

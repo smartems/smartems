@@ -23,7 +23,7 @@ import {
 } from 'app/core/utils/explore';
 // Types
 import { ExploreItemState, ExploreUrlState, ThunkResult } from 'app/types';
-import { RefreshPicker } from '@grafana/ui';
+import { RefreshPicker } from '@smartems/ui';
 
 import {
   AbsoluteTimeRange,

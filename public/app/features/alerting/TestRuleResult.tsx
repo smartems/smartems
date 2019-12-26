@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { LoadingPlaceholder, JSONFormatter } from '@grafana/ui';
+import { LoadingPlaceholder, JSONFormatter } from '@smartems/ui';
 
 import appEvents from 'app/core/app_events';
 import { CopyToClipboard } from 'app/core/components/CopyToClipboard/CopyToClipboard';

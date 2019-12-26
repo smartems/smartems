@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { debounce } from 'lodash';
-import { Input } from '@grafana/ui';
+import { Input } from '@smartems/ui';
 
 export interface Props {
   onChange: (alignmentPeriod: any) => void;

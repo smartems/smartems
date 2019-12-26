@@ -14,7 +14,7 @@ import { DashboardGrid } from '../dashgrid/DashboardGrid';
 import { DashNav } from '../components/DashNav';
 import { SubMenu } from '../components/SubMenu';
 import { DashboardSettings } from '../components/DashboardSettings';
-import { CustomScrollbar, Alert } from '@grafana/ui';
+import { CustomScrollbar, Alert } from '@smartems/ui';
 
 // Redux
 import { initDashboard } from '../state/initDashboard';

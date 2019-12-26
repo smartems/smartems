@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Types
-import { Select } from '@grafana/ui';
+import { Select } from '@smartems/ui';
 import { DataQuery, DataQueryError, PanelData, DataFrame, SelectableValue } from '@grafana/data';
 import { DashboardQuery } from './types';
 import config from 'app/core/config';

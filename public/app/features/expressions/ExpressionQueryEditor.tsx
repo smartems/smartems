@@ -1,7 +1,7 @@
 // Libraries
 import React, { PureComponent, ChangeEvent } from 'react';
 
-import { FormLabel, Select, FormField } from '@grafana/ui';
+import { FormLabel, Select, FormField } from '@smartems/ui';
 import { SelectableValue, ReducerID, QueryEditorProps } from '@grafana/data';
 
 // Types

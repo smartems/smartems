@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FC } from 'react';
-import { Input } from '@grafana/ui';
+import { Input } from '@smartems/ui';
 
 export interface Props {
   orgName: string;

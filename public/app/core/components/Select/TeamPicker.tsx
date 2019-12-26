@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { AsyncSelect } from '@grafana/ui';
+import { AsyncSelect } from '@smartems/ui';
 import { debounce } from 'lodash';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 

@@ -9,7 +9,7 @@ import { Emitter } from 'app/core/utils/emitter';
 import { getTimeSrv } from 'app/features/dashboard/services/TimeSrv';
 // Types
 import { PanelModel } from '../state/PanelModel';
-import { ErrorBoundaryAlert } from '@grafana/ui';
+import { ErrorBoundaryAlert } from '@smartems/ui';
 import {
   DataQuery,
   DataSourceApi,

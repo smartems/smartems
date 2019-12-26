@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { NavModel } from '@grafana/data';
-import { FormField, Alert } from '@grafana/ui';
+import { FormField, Alert } from '@smartems/ui';
 import { getNavModel } from 'app/core/selectors/navModel';
 import config from 'app/core/config';
 import Page from 'app/core/components/Page/Page';

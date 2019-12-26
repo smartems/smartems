@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 
 // Types
-import { ThemeContext } from '@grafana/ui';
+import { ThemeContext } from '@smartems/ui';
 import { PanelProps } from '@grafana/data';
 import { Options } from './types';
-import Table from '@grafana/ui/src/components/Table/Table';
+import Table from '@smartems/ui/src/components/Table/Table';
 
 interface Props extends PanelProps<Options> {}
 
