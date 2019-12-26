@@ -79,7 +79,7 @@ export class GrafanaBootConfig {
   }
 }
 
-const bootData = (window as any).grafanaBootData || {
+const bootData = (window as any).smartemsBootData || {
   settings: {},
   user: {},
 };

@@ -516,7 +516,7 @@
                 "legendFormat": "{{statuscode}}",
                 "refId": "B",
                 "step": 15,
-                "target": "dev.grafana.cb-office.alerting.active_alerts"
+                "target": "dev.smartems.cb-office.alerting.active_alerts"
               }
             ],
             "thresholds": [],

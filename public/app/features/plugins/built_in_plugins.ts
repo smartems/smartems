@@ -9,7 +9,7 @@ const elasticsearchPlugin = async () =>
 const opentsdbPlugin = async () =>
   await import(/* webpackChunkName: "opentsdbPlugin" */ 'app/plugins/datasource/opentsdb/module');
 const smartemsPlugin = async () =>
-  await import(/* webpackChunkName: "grafanaPlugin" */ 'app/plugins/datasource/smartems/module');
+  await import(/* webpackChunkName: "smartemsPlugin" */ 'app/plugins/datasource/smartems/module');
 const influxdbPlugin = async () =>
   await import(/* webpackChunkName: "influxdbPlugin" */ 'app/plugins/datasource/influxdb/module');
 const lokiPlugin = async () => await import(/* webpackChunkName: "lokiPlugin" */ 'app/plugins/datasource/loki/module');

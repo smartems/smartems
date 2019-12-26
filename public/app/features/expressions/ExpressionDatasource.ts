@@ -27,7 +27,7 @@ export class ExpressionDatasourceApi extends DataSourceApi<ExpressionQuery> {
     const { targets, intervalMs, maxDataPoints, range } = request;
 
     let expressionCount = 0;
-    const orgId = (window as any).grafanaBootData.user.orgId;
+    const orgId = (window as any).smartemsBootData.user.orgId;
     const queries = targets.map(q => {
       if (q.datasource === ExpressionDatasourceID) {
         expressionCount++;

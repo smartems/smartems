@@ -20,7 +20,7 @@ export function geminiScrollbar() {
       const scroller = elem;
 
       console.log('scroll');
-      if (attrs.grafanaScrollbar && attrs.grafanaScrollbar === 'scrollonroot') {
+      if (attrs.smartemsScrollbar && attrs.smartemsScrollbar === 'scrollonroot') {
         scrollRoot = scroller;
       }
 
