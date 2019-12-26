@@ -3,10 +3,10 @@
 # to allow `make DOCSPORT=9000 docs`
 DOCSPORT := 3004
 
-DOCKER_DOCS_IMAGE := grafana/smartems-docs
+DOCKER_DOCS_IMAGE := smartems/smartems-docs
 SOURCES_HOST_DIR := "$(shell pwd)/sources"
 
-# assuming grafana and grafana.org-repo to be checked out in the same folder
+# assuming smartems and smartems.org-repo to be checked out in the same folder
 DEFAULT_LAYOUTS_DIR := "$(shell pwd)/../../../../../../smartems.org/layouts"
 
 # to allow `make DOCSDIR=docs docs-shell` (to create a bind mount in docs)

@@ -17,8 +17,8 @@
       "version": "1.0.0"
     },
     {
-      "type": "grafana",
-      "id": "grafana",
+      "type": "smartems",
+      "id": "smartems",
       "name": "Grafana",
       "version": "6.6.0-pre"
     },

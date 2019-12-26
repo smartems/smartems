@@ -2,8 +2,8 @@
   "__inputs": [],
   "__requires": [
     {
-      "type": "grafana",
-      "id": "grafana",
+      "type": "smartems",
+      "id": "smartems",
       "name": "Grafana",
       "version": "6.2.0-pre"
     },

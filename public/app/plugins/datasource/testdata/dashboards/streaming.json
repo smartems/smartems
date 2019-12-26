@@ -11,8 +11,8 @@
   ],
   "__requires": [
     {
-      "type": "grafana",
-      "id": "grafana",
+      "type": "smartems",
+      "id": "smartems",
       "name": "Grafana",
       "version": "6.3.0-pre"
     },

@@ -90,7 +90,7 @@ export const run = (includeInternalScripts = false) => {
 
     program
       .command('toolkit:build')
-      .description('Prepares grafana/toolkit dist package')
+      .description('Prepares smartems/toolkit dist package')
       .action(async cmd => {
         await execTask(toolkitBuildTask)({});
       });
@@ -136,7 +136,7 @@ export const run = (includeInternalScripts = false) => {
   program
     .command('plugin:dev')
     .option('-w, --watch', 'Run plugin development mode with watch enabled')
-    .option('--yarnlink', 'symlink this project to the local grafana/toolkit')
+    .option('--yarnlink', 'symlink this project to the local smartems/toolkit')
     .description('Starts plugin dev mode')
     .action(async cmd => {
       await execTask(pluginDevTask)({

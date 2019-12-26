@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-const grafanaURL = 'https://api.github.com/repos/smartems/smartems';
+const smartemsURL = 'https://api.github.com/repos/smartems/smartems';
 const enterpriseURL = 'https://api.github.com/repos/smartems/smartems-enterprise';
 
 // Encapsulates the creation of a client for the Github API
@@ -24,7 +24,7 @@ class GithubClient {
     const token = process.env.GITHUB_ACCESS_TOKEN;
 
     const clientConfig: AxiosRequestConfig = {
-      baseURL: enterprise ? enterpriseURL : grafanaURL,
+      baseURL: enterprise ? enterpriseURL : smartemsURL,
       timeout: 10000,
     };
 

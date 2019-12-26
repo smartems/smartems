@@ -1,5 +1,5 @@
 VERSION="dev"
-TAG="grafana/build-container"
+TAG="smartems/build-container"
 USER_ID=$(shell id -u)
 GROUP_ID=$(shell id -g)
 
@@ -23,32 +23,32 @@ run-with-local-source-live:
 		-e "CIRCLE_BRANCH=local" \
 		-e "CIRCLE_BUILD_NUM=472" \
 		-w "/go/src/github.com/smartems/smartems" \
-		--name grafana-build \
+		--name smartems-build \
 		-v "${GOPATH}/src/github.com/smartems/smartems:/go/src/github.com/smartems/smartems" \
 		${TAG}:${VERSION} \
 		bash -c "/tmp/bootstrap.sh; mkdir /.cache; chown "${USER_ID}:${GROUP_ID}" /.cache; tail -f /dev/null"
-	docker exec -ti --user "${USER_ID}:${GROUP_ID}" grafana-build bash
+	docker exec -ti --user "${USER_ID}:${GROUP_ID}" smartems-build bash
 
 run-with-local-source-copy:
 	docker run -d \
 		-e "CIRCLE_BRANCH=local" \
 		-e "CIRCLE_BUILD_NUM=472" \
 		-w "/go/src/github.com/smartems/smartems" \
-		--name grafana-build \
+		--name smartems-build \
 		${TAG}:${VERSION} \
 		bash -c "/tmp/bootstrap.sh; tail -f /dev/null"
-	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/smartems/
-	docker exec -ti grafana-build bash
+	docker cp "${GOPATH}/src/github.com/smartems/smartems" smartems-build:/go/src/github.com/smartems/
+	docker exec -ti smartems-build bash
 
 update-source:
-	docker cp "${GOPATH}/src/github.com/smartems/smartems" grafana-build:/go/src/github.com/smartems/	
+	docker cp "${GOPATH}/src/github.com/smartems/smartems" smartems-build:/go/src/github.com/smartems/	
 
 attach:
-	docker exec -ti grafana-build bash
+	docker exec -ti smartems-build bash
 
 attach-live:
-	docker exec -ti --user "${USER_ID}:${GROUP_ID}" grafana-build bash
+	docker exec -ti --user "${USER_ID}:${GROUP_ID}" smartems-build bash
 
 stop:
-	docker kill grafana-build
-	docker rm grafana-build
+	docker kill smartems-build
+	docker rm smartems-build

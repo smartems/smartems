@@ -31,18 +31,18 @@ import impressionSrv from 'app/core/services/impression_srv';
 import builtInPlugins from './built_in_plugins';
 import * as d3 from 'd3';
 import * as emotion from 'emotion';
-import * as grafanaData from '@smartems/data';
-import * as grafanaUIraw from '@smartems/ui';
+import * as smartemsData from '@smartems/data';
+import * as smartemsUIraw from '@smartems/ui';
 import * as grafanaRuntime from '@smartems/runtime';
 
 // Help the 6.4 to 6.5 migration
 // The base classes were moved from @smartems/ui to @smartems/data
 // This exposes the same classes on both import paths
-const grafanaUI = grafanaUIraw as any;
-grafanaUI.PanelPlugin = grafanaData.PanelPlugin;
-grafanaUI.DataSourcePlugin = grafanaData.DataSourcePlugin;
-grafanaUI.AppPlugin = grafanaData.AppPlugin;
-grafanaUI.DataSourceApi = grafanaData.DataSourceApi;
+const smartemsUI = smartemsUIraw as any;
+smartemsUI.PanelPlugin = smartemsData.PanelPlugin;
+smartemsUI.DataSourcePlugin = smartemsData.DataSourcePlugin;
+smartemsUI.AppPlugin = smartemsData.AppPlugin;
+smartemsUI.DataSourceApi = smartemsData.DataSourceApi;
 
 // rxjs
 import * as rxjs from 'rxjs';
@@ -82,8 +82,8 @@ function exposeToPlugin(name: string, component: any) {
   });
 }
 
-exposeToPlugin('@smartems/data', grafanaData);
-exposeToPlugin('@smartems/ui', grafanaUI);
+exposeToPlugin('@smartems/data', smartemsData);
+exposeToPlugin('@smartems/ui', smartemsUI);
 exposeToPlugin('@smartems/runtime', grafanaRuntime);
 exposeToPlugin('lodash', _);
 exposeToPlugin('moment', moment);

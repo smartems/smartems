@@ -2,7 +2,7 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "private": true,
-  "name": "grafana",
+  "name": "smartems",
   "version": "6.5.2",
   "repository": {
     "type": "git",
