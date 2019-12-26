@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
 )
 
 type CommandLine interface {

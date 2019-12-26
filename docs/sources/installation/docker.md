@@ -91,7 +91,7 @@ For a list of available tags, check out [grafana/grafana](https://hub.docker.com
 
 ## Installing Plugins for smartEMS
 
-Pass the plugins you want installed to docker with the `GF_INSTALL_PLUGINS` environment variable as a comma separated list. This will pass each plugin name to `grafana-cli plugins install ${plugin}` and install them when smartEMS starts.
+Pass the plugins you want installed to docker with the `GF_INSTALL_PLUGINS` environment variable as a comma separated list. This will pass each plugin name to `smartems-cli plugins install ${plugin}` and install them when smartEMS starts.
 
 ```bash
 docker run -d \

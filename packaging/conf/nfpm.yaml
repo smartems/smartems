@@ -8,7 +8,7 @@ replaces:
 - grafana
 provides:
 - smartems-server
-- grafana-cli
+- smartems-cli
 depends:
 - adduser
 - libfontconfig1
@@ -21,7 +21,7 @@ license: "Apache 2"
 bindir: "/usr/sbin"
 files:
   "./bin/smartems-server": "/usr/sbin/smartems-server"
-  "./bin/grafana-cli": "/usr/sbin/grafana-cli"
+  "./bin/smartems-cli": "/usr/sbin/smartems-cli"
 config_files:
   ./packaging/deb/init.d/smartems-server: "/etc/init.d/smartems-server"
   ./packaging/deb/default/smartems-server: "/etc/default/smartems-server"

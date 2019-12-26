@@ -169,9 +169,9 @@ schema on restart. It's advisable to do a backup of smartEMS's database before u
 
 If you are using plugins make sure to update your plugins as some might not work perfectly v4.
 
-You can update plugins using grafana-cli
+You can update plugins using smartems-cli
 
-    grafana-cli plugins update-all
+    smartems-cli plugins update-all
 
 ## Changelog
 

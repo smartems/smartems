@@ -13,8 +13,8 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
 	"github.com/smartems/smartems/pkg/util/errutil"
 	"golang.org/x/xerrors"
 )

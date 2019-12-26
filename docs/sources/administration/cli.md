@@ -1,7 +1,7 @@
 +++
 title = "smartEMS CLI"
-description = "Guide to using grafana-cli"
-keywords = ["grafana", "cli", "grafana-cli", "command line interface"]
+description = "Guide to using smartems-cli"
+keywords = ["grafana", "cli", "smartems-cli", "command line interface"]
 type = "docs"
 [menu.docs]
 parent = "admin"
@@ -23,13 +23,13 @@ You can find more information about how to install and manage your plugins in th
 > This feature is only available in smartEMS 4.1 and above.
 
 To show all admin commands:
-`grafana-cli admin`
+`smartems-cli admin`
 
 ### Reset admin password
 
 You can reset the password for the admin user using the CLI. The use case for this command is when you have lost the admin password.
 
-`grafana-cli admin reset-admin-password ...`
+`smartems-cli admin reset-admin-password ...`
 
 If running the command returns this error:
 
@@ -37,7 +37,7 @@ If running the command returns this error:
 
 then there are two flags that can be used to set homepath and the config file path.
 
-`grafana-cli --homepath "/usr/share/grafana" admin reset-admin-password newpass`
+`smartems-cli --homepath "/usr/share/grafana" admin reset-admin-password newpass`
 
 If you have not lost the admin password then it is better to set in the smartEMS UI. If you need to set the password in a script then the [smartEMS API](http://docs.grafana.org/http_api/user/#change-password) can be used. Here is an example using curl with basic auth:
 

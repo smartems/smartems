@@ -2,8 +2,8 @@ package commands
 
 import (
 	"errors"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/commands/commandstest"
-	s "github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/commands/commandstest"
+	s "github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 )

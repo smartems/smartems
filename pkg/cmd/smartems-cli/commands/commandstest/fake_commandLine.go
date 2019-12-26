@@ -2,7 +2,7 @@ package commandstest
 
 import (
 	"github.com/codegangsta/cli"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 )
 
 type FakeFlagger struct {

@@ -403,7 +403,7 @@ Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin]
 # 6.2.5 (2019-06-25)
 
 ### Features / Enhancements
-* **smartEMS-CLI**: Wrapper for `grafana-cli` within RPM/DEB packages and config/homepath are now global flags. [#17695](https://github.com/smartems/smartems/pull/17695), [@gotjosh](https://github.com/gotjosh)
+* **smartEMS-CLI**: Wrapper for `smartems-cli` within RPM/DEB packages and config/homepath are now global flags. [#17695](https://github.com/smartems/smartems/pull/17695), [@gotjosh](https://github.com/gotjosh)
 * **Panel**: Fully escape html in drilldown links (was only sanitized before) . [#17731](https://github.com/smartems/smartems/pull/17731), [@dehrax](https://github.com/dehrax)
 
 ### Bug Fixes
@@ -421,8 +421,8 @@ Please consider migrating from PhantomJS to the [smartEMS Image Renderer plugin]
 # 6.2.3 (2019-06-17)
 
 ### Known issues
-* **grafana-cli**: The argument `--pluginsDir` is not working.
-* **docker**: Due to above problem with grafana-cli the docker run will fail to start the container if you're installing plugins using the `GF_INSTALL_PLUGINS` environment variable. We have removed 6.2.3 tag from docker hub and latest tag now points to 6.2.2.
+* **smartems-cli**: The argument `--pluginsDir` is not working.
+* **docker**: Due to above problem with smartems-cli the docker run will fail to start the container if you're installing plugins using the `GF_INSTALL_PLUGINS` environment variable. We have removed 6.2.3 tag from docker hub and latest tag now points to 6.2.2.
 
 More details in bug report: https://github.com/smartems/smartems/issues/17613
 
@@ -1019,7 +1019,7 @@ See [security announcement](https://community.grafana.com/t/grafana-5-3-3-and-4-
 * **Alerting**: Fix diff and percent_diff reducers [#11563](https://github.com/smartems/smartems/issues/11563), thx [@jessetane](https://github.com/jessetane)
 * **Alerting**: Fix rendering timeout which could cause notifications to not be sent due to rendering timing out [#12151](https://github.com/smartems/smartems/issues/12151)
 * **Docker**: Make it possible to set a specific plugin url [#12861](https://github.com/smartems/smartems/pull/12861), thx [ClementGautier](https://github.com/ClementGautier)
-* **smartEMSCli**: Fixed issue with grafana-cli install plugin resulting in corrupt http response from source error. Fixes [#13079](https://github.com/smartems/smartems/issues/13079)
+* **smartEMSCli**: Fixed issue with smartems-cli install plugin resulting in corrupt http response from source error. Fixes [#13079](https://github.com/smartems/smartems/issues/13079)
 * **Provisioning**: Should allow one default data source per organization [#12229](https://github.com/smartems/smartems/issues/12229)
 * **Github OAuth**: Allow changes of user info at Github to be synched to smartEMS when signing in [#11818](https://github.com/smartems/smartems/issues/11818), thx [@rwaweber](https://github.com/rwaweber)
 * **OAuth**: Fix overriding tls_skip_verify_insecure using environment variable [#12747](https://github.com/smartems/smartems/issues/12747), thx [@jangaraj](https://github.com/jangaraj)
@@ -1085,7 +1085,7 @@ These are new features that's still being worked on and are in an experimental p
 
 # 5.2.4 (2018-09-07)
 
-* **smartEMSCli**: Fixed issue with grafana-cli install plugin resulting in corrupt http response from source error. Fixes [#13079](https://github.com/smartems/smartems/issues/13079)
+* **smartEMSCli**: Fixed issue with smartems-cli install plugin resulting in corrupt http response from source error. Fixes [#13079](https://github.com/smartems/smartems/issues/13079)
 
 # 5.2.3 (2018-08-29)
 
@@ -1885,7 +1885,7 @@ Pull Request: [#8472](https://github.com/smartems/smartems/pull/8472)
 * **Graph**: Shared crosshair option renamed to shared tooltip, shows tooltip on all graphs as you hover over one graph. [#1578](https://github.com/smartems/smartems/pull/1578), [#6274](https://github.com/smartems/smartems/pull/6274)
 * **Elasticsearch**: Added support for Missing option (bucket) for terms aggregation [#4244](https://github.com/smartems/smartems/pull/4244), thx [@shanielh](https://github.com/shanielh)
 * **Elasticsearch**: Added support for Elasticsearch 5.x [#5740](https://github.com/smartems/smartems/issues/5740), thx [@lpic10](https://github.com/lpic10)
-* **CLI**: Make it possible to reset the admin password using the grafana-cli. [#5479](https://github.com/smartems/smartems/issues/5479)
+* **CLI**: Make it possible to reset the admin password using the smartems-cli. [#5479](https://github.com/smartems/smartems/issues/5479)
 * **Influxdb**: Support multiple tags in InfluxDB annotations. [#4550](https://github.com/smartems/smartems/pull/4550), thx [@adrianlzt](https://github.com/adrianlzt)
 * **LDAP**:  Basic Auth now supports LDAP username and password, [#6940](https://github.com/smartems/smartems/pull/6940), thx [@utkarshcmu](https://github.com/utkarshcmu)
 * **LDAP**: Now works with Auth Proxy, role and organization mapping & sync will regularly be performed. [#6895](https://github.com/smartems/smartems/pull/6895), thx [@Seuf](https://github.com/seuf)
@@ -2098,7 +2098,7 @@ due to too many connections/file handles on the data source backend. This proble
 * **Dashlist**: Fixed issue dashboard list panel and caching tags, fixes [#4768](https://github.com/smartems/smartems/issues/4768)
 * **Graph**: Fixed issue with unneeded scrollbar in legend for Firefox, fixes [#4760](https://github.com/smartems/smartems/issues/4760)
 * **Table panel**: Fixed issue table panel formatting string array properties, fixes [#4791](https://github.com/smartems/smartems/issues/4791)
-* **grafana-cli**: Improve error message when failing to install plugins due to corrupt response, fixes [#4651](https://github.com/smartems/smartems/issues/4651)
+* **smartems-cli**: Improve error message when failing to install plugins due to corrupt response, fixes [#4651](https://github.com/smartems/smartems/issues/4651)
 * **Singlestat**: Fixes prefix an postfix for gauges, fixes [#4812](https://github.com/smartems/smartems/issues/4812)
 * **Singlestat**: Fixes auto-refresh on change for some options, fixes [#4809](https://github.com/smartems/smartems/issues/4809)
 
@@ -2114,7 +2114,7 @@ slack channel (link to slack channel in readme).
 # 3.0.0-beta5 (2016-04-15)
 
 ### Bug fixes
-* **grafana-cli**: Fixed issue grafana-cli tool, did not detect the right plugin dir, fixes [#4723](https://github.com/smartems/smartems/issues/4723)
+* **smartems-cli**: Fixed issue smartems-cli tool, did not detect the right plugin dir, fixes [#4723](https://github.com/smartems/smartems/issues/4723)
 * **Graph**: Fixed issue with light theme text color issue in tooltip, fixes [#4702](https://github.com/smartems/smartems/issues/4702)
 * **Snapshot**: Fixed issue with empty snapshots, fixes [#4706](https://github.com/smartems/smartems/issues/4706)
 

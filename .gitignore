@@ -58,7 +58,7 @@ profile.cov
 /local
 .notouch
 /Makefile.local
-/pkg/cmd/grafana-cli/grafana-cli
+/pkg/cmd/smartems-cli/smartems-cli
 /pkg/cmd/smartems-server/smartems-server
 /pkg/cmd/smartems-server/debug
 /pkg/extensions

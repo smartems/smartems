@@ -5,8 +5,8 @@ import (
 
 	"github.com/fatih/color"
 	"github.com/smartems/smartems/pkg/bus"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 	"github.com/smartems/smartems/pkg/models"
 	"github.com/smartems/smartems/pkg/services/sqlstore"
 	"github.com/smartems/smartems/pkg/util"

@@ -66,14 +66,14 @@ smartEMS 3.0, but go to <a href=https://grafana.com> and check out the preview
 and sign up for an account</a> in the meantime.
 
 
-## grafana-cli
+## smartems-cli
 
-smartEMS 3.0 comes with a new command line tool called grafana-cli. You
+smartEMS 3.0 comes with a new command line tool called smartems-cli. You
 can easily install plugins from smartEMS.net with it. For
 example:
 
 ```
-grafana-cli install grafana-pie-chart-panel
+smartems-cli install grafana-pie-chart-panel
 ```
 
 ## Personalization and Preferences

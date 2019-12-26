@@ -25,7 +25,7 @@ can make older plugins stop working properly.
 You can update all plugins using
 
 ```bash
-grafana-cli plugins update-all
+smartems-cli plugins update-all
 ```
 
 ## Database backup

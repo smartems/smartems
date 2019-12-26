@@ -3,7 +3,7 @@ package commandstest
 import (
 	"os"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
 )
 
 type FakeGrafanaComClient struct {

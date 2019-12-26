@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/commands/commandstest"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/commands/commandstest"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/stretchr/testify/assert"
 )

@@ -2,9 +2,9 @@ package commands
 
 import (
 	"github.com/fatih/color"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	s "github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	s "github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 	"github.com/smartems/smartems/pkg/util/errutil"
 )
 

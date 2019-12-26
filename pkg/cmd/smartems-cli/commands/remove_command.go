@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 )
 
 var removePlugin func(pluginPath, id string) error = services.RemoveInstalledPlugin

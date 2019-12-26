@@ -6,10 +6,10 @@ import (
 	"runtime"
 
 	"github.com/codegangsta/cli"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/commands"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/commands"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 )
 
 var version = "master"

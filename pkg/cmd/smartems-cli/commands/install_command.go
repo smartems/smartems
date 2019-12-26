@@ -15,13 +15,13 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 	"github.com/smartems/smartems/pkg/util/errutil"
 	"golang.org/x/xerrors"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	m "github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
-	s "github.com/smartems/smartems/pkg/cmd/grafana-cli/services"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	m "github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
+	s "github.com/smartems/smartems/pkg/cmd/smartems-cli/services"
 )
 
 func validateInput(c utils.CommandLine, pluginFolder string) error {

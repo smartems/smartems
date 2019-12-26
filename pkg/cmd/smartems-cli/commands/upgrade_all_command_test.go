@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/models"
 	"github.com/stretchr/testify/assert"
 )
 

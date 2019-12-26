@@ -3,8 +3,8 @@ package commands
 import (
 	"errors"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/utils"
 )
 
 func validateVersionInput(c utils.CommandLine) error {

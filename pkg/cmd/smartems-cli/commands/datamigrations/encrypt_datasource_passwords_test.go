@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/smartems/smartems/pkg/cmd/grafana-cli/commands/commandstest"
+	"github.com/smartems/smartems/pkg/cmd/smartems-cli/commands/commandstest"
 	"github.com/smartems/smartems/pkg/components/securejsondata"
 	"github.com/smartems/smartems/pkg/models"
 	"github.com/smartems/smartems/pkg/services/sqlstore"

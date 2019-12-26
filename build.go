@@ -45,7 +45,7 @@ var (
 	includeBuildId        bool     = true
 	buildId               string   = "0"
 	serverBinary          string   = "smartems-server"
-	cliBinary             string   = "grafana-cli"
+	cliBinary             string   = "smartems-cli"
 	binaries              []string = []string{serverBinary, cliBinary}
 	isDev                 bool     = false
 	enterprise            bool     = false
@@ -114,7 +114,7 @@ func main() {
 
 		case "build-cli":
 			clean()
-			build("grafana-cli", "./pkg/cmd/grafana-cli", []string{})
+			build("smartems-cli", "./pkg/cmd/smartems-cli", []string{})
 
 		case "build":
 			//clean()
@@ -277,7 +277,7 @@ func createDebPackages() {
 		initdScriptSrc:      "packaging/deb/init.d/smartems-server",
 		defaultFileSrc:      "packaging/deb/default/smartems-server",
 		systemdFileSrc:      "packaging/deb/systemd/smartems-server.service",
-		cliBinaryWrapperSrc: "packaging/wrappers/grafana-cli",
+		cliBinaryWrapperSrc: "packaging/wrappers/smartems-cli",
 
 		depends: []string{"adduser", "libfontconfig1"},
 	})
@@ -307,7 +307,7 @@ func createRpmPackages() {
 		initdScriptSrc:      "packaging/rpm/init.d/smartems-server",
 		defaultFileSrc:      "packaging/rpm/sysconfig/smartems-server",
 		systemdFileSrc:      "packaging/rpm/systemd/smartems-server.service",
-		cliBinaryWrapperSrc: "packaging/wrappers/grafana-cli",
+		cliBinaryWrapperSrc: "packaging/wrappers/smartems-cli",
 
 		depends: []string{"/sbin/service", "fontconfig", "freetype", "urw-fonts"},
 	})
@@ -334,7 +334,7 @@ func createPackage(options linuxPackageOptions) {
 	runPrint("mkdir", "-p", filepath.Join(packageRoot, "/usr/lib/systemd/system"))
 	runPrint("mkdir", "-p", filepath.Join(packageRoot, "/usr/sbin"))
 
-	// copy grafana-cli wrapper
+	// copy smartems-cli wrapper
 	runPrint("cp", "-p", options.cliBinaryWrapperSrc, filepath.Join(packageRoot, "/usr/sbin/"+cliBinary))
 
 	// copy smartems-server binary
@@ -353,7 +353,7 @@ func createPackage(options linuxPackageOptions) {
 
 	// create /bin within home
 	runPrint("mkdir", "-p", filepath.Join(packageRoot, options.homeBinDir))
-	// The grafana-cli binary is exposed through a wrapper to ensure a proper
+	// The smartems-cli binary is exposed through a wrapper to ensure a proper
 	// configuration is in place. To enable that, we need to store the original
 	// binary in a separate location to avoid conflicts.
 	runPrint("cp", "-p", filepath.Join(workingDir, "tmp/bin/"+cliBinary), filepath.Join(packageRoot, options.homeBinDir, cliBinary))

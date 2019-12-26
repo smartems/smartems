@@ -36,10 +36,10 @@ that's installed.
 
 The [smartEMS image renderer plugin](https://grafana.com/grafana/plugins/grafana-image-renderer) is a plugin that runs on the backend and handles rendering panels and dashboards as PNG-images using headless chrome.
 
-You can install it using grafana-cli:
+You can install it using smartems-cli:
 
 ```bash
-grafana-cli plugins install grafana-image-renderer
+smartems-cli plugins install grafana-image-renderer
 ```
 
 For further information and instructions refer to [troubleshooting](#troubleshooting) and the [plugin details](https://grafana.com/grafana/plugins/grafana-image-renderer).

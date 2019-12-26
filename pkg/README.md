@@ -12,7 +12,7 @@ For more information on developing for the backend:
 | folder | description |
 | ------- | ----------- |
 | /pkg/api | HTTP handlers and routing. Almost all handler funcs are global which is something we would like to improve in the future. Handlers should be associated with a struct that refers to all dependencies. |
-| /pkg/cmd | The binaries that we build: smartems-server and grafana-cli. |
+| /pkg/cmd | The binaries that we build: smartems-server and smartems-cli. |
 | /pkg/components | A mix of third-party packages and packages we have implemented ourselves. Includes our packages that have out-grown the util package and don't naturally belong somewhere else. |
 | /pkg/infra | Packages in infra should be packages that are used in multiple places in smartEMS without knowing anything about the smartEMS domain. |
 | /pkg/services | Packages in services are responsible for peristing domain objects and manage the relationship between domain objects. Services should communicate with each other using DI when possible. Most of smartEMS's codebase still relies on global state for this. Any new features going forward should use DI. |
