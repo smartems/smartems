@@ -3,10 +3,10 @@ package guardian
 import (
 	"errors"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/infra/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/infra/log"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 var (

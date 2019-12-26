@@ -1,7 +1,7 @@
 package social
 
 import (
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/log"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 )

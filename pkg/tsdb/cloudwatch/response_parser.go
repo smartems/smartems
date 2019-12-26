@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/aws/aws-sdk-go/service/cloudwatch"
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/null"
+	"github.com/smartems/smartems/pkg/tsdb"
 )
 
 func (e *CloudWatchExecutor) parseResponse(metricDataOutputs []*cloudwatch.GetMetricDataOutput, queries map[string]*cloudWatchQuery) ([]*cloudwatchResponse, error) {

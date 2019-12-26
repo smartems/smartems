@@ -3,10 +3,10 @@ package plugins
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/ini.v1"
 )

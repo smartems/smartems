@@ -5,13 +5,13 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 
 	"github.com/go-xorm/core"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/tsdb"
-	"github.com/grafana/grafana/pkg/tsdb/sqleng"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/tsdb/sqleng"
 )
 
 func init() {

@@ -1,8 +1,8 @@
 package commands
 
 import (
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
 )
 
 // listRemoteCommand prints out all plugins in the remote repo with latest version supported on current platform.

@@ -5,7 +5,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/models"
 )
 
 type Test struct {

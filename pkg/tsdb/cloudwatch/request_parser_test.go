@@ -3,7 +3,7 @@ package cloudwatch
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/components/simplejson"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

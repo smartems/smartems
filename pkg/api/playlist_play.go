@@ -4,11 +4,11 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	_ "github.com/grafana/grafana/pkg/infra/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/search"
+	"github.com/smartems/smartems/pkg/api/dtos"
+	"github.com/smartems/smartems/pkg/bus"
+	_ "github.com/smartems/smartems/pkg/infra/log"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/search"
 )
 
 func populateDashboardsByID(dashboardByIDs []int64, dashboardIDOrder map[int64]int) (dtos.PlaylistDashboardsSlice, error) {

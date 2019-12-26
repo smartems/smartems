@@ -6,12 +6,12 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/auth"
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/services/multildap"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/auth"
+	"github.com/smartems/smartems/pkg/services/ldap"
+	"github.com/smartems/smartems/pkg/services/multildap"
+	"github.com/smartems/smartems/pkg/setting"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

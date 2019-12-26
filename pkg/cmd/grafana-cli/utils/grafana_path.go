@@ -5,7 +5,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
 	"golang.org/x/xerrors"
 )
 

@@ -6,9 +6,9 @@ import (
 
 	macaron "gopkg.in/macaron.v1"
 
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util"
 )
 
 type AuthOptions struct {

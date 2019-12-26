@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 type proxyTransportCache struct {

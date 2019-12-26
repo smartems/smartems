@@ -10,11 +10,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/tsdb"
 	"github.com/stretchr/testify/require"
 
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/models"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/sqlstore"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

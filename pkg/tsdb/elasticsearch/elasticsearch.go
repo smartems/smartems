@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/tsdb"
-	es "github.com/grafana/grafana/pkg/tsdb/elasticsearch/client"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/tsdb"
+	es "github.com/smartems/smartems/pkg/tsdb/elasticsearch/client"
 )
 
 // ElasticsearchExecutor represents a handler for handling elasticsearch datasource request

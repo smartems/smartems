@@ -13,9 +13,9 @@ import (
 	"path"
 	"runtime"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
+	"github.com/smartems/smartems/pkg/util/errutil"
 	"golang.org/x/xerrors"
 )
 

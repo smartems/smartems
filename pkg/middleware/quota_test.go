@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/auth"
-	"github.com/grafana/grafana/pkg/services/quota"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/bus"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/auth"
+	"github.com/smartems/smartems/pkg/services/quota"
+	"github.com/smartems/smartems/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

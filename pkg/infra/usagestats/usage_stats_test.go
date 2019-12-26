@@ -11,12 +11,12 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/services/sqlstore"
+	"github.com/smartems/smartems/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -8,10 +8,10 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/macaron.v1"
 
-	"github.com/grafana/grafana/pkg/infra/remotecache"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/auth"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/infra/remotecache"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/auth"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 type scenarioContext struct {

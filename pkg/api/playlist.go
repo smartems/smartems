@@ -3,9 +3,9 @@ package api
 import (
 	"net/http"
 
-	"github.com/grafana/grafana/pkg/bus"
-	_ "github.com/grafana/grafana/pkg/infra/log"
-	m "github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/bus"
+	_ "github.com/smartems/smartems/pkg/infra/log"
+	m "github.com/smartems/smartems/pkg/models"
 )
 
 func ValidateOrgPlaylist(c *m.ReqContext) {

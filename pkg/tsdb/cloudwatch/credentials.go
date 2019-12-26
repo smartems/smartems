@@ -16,7 +16,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatch"
 	"github.com/aws/aws-sdk-go/service/sts"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 type cache struct {

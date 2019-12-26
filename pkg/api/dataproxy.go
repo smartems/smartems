@@ -1,10 +1,10 @@
 package api
 
 import (
-	"github.com/grafana/grafana/pkg/api/pluginproxy"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
+	"github.com/smartems/smartems/pkg/api/pluginproxy"
+	"github.com/smartems/smartems/pkg/infra/metrics"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
 )
 
 func (hs *HTTPServer) ProxyDataSourceRequest(c *m.ReqContext) {

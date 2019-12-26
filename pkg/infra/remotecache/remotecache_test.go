@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/services/sqlstore"
+	"github.com/smartems/smartems/pkg/setting"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -7,20 +7,20 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/grafana/grafana/pkg/services/alerting"
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/smartems/smartems/pkg/services/alerting"
+	"github.com/smartems/smartems/pkg/services/dashboards"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/dashdiffs"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/services/guardian"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/smartems/smartems/pkg/api/dtos"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/dashdiffs"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/metrics"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/services/guardian"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util"
 )
 
 const (

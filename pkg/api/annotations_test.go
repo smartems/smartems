@@ -3,10 +3,10 @@ package api
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/annotations"
+	"github.com/smartems/smartems/pkg/api/dtos"
+	"github.com/smartems/smartems/pkg/bus"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/annotations"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

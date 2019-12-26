@@ -6,8 +6,8 @@ import (
 
 	_ "github.com/crewjam/saml"
 	_ "github.com/gobwas/glob"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/registry"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/registry"
 	_ "github.com/jung-kurt/gofpdf"
 	_ "github.com/pkg/errors"
 	_ "github.com/robfig/cron"

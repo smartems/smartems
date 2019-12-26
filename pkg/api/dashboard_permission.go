@@ -3,10 +3,10 @@ package api
 import (
 	"time"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/bus"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/guardian"
+	"github.com/smartems/smartems/pkg/api/dtos"
+	"github.com/smartems/smartems/pkg/bus"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/guardian"
 )
 
 func GetDashboardPermissionList(c *m.ReqContext) Response {

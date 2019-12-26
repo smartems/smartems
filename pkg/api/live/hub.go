@@ -3,9 +3,9 @@ package live
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/api/dtos"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/api/dtos"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/infra/log"
 )
 
 type hub struct {

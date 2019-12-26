@@ -6,10 +6,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/components/gtime"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/tsdb"
-	"github.com/grafana/grafana/pkg/tsdb/sqleng"
+	"github.com/smartems/smartems/pkg/components/gtime"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/tsdb/sqleng"
 )
 
 const rsIdentifier = `([_a-zA-Z0-9]+)`

@@ -10,8 +10,8 @@ import (
 	"path"
 	"time"
 
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	m "github.com/grafana/grafana/pkg/cmd/grafana-cli/models"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
+	m "github.com/smartems/smartems/pkg/cmd/grafana-cli/models"
 )
 
 var (

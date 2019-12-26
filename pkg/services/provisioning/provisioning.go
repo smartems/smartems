@@ -5,14 +5,14 @@ import (
 	"path"
 	"sync"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/util/errutil"
 
-	"github.com/grafana/grafana/pkg/registry"
-	"github.com/grafana/grafana/pkg/services/provisioning/dashboards"
-	"github.com/grafana/grafana/pkg/services/provisioning/datasources"
-	"github.com/grafana/grafana/pkg/services/provisioning/notifiers"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/registry"
+	"github.com/smartems/smartems/pkg/services/provisioning/dashboards"
+	"github.com/smartems/smartems/pkg/services/provisioning/datasources"
+	"github.com/smartems/smartems/pkg/services/provisioning/notifiers"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 type DashboardProvisioner interface {

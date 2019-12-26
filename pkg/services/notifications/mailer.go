@@ -15,9 +15,9 @@ import (
 
 	gomail "gopkg.in/mail.v2"
 
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util/errutil"
 )
 
 func (ns *NotificationService) send(msg *Message) (int, error) {

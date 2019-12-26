@@ -1,13 +1,13 @@
 package login
 
 import (
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/ldap"
-	"github.com/grafana/grafana/pkg/services/multildap"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/ldap"
+	"github.com/smartems/smartems/pkg/services/multildap"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util/errutil"
 )
 
 // getLDAPConfig gets LDAP config

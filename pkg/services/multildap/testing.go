@@ -1,8 +1,8 @@
 package multildap
 
 import (
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/ldap"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/ldap"
 )
 
 // MockLDAP represents testing struct for ldap testing

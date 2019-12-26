@@ -6,10 +6,10 @@ import (
 
 	sdk "github.com/grafana/grafana-plugin-sdk-go/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/genproto/pluginv2"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/tsdb"
 )
 
 func NewDatasourcePluginWrapperV2(log log.Logger, plugin sdk.DatasourcePlugin) *DatasourcePluginWrapperV2 {

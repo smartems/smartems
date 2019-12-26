@@ -3,9 +3,9 @@ package dashboards
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/guardian"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/guardian"
 	. "github.com/smartystreets/goconvey/convey"
 	"golang.org/x/xerrors"
 )

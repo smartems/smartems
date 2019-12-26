@@ -4,15 +4,15 @@ import (
 	"context"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/metrics"
+	"github.com/smartems/smartems/pkg/models"
 	"golang.org/x/xerrors"
 
-	"github.com/grafana/grafana/pkg/services/annotations"
-	"github.com/grafana/grafana/pkg/services/rendering"
+	"github.com/smartems/smartems/pkg/services/annotations"
+	"github.com/smartems/smartems/pkg/services/rendering"
 )
 
 type resultHandler interface {

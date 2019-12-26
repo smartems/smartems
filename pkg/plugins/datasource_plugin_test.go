@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

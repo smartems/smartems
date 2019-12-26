@@ -1,13 +1,13 @@
 package dashboards
 
 import (
-	"github.com/grafana/grafana/pkg/services/provisioning/values"
+	"github.com/smartems/smartems/pkg/services/provisioning/values"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/dashboards"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/services/dashboards"
 
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/models"
 )
 
 type DashboardsAsConfig struct {

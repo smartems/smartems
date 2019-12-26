@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/log"
 )
 
 type HttpGetResponse struct {

@@ -20,8 +20,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/setting"
 	"gopkg.in/macaron.v1"
 
 	gocache "github.com/patrickmn/go-cache"

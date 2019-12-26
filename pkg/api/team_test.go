@@ -3,13 +3,13 @@ package api
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/models"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/log"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/stretchr/testify/assert"
 	macaron "gopkg.in/macaron.v1"

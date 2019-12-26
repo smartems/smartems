@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/grafana/grafana/pkg/api/pluginproxy"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/middleware"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/smartems/smartems/pkg/api/pluginproxy"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/middleware"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/util"
 	macaron "gopkg.in/macaron.v1"
 )
 

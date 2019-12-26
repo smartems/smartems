@@ -5,7 +5,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/grafana/grafana/pkg/services/annotations"
+	"github.com/smartems/smartems/pkg/services/annotations"
 )
 
 func TestAnnotations(t *testing.T) {

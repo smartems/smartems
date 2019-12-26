@@ -3,8 +3,8 @@ package cloudwatch
 import (
 	"context"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/tsdb"
 	"golang.org/x/sync/errgroup"
 )
 

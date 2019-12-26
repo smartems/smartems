@@ -5,8 +5,8 @@ import (
 
 	"sort"
 
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/null"
+	"github.com/smartems/smartems/pkg/tsdb"
 )
 
 // queryReducer reduces an timeserie to a nullable float

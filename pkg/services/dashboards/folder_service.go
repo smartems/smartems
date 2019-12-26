@@ -1,10 +1,10 @@
 package dashboards
 
 import (
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/guardian"
-	"github.com/grafana/grafana/pkg/services/search"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/guardian"
+	"github.com/smartems/smartems/pkg/services/search"
 )
 
 // FolderService service for operating on folders

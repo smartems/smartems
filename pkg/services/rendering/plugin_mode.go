@@ -7,8 +7,8 @@ import (
 	"time"
 
 	pluginModel "github.com/grafana/grafana-plugin-model/go/renderer"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/plugins/backendplugin"
 )
 
 func (rs *RenderingService) startPlugin(ctx context.Context) error {

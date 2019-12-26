@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/tsdb"
 )
 
 // returns a map of queries with query id as key. In the case a q request query

@@ -3,8 +3,8 @@ package login
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/models"
 	log "github.com/inconshreveable/log15"
 	"github.com/stretchr/testify/require"
 )

@@ -4,13 +4,13 @@ import (
 	"fmt"
 
 	"github.com/fatih/color"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/logger"
-	"github.com/grafana/grafana/pkg/cmd/grafana-cli/utils"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/util"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/logger"
+	"github.com/smartems/smartems/pkg/cmd/grafana-cli/utils"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/sqlstore"
+	"github.com/smartems/smartems/pkg/util"
+	"github.com/smartems/smartems/pkg/util/errutil"
 )
 
 const AdminUserId = 1

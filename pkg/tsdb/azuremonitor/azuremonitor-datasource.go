@@ -12,16 +12,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/api/pluginproxy"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/api/pluginproxy"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/setting"
 	opentracing "github.com/opentracing/opentracing-go"
 	"golang.org/x/net/context/ctxhttp"
 
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/components/null"
+	"github.com/smartems/smartems/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/tsdb"
 )
 
 // AzureMonitorDatasource calls the Azure Monitor API - one of the four API's supported

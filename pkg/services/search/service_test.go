@@ -3,8 +3,8 @@ package search
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/models"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/models"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

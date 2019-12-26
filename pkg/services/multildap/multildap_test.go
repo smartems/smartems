@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/services/ldap"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/services/ldap"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

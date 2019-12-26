@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"text/template"
 
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
 )
 
 // InterpolateString accepts template data and return a string with substitutions

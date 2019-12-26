@@ -3,7 +3,7 @@ package middleware
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/setting"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

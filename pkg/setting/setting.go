@@ -20,8 +20,8 @@ import (
 	"github.com/go-macaron/session"
 	ini "gopkg.in/ini.v1"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/util"
 )
 
 type Scheme string

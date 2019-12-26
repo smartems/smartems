@@ -8,8 +8,8 @@ import (
 
 	"github.com/unknwon/com"
 
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 const timeLimitCodeLength = 12 + 6 + 40

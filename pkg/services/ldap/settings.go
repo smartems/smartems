@@ -8,10 +8,10 @@ import (
 	"github.com/BurntSushi/toml"
 	"golang.org/x/xerrors"
 
-	"github.com/grafana/grafana/pkg/infra/log"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/infra/log"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util/errutil"
 )
 
 // Config holds list of connections to LDAP

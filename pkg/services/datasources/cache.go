@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/infra/localcache"
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/registry"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/infra/localcache"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/registry"
 )
 
 type CacheService interface {

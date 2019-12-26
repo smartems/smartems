@@ -3,7 +3,7 @@ package backendplugin
 import (
 	"os/exec"
 
-	"github.com/grafana/grafana/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/infra/log"
 
 	datasourceV1 "github.com/grafana/grafana-plugin-model/go/datasource"
 	rendererV1 "github.com/grafana/grafana-plugin-model/go/renderer"

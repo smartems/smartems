@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"strings"
 
-	m "github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/util"
+	m "github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/util"
 	"golang.org/x/oauth2/google"
 )
 

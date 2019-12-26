@@ -8,17 +8,17 @@ import (
 	"path"
 	"time"
 
-	"github.com/grafana/grafana/pkg/plugins/backendplugin"
+	"github.com/smartems/smartems/pkg/plugins/backendplugin"
 
-	"github.com/grafana/grafana/pkg/setting"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/setting"
+	"github.com/smartems/smartems/pkg/util/errutil"
 
 	datasourceV1 "github.com/grafana/grafana-plugin-model/go/datasource"
 	sdk "github.com/grafana/grafana-plugin-sdk-go/datasource"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins/datasource/wrapper"
-	"github.com/grafana/grafana/pkg/tsdb"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins/datasource/wrapper"
+	"github.com/smartems/smartems/pkg/tsdb"
 	plugin "github.com/hashicorp/go-plugin"
 	"golang.org/x/xerrors"
 )

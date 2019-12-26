@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/infra/metrics"
-	"github.com/grafana/grafana/pkg/models"
-	"github.com/grafana/grafana/pkg/plugins"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/infra/metrics"
+	"github.com/smartems/smartems/pkg/models"
+	"github.com/smartems/smartems/pkg/plugins"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 var usageStatsURL = "https://stats.grafana.org/grafana-usage-report"

@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/go-xorm/xorm"
-	"github.com/grafana/grafana/pkg/bus"
-	"github.com/grafana/grafana/pkg/infra/log"
-	"github.com/grafana/grafana/pkg/util/errutil"
+	"github.com/smartems/smartems/pkg/bus"
+	"github.com/smartems/smartems/pkg/infra/log"
+	"github.com/smartems/smartems/pkg/util/errutil"
 	sqlite3 "github.com/mattn/go-sqlite3"
 )
 

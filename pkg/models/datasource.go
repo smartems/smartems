@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/grafana/grafana/pkg/components/securejsondata"
-	"github.com/grafana/grafana/pkg/components/simplejson"
+	"github.com/smartems/smartems/pkg/components/securejsondata"
+	"github.com/smartems/smartems/pkg/components/simplejson"
 )
 
 const (

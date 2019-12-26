@@ -3,8 +3,8 @@ package remotecache
 import (
 	"testing"
 
-	"github.com/grafana/grafana/pkg/services/sqlstore"
-	"github.com/grafana/grafana/pkg/setting"
+	"github.com/smartems/smartems/pkg/services/sqlstore"
+	"github.com/smartems/smartems/pkg/setting"
 )
 
 // NewFakeStore creates store for testing
