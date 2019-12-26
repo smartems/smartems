@@ -4,7 +4,7 @@ import { LoadingPlaceholder, JSONFormatter } from '@smartems/ui';
 import appEvents from 'app/core/app_events';
 import { CopyToClipboard } from 'app/core/components/CopyToClipboard/CopyToClipboard';
 import { DashboardModel } from '../dashboard/state/DashboardModel';
-import { getBackendSrv, BackendSrv } from '@grafana/runtime';
+import { getBackendSrv, BackendSrv } from '@smartems/runtime';
 import { AppEvents } from '@smartems/data';
 
 export interface Props {

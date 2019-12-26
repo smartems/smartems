@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Services
-import { getAngularLoader, AngularComponent } from '@grafana/runtime';
+import { getAngularLoader, AngularComponent } from '@smartems/runtime';
 import { getTimeSrv } from 'app/features/dashboard/services/TimeSrv';
 
 // Types

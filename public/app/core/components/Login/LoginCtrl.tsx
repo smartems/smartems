@@ -5,7 +5,7 @@ import { updateLocation } from 'app/core/actions';
 import { connect } from 'react-redux';
 import { StoreState } from 'app/types';
 import { PureComponent } from 'react';
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { hot } from 'react-hot-loader';
 import appEvents from 'app/core/app_events';
 import { AppEvents } from '@smartems/data';

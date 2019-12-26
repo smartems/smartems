@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { renderMarkdown } from '@smartems/data';
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 
 interface Props {
   plugin: {

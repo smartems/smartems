@@ -1,4 +1,4 @@
-import { config, GrafanaBootConfig } from '@grafana/runtime';
+import { config, GrafanaBootConfig } from '@smartems/runtime';
 
 // Legacy binding paths
 export { config, GrafanaBootConfig as Settings };

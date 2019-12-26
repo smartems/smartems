@@ -1,5 +1,5 @@
 import { DatasourceSrvMock, MockDataSourceApi } from 'test/mocks/datasource_srv';
-import { getDataSourceSrv } from '@grafana/runtime';
+import { getDataSourceSrv } from '@smartems/runtime';
 import { getQueryOptions } from 'test/helpers/getQueryOptions';
 import { LoadingState, DataSourceInstanceSettings } from '@smartems/data';
 import { MixedDatasource } from './module';
@@ -13,7 +13,7 @@ const datasourceSrv = new DatasourceSrvMock(defaultDS, {
   C: new MockDataSourceApi('DSC', { data: ['CCCC'] }),
 });
 
-jest.mock('@grafana/runtime', () => ({
+jest.mock('@smartems/runtime', () => ({
   getDataSourceSrv: () => {
     return datasourceSrv;
   },

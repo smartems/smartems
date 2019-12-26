@@ -5,7 +5,7 @@ import Drop from 'tether-drop';
 // @ts-ignore
 import baron from 'baron';
 import { PanelEvents } from '@smartems/data';
-import { getLocationSrv } from '@grafana/runtime';
+import { getLocationSrv } from '@smartems/runtime';
 
 const module = angular.module('grafana.directives');
 

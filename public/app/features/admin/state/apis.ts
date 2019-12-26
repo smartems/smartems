@@ -1,4 +1,4 @@
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { dateTime } from '@smartems/data';
 import { LdapUser, LdapConnectionInfo, UserSession, SyncInfo, User } from 'app/types';
 

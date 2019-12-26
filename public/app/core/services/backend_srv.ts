@@ -7,7 +7,7 @@ import { DashboardModel } from 'app/features/dashboard/state/DashboardModel';
 import { DashboardSearchHit } from 'app/types/search';
 import { ContextSrv } from './context_srv';
 import { FolderInfo, DashboardDTO, CoreEvents } from 'app/types';
-import { BackendSrv as BackendService, getBackendSrv as getBackendService, BackendSrvRequest } from '@grafana/runtime';
+import { BackendSrv as BackendService, getBackendSrv as getBackendService, BackendSrvRequest } from '@smartems/runtime';
 import { AppEvents } from '@smartems/data';
 
 export class BackendSrv implements BackendService {

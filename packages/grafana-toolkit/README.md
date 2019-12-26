@@ -143,10 +143,10 @@ The styles will be injected via `style` tag during runtime.
 #### Theme-specific stylesheets
 If you want to provide different stylesheets for dark/light theme, then create `dark.[css|scss]` and `light.[css|scss]` files in the `src/styles` directory of your plugin. grafana-toolkit generates theme-specific stylesheets that are stored in `dist/styles` directory.
 
-In order for smartEMS to pick up your theme stylesheets, you need to use `loadPluginCss` from `@grafana/runtime` package. Typically you would do that in the entry point of your plugin:
+In order for smartEMS to pick up your theme stylesheets, you need to use `loadPluginCss` from `@smartems/runtime` package. Typically you would do that in the entry point of your plugin:
 
 ```ts
-import { loadPluginCss } from '@grafana/runtime';
+import { loadPluginCss } from '@smartems/runtime';
 
 loadPluginCss({
   dark: 'plugins/<YOUR-PLUGIN-ID>/styles/dark.css',
@@ -154,7 +154,7 @@ loadPluginCss({
 });
 ```
 
-You must add `@grafana/runtime` to your plugin dependencies by running `yarn add @grafana/runtime` or `npm instal @grafana/runtime`.
+You must add `@smartems/runtime` to your plugin dependencies by running `yarn add @smartems/runtime` or `npm instal @smartems/runtime`.
 
 > Note that in this case static files (png, svg, json, html) are all copied to dist directory when the plugin is bundled. Relative paths to those files does not change!
 

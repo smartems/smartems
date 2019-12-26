@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { PanelCtrl } from '../../../features/panel/panel_ctrl';
 import { auto } from 'angular';
-import { BackendSrv } from '@grafana/runtime';
+import { BackendSrv } from '@smartems/runtime';
 import { PanelEvents } from '@smartems/data';
 import { ContextSrv } from '../../../core/services/context_srv';
 import { CoreEvents } from 'app/types';

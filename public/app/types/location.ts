@@ -1,4 +1,4 @@
-import { UrlQueryMap } from '@grafana/runtime';
+import { UrlQueryMap } from '@smartems/runtime';
 
 export interface LocationState {
   url: string;

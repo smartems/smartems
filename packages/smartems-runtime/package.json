@@ -1,7 +1,7 @@
 {
   "author": "Grafana Labs",
   "license": "Apache-2.0",
-  "name": "@grafana/runtime",
+  "name": "@smartems/runtime",
   "version": "6.5.2",
   "description": "Grafana Runtime Library",
   "keywords": [

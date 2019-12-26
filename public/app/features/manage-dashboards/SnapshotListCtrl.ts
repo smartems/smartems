@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { NavModelSrv } from 'app/core/core';
 import { ILocationService } from 'angular';
-import { BackendSrv } from '@grafana/runtime';
+import { BackendSrv } from '@smartems/runtime';
 import { GrafanaRootScope } from 'app/routes/GrafanaCtrl';
 import { CoreEvents } from 'app/types';
 

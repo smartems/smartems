@@ -2,7 +2,7 @@
  * @preserve jquery-param (c) 2015 KNOWLEDGECODE | MIT
  */
 
-import { UrlQueryMap } from '@grafana/runtime';
+import { UrlQueryMap } from '@smartems/runtime';
 
 export function renderUrl(path: string, query: UrlQueryMap | undefined): string {
   if (query && Object.keys(query).length > 0) {

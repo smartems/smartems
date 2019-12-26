@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { hot } from 'react-hot-loader';
 
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { NavModel } from '@smartems/data';
 
 import { StoreState } from 'app/types';

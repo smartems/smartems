@@ -13,7 +13,7 @@ import 'mousetrap-global-bind';
 import { ContextSrv } from './context_srv';
 import { ILocationService, IRootScopeService, ITimeoutService } from 'angular';
 import { GrafanaRootScope } from 'app/routes/GrafanaCtrl';
-import { getLocationSrv } from '@grafana/runtime';
+import { getLocationSrv } from '@smartems/runtime';
 
 export class KeybindingSrv {
   helpModal: boolean;

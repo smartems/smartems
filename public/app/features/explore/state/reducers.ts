@@ -64,7 +64,7 @@ import {
 } from './actionTypes';
 import { reducerFactory, ActionOf } from 'app/core/redux';
 import { updateLocation } from 'app/core/actions/location';
-import { LocationUpdate } from '@grafana/runtime';
+import { LocationUpdate } from '@smartems/runtime';
 import TableModel from 'app/core/table_model';
 import { ResultProcessor } from '../utils/ResultProcessor';
 

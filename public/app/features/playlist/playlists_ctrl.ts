@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import coreModule from '../../core/core_module';
-import { BackendSrv } from '@grafana/runtime';
+import { BackendSrv } from '@smartems/runtime';
 import { NavModelSrv } from 'app/core/nav_model_srv';
 import { CoreEvents } from 'app/types';
 import { AppEvents } from '@smartems/data';

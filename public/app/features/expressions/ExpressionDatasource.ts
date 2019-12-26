@@ -8,7 +8,7 @@ import {
 import { ExpressionQuery, GELQueryType } from './types';
 import { ExpressionQueryEditor } from './ExpressionQueryEditor';
 import { Observable, from } from 'rxjs';
-import { config } from '@grafana/runtime';
+import { config } from '@smartems/runtime';
 import { getBackendSrv } from 'app/core/services/backend_srv';
 
 /**

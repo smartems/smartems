@@ -1,6 +1,6 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "import-blacklist": [true, ["^@smartems/data.*"], ["^@smartems/ui.*"], ["^@grafana/runtime.*"]]
+    "import-blacklist": [true, ["^@smartems/data.*"], ["^@smartems/ui.*"], ["^@smartems/runtime.*"]]
   }
 }

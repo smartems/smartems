@@ -1,5 +1,5 @@
 import React from 'react';
-import { config, GrafanaBootConfig } from '@grafana/runtime';
+import { config, GrafanaBootConfig } from '@smartems/runtime';
 import { ThemeContext, getTheme } from '@smartems/ui';
 import { GrafanaThemeType } from '@smartems/data';
 

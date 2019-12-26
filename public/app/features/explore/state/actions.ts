@@ -83,7 +83,7 @@ import { updateLocation } from '../../../core/actions';
 import { getTimeSrv, TimeSrv } from '../../dashboard/services/TimeSrv';
 import { preProcessPanelData, runRequest } from '../../dashboard/state/runRequest';
 import { PanelModel } from 'app/features/dashboard/state';
-import { DataSourceSrv } from '@grafana/runtime';
+import { DataSourceSrv } from '@smartems/runtime';
 
 /**
  * Updates UI state and save it to the URL

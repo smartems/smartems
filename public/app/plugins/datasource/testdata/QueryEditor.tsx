@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import _ from 'lodash';
 
 // Services & Utils
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 
 // Components
 import { FormLabel, Select } from '@smartems/ui';

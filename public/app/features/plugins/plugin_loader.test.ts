@@ -13,7 +13,7 @@ jest.mock('app/core/core', () => {
   };
 });
 
-import { SystemJS } from '@grafana/runtime';
+import { SystemJS } from '@smartems/runtime';
 import { AppPluginMeta, PluginMetaInfo, PluginType, PluginIncludeType, AppPlugin } from '@smartems/data';
 import { importAppPlugin } from './plugin_loader';
 

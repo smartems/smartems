@@ -6,7 +6,7 @@ import Drop from 'tether-drop';
 
 // Utils and servies
 import { colors } from '@smartems/ui';
-import { setBackendSrv, BackendSrv, setDataSourceSrv } from '@grafana/runtime';
+import { setBackendSrv, BackendSrv, setDataSourceSrv } from '@smartems/runtime';
 import config from 'app/core/config';
 import coreModule from 'app/core/core_module';
 import { profiler } from 'app/core/profiler';
@@ -17,7 +17,7 @@ import { KeybindingSrv, setKeybindingSrv } from 'app/core/services/keybindingSrv
 import { AngularLoader, setAngularLoader } from 'app/core/services/AngularLoader';
 import { configureStore } from 'app/store/configureStore';
 
-import { LocationUpdate, setLocationSrv } from '@grafana/runtime';
+import { LocationUpdate, setLocationSrv } from '@smartems/runtime';
 import { updateLocation } from 'app/core/actions';
 
 // Types

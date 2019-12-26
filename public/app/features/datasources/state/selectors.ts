@@ -1,6 +1,6 @@
 import { DataSourceSettings, DataSourcePluginMeta } from '@smartems/data';
 import { DataSourcesState } from '../../../types/datasources';
-import { UrlQueryValue } from '@grafana/runtime';
+import { UrlQueryValue } from '@smartems/runtime';
 
 export const getDataSources = (state: DataSourcesState) => {
   const regex = new RegExp(state.searchQuery, 'i');

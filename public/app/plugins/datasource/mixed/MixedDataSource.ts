@@ -11,7 +11,7 @@ import {
   DataQueryResponse,
   DataSourceInstanceSettings,
 } from '@smartems/data';
-import { getDataSourceSrv } from '@grafana/runtime';
+import { getDataSourceSrv } from '@smartems/runtime';
 import { mergeMap, map } from 'rxjs/operators';
 
 export const MIXED_DATASOURCE_NAME = '-- Mixed --';

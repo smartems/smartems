@@ -5,7 +5,7 @@ import { PanelCtrl } from 'app/plugins/sdk';
 import { dateMath, dateTime } from '@smartems/data';
 import { PanelEvents } from '@smartems/data';
 import { auto } from 'angular';
-import { BackendSrv } from '@grafana/runtime';
+import { BackendSrv } from '@smartems/runtime';
 
 class AlertListPanel extends PanelCtrl {
   static templateUrl = 'module.html';

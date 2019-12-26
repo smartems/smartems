@@ -17,7 +17,7 @@ import { auto } from 'angular';
 import { TemplateSrv } from '../templating/template_srv';
 import { getPanelLinksSupplier } from './panellinks/linkSuppliers';
 import { AppEvent, PanelEvents, PanelPluginMeta, renderMarkdown } from '@smartems/data';
-import { getLocationSrv } from '@grafana/runtime';
+import { getLocationSrv } from '@smartems/runtime';
 
 export class PanelCtrl {
   panel: any;

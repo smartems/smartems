@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import config from 'app/core/config';
 import locationUtil from 'app/core/utils/location_util';
-import { BackendSrv } from '@grafana/runtime';
+import { BackendSrv } from '@smartems/runtime';
 import { ValidationSrv } from './services/ValidationSrv';
 import { NavModelSrv } from 'app/core/core';
 import { ILocationService } from 'angular';

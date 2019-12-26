@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import { DashboardModel, PanelModel } from 'app/features/dashboard/state';
 import { JSONFormatter, Modal } from '@smartems/ui';
 import { css } from 'emotion';
-import { getLocationSrv } from '@grafana/runtime';
+import { getLocationSrv } from '@smartems/runtime';
 
 interface Props {
   dashboard: DashboardModel;

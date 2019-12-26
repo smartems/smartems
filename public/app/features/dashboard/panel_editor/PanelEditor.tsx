@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { Tooltip } from '@smartems/ui';
 import { PanelPlugin, PanelPluginMeta } from '@smartems/data';
-import { AngularComponent, config } from '@grafana/runtime';
+import { AngularComponent, config } from '@smartems/runtime';
 
 import { QueriesTab } from './QueriesTab';
 import VisualizationTab from './VisualizationTab';

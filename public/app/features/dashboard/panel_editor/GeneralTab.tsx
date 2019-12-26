@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Components
-import { getAngularLoader, AngularComponent } from '@grafana/runtime';
+import { getAngularLoader, AngularComponent } from '@smartems/runtime';
 import { EditorTabBody } from './EditorTabBody';
 import './../../panel/GeneralTabCtrl';
 

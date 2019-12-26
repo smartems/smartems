@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { User, Team } from 'app/types';
 import { config } from 'app/core/config';
 

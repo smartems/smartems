@@ -1,6 +1,6 @@
 import coreModule from 'app/core/core_module';
 import locationUtil from 'app/core/utils/location_util';
-import { UrlQueryMap } from '@grafana/runtime';
+import { UrlQueryMap } from '@smartems/runtime';
 import { DashboardLoaderSrv } from 'app/features/dashboard/services/DashboardLoaderSrv';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { ILocationService } from 'angular';

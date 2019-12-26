@@ -14,7 +14,7 @@ import { updateLocation } from 'app/core/actions';
 import { PanelModel } from '../../state';
 import { DashboardModel } from '../../state';
 import { LS_PANEL_COPY_KEY } from 'app/core/constants';
-import { LocationUpdate } from '@grafana/runtime';
+import { LocationUpdate } from '@smartems/runtime';
 
 export type PanelPluginInfo = { id: any; defaults: { gridPos: { w: any; h: any }; title: any } };
 

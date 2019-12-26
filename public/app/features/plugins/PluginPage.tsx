@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import find from 'lodash/find';
 // Types
-import { UrlQueryMap } from '@grafana/runtime';
+import { UrlQueryMap } from '@smartems/runtime';
 import { StoreState, AppNotificationSeverity, CoreEvents } from 'app/types';
 import { Alert, Tooltip } from '@smartems/ui';
 import {

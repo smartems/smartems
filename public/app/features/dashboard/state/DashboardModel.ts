@@ -14,7 +14,7 @@ import sortByKeys from 'app/core/utils/sort_by_keys';
 import { PanelModel, GridPos, panelAdded, panelRemoved } from './PanelModel';
 import { DashboardMigrator } from './DashboardMigrator';
 import { TimeRange, TimeZone, AppEvent } from '@smartems/data';
-import { UrlQueryValue } from '@grafana/runtime';
+import { UrlQueryValue } from '@smartems/runtime';
 import { PanelEvents } from '@smartems/data';
 import { KIOSK_MODE_TV, DashboardMeta, CoreEvents } from 'app/types';
 import { toUtc, DateTimeInput, dateTime, isDateTime } from '@smartems/data';

@@ -1,5 +1,5 @@
 import { ThunkAction } from 'redux-thunk';
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { StoreState, Team, TeamGroup, TeamMember } from 'app/types';
 import { updateNavIndex, UpdateNavIndexAction } from 'app/core/actions';
 import { buildNavModel } from './navModel';

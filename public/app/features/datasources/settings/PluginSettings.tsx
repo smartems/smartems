@@ -8,7 +8,7 @@ import {
   DataQuery,
   DataSourceJsonData,
 } from '@smartems/data';
-import { getAngularLoader, AngularComponent } from '@grafana/runtime';
+import { getAngularLoader, AngularComponent } from '@smartems/runtime';
 
 export type GenericDataSourcePlugin = DataSourcePlugin<DataSourceApi<DataQuery, DataSourceJsonData>>;
 

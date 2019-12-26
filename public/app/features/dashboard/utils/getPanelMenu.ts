@@ -1,7 +1,7 @@
 import { updateLocation } from 'app/core/actions';
 import { store } from 'app/store/store';
 import config from 'app/core/config';
-import { getDataSourceSrv, getLocationSrv } from '@grafana/runtime';
+import { getDataSourceSrv, getLocationSrv } from '@smartems/runtime';
 import { PanelMenuItem } from '@smartems/data';
 
 import { copyPanel, duplicatePanel, editPanelJson, removePanel, sharePanel } from 'app/features/dashboard/utils/panel';

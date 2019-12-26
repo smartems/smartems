@@ -8,7 +8,7 @@ import { Team } from '../../types';
 import { cleanUpAction } from '../actions/cleanUp';
 import { initialTeamsState } from '../../features/teams/state/reducers';
 
-jest.mock('@grafana/runtime', () => ({
+jest.mock('@smartems/runtime', () => ({
   config: {
     bootData: {
       navTree: [] as NavModelItem[],

@@ -1,4 +1,4 @@
-import { DataSourceSrv } from '@grafana/runtime';
+import { DataSourceSrv } from '@smartems/runtime';
 import { DataSourceApi, PluginMeta, DataTransformerConfig } from '@smartems/data';
 
 import { ElasticsearchQuery } from '../../plugins/datasource/elasticsearch/types';

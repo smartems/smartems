@@ -5,7 +5,7 @@ import coreModule from 'app/core/core_module';
 // Services & Utils
 import config from 'app/core/config';
 import { importDataSourcePlugin } from './plugin_loader';
-import { DataSourceSrv as DataSourceService, getDataSourceSrv as getDataSourceService } from '@grafana/runtime';
+import { DataSourceSrv as DataSourceService, getDataSourceSrv as getDataSourceService } from '@smartems/runtime';
 
 // Types
 import { DataSourceApi, DataSourceSelectItem, ScopedVars, AppEvents } from '@smartems/data';

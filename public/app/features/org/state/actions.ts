@@ -1,5 +1,5 @@
 import { Organization, ThunkResult } from 'app/types';
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 
 export enum ActionTypes {
   LoadOrganization = 'LOAD_ORGANIZATION',

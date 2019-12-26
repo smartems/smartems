@@ -30,7 +30,7 @@ import { RefreshPicker } from '@smartems/ui';
 import { ExploreMode, ExploreUrlState, QueryOptions, QueryTransaction } from 'app/types/explore';
 import { config } from '../config';
 import { TimeSrv } from 'app/features/dashboard/services/TimeSrv';
-import { DataSourceSrv } from '@grafana/runtime';
+import { DataSourceSrv } from '@smartems/runtime';
 
 export const DEFAULT_RANGE = {
   from: 'now-1h',

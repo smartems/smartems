@@ -1,5 +1,5 @@
 import { DataQuery } from '@smartems/data';
-import { DataSourceSrv } from '@grafana/runtime';
+import { DataSourceSrv } from '@smartems/runtime';
 import { DataTransformerConfig } from '@smartems/data';
 
 export const getDefaultCondition = () => ({

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { css } from 'emotion';
 import { Alert, Button } from '@smartems/ui';
 
-import { AngularComponent, getAngularLoader, getDataSourceSrv } from '@grafana/runtime';
+import { AngularComponent, getAngularLoader, getDataSourceSrv } from '@smartems/runtime';
 import appEvents from 'app/core/app_events';
 import { getAlertingValidationMessage } from './getAlertingValidationMessage';
 

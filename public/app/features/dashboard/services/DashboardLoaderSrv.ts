@@ -9,7 +9,7 @@ import impressionSrv from 'app/core/services/impression_srv';
 import { BackendSrv } from 'app/core/services/backend_srv';
 import { DashboardSrv } from './DashboardSrv';
 import DatasourceSrv from 'app/features/plugins/datasource_srv';
-import { UrlQueryValue } from '@grafana/runtime';
+import { UrlQueryValue } from '@smartems/runtime';
 import { GrafanaRootScope } from 'app/routes/GrafanaCtrl';
 
 export class DashboardLoaderSrv {

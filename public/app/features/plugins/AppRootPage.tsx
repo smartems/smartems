@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 // Types
 import { StoreState } from 'app/types';
-import { UrlQueryMap } from '@grafana/runtime';
+import { UrlQueryMap } from '@smartems/runtime';
 
 import Page from 'app/core/components/Page/Page';
 import { getPluginSettings } from './PluginSettingsCache';

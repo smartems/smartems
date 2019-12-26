@@ -160,7 +160,7 @@ export const getWebpackConfig: WebpackConfigurationGetter = options => {
       'd3',
       'angular',
       '@smartems/ui',
-      '@grafana/runtime',
+      '@smartems/runtime',
       '@smartems/data',
       // @ts-ignore
       (context, request, callback) => {

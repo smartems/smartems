@@ -4,7 +4,7 @@ import { UserProfileEditForm } from './UserProfileEditForm';
 import { SharedPreferences } from 'app/core/components/SharedPreferences/SharedPreferences';
 import { UserTeams } from './UserTeams';
 import { UserOrganizations } from './UserOrganizations';
-import { config } from '@grafana/runtime';
+import { config } from '@smartems/runtime';
 import { LoadingPlaceholder } from '@smartems/ui';
 
 export const ReactProfileWrapper = () => (

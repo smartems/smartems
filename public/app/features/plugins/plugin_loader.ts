@@ -33,7 +33,7 @@ import * as d3 from 'd3';
 import * as emotion from 'emotion';
 import * as grafanaData from '@smartems/data';
 import * as grafanaUIraw from '@smartems/ui';
-import * as grafanaRuntime from '@grafana/runtime';
+import * as grafanaRuntime from '@smartems/runtime';
 
 // Help the 6.4 to 6.5 migration
 // The base classes were moved from @smartems/ui to @smartems/data
@@ -84,7 +84,7 @@ function exposeToPlugin(name: string, component: any) {
 
 exposeToPlugin('@smartems/data', grafanaData);
 exposeToPlugin('@smartems/ui', grafanaUI);
-exposeToPlugin('@grafana/runtime', grafanaRuntime);
+exposeToPlugin('@smartems/runtime', grafanaRuntime);
 exposeToPlugin('lodash', _);
 exposeToPlugin('moment', moment);
 exposeToPlugin('jquery', jquery);

@@ -1,4 +1,4 @@
-import { getBackendSrv } from '@grafana/runtime';
+import { getBackendSrv } from '@smartems/runtime';
 import { AlertRuleDTO, StoreState } from 'app/types';
 import { ThunkAction } from 'redux-thunk';
 
